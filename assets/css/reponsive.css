@@ -22,20 +22,16 @@
  }
  
  @media(max-width: 612px) {
-    .bg-img{
-        height: 500px;
-    }
-    .slide-banner input,.bottom-search input{
+    
+    .form-control.email-address{
         max-height: 38px;
         display: flex;
      }
-    .slide-banner a,
-    .bottom-search a{
-        max-width: 140px;
-        height: 38px;
+     #basic-addon2{
         font-size: 1.25rem;
         justify-content: center;
         justify-items: center;
+        
     }
     .layer h1 {
        font-size: 50px;
@@ -72,7 +68,9 @@
  }
  
  @media(max-width: 515px) {
-    
+    .bg-img{
+        height: 500px;
+    }
     .layer h1 {
         font-size: 32px;
     }

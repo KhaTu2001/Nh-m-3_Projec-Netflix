@@ -45,13 +45,14 @@
  
  h1 {
     color: #fff;
-    font-size: 4.625em; 
+    font-size: 3.625em; 
     
  }
  
  h3,
  h5 {
     color: #fff;
+    padding-bottom: 24px;
  }
  
  .text-common {
@@ -80,7 +81,7 @@
     font-weight: bold;
  }
  a.navbar-brand:hover{
-    color: #e50914 !important;
+     color: #e50914 !important;
  }
 .slide-banner a,.bottom-search a{
     background-color: #e50914;
@@ -154,13 +155,14 @@
     margin-top: 10px;
     padding-top: 5px;
  }
- 
+
  .input-group-text {
     font-size: 28px;
     background-color: #e50914;
     color: #fff;
     border: 0px;
     cursor: pointer;
+    
  }
  
  .btn-check:focus+.btn,
@@ -171,7 +173,15 @@
  .main-search input {
     height: 70px;
  }
- 
+ .advertise_part1 a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.625rem;
+ }
+ .advertise_part1 a i{
+     padding-left: 12px;
+     
+ }
  .faq .btn {
     width: 100%;
     height: 72px;
