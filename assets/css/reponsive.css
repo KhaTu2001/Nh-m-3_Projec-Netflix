@@ -23,9 +23,10 @@
  
  @media(max-width: 612px) {
     
-    .form-control.email-address{
+    .email-address{
         max-height: 38px;
         display: flex;
+        
      }
      #basic-addon2{
         font-size: 1.25rem;

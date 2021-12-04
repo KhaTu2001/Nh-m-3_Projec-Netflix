@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix</title>
+    <link rel="shotcut icon" type="img" href="/assets/img/logo-icon.jpg" >
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css"> 
@@ -29,7 +30,7 @@
           </select>
         </div>
         
-        <button type="sunmit" class="btn btn-danger btn-sign-in top-sign-in container">Sign In</button>
+        <a href=""><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign In</button></a>
         
       </form>
     </div>
@@ -47,7 +48,10 @@
         <div class="col-md-2 col-1"></div>
         <div class="col-md-8 col-10  main-search">
           <div class="input-group mb-3">
-            <input type="text" class="form-control email-address" placeholder="Email address">
+             <div class="email-search form-control">
+              <input type="email" class=" email-address " required = "">
+              <label for="">Email address</label>
+            </div>
             <a href="" class="input-group-text " id="basic-addon2">Get Started <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
@@ -117,15 +121,19 @@
       
     </div>
   </section>
-  <section>
+  <section class="bottom-email-search">
     <div class="bottom-search">
       <p class="text-center">Ready to watch? Enter your email to create or restart your membership.</p>
       <div class="row">
         <div class="col-md-2 col-1"></div>
         <div class="col-md-8 col-10 p-0 main-search">
           <div class="input-group mb-3">
-            <input type="email" class="form-control email-address " placeholder="Email address">
-            <a class="input-group-text " id="basic-addon2">Get Started <i class="fas fa-chevron-right"></i></a>
+            <div class="email-search form-control">
+
+              <input type="email" class=" email-address " required = "">
+              <label for="">Email address</label>
+            </div>
+            <a href="" class="input-group-text " id="basic-addon2">Get Started <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
       </div>
@@ -133,9 +141,7 @@
   </section>
   <footer>
     <div class="container">
-     <ul>
-       <li class="ps-2 pb-3">Questions? Call <a href="#"> 000-800-040-1843</a></a></li>
-     </ul>
+     <a href="#" class="question-contact" style="margin-left: 32px;">Questions? Contact us.</a>
       <div class="row">
         <div class="col-md-3 col-6">
           <ul>
