@@ -1,160 +1,224 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto' ,sans-serif;
-}
-.container .site-header{
+:root {
+    --bs-red: #e50914;
+    
+ }
+
+#header .head{
     position: absolute;
+    display: inline-flex;
+    align-items: center;
     top: 0;
     left: 0;
+    
+}
+.btn-sign-in{
+    min-width: 84px;
+}
+ body {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto",sans-serif;
+    overflow-x: hidden;
+ }
+ 
+ img {
+    max-width: 100%;
+ }
+ 
+ section {
+    border-top: 8px solid #222;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-color: #000000;
+ }
+ 
+ section h2 {
+    font-size: 55px;
+    color: #fff;
+    font-weight: bold;
+ }
+ 
+ section p {
+    font-size: 22px;
+    color: #fff;
+ }
+ 
+ h1 {
+    color: #fff;
+    font-size: 4.625em; 
+    
+ }
+ 
+ h3,
+ h5 {
+    color: #fff;
+ }
+ 
+ .text-common {
+    color: #757575;
+ }
+ 
+ .row {
+    margin: 0px;
+ }
+ 
+ .navbar {
+    position: absolute;
+    width: 100%;
+ }
+ 
+ .form-select {
+    background-color: #333;
+    border: 1px solid #757575;
+    color: #757575;
+    height: 52px;
+ }
+ 
+ a.navbar-brand {
+    color: #e50914 !important;
+    font-size: 44px;
+    font-weight: bold;
+ }
+ a.navbar-brand:hover{
+    color: #e50914 !important;
+ }
+.slide-banner a,.bottom-search a{
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
     display: flex;
+    font-weight: 400;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 24px 50px;
-    z-index: 100000;
-}
-
-.header_navbar--logo{
-    width: 13%;
+    font-size: 1.625rem;
 }
 .nav-option{
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
 }
-.nav-option div{
-    padding-right: 24px;
+
+.slide-banner a:hover{
+    color: #fff,!important;
 }
-.container .site-header a{
-    color: #fff;
-    text-decoration: none;
-    background-color: #e50914;
-    padding: 8px 18px;
-    border-radius: 5px;
+.slide-banner a i {
+    padding-left: 24px;
 }
-..language-selection .dropdown-menu .dropdown-item{
-    background-color: #fff;
-}
-.language-selection .dropdown-menu .dropdown-item.disabled{
-    background-color: #8c8c8c;
-}
-.language-selection{
-    background: transparent;
-}
-.language-selection button{
-    background-color: transparent;
-    border: 1px solid #fff;
-}
-.bander{
-    width: 100%;
+ .bg-img {
+    background-image: url(/assets/img/slide-banner.jpg);
     height: 100vh;
-    position: relative;
+ }
+.option-language{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    margin-right: 24px;
+    margin-top: 8px;
+    border-radius: 4px;
+    min-height: 36px;
+}
+ 
+ .icon-language{
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px;
+}
+.language-selection {
+    max-height: 38px;
+    border: none;
+}
+.language-selection:active{
+    border: none;
+}
+
+#header select{
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.bander::before{
-    content: "";
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 400px;
-    z-index: 1;
-    background: linear-gradient(to bottom , #000, transparent);
-}
-.bander::after{
-    content: "";
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 400px;
-    z-index: 1;
-    background: linear-gradient(to top , #000, transparent);
-}
-.banner-card-background{
+ .layer {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-
-}
-.bander .banner-card-text{
-    position: absolute;
-    top: 54%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 1000;
-}
-.bander .banner-card-text .heading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-.bander .banner-card-text .heading h2{
-    font-size: 3.125rem;
-    color: #fff;
-    letter-spacing: 2px;
-    width: 80%;
-    font-weight: 600;
-}
-.bander .banner-card-text .heading h5{
-    font-size: 1.625rem;
-    color: #fff;
-    font-weight: 400;
-    padding: 1rem 0;
-}
-.bander .banner-card-text .heading p{
-    font-size: 1.2rem;
-    color: #fff;
-    font-weight: 500;
-    padding: 16px 0;
-    padding-bottom: 20px;
-}
-.bander .banner-card-text .search{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.bander .banner-card-text .search input{
-    
-    font-size: 16px;
-    border: 1px solid #8c8c8c;
-    color: #000;
-    outline: none;
-    border-radius: 4px;
-    padding: 10px 10px 0 0;
-    min-width: 460px;
-    height: 60px;
-    align-items: center;
-}
-.bander .banner-card-text .search a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: 400;
-    letter-spacing: 0.1px;
-    border-radius: 2px;
+ }
+ 
+ .top-sign-in {
+    height: 34px;
+    margin-top: 10px;
+    padding-top: 5px;
+ }
+ 
+ .input-group-text {
+    font-size: 28px;
     background-color: #e50914;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-    font-size: 1.625rem;
-    min-width: 200px;
-    padding: 0 30px;
-    line-height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-.bander .banner-card-text .search a i{
-    padding-left: 20px;
-}
-.Advertise{
-    
+    color: #fff;
+    border: 0px;
+    cursor: pointer;
+ }
+ 
+ .btn-check:focus+.btn,
+ .btn:focus {
+    box-shadow: none;
+ }
+ 
+ .main-search input {
+    height: 70px;
+ }
+ 
+ .faq .btn {
+    width: 100%;
+    height: 72px;
+    background-color: #303030;
+    font-size: 30px;
+    padding-top: 12px;
+    text-align: left;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    border-radius: 0px;
+ }
+ 
+ .multi-collapse.show {
+    margin-bottom: 10px;
+ }
+ 
+ .faq .card {
+    background-color: #303030;
+    font-size: 26px;
+    color: #fff;
+    padding-left: 30px;
+ }
+ 
+ footer {
+    background-color: #000000;
+    padding-top: 40px;
+    border-top: 8px solid #222;
+ }
+ 
+ footer ul {
+    list-style-type: none;
+ }
+ 
+ footer ul li {
+    color: #757575;
+    margin-bottom: 15px;
+ }
+ 
+ footer a {
+    text-decoration: none;
+    color: #757575;
+ }
+ 
+ footer a:hover {
+    color: #757575;
+    text-decoration: underline;
+ }
+ a:hover{
+    color: #fff !important;
 }
