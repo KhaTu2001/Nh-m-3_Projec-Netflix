@@ -4,11 +4,13 @@
  }
 
 #header .head{
+   margin-top: 16px;
     position: absolute;
     display: inline-flex;
     align-items: center;
     top: 0;
     left: 0;
+    z-index: 1;
     
 }
 .btn-sign-in{
@@ -80,8 +82,9 @@
  
  a.navbar-brand {
     color: #e50914 !important;
-    font-size: 44px;
+    
     font-weight: bold;
+    width: 160px;
  }
  a.navbar-brand:hover{
      color: #e50914 !important;
@@ -175,6 +178,10 @@
  
  .main-search input {
     height: 50px;
+    
+ }
+ .main-search .input-group{
+    border-radius: 4px;
  }
  .advertise_part1 a{
     text-decoration: none;
@@ -267,4 +274,201 @@
 }
 .question-contact{
    margin-top: 24px;
+}
+.contact-header{
+   position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+}
+.contact-header a{
+   width: 90px;
+   
+}
+.navbar-right{
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+}
+.sperate{
+   display: block;
+   content: "";
+   height: 28px;
+   width: 1px;
+   background-color: #fff;
+   margin-top: 4px;
+}
+.help-center a{
+   margin-left: 20px;
+   margin-top: 16px;
+   text-decoration: none;
+   color: #fff;
+   font-size: 1.25rem;
+}
+.navbar-left{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.join-netflix{
+   margin-top: 8px;
+   border: 1px solid #fff;
+   padding: 4px 4px;
+   border-radius: 4px;
+   margin-right: 16px;
+}
+.join-netflix a{
+   font-size: 1rem;
+   text-decoration: none;
+   color: #fff;
+}
+.back-to-help a{
+   
+   padding-top:32px;
+   text-decoration: none;
+   color: #e50914;
+}
+.back-to-help a:hover{
+   color: #e50914 !important;
+   text-decoration:underline;
+}
+.content-contact{
+   background-color: #fff;
+   border-top: none;
+   padding-top: 32px;
+   padding-bottom: 0;
+}
+.content-contact h1{
+   color: #000 ;
+   font-weight: 700;
+}
+.content-contact h3{
+   color: #000 ;
+   padding-bottom: 4px;
+}
+
+.content-contact p{
+   color: #000 ;
+   font-size: 1.1rem
+}
+.content-contact h5{
+   color: #000 ;
+   padding-bottom: 2px;
+}
+.back-to-help a i{
+   padding-right: 12px;
+}
+.app-dowload{
+   display: flex;
+   width: 260px;
+   justify-content: space-between;
+}
+.app-dowload a{
+  margin-top: 16px;
+}
+.app-dowload a img{
+   height: 36px;
+   border-radius: 4px;
+   width: 120px;
+   position: 50%;
+}
+.contact-question{
+   display: flex;
+   margin-top: 32px;
+}
+.contact-question a{
+   text-decoration: none;
+   color: #e50914 !important;
+}
+.contact-question a:hover{
+   display: block;
+   color: #e50914;
+   text-decoration: underline;
+}
+.call-us{
+   padding:  8px 16px;
+   color: #303030;
+   margin-top: 4px;
+   background-color: #fff;
+   font-weight: 600;
+   border: 1px solid #303030;
+}
+.live-chat{
+   padding:  8px 16px;
+   color: #303030;
+   margin-top: 4px;
+   background-color: #fff;
+   font-weight: 600;
+   border: 1px solid #303030;
+}
+.content-contact-left li{
+   padding: 8px 0;
+   
+}
+.content-contact-left li a{
+   text-decoration: none;
+   color: #000 !important;
+}
+.content-contact-left li a:hover{
+   text-decoration: underline;
+   color: #e50914 !important;
+}
+.content-contact-left h5{
+   margin: 20px 0;
+   font-size: 1rem;
+}
+.questions-search{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 4px;
+   border: 2px solid rgb(165, 156, 156);
+   border-radius: 4px;
+   height: 50px;
+}
+.search-icon{
+   width: 15%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.search-icon i{
+   font-size: 1.25rem;
+   line-height: 100%;
+   align-items: center;
+   color: rgb(165, 156, 156);
+   
+}
+.questions-search input {
+   outline: none;
+   border: none;
+   box-shadow: none;
+   width: 85%;
+}
+.footer-contact{
+   margin-top: 68px;
+   background-color: #221f1f;
+   height: 240px;
+}
+.footer-contact select{
+   font-size: 1.25rem;
+   color: #757575;
+   border: 1px solid #fff;
+   font-weight: 400;
+   border-radius: 4px;
+   display: flex;
+   padding-right: 58px;
+   padding-left: 24px;
+   height: 68px;
+}
+.footer-contact-left{
+   display: flex;
+   float: right;
+   
+}
+.footer-contact-left a{
+   margin-left: 24px;
+}
+.footer-contact-left a:hover{
+   color: #757575 !important;
 }
