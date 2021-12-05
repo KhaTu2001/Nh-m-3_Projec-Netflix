@@ -33,17 +33,18 @@
 
  }
  
- @media(max-width: 770px) {
+ @media(max-width: 767px) {
     .reverse {
        flex-direction: column-reverse;
     }
     .footer-contact{
-      height: 300px;
+      height: 100%;
     }
     .footer-contact-left{
       margin-top: 48px;
       flex-direction: column;
       float: left;
+      align-items:flex-start;
    }
    .footer-contact-left a{
       margin-top: 8px;
@@ -53,6 +54,27 @@
  }
  
  @media(max-width: 612px) {
+   .sperate{
+      display: none;
+   }
+   .header_navbar--logo-first{
+      display: none;
+   }
+   .header_navbar--logo-second{
+      display: block;
+   }
+   .contact-header{
+      height: 120px;
+   }
+   .navbar-right{
+      flex-direction: column;
+   }
+   .help-center{
+      margin-left: -32px;
+   }
+   .navbar-left{
+      margin-top: -54px;
+   }
    
     .email-address{
         max-height: 38px;
@@ -103,6 +125,9 @@
  }
  
  @media(max-width: 515px) {
+   .join-netflix {
+      margin-top: -0.5px;
+   }
     .bg-img{
         height: 500px;
     }

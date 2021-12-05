@@ -82,10 +82,12 @@
  
  a.navbar-brand {
     color: #e50914 !important;
-    
     font-weight: bold;
     width: 160px;
  }
+.header_navbar--logo-second{
+   display: none;
+}
  a.navbar-brand:hover{
      color: #e50914 !important;
  }
@@ -115,36 +117,34 @@
     background-image: url(/assets/img/slide-banner.jpg);
     height: 100vh;
  }
-.option-language{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #fff;
-    margin-right: 24px;
-    margin-top: 8px;
-    border-radius: 4px;
-    min-height: 36px;
-}
  
  .icon-language{
     color: #fff;
     justify-content: center;
     align-items: center;
-    padding: 0 4px;
+    margin-top: 6px;
+    margin-right: -10px;
 }
 .language-selection {
-    max-height: 38px;
-    border: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid #fff;
+   padding-left: 24px;
+   border-radius: 4px;
+   min-height: 36px;
+   margin-right: 24px;
+   margin-top: 8px;
 }
-.language-selection:active{
-    border: none;
+.language-selection::before{
+   
 }
-
 #header select{
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
  .layer {
     background-color: rgba(0, 0, 0, 0.5);
@@ -276,7 +276,7 @@
    margin-top: 24px;
 }
 .contact-header{
-   position: relative;
+position: relative;
   display: flex;
   justify-content: space-between;
   height: 64px;
@@ -448,7 +448,7 @@
 .footer-contact{
    margin-top: 68px;
    background-color: #221f1f;
-   height: 240px;
+   height: 100%;
 }
 .footer-contact select{
    font-size: 1.25rem;
