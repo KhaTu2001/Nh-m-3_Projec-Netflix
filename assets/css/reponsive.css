@@ -23,6 +23,18 @@
    .footer-contact-left{
       flex-direction: column;
    }
+   .faq-footer{
+      flex-wrap: wrap;
+   }
+   .faq-footer-right {
+      width: 100%;
+      justify-content: space-between;
+   }
+   .faq-footer-right button{
+      width: 48%;
+      background-color: #fff;
+      height: 42px;
+   }
    
  }
 
@@ -30,6 +42,8 @@
     .layer h1 {
        font-size: 60px;
     }
+    
+    
 
  }
  
@@ -50,6 +64,16 @@
       margin-top: 8px;
       margin-left:-4px ;
    }
+   .faq-footer-right{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .faq-footer-right button{
+      width: 100%;
+      margin: 8px 0;
+   }
+   
+   
     
  }
  
@@ -122,6 +146,18 @@
     section p {
        font-size: 18px;
     }
+    .alert-left{
+      flex-wrap: wrap;
+   }
+   .aleart-submit{
+      justify-content: left;
+   }
+   .alert-icon{
+      justify-content:left;
+      
+   }
+  
+    
  }
  
  @media(max-width: 515px) {
