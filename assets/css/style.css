@@ -538,6 +538,15 @@ position: relative;
 .faq-content h1{
    color: #000;
 }
+.faq-content-right h3{
+   color: #000;
+   font-size: 1.5rem;
+   font-weight: 650;
+}
+.faq-content-right span{
+   color: #000;
+   font-weight: 650;
+}
 .faq-content-right{
    margin-top: 24px
 }
@@ -594,4 +603,18 @@ position: relative;
 }
 .faq-footer-right button:hover{
    background-color:#eaeae6 ;
+}
+.note >div{
+   display: inline;
+}
+.note{
+   font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    border-left: 4px solid #d5d4d1;
+    color: #221f1f;
+    display: block;
+    margin: 8px 0 24px;
+    padding: 0 12px;
+    position: relative;
 }
