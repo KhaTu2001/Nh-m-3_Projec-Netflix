@@ -1,0 +1,118 @@
+h1 {
+    color: #fff;
+    font-size: 32px; 
+    
+ }
+ 
+ h3,
+ h5 {
+    color: #fff;
+    font-size: 16px;
+    padding-bottom: 24px;
+ }
+ .fab{
+    font-size: 20px;
+    color: #fff;
+    background-color: #0D6EFD;
+ }
+
+#header .head{
+   margin-top: 16px;
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1;  
+}
+a.navbar-brand {
+   color: #e50914 !important;
+   font-weight: bold;
+   width: 160px;
+}
+.header_navbar--logo-second{
+  display: none;
+}
+a.navbar-brand:hover{
+    color: #e50914 !important;
+}
+.bg-img {
+    background-image: url(/assets/img/slide-banner.jpg);
+    height: 100%;
+ }
+.form_login{ 
+    display: flex;
+    margin-bottom: 10rem;
+    opacity: 0.9;
+    justify-content: center;
+    align-items: center;
+    
+ }
+ .form_layout{
+    margin-top: 76px;
+    height: 560px;   
+    background-color: #13110E;
+    padding: 60px 68px 40px;
+    opacity: 1 !important;
+ }
+ .form-control{
+    width: 314px !important;
+
+ }
+ .form-check-label,.needhelp_form{
+    color: #fff !important;
+ }
+ .needhelp_form{
+     margin-left: 100px;
+     text-decoration: none;
+ }
+ .needhelp_form:hover{
+    text-decoration: underline;
+ }
+ .btn-primary{
+     background-color: #e50914 !important;
+     border-color: #e50914 !important;
+     width: 100%;
+ }
+ .Form_loginfb{
+     text-decoration: none;
+     color: #fff;
+ }
+ .Form_loginfb:hover{
+    color: #fff;
+ }
+ .form_signup{
+    display: flex;
+ }
+ .form_signup h5{
+    font-size: 16px;
+ }
+.sign_up_now{
+   margin-left: 5px;
+   text-decoration: none;
+   color: #fff;
+}
+.sign_up_now:hover{
+   text-decoration: underline;
+   color: #fff;
+}
+
+.login_footer{
+   background-color: #13110E;
+   opacity: 0.9;
+   padding: 40px 0;
+
+}
+.login_footer ul{
+   list-style: none;
+}
+.login_footer a{
+   color: #757575;
+   text-decoration: none;
+}
+.login_footer a:hover {
+   color: #757575;
+   text-decoration: underline;
+}
+
+ 
