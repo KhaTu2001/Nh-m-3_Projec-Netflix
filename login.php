@@ -18,7 +18,7 @@
 <body>
   <nav id="header" class=" navbar navbar-light p-0">
     <div class="container-fluid px-5 head">
-      <a href="index.html" class="navbar-brand">  <svg
+      <a href="index.php" class="navbar-brand">  <svg
         viewBox="0 0 111 30"
         class="header_navbar--logo"
         focusable="false"
@@ -65,7 +65,7 @@
             </div>
             <div class="mb-3 form_signup">
               <h5>New to Netflix?</h5>
-              <a class="sign_up_now" href="index.html">Sign up now.</a>
+              <a class="sign_up_now" href="index.php">Sign up now.</a>
             </div>
             <!-- <div class="mb-3 form_capcha">
               <span>This page is protected by Google reCAPTCHA to ensure you're not a bot.</span>
@@ -118,6 +118,6 @@
         </div> 
       </div>
       
-    <script src="/assets/css/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>   
+    <script src="assets/css/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>   
 </body>
 </html>

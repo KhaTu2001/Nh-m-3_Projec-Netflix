@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
     
   <nav id="header" class=" navbar navbar-light p-0">
     <div class="container-fluid px-5 head">
-      <a href="index.html" class="navbar-brand">  <svg
+      <a href="index.php" class="navbar-brand">  <svg
         viewBox="0 0 111 30"
         class="header_navbar--logo"
         focusable="false"
@@ -41,13 +42,15 @@
           </select>
         
         
-        <a href="login.html"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign In</button></a>
+        <a href="login.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign In</button></a>
       
 
       </form>
     </div>
   </nav>
-  <div class="slide-banner bg-img">
+  <div class="slide-banner bg-img "
+  style="background-image: url(assets/img/slide-banner.jpg);
+    height: 100vh;">
     <div class="layer">
       <div class="row">
         <div class="col-md-12 text-center">
@@ -153,11 +156,11 @@
   </section>
   <footer>
     <div class="container">
-     <a href="contactus.html" class="question-contact" style="margin-left: 32px;">Questions? Contact us.</a>
+     <a href="contactus.php" class="question-contact" style="margin-left: 32px;">Questions? Contact us.</a>
       <div class="row">
         <div class="col-md-3 col-6">
           <ul>
-            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="FAQ.php">FAQ</a></li>
             <li><a href="#">Investor Relations</a></li>
             <li><a href="#">Privacy</a></li>
             <li><a href="#">Speed Test</a></li>
@@ -202,6 +205,6 @@
     </div>
   </footer>
   
-  <script src="/assets/css/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+  <script src="assets/css/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

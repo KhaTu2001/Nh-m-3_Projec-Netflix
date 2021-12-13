@@ -19,7 +19,7 @@
 
                <div class="navbar-right">
    
-                   <a href="index.html" class="navbar-brand" >  
+                   <a href="index.php" class="navbar-brand" >  
                      <svg
                      viewBox="0 0 111 30"
                      class="header_navbar--logo-first"
@@ -105,7 +105,7 @@
            <div class="col-lg-8 col-md-12 ">
             
                <div class="faq-content-right">
-                <img src="/assets/img/faq-slide-img.png" class="img-fluid" alt="">
+                <img src="assets/img/faq-slide-img.png" class="img-fluid" alt="">
                    <p>Netflix is a subscription-based <a href="">streaming service</a>  that allows our members to watch TV shows and movies without commercials on an internet-connected device.</p>
                    <p>You can also <a href="">download TV shows and movies</a>  to your iOS, Android, or Windows 10 device and watch without an internet connection.</p>
                    <p>If you're already a member and would like to learn more about using Netflix, visit <a href="">Getting started with Netflix.</a> </p>
@@ -113,7 +113,7 @@
                <hr class="container-fluid" style="margin-top: 42px;">
                <div class="faq-content-right">
                 <h3>TV Shows & Movies</h3>
-                <img src="/assets/img/faq-slide-img-2.png" class="img-fluid" alt="">
+                <img src="assets/img/faq-slide-img-2.png" class="img-fluid" alt="">
                    <p>Netflix content varies by region and may change over time. You can watch from a wide variety of <a href="">award-winning Netflix Originals, TV shows, movies, documentaries, and more. </a> </p>
                    <p>The more you watch, the better Netflix gets at <a href="">recommending</a> TV shows and movies we think you’ll enjoy.</p>
                   
@@ -121,7 +121,7 @@
                <hr class="container-fluid" style="margin-top: 42px;">
                <div class="faq-content-right">
                 <h3>Supported Devices</h3>
-                <img src="/assets/img/faq-slide-img-3.png" class="img-fluid" alt="">
+                <img src="assets/img/faq-slide-img-3.png" class="img-fluid" alt="">
                 <p>You can watch Netflix through any <a href="">internet-connected device</a> that offers the Netflix app, including smart TVs, game consoles, streaming media players, set-top boxes, smartphones, and tablets. You can also watch Netflix on your computer using an internet browser. You can review the  system requirements for web browser compatibility, and check our <a href=""> internet speed recommendations</a> to achieve the best performance. </p>
                 <p>You can also <a href="">download TV shows and movies</a>  to your iOS, Android, or Windows 10 device and watch without an internet connection.</p>
                 <div class="note">
@@ -132,7 +132,7 @@
                <hr class="container-fluid" style="margin-top: 42px;">
                <div class="faq-content-right">
                 <h3>Plans and Pricing</h3>
-                <img src="/assets/img/faq-slide-img-4.png" class="img-fluid" alt="">
+                <img src="assets/img/faq-slide-img-4.png" class="img-fluid" alt="">
                    <p>Each Netflix plan determines the number of devices you can watch Netflix on <span>at the same time</span> and if you prefer to view in Standard Definition (SD), High Definition (HD), or Ultra High Definition (UHD). </p>
                    <p> <a href="">Compare our plans and pricing</a> to decide which one is right for you. You can easily <a href="">change your plan</a>  or <a href="">cancel</a> online at any time.</p>
                   
@@ -140,7 +140,7 @@
                <hr class="container-fluid" style="margin-top: 42px;">
                <div class="faq-content-right">
                 <h3>Plans and Pricing</h3>
-                <img src="/assets/img/faq-slide-img-5.png" class="img-fluid" alt="">
+                <img src="assets/img/faq-slide-img-5.png" class="img-fluid" alt="">
                 <p style="margin-top: 0;">Follow these easy steps to start watching Netflix today:</p>
                 <ul>
                     <li><p>Visit <a href="">netflix.com/signup.</a></p></li>

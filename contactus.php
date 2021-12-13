@@ -19,7 +19,7 @@
 
                <div class="navbar-right">
    
-                   <a href="index.html" class="navbar-brand" >  
+                   <a href="index.php" class="navbar-brand" >  
                      <svg
                      viewBox="0 0 111 30"
                      class="header_navbar--logo-first"
