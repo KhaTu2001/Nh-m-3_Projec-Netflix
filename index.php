@@ -178,7 +178,7 @@
         <div class="col-md-3 col-6">
           <ul>
             <li><a href="#">Account</a></li>
-            <li><a href="#">Ways to Watch</a></li>
+            <li><a href="way-match.php">Ways to Watch</a></li>
             <li><a href="#">Corporate Information</a></li>
             <li><a href="#">Netflix Originals</a></li>
           </ul>

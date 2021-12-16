@@ -1,0 +1,36 @@
+.navbar .container-fluid img{
+    width: 145px;
+    height: 35px;
+    margin-left: 200px;
+}
+.navbar .container-fluid form{
+    text-align: center;
+    margin-right: 250px;
+}
+.navbar .container-fluid form button{
+    background-color: red;
+    width: 75px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 3px;
+    margin-left: 15px;
+}
+.link-primary{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+.top h2{
+    max-width: 785px;
+    margin: 0 auto 20px auto;
+    line-height: 1;
+    font-size: 3.6rem;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+.top{
+    background-image: url(assets/img/backgourp.jpg);
+    padding: 100px 0;
+}
