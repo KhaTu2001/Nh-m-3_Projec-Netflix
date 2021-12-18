@@ -1,49 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>help.netflix.com</title>
-    <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg" >
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="assets/css/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/reponsive.css">
-</head>
-<body>
-    <?php
+
+    <?php   
         include 'Template/header_page-footer.php';
     ?>    
-    <?php
-    
-    ?>
-     <section class="container-fluid " style="border-top: none;background-color: #eaeae6;padding:0">
-            <div class="container contact-alert">
-                <a style="text-decoration: none; display:flex; ">
-                        <div style="color:#000; margin-top:-8px"class="alert-icon">
-                        <i style="font-size:1.25rem"  class="far fa-bell"></i>
-                        </div>
-                        <div class="alert-left">
-                            <div class="alert-text">
-                                <h5>We are currently experiencing a higher than normal wait time for chat support. </h5>
-                                <p>Please try again later or try calling us.</p>
-                            </div>
-                        </div>
-                        
-                   
-                </a>
-            </div>
-            
-        </section>
-        <section class="content-contact">
-          <div class="container">
-          <div class="container back-to-help">
-              <a href="help_center.php"><i class="fas fa-arrow-left"></i>Back to help home</a>
-          </div>
-            </div>
-        </section>
         <div class="container privacy-text" > 
             <h1 >Privacy Statement</h1>
             <p>This Privacy Statement explains our practices, including your choices, regarding the collection, use, and disclosure of certain information, including your personal information in connection with the Netflix service.</p>

@@ -1,54 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is Netflix?</title>
-    <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg" >
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="assets/css/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/reponsive.css">
-</head>
-<body>
+
     <?php
       include 'Template/header_page-footer.php';
     ?>
-        <section class="container-fluid " style="border-top: none;background-color: #fff;">
-            <div class="container faq-content-alert">
-                <a href="#">
-                    <div class="alert-change-password">
-                        <div class="alert-icon">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="alert-left">
-                            
-                   
-                            <div class="alert-text">
-                                <h5>How to change your password </h5>
-                                <p>If you forget your Netflix email address or password, this article explains how to regain access to your account </p>
-                            </div>
-                            <div class="aleart-submit">
-                                <a href="">Get Help</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </a>
-            </div>
-            
-        </section>
-        <hr class="container-fluid">
-        <section class="content-contact">
-            <div class="container">
-            <div class="container back-to-help">
-                <a href="#"><i class="fas fa-arrow-left"></i>Back to help home</a>
-            </div>
-    </div>
-  </section>
-  <section class="container-fluid faq-content" style="background-color: #fff; border-top: none;">
+        <section class="container-fluid faq-content" style="background-color: #fff; border-top: none;">
       
      <div class="container">
         <h1 class="container">What is Netflix?</h1>

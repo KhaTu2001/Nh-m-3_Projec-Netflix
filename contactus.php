@@ -1,47 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg" >
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css"> 
-    <link rel="stylesheet" href="assets/css/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/reponsive.css">
-</head>
-<body>
 <?php
       include 'Template/header_page-footer.php';
     ?>
-     <section class="container-fluid " style="border-top: none;background-color: #eaeae6;padding:0">
-            <div class="container contact-alert">
-                <a style="text-decoration: none; display:flex; "href="#">
-                        <div style="color:#000; margin-top:28px;"class="alert-icon">
-                        <i style="font-size:1.25rem"  class="far fa-bell"></i>
-                        </div>
-                        <div class="alert-left">
-                            <div class="alert-text">
-                                <h5>We are currently experiencing a higher than normal wait time for chat support. </h5>
-                                <p>Please try again later or try calling us.</p>
-                            </div>
-                        </div>
-                        
-                   
-                </a>
-            </div>
-            
-        </section>
-
-      <section class="content-contact">
-          <div class="container">
-          <div class="container back-to-help">
-              <a href="#"><i class="fas fa-arrow-left"></i>Back to help home</a>
-          </div>
-  </div>
-</section>
   <section class="content-contact">
     <div class="container">
       <h1>Contact Customer Service</h1>

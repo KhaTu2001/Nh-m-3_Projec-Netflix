@@ -1,23 +1,10 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix</title>
-    <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg" >
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="assets/css/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/reponsive.css">
-</head>
-<body>  
-    
-  <nav id="header" class=" navbar navbar-light p-0">
+<?php
+  include 'header.php' 
+?>
+ <nav id="header" class=" navbar navbar-light p-0">
     <div class="container-fluid px-5 head">
-      <a href="index.php" class="navbar-brand">  <svg
+      <a href="admin_page.php" class="navbar-brand">  <svg
         viewBox="0 0 111 30"
         class="header_navbar--logo"
         focusable="false"
@@ -143,40 +130,6 @@
       </div>
     </div>
   </section>
-  <footer>
-    <div class="container">
-     
-      <div class="row">
-        <div class="col-md-4 col-6">
-          <ul>
-            <li><a href="contactus.php" class="question-contact">Questions? Contact us.</a></li>
-            <li><a href="FAQ.php">FAQ</a></li>
-            <li><a href="privacy.php">Privacy</a></li>
-            
-          </ul>
-        </div>
-        <div class="col-md-4 col-6">
-          <ul>
-            <li><a href="#">Help Centre</a></li>
-            <li><a href="#">Legal Notices</a></li>
-            <li><a href="#">Terms of Use</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 col-6">
-          <ul>
-            <li><a href="login.php">Account</a></li>
-            <li><a href="#">Ways to Watch</a></li>
-            <li><a href="#">Corporate Information</a></li>
-           
-          </ul>
-        </div>
-       
-      </div>
-    </div>
-
-    
-  </footer>
-  
-  <script src="assets/css/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php
+    include 'footer.php';
+?>
