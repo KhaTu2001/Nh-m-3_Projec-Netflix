@@ -6,14 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix</title>
-    <link rel="shotcut icon" type="img" href="/assets/img/logo-icon.jpg" >
+    <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg" >
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css"> 
+    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="assets/css/bootstrap-5.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/reponsive.css">
-    
-    
 </head>
 <body>  
     
@@ -35,16 +33,7 @@
         </g>
       </svg></a>
       <form class="nav-option d-flex">
-        <div class="icon-language"><i style="color: #fff;" class="icon-language fas fa-globe-europe"></i></div>
-          <select class="language-selection"  style="background-color: transparent;" aria-label="Default select example">
-              <option selected style="background-color: #ccc;" > English</option>
-              <option value="1" style="background-color: #ccc;">Tiếng Việt</option>
-          </select>
-        
-        
         <a href="login.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign In</button></a>
-      
-
       </form>
     </div>
   </nav>
@@ -156,53 +145,36 @@
   </section>
   <footer>
     <div class="container">
-     <a href="contactus.php" class="question-contact" style="margin-left: 32px;">Questions? Contact us.</a>
+     
       <div class="row">
-        <div class="col-md-3 col-6">
+        <div class="col-md-4 col-6">
           <ul>
+            <li><a href="contactus.php" class="question-contact">Questions? Contact us.</a></li>
             <li><a href="FAQ.php">FAQ</a></li>
-            <li><a href="#">Investor Relations</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Speed Test</a></li>
+            <li><a href="privacy.php">Privacy</a></li>
+            
           </ul>
         </div>
-        <div class="col-md-3 col-6">
+        <div class="col-md-4 col-6">
           <ul>
-            <li>An active item</a></li>
             <li><a href="#">Help Centre</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Cookie Preferences</a></li>
             <li><a href="#">Legal Notices</a></li>
+            <li><a href="#">Terms of Use</a></li>
           </ul>
         </div>
-        <div class="col-md-3 col-6">
+        <div class="col-md-4 col-6">
           <ul>
-            <li><a href="#">Account</a></li>
+            <li><a href="login.php">Account</a></li>
             <li><a href="#">Ways to Watch</a></li>
             <li><a href="#">Corporate Information</a></li>
-            <li><a href="#">Netflix Originals</a></li>
+           
           </ul>
         </div>
-        <div class="col-md-3 col-6">
-          <ul>
-            <li><a href="#">Media Centre</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
+       
       </div>
     </div>
 
-    <div class="container">
-      <div class="row ps-4 pb-4">
-        <div class="col-lg-2 col-md-4 col-6">
-          <select class="form-select" style="background-color: transparent;box-shadow: none;color: #fff;" aria-label="Default select example">
-            <option selected style="color: #ccc;" >English</option>
-            <option value="1" style="color: #ccc;" >Tiếng Việt</option>
-          </select>
-        </div>
-      </div>
-    </div>
+    
   </footer>
   
   <script src="assets/css/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>

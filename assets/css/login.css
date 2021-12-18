@@ -36,10 +36,6 @@ a.navbar-brand {
 a.navbar-brand:hover{
     color: #e50914 !important;
 }
-.bg-img {
-    background-image: url(/assets/img/slide-banner.jpg);
-    height: 100%;
- }
 .form_login{ 
     display: flex;
     margin-bottom: 10rem;

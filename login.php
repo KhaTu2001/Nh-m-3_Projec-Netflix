@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="shotcut icon" type="img" href="/assets/img/logo-icon.jpg" >
+    <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg" >
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-5.1.3-dist/css/bootstrap.min.css">
@@ -36,7 +36,7 @@
       </div>
       </nav>
 
-      <div class="slide-banner bg-img">
+      <div class="slide-banner bg-img " style=" background-image: url(assets/img/slide-banner.jpg);height: 100%;">
         <div class="form_login">
           
           <form action="" class="form_layout">
