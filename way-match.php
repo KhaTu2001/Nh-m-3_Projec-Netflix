@@ -32,29 +32,29 @@
   </div>
   <div class="mid">
     <div class="container-fluid">
-      <div class="row align-items-start">
+        <div class="row"></div>
         <div class="col">
-          One of three columns
+          <img src="assets/img/iconwaymatch1.png" alt="">
         </div>
         <div class="col">
-          One of three columns
+        <img src="assets/img/iconwaymatch2.png" alt="">
         </div>
         <div class="col">
-          One of three columns
+        <img src="assets/img/iconwaymatch3.png" alt="">
         </div>
         <div class="col">
-          One of three columns
+        <img src="assets/img/iconwaymatch4.png" alt="">
         </div>
         <div class="col">
-          One of three columns
+        <img src="assets/img/iconwaymatch5.png" alt="">
         </div>
         <div class="col">
-          One of three columns
+        <img src="assets/img/iconwaymatch6.png" alt="">
         </div>
         <div class="col">
-          One of three columns
+        <img src="assets/img/iconwaymatch7.png" alt="">
         </div>
-      </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
