@@ -1,5 +1,5 @@
 <?php
-$con = new mysqli("localhost","root","","project_netflix");
+$con = new mysqli("localhost","root","","btl_netflix");
 
 // Check connection
 if ($con -> connect_errno) {
