@@ -4,6 +4,7 @@
  }
 
 #header .head{
+   position: absolute;
    margin-top: 16px;
     position: absolute;
     display: inline-flex;
@@ -118,6 +119,9 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
+ }
+ .layer.row{
+    z-index: 1;
  }
  
  .top-sign-in {
