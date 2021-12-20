@@ -1,9 +1,9 @@
 <?php
-  include 'header.php' 
+  include 'Template/header.php' 
 ?>
  <nav id="header" class=" navbar navbar-light p-0">
     <div class="container-fluid px-5 head">
-      <a href="admin_page.php" class="navbar-brand">  <svg
+      <a href="index.php" class="navbar-brand">  <svg
         viewBox="0 0 111 30"
         class="header_navbar--logo"
         focusable="false"
@@ -131,5 +131,5 @@
     </div>
   </section>
 <?php
-    include 'footer.php';
+    include 'Template/footer.php';
 ?>

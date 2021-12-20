@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Login</title>
-    <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg" >
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="login.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="assets/css/reponsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Netflix</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="admin.css?v=<?php echo time(); ?>">
 </head>
-<body>
-  <nav id="header" class=" navbar navbar-light p-0">
+<body>  
+    
+<nav id="header" class=" navbar navbar-light p-0">
     <div class="container-fluid px-5 head">
       <a href="index.php" class="navbar-brand">  <svg
         viewBox="0 0 111 30"
@@ -34,19 +29,8 @@
           ></path>
         </g>
       </svg></a>
-      </div>
-      </nav>
-=======
-    <title>Netflix</title>
-    <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg" >
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="assets/css/reponsive.css">
-</head>
-<body>  
-    
- 
->>>>>>> 11eb5f04f09ec0b2fe151dec682c9d8dafd80d1a
+      <form class="nav-option d-flex">
+        <a href="#"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign Out</button></a>
+      </form>
+    </div>
+  </nav>
