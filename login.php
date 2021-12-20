@@ -103,23 +103,14 @@
                </div>
                <div class="col-md-3 col-6 my-4">
                  <ul>
-                   <li><a href="#">Privacy</a></li>
+                   <li><a href="privacy.php">Privacy</a></li>
                    
                  </ul>
                </div>
              </div>
            </div>
        
-           <div class="container">
-             <div class="row ps-4 pb-4">
-               <div class="col-lg-2 col-md-4 col-6">
-                 <select class="form-select" style="background-color: transparent;box-shadow: none;color: #fff;" aria-label="Default select example">
-                   <option selected style="color: #ccc;" >English</option>
-                   <option value="1" style="color: #ccc;" >Tiếng Việt</option>
-                 </select>
-               </div>
-             </div>
-           </div>
+           
         </div> 
       </div>
       

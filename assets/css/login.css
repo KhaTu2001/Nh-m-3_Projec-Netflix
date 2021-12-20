@@ -110,3 +110,11 @@ a.navbar-brand:hover{
   color: #757575;
   text-decoration: underline;
 }
+
+/* Css for main.html */
+.img_posters{
+   width: 100%;
+   margin-right: 10px;
+   max-height: 100px;
+   transition: trasform 450ms;
+}

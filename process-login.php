@@ -16,7 +16,7 @@
             // CẤP THẺ LÀM VIỆC
             $_SESSION['isLoginOK'] = $email;
 
-            header("location: main.php"); //Chuyển hướng về Trang quản trị
+            header("location: main.html"); //Chuyển hướng về Trang quản trị
         }
         else{
 
