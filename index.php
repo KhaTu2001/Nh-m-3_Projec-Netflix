@@ -1,4 +1,3 @@
-
 <?php
   include 'header.php' 
 ?>
@@ -43,11 +42,12 @@
               <input type="email" class=" email-address " required = "">
               <label for="">Email address</label>
             </div>
-            <a href="" class="input-group-text " id="basic-addon2">Get Started <i class="fas fa-chevron-right"></i></a>
+            <a href="signup.php" class="input-group-text " id="basic-addon2">Get Started <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
         
       </div>
+      
     </div>
   </div>
   <section>
