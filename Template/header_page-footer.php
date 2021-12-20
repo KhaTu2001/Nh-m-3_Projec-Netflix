@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>help.netflix.com</title>
+    <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg" >
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/reponsive.css">
+</head>
+<body>
+>>>>>>> e426c9b321a895e7990b15ecfc87e81b084fdaeb
 <nav id="header" class="container-fluid" style="background-color: #000;">
         <div class="contact-header container">
            <div class=" row" >
@@ -49,4 +67,33 @@
                </form>
            </div>
         </div>
+<<<<<<< HEAD
       </nav>
+=======
+      </nav>
+      <section class="container-fluid " style="border-top: none;background-color: #eaeae6;padding:0">
+            <div class="container contact-alert">
+                <a style="text-decoration: none; display:flex; "href="#">
+                        <div style="color:#000; "class="alert-icon">
+                        <i style="font-size:1.25rem"  class="far fa-bell"></i>
+                        </div>
+                        <div class="alert-left">
+                            <div class="alert-text">
+                                <h5>We are currently experiencing a higher than normal wait time for chat support. </h5>
+                                <p>Please try again later or try calling us.</p>
+                            </div>
+                        </div>
+                        
+                   
+                </a>
+            </div>
+            
+        </section>
+        <section class="content-contact">
+            <div class="container">
+            <div class="container back-to-help">
+                <a href="#"><i class="fas fa-arrow-left"></i>Back to help home</a>
+            </div>
+    </div>
+  </section>
+>>>>>>> e426c9b321a895e7990b15ecfc87e81b084fdaeb

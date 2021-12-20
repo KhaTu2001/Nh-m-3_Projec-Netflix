@@ -1,23 +1,7 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix</title>
-    <link rel="shotcut icon" type="img" href="/assets/img/logo-icon.jpg" >
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css"> 
-    <link rel="stylesheet" href="assets/css/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/reponsive.css">
-    
-    
-</head>
-<body>  
-    
-  <nav id="header" class=" navbar navbar-light p-0">
+<?php
+  include 'Template/header.php' 
+?>
+ <nav id="header" class=" navbar navbar-light p-0">
     <div class="container-fluid px-5 head">
       <a href="index.php" class="navbar-brand">  <svg
         viewBox="0 0 111 30"
@@ -35,16 +19,7 @@
         </g>
       </svg></a>
       <form class="nav-option d-flex">
-        <div class="icon-language"><i style="color: #fff;" class="icon-language fas fa-globe-europe"></i></div>
-          <select class="language-selection"  style="background-color: transparent;" aria-label="Default select example">
-              <option selected style="background-color: #ccc;" > English</option>
-              <option value="1" style="background-color: #ccc;">Tiếng Việt</option>
-          </select>
-        
-        
         <a href="login.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign In</button></a>
-      
-
       </form>
     </div>
   </nav>
@@ -53,7 +28,7 @@
     height: 100vh;">
     <div class="layer">
       <div class="row">
-        <div class="col-md-12 text-center">
+        <div class="col-md-12 text-center" style="z-index: 1;">
           <h1>Unlimited movies, TV <br>shows and more.</h1>
           <h3>Watch anywhere. Cancel anytime.</h3>
           <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
@@ -154,6 +129,7 @@
       </div>
     </div>
   </section>
+<<<<<<< HEAD
   <footer>
     <div class="container">
      <a href="contactus.php" class="question-contact" style="margin-left: 32px;">Questions? Contact us.</a>
@@ -208,3 +184,8 @@
   <script src="assets/css/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
+=======
+<?php
+    include 'Template/footer.php';
+?>
+>>>>>>> e426c9b321a895e7990b15ecfc87e81b084fdaeb

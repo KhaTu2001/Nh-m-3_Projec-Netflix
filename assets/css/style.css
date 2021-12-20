@@ -4,6 +4,7 @@
  }
 
 #header .head{
+   position: absolute;
    margin-top: 16px;
     position: absolute;
     display: inline-flex;
@@ -72,14 +73,6 @@
     position: absolute;
     width: 100%;
  }
- 
- .form-select {
-    background-color: #333;
-    border: 1px solid #757575;
-    color: #757575;
-    height: 52px;
- }
- 
  a.navbar-brand {
     color: #e50914 !important;
     font-weight: bold;
@@ -118,34 +111,6 @@
     height: 100vh;
  }
  
- .icon-language{
-    color: #fff;
-    justify-content: center;
-    align-items: center;
-    margin-top: 6px;
-    margin-right: -10px;
-}
-.language-selection {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border: 1px solid #fff;
-   padding-left: 24px;
-   border-radius: 4px;
-   min-height: 36px;
-   margin-right: 24px;
-   margin-top: 8px;
-}
-.language-selection::before{
-   
-}
-#header select{
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
  .layer {
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -154,6 +119,9 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
+ }
+ .layer.row{
+    z-index: 1;
  }
  
  .top-sign-in {
@@ -401,6 +369,8 @@ position: relative;
    font-weight: 600;
    border: 1px solid #303030;
 }
+
+
 .content-contact-left li{
    padding: 8px 0;
    
@@ -447,22 +417,8 @@ position: relative;
    width: 85%;
 }
 .footer-contact{
-   margin-top: 68px;
    background-color: #221f1f;
-   height: 100%;
 }
-.footer-contact select{
-   font-size: 1.25rem;
-   color: #757575;
-   border: 1px solid #757575;
-   font-weight: 400;
-   border-radius: 4px;
-   display: flex;
-   padding-right: 58px;
-   padding-left: 32px;
-   height: 50px;
-}
-
 .footer-contact-left{
    display: flex;
    float: right;
@@ -601,9 +557,6 @@ position: relative;
    font-weight: 650;
    border:1px solid #000
 }
-.faq-footer-right button:hover{
-   background-color:#eaeae6 ;
-}
 .note >div{
    display: inline;
 }
@@ -618,4 +571,46 @@ position: relative;
     padding: 0 12px;
     position: relative;
 }
+<<<<<<< HEAD
+=======
+.contact-alert{
+   color: black !important;
+   display: flex  ;
+}
+.contact-alert a :hover{
+   color: black !important;
+}
+.privacy-text{
+   margin-top: 20px;
+}
+.privacy-text h1{
+   color: #000000;
+   margin: 40px 0;
+}
+.privacy-text span{
+   font-weight: 650;
+}
+.privacy-text a{
+   color: #e50914 !important;
+   text-decoration: none;
+}
+.privacy-text a:hover{
+   color: #e50914;
+   text-decoration: underline;
+}
+.privacy-text h5{
+   color: black;
+   margin-bottom: 16px;
+}
+.privacy-text p {
+   color: black;
+   margin-bottom: 16px;
+}
+.privacy-text ul{
+   margin-bottom: 12px;
+}
+.privacy-text ul li {
+   margin-bottom: 12px;
+}
+>>>>>>> e426c9b321a895e7990b15ecfc87e81b084fdaeb
 

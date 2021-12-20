@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,6 +45,12 @@
           </div>
             </div>
         </section>
+=======
+
+    <?php   
+        include 'Template/header_page-footer.php';
+    ?>    
+>>>>>>> e426c9b321a895e7990b15ecfc87e81b084fdaeb
         <div class="container privacy-text" > 
             <h1 >Privacy Statement</h1>
             <p>This Privacy Statement explains our practices, including your choices, regarding the collection, use, and disclosure of certain information, including your personal information in connection with the Netflix service.</p>

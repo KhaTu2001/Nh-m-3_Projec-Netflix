@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Netflix</title>
     <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg" >
     <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/font/fontawesome-free-5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/login.css"> 
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="assets/css/login.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
     <link rel="stylesheet" href="assets/css/reponsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <nav id="header" class=" navbar navbar-light p-0">
@@ -35,29 +33,35 @@
       </svg></a>
       </div>
       </nav>
-
-      <div class="slide-banner bg-img" style="background-image: url(assets/img/slide-banner.jpg);
-    height: 100%;">
+      <div class="slide-banner bg-img " style=" background-image: url(assets/img/slide-banner.jpg);height: 100%;">
         <div class="form_login">
-          <form action="" class="form_layout">
+          
+          <form action="process-login.php" class="form_layout" method="POST">
             <div class="form_header">
               <h1>Sign in</h1>
             </div>
             <div class="mb-3 mt-3">
              
-              <input type="email" class="form-control" id="email" placeholder="Email or phone number" name="email">
+            <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" required autofocus>
             </div>
             <div class="mb-3">
              
-              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+            <input type="password" id="inputPassword" name="txtPass" class="form-control" placeholder="Password" required>
+             
             </div>
             
-            <button type="submit" class="btn btn-primary mb-3">Sign in</button>
+            <button type="submit" class="btn btn-primary mb-3" name="btn_submit">Sign in</button>
             <div class="form-check mb-3">
               <label class="form-check-label ">
                 <input class="form-check-input" type="checkbox" name="remember"> Remember me
               </label>
               <a class="needhelp_form" href="">Needhelp?</a>
+              <?php
+                    if(isset($_GET['error'])){
+                        echo "<h5 style='color:red'> {$_GET['error']} </h5>";
+                    }
+
+                ?>
             </div>
             <div class="mb-3">
               <i class="fab fa-facebook-square"></i>
