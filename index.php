@@ -28,7 +28,7 @@
     height: 100vh;">
     <div class="layer">
       <div class="row">
-        <div class="col-md-12 text-center" style="z-index: 1;">
+        <div class="col-md-12 text-center">
           <h1>Unlimited movies, TV <br>shows and more.</h1>
           <h3>Watch anywhere. Cancel anytime.</h3>
           <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
@@ -42,11 +42,12 @@
               <input type="email" class=" email-address " required = "">
               <label for="">Email address</label>
             </div>
-            <a href="" class="input-group-text " id="basic-addon2">Get Started <i class="fas fa-chevron-right"></i></a>
+            <a href="signup.php" class="input-group-text " id="basic-addon2">Get Started <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
         
       </div>
+      
     </div>
   </div>
   <section>
@@ -129,63 +130,6 @@
       </div>
     </div>
   </section>
-<<<<<<< HEAD
-  <footer>
-    <div class="container">
-     <a href="contactus.php" class="question-contact" style="margin-left: 32px;">Questions? Contact us.</a>
-      <div class="row">
-        <div class="col-md-3 col-6">
-          <ul>
-            <li><a href="FAQ.php">FAQ</a></li>
-            <li><a href="#">Investor Relations</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Speed Test</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-6">
-          <ul>
-            <li>An active item</a></li>
-            <li><a href="#">Help Centre</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Cookie Preferences</a></li>
-            <li><a href="#">Legal Notices</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-6">
-          <ul>
-            <li><a href="#">Account</a></li>
-            <li><a href="way-match.php">Ways to Watch</a></li>
-            <li><a href="#">Corporate Information</a></li>
-            <li><a href="#">Netflix Originals</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 col-6">
-          <ul>
-            <li><a href="#">Media Centre</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row ps-4 pb-4">
-        <div class="col-lg-2 col-md-4 col-6">
-          <select class="form-select" style="background-color: transparent;box-shadow: none;color: #fff;" aria-label="Default select example">
-            <option selected style="color: #ccc;" >English</option>
-            <option value="1" style="color: #ccc;" >Tiếng Việt</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  </footer>
-  
-  <script src="assets/css/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
-</body>
-</html>
-=======
 <?php
     include 'Template/footer.php';
 ?>
->>>>>>> e426c9b321a895e7990b15ecfc87e81b084fdaeb

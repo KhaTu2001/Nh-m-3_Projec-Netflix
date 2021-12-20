@@ -33,6 +33,7 @@
       </svg></a>
       </div>
       </nav>
+
       <div class="slide-banner bg-img " style=" background-image: url(assets/img/slide-banner.jpg);height: 100%;">
         <div class="form_login">
           
@@ -102,26 +103,18 @@
                </div>
                <div class="col-md-3 col-6 my-4">
                  <ul>
-                   <li><a href="#">Privacy</a></li>
+                   <li><a href="privacy.php">Privacy</a></li>
                    
                  </ul>
                </div>
              </div>
            </div>
        
-           <div class="container">
-             <div class="row ps-4 pb-4">
-               <div class="col-lg-2 col-md-4 col-6">
-                 <select class="form-select" style="background-color: transparent;box-shadow: none;color: #fff;" aria-label="Default select example">
-                   <option selected style="color: #ccc;" >English</option>
-                   <option value="1" style="color: #ccc;" >Tiếng Việt</option>
-                 </select>
-               </div>
-             </div>
-           </div>
+           
         </div> 
       </div>
       
-    <script src="assets/css/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>   
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>   
 </body>
 </html>

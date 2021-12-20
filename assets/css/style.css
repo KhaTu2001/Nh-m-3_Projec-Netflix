@@ -210,6 +210,9 @@
  a:hover{
     color: #fff !important;
 }
+.form_email{
+   display: flex !important;
+}
 .email-address{
    height: 80px;
    padding: 10px 0;

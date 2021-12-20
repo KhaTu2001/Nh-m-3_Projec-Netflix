@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 20, 2021 at 01:56 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.3.33
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th12 20, 2021 lúc 04:47 PM
+-- Phiên bản máy phục vụ: 10.4.21-MariaDB
+-- Phiên bản PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `btl_netflix`
+-- Cơ sở dữ liệu: `btl_netflix`
 --
 CREATE DATABASE IF NOT EXISTS `btl_netflix` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `btl_netflix`;
@@ -26,28 +26,27 @@ USE `btl_netflix`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nguoidung`
+-- Cấu trúc bảng cho bảng `nguoidung`
 --
 
 CREATE TABLE `nguoidung` (
   `id` int(11) NOT NULL,
-  `username` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `pass` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `username` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pass` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `nguoidung`
+-- Đang đổ dữ liệu cho bảng `nguoidung`
 --
 
 INSERT INTO `nguoidung` (`id`, `username`, `email`, `pass`) VALUES
-(1, 'quan', 'a@gmail.com', '[1]'),
-(2, 'khatu', 'khatu@gmail.com', '123456');
+(1, 'admin', 'quan@gmail.com', '123');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `phim`
+-- Cấu trúc bảng cho bảng `phim`
 --
 
 CREATE TABLE `phim` (
@@ -60,7 +59,7 @@ CREATE TABLE `phim` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `phim`
+-- Đang đổ dữ liệu cho bảng `phim`
 --
 
 INSERT INTO `phim` (`ma_phim`, `anh`, `tenphim`, `linkphim`, `tenquocgia`, `tentheloai`) VALUES
@@ -70,7 +69,7 @@ INSERT INTO `phim` (`ma_phim`, `anh`, `tenphim`, `linkphim`, `tenquocgia`, `tent
 -- --------------------------------------------------------
 
 --
--- Table structure for table `quocgia`
+-- Cấu trúc bảng cho bảng `quocgia`
 --
 
 CREATE TABLE `quocgia` (
@@ -80,7 +79,7 @@ CREATE TABLE `quocgia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `quocgia`
+-- Đang đổ dữ liệu cho bảng `quocgia`
 --
 
 INSERT INTO `quocgia` (`ma_quocgia`, `ma_phim`, `tenquocgia`) VALUES
@@ -89,7 +88,7 @@ INSERT INTO `quocgia` (`ma_quocgia`, `ma_phim`, `tenquocgia`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `theloai`
+-- Cấu trúc bảng cho bảng `theloai`
 --
 
 CREATE TABLE `theloai` (
@@ -99,86 +98,31 @@ CREATE TABLE `theloai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `theloai`
+-- Đang đổ dữ liệu cho bảng `theloai`
 --
 
 INSERT INTO `theloai` (`ma_theloai`, `ma_phim`, `tentheloai`) VALUES
 (1, 1, 'test');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `nguoidung`
+-- Chỉ mục cho bảng `nguoidung`
 --
 ALTER TABLE `nguoidung`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `phim`
---
-ALTER TABLE `phim`
-  ADD PRIMARY KEY (`ma_phim`),
-  ADD UNIQUE KEY `tenphim` (`tenphim`),
-  ADD UNIQUE KEY `linkphim` (`linkphim`),
-  ADD UNIQUE KEY `tenquocgia` (`tenquocgia`);
-
---
--- Indexes for table `quocgia`
---
-ALTER TABLE `quocgia`
-  ADD PRIMARY KEY (`ma_quocgia`),
-  ADD UNIQUE KEY `tenquocgia` (`tenquocgia`),
-  ADD KEY `phim_ibfk_1` (`ma_phim`);
-
---
--- Indexes for table `theloai`
---
-ALTER TABLE `theloai`
-  ADD PRIMARY KEY (`ma_theloai`),
-  ADD UNIQUE KEY `tentheloai` (`tentheloai`),
-  ADD KEY `ma_phim_ibfk_1` (`ma_phim`);
-
---
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `nguoidung`
+-- AUTO_INCREMENT cho bảng `nguoidung`
 --
 ALTER TABLE `nguoidung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `quocgia`
---
-ALTER TABLE `quocgia`
-  MODIFY `ma_quocgia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `theloai`
---
-ALTER TABLE `theloai`
-  MODIFY `ma_theloai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `quocgia`
---
-ALTER TABLE `quocgia`
-  ADD CONSTRAINT `phim_ibfk_1` FOREIGN KEY (`ma_phim`) REFERENCES `phim` (`ma_phim`);
-
---
--- Constraints for table `theloai`
---
-ALTER TABLE `theloai`
-  ADD CONSTRAINT `ma_phim_ibfk_1` FOREIGN KEY (`ma_phim`) REFERENCES `phim` (`ma_phim`);
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
