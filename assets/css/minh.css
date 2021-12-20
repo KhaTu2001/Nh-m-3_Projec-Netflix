@@ -1,13 +1,12 @@
-.navbar .container-fluid img{
+.navbar .container img{
     width: 145px;
     height: 35px;
-    margin-left: 200px;
+
 }
-.navbar .container-fluid form{
+.navbar .container form{
     text-align: center;
-    margin-right: 250px;
 }
-.navbar .container-fluid form button{
+.navbar .container form button{
     background-color: red;
     width: 75px;
     height: 40px;
@@ -34,10 +33,76 @@
     background-image: url(assets/img/backgourp.jpg);
     padding: 100px 0;
 }
-.mid .container-fluid{
+.tabs {
     display: flex;
-}
-.mid .container-fluid .row img{
-    width: 217px;
-    height: 160px;
-}
+    position: relative;
+  }
+  .tab-content{
+      background-image: url(assets/img/backgroundwaymatch.png);
+      padding: 100px;
+  }
+  .tab-content{
+    color: aliceblue;
+  }
+  .tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #e60b0b;
+    transition: all 0.2s ease;
+  }
+  .text{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .ᴠr { 
+    height: 100%; width: 1pх; 
+    border-left: 1px solid gray;
+   }
+   .container .row a{
+     color: gray;
+     text-decoration: none;
+   }
+   .container .row a:hover{
+     text-decoration: underline;
+   }
+   .banquyen{
+    display: flex;
+    text-align: center;
+   }
+   .bottom img{
+     width: 50px;
+   }
+   .bottom{
+     margin-left: 110px;
+     margin-top: 20px;
+   }
+   .bottom .banquyen .far{
+     margin-top: 5px;
+     margin-right: 5px;
+   }
+   .bottom .textany a{
+    color: gray;
+    text-decoration: none;
+  }
+  .textany{
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+  }
+  .textany a:hover{
+    text-decoration: underline;
+  }
+  .banquyenleft{
+    display: flex;
+    flex: 1;
+  }
+  .banquyen img{
+    display: flex;
+  }
+
