@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assets/css/reponsive.css">
 </head>
 <body>
-  <nav id="header" class=" navbar navbar-light p-0">
+<nav id="header" class=" navbar navbar-light p-0">
     <div class="container-fluid px-5 head">
       <a href="index.php" class="navbar-brand">  <svg
         viewBox="0 0 111 30"
@@ -32,12 +32,12 @@
         </g>
       </svg></a>
       </div>
-      </nav>
+      </nav>  
 
       <div class="slide-banner bg-img " style=" background-image: url(assets/img/slide-banner.jpg);height: 100%;">
         <div class="form_login">
           
-          <form action="process-login.php" class="form_layout" method="POST">
+          <form action="process-login.php" class="form_layout" method="POST" name="login" onsubmit="return validateLogin()">
             <div class="form_header">
               <h1>Sign in</h1>
             </div>
@@ -48,9 +48,9 @@
             <div class="mb-3">
              
             <input type="password" id="inputPassword" name="txtPass" class="form-control" placeholder="Password" required>
-             
-            </div>
             
+            </div>
+            <p id="sr_pass"></p>
             <button type="submit" class="btn btn-primary mb-3" name="btn_submit">Sign in</button>
             <div class="form-check mb-3">
               <label class="form-check-label ">
@@ -116,5 +116,6 @@
       
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>   
+<script src="assets/js/main.js"></script>
 </body>
 </html>

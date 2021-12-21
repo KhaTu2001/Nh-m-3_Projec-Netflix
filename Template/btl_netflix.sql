@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 20, 2021 lúc 04:47 PM
+-- Thời gian đã tạo: Th12 21, 2021 lúc 04:48 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.12
 
@@ -41,7 +41,8 @@ CREATE TABLE `nguoidung` (
 --
 
 INSERT INTO `nguoidung` (`id`, `username`, `email`, `pass`) VALUES
-(1, 'admin', 'quan@gmail.com', '123');
+(1, 'admin', 'quan@gmail.com', '123'),
+(2, 'admin', 'quan27@gmail.com', 'Quan2001');
 
 -- --------------------------------------------------------
 
@@ -122,7 +123,7 @@ ALTER TABLE `nguoidung`
 -- AUTO_INCREMENT cho bảng `nguoidung`
 --
 ALTER TABLE `nguoidung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

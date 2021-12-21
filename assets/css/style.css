@@ -609,4 +609,6 @@ position: relative;
 .privacy-text ul li {
    margin-bottom: 12px;
 }
-
+.header_right{
+  float: right !important;
+}
