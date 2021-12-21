@@ -27,11 +27,10 @@
             <h3>Call us from any phone</h3>
             <h5>Phone is currently unavailable.</h5>
             <p>Call us using the Netflix app as we don't offer a phone number in your country</p>
-            <button class="call-us">CALL US</button>
             <hr>
             <h3>Live Chat</h3>
             <p>You will need an internet or mobile phone connection.</p>
-            <button class="live-chat">START LIVE CHAT</button>
+            
           </div>
         </div>
         <div class="col-lg-4 col-md-12 ">

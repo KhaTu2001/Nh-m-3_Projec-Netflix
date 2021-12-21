@@ -83,15 +83,6 @@
      </div>
 
   </section>
-    <section class="container-fluid" style="background-color: #eaeae6; border-top: none; margin-top: 10px;">
-        <div class="container faq-footer">
-            <h4 class="faq-footer-left" style="font-weight: 700;">Want to contact us?</h4>
-            <div class="faq-footer-right">
-                <button class="call-us">CALL US</button>
-                <button class = "live-chat">START LIVE CHAT</button>
-            </div>
-        </div>
-    </section>
 
     <?php
     include 'Template/footer_page-footer.php';
