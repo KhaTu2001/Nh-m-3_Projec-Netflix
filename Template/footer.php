@@ -20,8 +20,8 @@
         <div class="col-md-4 col-6">
           <ul>
             <li><a href="login.php">Account</a></li>
-            <li><a href="#">Ways to Watch</a></li>
-            <li><a href="#">Corporate Information</a></li>
+            <li><a href="way-match.php">Ways to Match</a></li>
+            <li><a href="corpinfo.php">Corporate Information</a></li>
            
           </ul>
         </div>
