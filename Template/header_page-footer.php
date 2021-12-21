@@ -17,7 +17,7 @@
         <div class="contact-header container">
            <div class=" row" >
 
-               <div class="navbar-right">
+               <div class="navbar-right"style="width:auto;">
    
                    <a href="index.php" class="navbar-brand" >  
                      <svg
@@ -51,18 +51,19 @@
                    <div class="sperate"></div>
                    <div class="help-center">
                        <a href="#">Help Center</a>
-                   </div>
-               </div>
+                    </div>
+            
            </div>
-           <div class="navbar-left">
+           <div class="navbar-left" style="width:auto;">
                <div class="join-netflix">
-
                    <a href="">JOIN NETFLIX</a>
                </div>
                <form class="nav-option d-flex">
                  <a href=""><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign In</button></a>
                </form>
            </div>
+        </div>
+
         </div>
       </nav>
       <section class="container-fluid " style="border-top: none;background-color: #eaeae6;padding:0">

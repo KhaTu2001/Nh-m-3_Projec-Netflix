@@ -2,6 +2,7 @@
     --bs-red: #e50914;
     
  }
+ 
 
 #header .head{
    position: absolute;
@@ -244,10 +245,15 @@
    margin-top: 24px;
 }
 .contact-header{
-position: relative;
+   position: relative;
   display: flex;
   justify-content: space-between;
   height: 64px;
+}
+
+.contact-header .row{
+   display: flex;
+  justify-content: space-between;
 }
 .contact-header a{
    width: 90px;
