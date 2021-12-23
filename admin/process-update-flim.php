@@ -1,32 +1,34 @@
 <?php
     // Trước khi cho người dùng xâm nhập vào bên trong
     // Phải kiểm tra THẺ LÀM VIỆC
-    session_start();
-    if(!isset($_SESSION['isLoginOK'])){
-        header("location:login.php");
-    }
-    // Xử lý giá trị GỬI TỚI
-    if(isset($_POST['txtMaNV'])){
-        $maNhanVien = $_POST['txtMaNV'];
-    }
-    if(isset($_POST['txtHoTen'])){
-        $hoTen      = $_POST['txtHoTen'];
-    }
-
-    $chucVu         = $_POST['txtChucVu'];
-    $soMayBan       = $_POST['txtSoMayBan'];
-    $soDiDong       = $_POST['txtSoDiDong'];
-    $email          = $_POST['txtEmail'];
-    $maDonVi        = $_POST['cboDonVi'];
-
     
-    // Bước 01: Kết nối Database Server
-    $conn = mysqli_connect('localhost','root','','dhtl_danhba');
-    if(!$conn){
-        die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
+    // Xử lý giá trị GỬI TỚI
+    if(isset($_POST['txtidmovie'])){
+        $maNhanVien = $_POST['txtidmovie'];
     }
+    if(isset($_POST['txtnameofflim'])){
+        $moviename = $_POST['txtnameofflim'];
+    }
+    
+    $image = $_FILES['image']['name'];
+    $target = "photo/".basename($image);
+    $sql = "INSERT INTO movie (image) VALUES ('$image')";
+    mysqli_query($conn, $sql);
+    if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+    echo '<script language="javascript">alert("Đã upload thành công!");</script>';
+    }else{
+    echo '<script language="javascript">alert("Đã upload thất bại!");</script>';
+    }
+    
+    
+    $movielink = $_POST['txtlink'];
+    $countryname = $_POST['cboCountry'];
+    $genrename = $_POST['cbogenre'];
+    // Bước 01: Kết nối Database Server
+    include 'connect.php';
     // Bước 02: Thực hiện truy vấn
-    $sql = "UPDATE db_nhanvien SET hovaten='$hoTen', chucvu='$chucVu', sodt_coquan = '$soMayBan', sodt_didong = '$soDiDong', email='$email', ma_donvi = '$maDonVi' WHERE ma_nhanvien = '$maNhanVien'";
+    $sql = "UPDATE movie 
+            SET image='$image', name_movie='$moviename', link = '$movielink', name_country = '$countryname', name_genre='$genrename'";
     // echo $sql;
 
     $ketqua = mysqli_query($conn,$sql);

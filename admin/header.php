@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link rel="shotcut icon" type="img" href="logo-icon.jpg" >
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">  
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="admin.css?v=<?php echo time(); ?>">
 </head>
 <body>  
     
-<nav id="header" class=" navbar navbar-light p-0">
-    <div class="container-fluid px-5 head">
+<nav id="header" class=" navbar navbar-light p-0 "  style="">
+    <div class="container px-5 head" >
       <a href="index.php" class="navbar-brand">  <svg
         viewBox="0 0 111 30"
         class="header_navbar--logo"
@@ -29,8 +30,8 @@
           ></path>
         </g>
       </svg></a>
-      <form class="nav-option d-flex">
-        <a href="#"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign Out</button></a>
-      </form>
+      
+        <a href="#"><button type="button" class="btn btn-danger btn_signout"> Sign Out</button></a>
+      
     </div>
   </nav>

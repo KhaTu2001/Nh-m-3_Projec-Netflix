@@ -1,27 +1,22 @@
 <?php
     // Trước khi cho người dùng xâm nhập vào bên trong
     // Phải kiểm tra THẺ LÀM VIỆC
-    session_start();
-    if(!isset($_SESSION['isLoginOK'])){
-        header("location:login.php");
-    }
+
     // deleteEmployee: NHẬN DỮ LIỆU TỪ admin.php gửi sang
-    $ma_phim = $_GET['ma_phim'];
+    $id_movie = $_GET['id_movie'];
 
     // Bước 01: Kết nối Database Server
-    $conn = mysqli_connect('localhost','root','','btl_netflix');
-    if(!$conn){
-        die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
-    }
+    require 'connect.php';
     // Bước 02: Thực hiện truy vấn
-    $sql = "SELECT * FROM phim WHERE ma_phim = '$ma_phim'";
+    $sql = "SELECT * FROM movie WHERE id_movie = '$id_movie'";
 
     $result = mysqli_query($conn,$sql); //Nó chỉ ra về 1 bản ghi, mà mình chỉ cần lấy 1 bản ghi thôi
 
     // Bước 03: Xử lý kết quả
     if(mysqli_num_rows($result) > 0){
         $row = mysqli_fetch_assoc($result);
-        $ma_quocgia = $row['ma_quocgia'];
+        $id_country = $row['id_country'];
+        $id_genre = $row['id_genre'];
     }
 
     // Bước 04: Đóng kết nối
@@ -32,17 +27,26 @@
     include("header.php");
 ?>
     <main>
-    <div class="container">
+    <div class="slide-banner bg-img "
+    style="background-image: url(slide-banner.jpg); height: 100vh;"
+      >
     <h5 class="text-center text-primary mt-5">Add a new movie to the movie store.</h5>
         <!-- Form thêm Dữ liệu nhân viên -->
         
         <form action="process-update-flim.php" method="post" enctype="multipart/form-data" >
+        <div class="form-group">
+                <label for="txtidmovie">Movie ID</label>
+                <input type="text" class="form-control" id="txtidmovie" name="txtidmovie" placeholder="Add Movie ID">
+                <!-- <small id="txtHoTenHelp" class="form-text text-muted">Có thể dùng nó hiển thị thông báo lỗi hoặc gợi ý</small> -->
+            </div>
             <div class="form-group" >
-                <label for="txtimg">Image</label>
+            <label for="txtimg">Image</label>
                 <?php   
                     echo "<br>";
                 ?>
-                <input type="file" name="image" id="txtimg" name="txtimg" >
+   
+                <input type="file" name="image"> 
+               
                 <!-- <small id="txtHoTenHelp" class="form-text text-muted">Có thể dùng nó hiển thị thông báo lỗi hoặc gợi ý</small> -->
             </div>
             <div class="form-group">
@@ -62,19 +66,19 @@
                     <!-- Truy vấn dữ liệu để Hiển thị lựa chọn Đơn vị -->
                     <?php 
                         // Bước 01: Kết nối Database Server
-                       include 'connect.php';
+                        require 'connect.php';
                         // Bước 02: Thực hiện truy vấn
-                        $sql = "SELECT * FROM quocgia";
+                        $sql = "SELECT * FROM country";
 
                         $result = mysqli_query($conn,$sql);
 
                         // Bước 03: Xử lý kết quả truy vấn
                         if(mysqli_num_rows($result)){
                             while($row = mysqli_fetch_assoc($result)){
-                                if($row['ma_quocgia'] == $ma_quocgia){
-                                    echo '<option selected value="'.$row['ma_quocgia'].'">'.$row['tenquocgia'].'</option>';
+                                if($row['id_country'] == $id_country){
+                                    echo '<option selected value="'.$row['id_country'].'">'.$row['name_country'].'</option>';
                                 }else{
-                                    echo '<option value="'.$row['ma_quocgia'].'">'.$row['tenquocgia'].'</option>';
+                                    echo '<option value="'.$row['id_country'].'">'.$row['name_country'].'</option>';
                                 }
 
                             }
@@ -93,19 +97,19 @@
                     <!-- Truy vấn dữ liệu để Hiển thị lựa chọn Đơn vị -->
                     <?php 
                         // Bước 01: Kết nối Database Server
-                        include 'connect.php';
+                        require 'connect.php';
                         // Bước 02: Thực hiện truy vấn
-                        $sql = "SELECT * FROM theloai";
+                        $sql = "SELECT * FROM genre";
 
                         $result = mysqli_query($conn,$sql);
 
                         // Bước 03: Xử lý kết quả truy vấn
                         if(mysqli_num_rows($result)){
                             while($row = mysqli_fetch_assoc($result)){
-                                if($row['ma_donvi'] == $ma_theloai){
-                                    echo '<option selected value="'.$row['ma_theloai'].'">'.$row['tentheloai'].'</option>';
+                                if($row['id_genre'] == $id_genre){
+                                    echo '<option selected value="'.$row['id_genre'].'">'.$row['name_genre'].'</option>';
                                 }else{
-                                    echo '<option value="'.$row['ma_theloai'].'">'.$row['tentheloai'].'</option>';
+                                    echo '<option value="'.$row['id_country'].'">'.$row['name_genre'].'</option>';
                                 }
 
                             }
@@ -117,7 +121,7 @@
                
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary mt-3">save</button>
+            <button type="submit" name="save"class="btn btn-primary mt-3">save</button>
         </form>
     </div>    
     </main>

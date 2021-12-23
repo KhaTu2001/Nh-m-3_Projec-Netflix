@@ -1,18 +1,15 @@
 <?php
     // Trước khi cho người dùng xâm nhập vào bên trong
     // Phải kiểm tra THẺ LÀM VIỆC
-    session_start();
-    if(!isset($_SESSION['isLoginOK'])){
-        header("location:login.php");
-    }
+    
     // admin.php TRUYỀN DỮ LIỆU SANG
     // deleteEmployee: NHẬN DỮ LIỆU TỪ admin.php gửi sang
-    $ma_phim = $_GET['ma_phim'];
+    $id_movie = $_GET['id_movie'];
 
     // Bước 01: Kết nối Database Server
-    include 'connect.php';
+    require 'connect.php';
     // Bước 02: Thực hiện truy vấn
-    $sql = "DELETE FROM phim WHERE ma_phim = '$ma_phim'";
+    $sql = "DELETE FROM movie WHERE id_movie = '$id_movie'";
 
     $number = mysqli_query($conn,$sql);
 

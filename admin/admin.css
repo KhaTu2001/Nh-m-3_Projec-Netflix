@@ -7,6 +7,9 @@
     z-index: 1;
     
 }
+.row>*{
+   width: auto;
+}
 body {
    padding: 0;
    margin: 0;
@@ -142,7 +145,7 @@ footer {
 }
  .admin_box table{
     color: #fff;
-    height: 400px;
+    max-height: 400px;
 
  }
  .admin_table {
@@ -169,31 +172,11 @@ footer {
  .admin_box table a i:hover{
     color: #e50914 !important;
  }
- #content{
-   margin: 20px auto;
-   border: 1px solid #cbcbcb;
-   overflow: auto;
-   padding: 20px;
-   }
-   form{
-   margin: 20px auto;
-   }
-   form div{
-   margin-top: 5px;
-   }
-   #img_div{
-   padding: 5px;
-   border: 1px solid #cbcbcb;
-   float: left
-   }
-   #img_div:after{
-   content: "";
-   display: block;
-   clear: both;
-   }
-   #img_div img{
-   float: left;
-   margin: 5px;
-   width: 400px;
-   height: auto;
-   }
+ .admin_table table tr:hover{
+   background-color:#e50914 ;
+   color: #fff;
+}
+.admin_table table td{
+   
+  
+}

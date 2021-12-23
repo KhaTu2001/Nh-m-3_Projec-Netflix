@@ -1,8 +1,5 @@
 <?php
-  session_start();
-  if(!isset($_SESSION['isLoginOK'])){
-    header("location:login.php");
-  }
+  
     include 'header.php';
 ?>
 <main>
@@ -21,38 +18,45 @@
               <h4 class="text-center  mt-5">Manage movie stores on Netflix</h5>
             </div>
               
-          <table class="table table-bordered">
+          <table class="table table-bordered table-hover">
+            
           <thead>
                 <tr>
-                      <th scope="col">movie code</th>
-                      <th scope="col">image</th>
-                      <th scope="col">movie name</th>
-                      <th scope="col">movie Link</th>
+                      <th scope="col">Movie code</th>
+                      <th scope="col">Movie name</th>
+                      <th scope="col">Image</th>
+                      <th scope="col">Movie Link</th>
                       <th scope="col">Country</th>
-                      <th scope="col">genre</th>
-                      <th scope="col">edit</th>
-                      <th scope="col">delete</th> 
+                      <th scope="col">Genre</th>
+                      <th scope="col">Edit</th>
+                      <th scope="col">Delete</th> 
                 </tr>
           </thead>
           <tbody>
               
               <?php
-                include 'connect.php';
-                  $sql = "SELECT phim.ma_phim,phim.anh, phim.tenphim, phim.linkphim,quocgia.tenquocgia,theloai.tentheloai
-                          from (phim inner join quocgia on phim.ma_phim = quocgia.ma_phim) inner join theloai on phim.ma_phim = theloai.ma_phim" ;
+                  include 'connect.php';
+                  $sql = "SELECT movie.id_movie,movie.name_movie, movie.image, movie.link,movie.name_country,movie.name_genre
+                          from movie";
                   $result = mysqli_query($conn,$sql);
                   if(mysqli_num_rows($result)>0){
                               while($row = mysqli_fetch_assoc($result)){
               ?>
                   <tr>
-                          <th style = "width:40px" scope="row"><?php echo $row['ma_phim']; ?></th>
-                          <td style = "width:320px"><?php echo'<img src="'.$row['anh'].'"  class="img-fluid">';?> </td>
-                          <td style = "width:150px"><?php echo $row['tenphim']; ?></td>
-                          <td style = "width:300px"><?php echo $row['linkphim']; ?></td>
-                          <td style = "width:150px"><?php echo $row['tenquocgia']; ?></td>
-                          <td style = "width:150px"><?php echo $row['tentheloai']; ?></td>
-                          <td style = "width:70px"><a href="update_flim.php?id=<?php echo $row['ma_phim']; ?>"><i class="fas fa-edit"></i></a></td>
-                          <td style = "width:70px"><a href="delete_flim.php?id=<?php echo $row['ma_phim']; ?>"><i class="far fa-trash-alt"></i></a></td>
+                          <th scope="row"><?php echo $row['id_movie']; ?></th>
+                          <td style = "width:150px;"><?php echo $row['name_movie']; ?></td>
+                          <td style = "width:320px"><?php     
+                          
+                          echo "<div id='img_div' style='width: 100%;'>";
+                          echo "<img  src='photo/".$row['image']."' >";
+                          echo "</div>";
+                          
+                          ?></td>
+                          <td style = "width:300px"><?php echo $row['link']; ?></td>
+                          <td style = "width:150px"><?php echo $row['name_country'];?></td>
+                          <td style = "width:150px"><?php echo $row['name_genre']; ?></td>
+                          <td style = "width:70px"><a href="update_flim.php?id=<?php echo $row['id_movie']; ?>"><i class="fas fa-edit"></i></a></td>
+                          <td style = "width:70px"><a href="delete_flim.php?id=<?php echo $row['id_movie']; ?>"><i class="far fa-trash-alt"></i></a></td>
                     </tr>
                 <?php
                         }

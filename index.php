@@ -27,8 +27,8 @@
   style="background-image: url(assets/img/slide-banner.jpg);
     height: 100vh;">
     <div class="layer">
-      <div class="row">
-        <div class="col-md-12 text-center">
+      <div class="row" style="flex:1;">
+        <div class="col-md-12 text-center" style="margin-top:100%" >
           <h1>Unlimited movies, TV <br>shows and more.</h1>
           <h3>Watch anywhere. Cancel anytime.</h3>
           <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
