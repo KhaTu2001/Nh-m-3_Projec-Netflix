@@ -132,12 +132,14 @@
  }
 
  .input-group-text {
-    font-size: 28px;
-    background-color: #e50914;
+    font-size: 28px !important;
+    background-color: #e50914 !important;
     color: #fff;
     border: 0px;
     cursor: pointer;
-    
+    margin-bottom: 12px;
+    width: 250px;
+
  }
  
  .btn-check:focus+.btn,
@@ -580,8 +582,7 @@
     padding: 0 12px;
     position: relative;
 }
-<<<<<<< HEAD
-=======
+
 .contact-alert{
    color: black !important;
    display: flex  ;
@@ -621,5 +622,8 @@
 .privacy-text ul li {
    margin-bottom: 12px;
 }
->>>>>>> e426c9b321a895e7990b15ecfc87e81b084fdaeb
+
+.header_right{
+  float: right !important;
+}
 

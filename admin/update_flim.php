@@ -30,6 +30,8 @@
     <div class="slide-banner bg-img "
     style="background-image: url(slide-banner.jpg); height: 100vh;"
       >
+      <div class="container-fluid admin_box" >
+        <div class="container admin_table">
     <h5 class="text-center text-primary mt-5">Add a new movie to the movie store.</h5>
         <!-- Form thêm Dữ liệu nhân viên -->
         
