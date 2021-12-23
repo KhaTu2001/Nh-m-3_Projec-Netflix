@@ -1,17 +1,15 @@
 <?php
-   
+
     session_start();
     include('connect.php');
     if (isset($_POST['btn_submit'])) {
         $email = $_POST['txtEmail'];
         $pass = $_POST['txtPass'];
-       
-    
-    
+
         $sql = "SELECT * FROM nguoidung WHERE email = '$email' AND pass='$pass'";
         echo $sql;
         $result = mysqli_query($con,$sql);
-        
+
         if(mysqli_num_rows($result) > 0){
             // CẤP THẺ LÀM VIỆC
             $_SESSION['isLoginOK'] = $email;
@@ -24,7 +22,7 @@
             header("location: login.php?error=$error");
              //Chuyển hướng, hiển thị thông báo lỗi
         }
-    
+
         if (mysqli_num_rows($res) > 0) {
             // $row = mysqli_fetch_assoc($res);
             // $pass_save = $row['password'];
@@ -33,13 +31,10 @@
             //     $_SESSION['user'] = $email;
             //     $_SESSION['userid'] = $row['userid'];
 
-    
+
         } else {
             header("Location: login.php");
         }
-    
+
     }
-
-
-        
     ?>

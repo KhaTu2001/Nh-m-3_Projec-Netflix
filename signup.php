@@ -23,36 +23,62 @@
       </svg></a>
       </div>
   </nav>
-      <div class="container form_signup">
-        <form action="action_page.php" style="border:1px solid #ccc">
-          <div class="container">
-            <h1 class="">Sign Up</h1>
-            <p>Please fill in this form to create an account.</p>
-            <hr>
-
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <label for="psw-repeat"><b>Repeat Password</b></label>
-            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-            <label>
-              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-            </label>
-
-            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-            <div class="clearfix">
-              <button type="button" class="cancelbtn">Cancel</button>
-              <button type="submit" class="signupbtn">Sign Up</button>
+      <div class="signup_form " style="margin-top: 70px;
+                                    background-color: #13110E;
+                                    padding: 60px 68px 40px;
+                                    opacity: 0.6 !important;
+                                    width: 500px !important;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    right:50%; ">
+        <form class="mx-1 mx-md-4 " method="POST">
+          <div class="d-flex flex-row align-items-center mb-4">
+           
+            <div class="form-outline flex-fill mb-0">
+              <label class="form-label" for="firstName">User Name</label>
+              <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Quan" />
+              
             </div>
           </div>
+          <div class="d-flex flex-row align-items-center mb-4">
+            
+            <div class="form-outline flex-fill mb-0">
+              <label class="form-label" for="firstName">Email</label>
+              <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" required autofocus>
+              
+            </div>
+          </div>
+          <div class="d-flex flex-row align-items-center mb-4">
+            
+            <div class="form-outline flex-fill mb-0">
+              <label class="form-label" for="firstName">Password</label>
+              <input type="password" id="inputPassword" name="txtPass" class="form-control" placeholder="Password" required>
+              
+            </div>
+          </div>
+          <div class="d-flex flex-row align-items-center mb-4">
+            
+            <div class="form-outline flex-fill mb-0">
+              <label class="form-label" for="firstName">Retry Password</label>
+              <input type="password" id="inputPassword" name="txtPass" class="form-control" placeholder="Retry Password" required>
+              
+            </div>
+          </div>
+                                                  
+          <div class="mb-3 form_signup">
+              <h5>Already have an account?</h5>
+              <a class="sign_up_now" href="login.php">Log in</a>
+          </div>
+          <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4" >
+            <button type="submit" class="btn btn-primary mb-3" name="btn_submit" style=" width:314px">Sign in</button>
+          </div>
+
         </form>
+
       </div>
 
 <?php
   require('Template/footerr.php')
 ?>
+

@@ -2,8 +2,10 @@
     --bs-red: #e50914;
     
  }
+ 
 
 #header .head{
+   position: absolute;
    margin-top: 16px;
     position: absolute;
     display: inline-flex;
@@ -119,6 +121,9 @@
     width: 100%;
     height: 100%;
  }
+ .layer.row{
+    z-index: 1;
+ }
  
  .top-sign-in {
     height: 34px;
@@ -127,12 +132,14 @@
  }
 
  .input-group-text {
-    font-size: 28px;
-    background-color: #e50914;
+    font-size: 28px !important;
+    background-color: #e50914 !important;
     color: #fff;
     border: 0px;
     cursor: pointer;
-    
+    margin-bottom: 12px;
+    width: 250px;
+
  }
  
  .btn-check:focus+.btn,
@@ -243,10 +250,15 @@
    margin-top: 24px;
 }
 .contact-header{
-position: relative;
+   position: relative;
   display: flex;
   justify-content: space-between;
   height: 64px;
+}
+
+.contact-header .row{
+   display: flex;
+  justify-content: space-between;
 }
 .contact-header a{
    width: 90px;
@@ -570,6 +582,7 @@ position: relative;
     padding: 0 12px;
     position: relative;
 }
+
 .contact-alert{
    color: black !important;
    display: flex  ;
@@ -609,6 +622,8 @@ position: relative;
 .privacy-text ul li {
    margin-bottom: 12px;
 }
+
 .header_right{
   float: right !important;
 }
+

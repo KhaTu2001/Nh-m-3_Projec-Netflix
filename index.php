@@ -37,13 +37,7 @@
       <div class="row w-100">
         <div class="col-md-2 col-1"></div>
         <div class="col-md-8 col-10  main-search">
-          <div class="input-group mb-3">
-             <div class="email-search form-control">
-              <input type="email" class=" email-address " required = "">
-              <label for="">Email address</label>
-            </div>
-            <a href="signup.php" class="input-group-text " id="basic-addon2">Get Started <i class="fas fa-chevron-right"></i></a>
-          </div>
+          <a href="signup.php" class="input-group-text " id="basic-addon2">Sign up now <i class="fas fa-chevron-right"></i></a>
         </div>
         
       </div>
@@ -117,15 +111,16 @@
       <p class="text-center">Ready to watch? Enter your email to create or restart your membership.</p>
       <div class="row">
         <div class="col-md-2 col-1"></div>
-        <div class="col-md-8 col-10 p-0 main-search">
-          <div class="input-group mb-3">
-            <div class="email-search form-control">
-
-              <input type="email" class=" email-address " required = "">
-              <label for="">Email address</label>
+        <div class="col-md-8 col-10  main-search">
+          <form action="index.php" class="form_layout" method="POST">
+            <div class="input-group mb-3">
+              <div class="email-search form-control">
+                <input type="email" class=" email-address " required = "">
+                <label for="">Email address</label>
+              </div>
+              <button type="submit" class="btn btn-danger mb-3 btn_get_stared" name="btn_submit2">Get Started</button>
             </div>
-            <a href="" class="input-group-text " id="basic-addon2">Get Started <i class="fas fa-chevron-right"></i></a>
-          </div>
+          </form>
         </div>
       </div>
     </div>

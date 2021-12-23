@@ -95,7 +95,7 @@
                         // Bước 01: Kết nối Database Server
                         include 'connect.php';
                         // Bước 02: Thực hiện truy vấn
-                        $sql = "SELECT * FROM db_donvi";
+                        $sql = "SELECT * FROM theloai";
 
                         $result = mysqli_query($conn,$sql);
 
@@ -122,5 +122,5 @@
     </div>    
     </main>
 <?php
-    include("template/footer.php");
+    include("footer.php");
 ?>

@@ -1,0 +1,108 @@
+.navbar .container img{
+    width: 145px;
+    height: 35px;
+
+}
+.navbar .container form{
+    text-align: center;
+}
+.navbar .container form button{
+    background-color: red;
+    width: 75px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 3px;
+    margin-left: 15px;
+}
+.link-primary{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+.top h2{
+    max-width: 785px;
+    margin: 0 auto 20px auto;
+    line-height: 1;
+    font-size: 3.6rem;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+.top{
+    background-image: url(assets/img/backgourp.jpg);
+    padding: 100px 0;
+}
+.tabs {
+    display: flex;
+    position: relative;
+  }
+  .tab-content{
+      background-image: url(assets/img/backgroundwaymatch.png);
+      padding: 100px;
+  }
+  .tab-content{
+    color: aliceblue;
+  }
+  .tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 6px;
+    border-radius: 15px;
+    background-color: #e60b0b;
+    transition: all 0.2s ease;
+  }
+  .text{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .ᴠr { 
+    height: 100%; width: 1pх; 
+    border-left: 1px solid gray;
+   }
+   .container .row a{
+     color: gray;
+     text-decoration: none;
+   }
+   .container .row a:hover{
+     text-decoration: underline;
+   }
+   .banquyen{
+    display: flex;
+    text-align: center;
+   }
+   .bottom img{
+     width: 50px;
+   }
+   .bottom{
+     margin-left: 110px;
+     margin-top: 20px;
+   }
+   .bottom .banquyen .far{
+     margin-top: 5px;
+     margin-right: 5px;
+   }
+   .bottom .textany a{
+    color: gray;
+    text-decoration: none;
+  }
+  .textany{
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+  }
+  .textany a:hover{
+    text-decoration: underline;
+  }
+  .banquyenleft{
+    display: flex;
+    flex: 1;
+  }
+  .banquyen img{
+    display: flex;
+  }
+
