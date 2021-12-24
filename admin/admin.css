@@ -1,3 +1,4 @@
+
 #header .head{
    margin-top: 16px;
     display: inline-flex;
@@ -145,20 +146,42 @@ footer {
 }
  .admin_box table{
     color: #fff;
-    max-height: 400px;
+    
 
+ }
+ .admin_table-top{
+   background-color: rgba(0, 0, 0, 0.7);
+   display: flex;
+   border-top-left-radius: 12px;
+   border-top-right-radius: 12px;
+   padding: 0 32px;
+   width: 100%;
+   
+ }
+ .admin_table-top h4{
+   align-items: left;
  }
  .admin_table {
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
    padding-bottom: 32px;
    padding-top: 12px;
- }
- .admin_table.page{
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-x: auto;
+    overflow-y: auto;
     scroll-behavior: smooth;
+    scrollbar-width: thin;
     
+    max-height: 500px;
+ }
+ .admin_table::-webkit-scrollbar {
+   
+   background-color: rgba(0, 0, 0, 0.7);
+}
+*::-webkit-scrollbar-thumb {
+   
+   border-radius: 20px;
+   border: 2px solid #9e17b9;
  }
  .admin_table label{
     color: #fff;
@@ -173,10 +196,10 @@ footer {
     color: #e50914 !important;
  }
  .admin_table table tr:hover{
-   background-color:#e50914 ;
+   background-color:#64060b ;
    color: #fff;
 }
-.admin_table table td{
-   
-  
+#img_div img{
+   height: auto;
+   width: 100%;
 }

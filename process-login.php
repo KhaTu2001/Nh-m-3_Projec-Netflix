@@ -6,7 +6,7 @@
         $email = $_POST['txtEmail'];
         $pass = $_POST['txtPass'];
 
-        $sql = "SELECT * FROM nguoidung WHERE email = '$email' AND pass='$pass'";
+        $sql = "SELECT * FROM user WHERE email = '$email' AND pass='$pass'";
         echo $sql;
         $result = mysqli_query($con,$sql);
 
@@ -23,18 +23,18 @@
              //Chuyển hướng, hiển thị thông báo lỗi
         }
 
-        if (mysqli_num_rows($res) > 0) {
-            // $row = mysqli_fetch_assoc($res);
-            // $pass_save = $row['password'];
-            // if (password_verify($pass, $pass_save)) {
-            //     $_SESSION['login'] = "<div class='danger'>Đăng nhập thành công.</div>";
-            //     $_SESSION['user'] = $email;
-            //     $_SESSION['userid'] = $row['userid'];
+        // if (mysqli_num_rows($res) > 0) {
+        //     // $row = mysqli_fetch_assoc($res);
+        //     // $pass_save = $row['password'];
+        //     // if (password_verify($pass, $pass_save)) {
+        //     //     $_SESSION['login'] = "<div class='danger'>Đăng nhập thành công.</div>";
+        //     //     $_SESSION['user'] = $email;
+        //     //     $_SESSION['userid'] = $row['userid'];
 
 
-        } else {
+         } else {
             header("Location: login.php");
         }
 
-    }
+
     ?>

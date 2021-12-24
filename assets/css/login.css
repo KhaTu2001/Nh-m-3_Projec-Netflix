@@ -3,6 +3,7 @@ h1,.form-label {
    font-size: 32px; 
 
 }
+
 p,label{
    color: #fff;
 }
@@ -183,3 +184,15 @@ a.navbar-brand:hover{
      width: 100%;
    }
  }
+.signup_form {
+      margin-top: 70px;
+      background-color: #13110E;
+      padding: 60px 68px 40px;
+      width: 400px !important;
+      height: 640px !important;
+      background-color:  rgba(0,0,0,0.7);
+      border-radius: 16px;
+}
+.btn.btn-primary{
+   margin-top: -20px;
+}

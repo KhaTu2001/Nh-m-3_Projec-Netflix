@@ -68,39 +68,68 @@
       <div class="row">
         <div class="col-lg-3 col-md-2 col-1"></div>
         <div class="col-lg-6 col-md-8 col-10 p-0">
-          <a class="btn text-white" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls autoplay="multiCollapseExample1">What is Netflix?</a>
-      <div class="collapse multi-collapse" id="multiCollapseExample1">
-        <div class="card card-body">
-          Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices. <br><br>
-          You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!
+        <div id="accordion">
+    <div class="card">
+      
+        <a class=" btn" data-bs-toggle="collapse" href="#collapseOne">
+          What is Netflix?
+          <i class="fas fa-plus"></i>
+        </a>
+      
+      <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+        Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!
         </div>
       </div>
-       <a class="btn text-white" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls autoplay="multiCollapseExample2">Where can I watch?</a>
-      <div class="collapse multi-collapse" id="multiCollapseExample2">
-        <div class="card card-body">
-          Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+    </div>
+    <div class="card">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+        Where can i watch?
+        <i class="fas fa-plus"></i>
+    </a>
+      <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+        Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
         </div>
       </div>
-       <a class="btn text-white" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls autoplay="multiCollapseExample3">How do I cancel?</a>
-      <div class="collapse multi-collapse" id="multiCollapseExample3">
-        <div class="card card-body">
-         Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+    </div>
+    <div class="card">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+          How do i cancel?
+          <i class="fas fa-plus"></i>
+        </a>
+      <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+        Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
         </div>
       </div>
-       <a class="btn text-white" data-bs-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls autoplay="multiCollapseExample4">What can I watch on Netflix?</a>
-      <div class="collapse multi-collapse" id="multiCollapseExample4">
-        <div class="card card-body">
-          Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+    </div>
+    <div class="card">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefour">
+          What can i watch on Netflix?
+          <i class="fas fa-plus"></i>
+        </a>
+      <div id="collapsefour" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+        Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
         </div>
       </div>
-       <a class="btn text-white" data-bs-toggle="collapse" href="#multiCollapseExample5" role="button" aria-expanded="false" aria-controls autoplay="multiCollapseExample5">Is Netflix good for kids?</a>
-      <div class="collapse multi-collapse" id="multiCollapseExample5">
-        <div class="card card-body">
-         The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space. <br><br>
-          Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.
+    </div>
+    <div class="card">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefive">
+          Is verry good for kids?
+          <i class="fas fa-plus"></i>
+        </a>
+     
+      <div id="collapsefive" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+        The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.
+        Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.
         </div>
       </div>
-        </div>
+    </div>
+  </div>
         <div class="col-lg-3 col-md-2 col-1"></div>
       </div>
       

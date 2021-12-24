@@ -177,15 +177,33 @@
  
  .multi-collapse.show {
     margin-bottom: 10px;
+    padding: 0;
  }
  
  .faq .card {
     background-color: #303030;
     font-size: 26px;
     color: #fff;
-    padding-left: 30px;
+    
+ }
+.card a{
+   color: #fff;
+   display:  flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.card a img{
+   height: 32px;
+}
+.menu-arrow-down {
+   transform: rotate(0deg);
+   transition: 1s linear;
  }
  
+ .menu-arrow-down.open {
+   transform: rotate(180deg);
+   transition: 1s linear;
+ }
  footer {
     background-color: #000000;
     padding: 40px 0;

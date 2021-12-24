@@ -3,7 +3,8 @@
 ?>
 
 
-  <body style="background-image: url(assets/img/slide-banner.jpg);height: 100%;">
+  <body style="background-image: url(assets/img/slide-banner.jpg);height: 100vh;">
+  
   <nav id="header" class=" navbar navbar-light p-0">
     <div class="container-fluid px-5 head">
       <a href="index.php" class="navbar-brand">  <svg
@@ -23,15 +24,7 @@
       </svg></a>
       </div>
   </nav>
-      <div class="signup_form " style="margin-top: 70px;
-                                    background-color: #13110E;
-                                    padding: 60px 68px 40px;
-                                    opacity: 0.6 !important;
-                                    width: 500px !important;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    right:50%; ">
+      <div class="signup_form container" >
         <form class="mx-1 mx-md-4 " method="POST">
           <div class="d-flex flex-row align-items-center mb-4">
            
@@ -71,7 +64,7 @@
               <a class="sign_up_now" href="login.php">Log in</a>
           </div>
           <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4" >
-            <button type="submit" class="btn btn-primary mb-3" name="btn_submit" style=" width:314px">Sign in</button>
+            <button type="submit" class="btn btn-primary mb-3" name="btn_submit" >Sign in</button>
           </div>
 
         </form>
