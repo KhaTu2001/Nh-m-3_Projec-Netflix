@@ -1,10 +1,13 @@
-
-
 <?php
-
+    // Trước khi cho người dùng xâm nhập vào bên trong
+    // Phải kiểm tra THẺ LÀM VIỆC
+    
     // Xử lý giá trị GỬI TỚI
-    if(isset($_POST['txtnameofflim'])){
-        $moviename = $_POST['txtnameofflim'];
+    if(isset($_POST['txtidmovie'])){
+        $maNhanVien = $_POST['txtidmovie'];
+    }
+    if(isset($_POST['txtnameoffilm'])){
+        $moviename = $_POST['txtnameoffilm'];
     }
     
     $image = $_FILES['image']['name'];
@@ -24,12 +27,12 @@
     // Bước 01: Kết nối Database Server
     include 'connect.php';
     // Bước 02: Thực hiện truy vấn
-    $sql = "INSERT INTO movie (name_movie,image,link,name_country, name_genre) 
-    VALUES ('$moviename','$image','$movielink','$countryname','$genrename')";
-
+    $sql = "UPDATE movie 
+            SET image='$image', name_movie='$moviename', link = '$movielink', name_country = '$countryname', name_genre='$genrename'";
     // echo $sql;
-    $ketqua = mysqli_query($conn,$sql);
 
+    $ketqua = mysqli_query($conn,$sql);
+    
     if(!$ketqua){
         header("location: error.php"); //Chuyển hướng lỗi
     }else{

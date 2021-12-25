@@ -1,3 +1,7 @@
+<?php 
+session_start();
+      //Put session start at the beginning of the file
+?>
 <?php
   include 'Template/header.php' 
 ?>
@@ -37,7 +41,19 @@
       <div class="row w-100">
         <div class="col-md-2 col-1"></div>
         <div class="col-md-8 col-10  main-search">
-          <a href="signup.php" class="input-group-text " id="basic-addon2">Sign up now <i class="fas fa-chevron-right"></i></a>
+        
+        <form action = "signup.php" class="form_layout" method="POST">
+            <div class="input-group">
+              <div class="email-search form-control">
+                <input type="email" id="email_address" class=" email-address " name="txtEmailinput" required = "">
+                <label for="">Email address</label>
+                
+              </div>
+              <button type="submit" class="btn btn-danger btn_get_stared" name="btn_submit">Get Started <i class="fas fa-chevron-right"></i></button>
+             
+            </div>
+          </form>
+         
         </div>
         
       </div>
@@ -73,58 +89,72 @@
       
         <a class=" btn" data-bs-toggle="collapse" href="#collapseOne">
           What is Netflix?
-          <i class="fas fa-plus"></i>
+          
         </a>
       
       <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
         <div class="card-body">
-        Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+        Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.<br><br>
 You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!
         </div>
       </div>
     </div>
     <div class="card">
-        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+      
+      <a class=" btn" data-bs-toggle="collapse" href="#collapsetwo">
+        How much does Netflix cost?
+        
+      </a>
+    
+    <div id="collapsetwo" class="collapse" data-bs-parent="#accordion">
+      <div class="card-body">
+      Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from 70,000 ₫ to 260,000 ₫ a month. No extra costs, no contracts.
+      </div>
+    </div>
+  </div>
+    <div class="card">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsethree">
         Where can i watch?
-        <i class="fas fa-plus"></i>
+        
     </a>
-      <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+      <div id="collapsethree" class="collapse" data-bs-parent="#accordion">
         <div class="card-body">
-        Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+        Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.<br><br>
+        You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
         </div>
       </div>
     </div>
     <div class="card">
-        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefour">
           How do i cancel?
-          <i class="fas fa-plus"></i>
+          
         </a>
-      <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+      <div id="collapsefour" class="collapse" data-bs-parent="#accordion">
         <div class="card-body">
         Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
         </div>
       </div>
     </div>
     <div class="card">
-        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefour">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefive">
           What can i watch on Netflix?
-          <i class="fas fa-plus"></i>
+          
         </a>
-      <div id="collapsefour" class="collapse" data-bs-parent="#accordion">
+      <div id="collapsefive" class="collapse" data-bs-parent="#accordion">
         <div class="card-body">
         Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
         </div>
       </div>
     </div>
     <div class="card">
-        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefive">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsesix">
           Is verry good for kids?
-          <i class="fas fa-plus"></i>
+          
         </a>
      
-      <div id="collapsefive" class="collapse" data-bs-parent="#accordion">
+      <div id="collapsesix" class="collapse" data-bs-parent="#accordion">
         <div class="card-body">
-        The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.
+        The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.<br><br>
         Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.
         </div>
       </div>
@@ -141,13 +171,15 @@ You can watch as much as you want, whenever you want, without a single ad – al
       <div class="row">
         <div class="col-md-2 col-1"></div>
         <div class="col-md-8 col-10  main-search">
-          <form action="index.php" class="form_layout" method="POST">
-            <div class="input-group mb-3">
+        <form action = "signup.php" class="form_layout" method="POST">
+            <div class="input-group">
               <div class="email-search form-control">
-                <input type="email" class=" email-address " required = "">
+                <input type="email" id="email_address" class=" email-address " name="txtEmailinput" required = "">
                 <label for="">Email address</label>
+                
               </div>
-              <button type="submit" class="btn btn-danger mb-3 btn_get_stared" name="btn_submit2">Get Started</button>
+              <button type="submit" class="btn btn-danger btn_get_stared" name="btn_submit">Get Started <i class="fas fa-chevron-right"></i></button>
+             
             </div>
           </form>
         </div>

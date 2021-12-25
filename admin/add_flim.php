@@ -11,7 +11,7 @@
         <h5 class="text-center text-primary mt-5">Add a new movie to the movie store.</h5>
         <!-- Form thêm Dữ liệu nhân viên -->
         
-        <form action="process-add-flim.php" method="post" enctype="multipart/form-data" >
+        <form action="process-add-film.php" method="post" enctype="multipart/form-data" >
             <div class="form-group" >
                 <label for="txtimg">Image</label>
                 <?php   
@@ -24,8 +24,8 @@
                 <!-- <small id="txtHoTenHelp" class="form-text text-muted">Có thể dùng nó hiển thị thông báo lỗi hoặc gợi ý</small> -->
             </div>
             <div class="form-group">
-                <label for="txtnameofflim">Movie name</label>
-                <input type="text" class="form-control" id="txtnameofflim" name="txtnameofflim" placeholder="Add Movie name">
+                <label for="txtnameoffilm">Movie name</label>
+                <input type="text" class="form-control" id="txtnameoffilm" name="txtnameoffilm" placeholder="Add Movie name">
                 <!-- <small id="txtHoTenHelp" class="form-text text-muted">Có thể dùng nó hiển thị thông báo lỗi hoặc gợi ý</small> -->
             </div>
             <div class="form-group">

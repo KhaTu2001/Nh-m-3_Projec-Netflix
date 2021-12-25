@@ -12,7 +12,7 @@
             <div class="container admin_table-top">
               
               <div>
-                    <a class="btn btn_add-flim" href="add_flim.php">Add</a>
+                    <a class="btn btn_add-film" href="add_lilm.php">Add</a>
               </div>
               <h4 style="margin-left:80px" class="text-center  mt-5">Manage movie stores on Netflix</h5>
             </div>
@@ -57,8 +57,8 @@
                           <td style = "width:300px"><?php echo $row['link']; ?></td>
                           <td style = "width:150px"><?php echo $row['name_country'];?></td>
                           <td style = "width:150px"><?php echo $row['name_genre']; ?></td>
-                          <td style = "width:70px"><a href="update_flim.php?id=<?php echo $row['id_movie']; ?>"><i class="fas fa-edit"></i></a></td>
-                          <td style = "width:70px"><a href="delete_flim.php?id=<?php echo $row['id_movie']; ?>"><i class="far fa-trash-alt"></i></a></td>
+                          <td style = "width:70px"><a href="update_film.php?id=<?php echo $row['id_movie']; ?>"><i class="fas fa-edit"></i></a></td>
+                          <td style = "width:70px"><a href="delete_film.php?id=<?php echo $row['id_movie']; ?>"><i class="far fa-trash-alt"></i></a></td>
                     </tr>
                 <?php
                         }

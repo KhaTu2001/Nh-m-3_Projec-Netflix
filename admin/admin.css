@@ -113,7 +113,7 @@ footer {
     color: #757575;
     text-decoration: underline;
  }
-.btn_add-flim{
+.btn_add-film{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +128,7 @@ footer {
    justify-content: space-between;
  }
 
- .btn_add-flim:hover{
+ .btn_add-film:hover{
     background:none;
     border: 2px solid #e50914;
     color: #e50914;

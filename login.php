@@ -43,7 +43,7 @@
             </div>
             <div class="mb-3 mt-3">
              
-            <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" required autofocus>
+            <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" value="" required autofocus>
             </div>
             <div class="mb-3">
              
@@ -113,7 +113,6 @@
            
         </div> 
       </div>
-      
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>   
 <script src="assets/js/main.js"></script>

@@ -6,7 +6,7 @@
         $email = $_POST['txtEmail'];
         $pass = $_POST['txtPass'];
 
-        $sql = "SELECT * FROM user WHERE email = '$email' AND pass='$pass'";
+        $sql = "SELECT * FROM nguoidung WHERE email = '$email' AND pass='$pass'";
         echo $sql;
         $result = mysqli_query($con,$sql);
 
@@ -17,7 +17,7 @@
             header("location: main.php"); //Chuyển hướng về Trang quản trị
         }
         else{
-
+            
             $error = "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác";
             header("location: login.php?error=$error");
              //Chuyển hướng, hiển thị thông báo lỗi

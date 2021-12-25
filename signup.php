@@ -1,6 +1,11 @@
+<?php 
+  session_start();
+      //Put session start at the beginning of the file
+?>
 <?php
   require('Template/header_login.php')
 ?>
+
 
 
   <body style="background-image: url(assets/img/slide-banner.jpg);height: 100vh;">
@@ -26,19 +31,26 @@
   </nav>
       <div class="signup_form container" >
         <form class="mx-1 mx-md-4 " method="POST">
+          
           <div class="d-flex flex-row align-items-center mb-4">
            
             <div class="form-outline flex-fill mb-0">
               <label class="form-label" for="firstName">User Name</label>
-              <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Quan" />
+              <input type="text" id="firstName" name="firstName" class="form-control" placeholder="User name" />
               
             </div>
           </div>
           <div class="d-flex flex-row align-items-center mb-4">
             
             <div class="form-outline flex-fill mb-0">
+              <?php
+                  $email_value = "";
+                  if(isset($_POST['txtEmailinput'])){
+                    $email_value = $_POST['txtEmailinput'];
+                  }
+              ?>
               <label class="form-label" for="firstName">Email</label>
-              <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" required autofocus>
+              <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" value="<?php echo $email_value;  ?> "  required autofocus>
               
             </div>
           </div>
@@ -64,13 +76,13 @@
               <a class="sign_up_now" href="login.php">Log in</a>
           </div>
           <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4" >
-            <button type="submit" class="btn btn-primary mb-3" name="btn_submit" >Sign in</button>
+            <button type="submit" class="btn btn-primary mb-3" name="btn_submit1" >Sign in</button>
           </div>
 
         </form>
 
       </div>
-
+      
 <?php
   require('Template/footerr.php')
 ?>
