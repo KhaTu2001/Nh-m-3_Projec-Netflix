@@ -1,0 +1,131 @@
+
+
+body {
+   padding: 0;
+   margin: 0;
+   font-family: "Roboto",sans-serif;
+   overflow-x: hidden;
+}
+#header .head{
+    position: absolute;
+    margin-top: 16px;
+     position: absolute;
+     display: inline-flex;
+     align-items: center;
+     top: 0;
+     left: 0;
+     z-index: 1;
+     
+ }
+.navbar_header{
+   display: flex;
+   justify-content: space-between;
+   background-color: #000;
+   align-items: center;
+   
+}
+.navbar_header ul {
+   display: flex;
+   list-style-type: none;
+   margin-top: 12px;
+}
+.navbar_header ul li{
+   margin-left: 16px;
+}
+.navbar_header ul li a{
+   text-decoration: none;
+   color: #fff;
+}
+.navbar_header-left{
+   display: flex;
+   padding: 8px 0;
+   align-items:center;
+   flex:1;
+}
+.navbar_header-left{
+ 
+}
+
+ .navbar {
+    position: absolute;
+    width: 100%;
+ }
+ a.navbar-brand {
+    color: #e50914 !important;
+    font-weight: bold;
+    width: 160px;
+ }
+.header_navbar--logo-second{
+   display: none;
+}
+.layer {
+   background-color: rgba(0, 0, 0, 0.5);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+}
+.notifyerror{
+    color: red;
+    font-size: 90%;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+img {
+   filter: gray;
+   /* IE6-9 */
+   -webkit-filter: grayscale(1);
+   /* Google Chrome, Safari 6+ & Opera 15+ */
+   -webkit-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
+   -moz-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
+   box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
+   margin-bottom: 20px;
+}
+
+img:hover {
+   filter: none;
+   /* IE6-9 */
+   -webkit-filter: grayscale(0);
+   /* Google Chrome, Safari 6+ & Opera 15+ */
+  }
+  .title{
+      padding: 10px 30px;
+      border-radius: 10px;
+      width: 500px;
+      margin: auto;
+  }
+.layer.row{
+   z-index: 1;
+   
+}
+.layer .row{
+   color: #fff;
+}
+.avata_admin{
+   margin-top: 100px;
+   height: 300px;
+   width: 300px;
+   border-radius: 50%;
+}
+.navbar-nav{
+   display: flex;
+   align-items: center;
+   margin-top: 12px;
+}
+.navbar-nav.side-nav{
+   margin-top: 12px;
+}
+.slide-banner{
+   padding-bottom: none;
+   background-repeat:repeat-x;
+   
+}
+.add_flim-form{
+   height: 100% !important ;
+}
+.collapse.navbar-collapse{
+   position: relative;
+}

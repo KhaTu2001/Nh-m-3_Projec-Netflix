@@ -6,15 +6,21 @@
         $email = $_POST['txtEmail'];
         $pass = $_POST['txtPass'];
 
-        $sql = "SELECT * FROM nguoidung WHERE email = '$email' AND pass='$pass'";
+        $sql = "SELECT * FROM user WHERE email = '$email' AND pass = '$pass'";
         echo $sql;
-        $result = mysqli_query($con,$sql);
-
+        $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result) > 0){
             // CẤP THẺ LÀM VIỆC
             $_SESSION['isLoginOK'] = $email;
+            $dbarray = mysqli_fetch_array($result);
+            if($dbarray['Usertype'] == 99){
+                header("location:Admin/admin_page.php"); 
+            }
+            
+            else{
 
-            header("location: main.html"); //Chuyển hướng về Trang quản trị
+                header("location:main.php"); 
+            }
         }
         else{
 
@@ -23,18 +29,11 @@
              //Chuyển hướng, hiển thị thông báo lỗi
         }
 
-        if (mysqli_num_rows($res) > 0) {
-            // $row = mysqli_fetch_assoc($res);
-            // $pass_save = $row['password'];
-            // if (password_verify($pass, $pass_save)) {
-            //     $_SESSION['login'] = "<div class='danger'>Đăng nhập thành công.</div>";
-            //     $_SESSION['user'] = $email;
-            //     $_SESSION['userid'] = $row['userid'];
 
 
-        } else {
+         } else {
             header("Location: login.php");
         }
 
-    }
+
     ?>
