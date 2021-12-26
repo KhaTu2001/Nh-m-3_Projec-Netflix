@@ -75,7 +75,7 @@
       <section class="container-fluid " style="border-top: none;background-color: #eaeae6;padding:0">
             <div class="container contact-alert">
                 <a style="text-decoration: none; display:flex; "href="#">
-                        <div style="color:#000; margin-top:24px;"class="alert-icon">
+                        <div style="color:#000; "class="alert-icon">
                         <i style="font-size:1.25rem"  class="far fa-bell"></i>
                         </div>
                         <div class="alert-left">
