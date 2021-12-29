@@ -45,24 +45,26 @@
              
             <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" value="" required autofocus>
             </div>
-            <div class="mb-3">
+            <div class="d-flex flex-row align-items-center mb-3 input_pass">
              
-            <input type="password" id="inputPassword" name="txtPass" class="form-control" placeholder="Password" required>
-            
+              <input type="password" id="inputPassword" name="txtPass" class="form-control" placeholder="Password" required>
+              
+             
             </div>
             <p id="sr_pass"></p>
-            <button type="submit" class="btn btn-primary mb-3" name="btn_submit">Sign in</button>
+            <button type="submit" class="btn btn-primary mb-3" name="btn_submit" style="max-width:314px">Sign in</button>
+            <?php
+                    if(isset($_GET['error'])){
+                        echo "<h5 style='color:white;width: 314px;'> {$_GET['error']} </h5>";
+                    }
+
+                ?>
             <div class="form-check mb-3">
               <label class="form-check-label ">
                 <input class="form-check-input" type="checkbox" name="remember"> Remember me
               </label>
               <a class="needhelp_form" href="">Needhelp?</a>
-              <?php
-                    if(isset($_GET['error'])){
-                        echo "<h5 style='color:red'> {$_GET['error']} </h5>";
-                    }
-
-                ?>
+              
             </div>
             <div class="mb-3">
               <i class="fab fa-facebook-square"></i>
