@@ -1,5 +1,4 @@
 <?php
-session_start();
     include 'header.php';
 ?>
 
@@ -10,54 +9,54 @@ session_start();
         $sql = "SELECT id FROM film ";
         $result = mysqli_query($conn, $sql);
     ?>
-		<div id="wrapper">
-            <?php
-                include("common.php");
-            ?>
-             <div class="slide-banner bg-img " style="background-image: url(asset/images/slide-banner.jpg);">
+		
+            
+             <div class="slide-banner bg-img " style="background-image: url(image/slide-banner.jpg);">
              
-            <div class="container add_flim-form" id="post_film" style="padding: 0 15%">
-                
-                <form method="post" id="form-insert-film" name="form-insert-film" class="form-horizontal" action="" role="form" >
-                    <div>
-                        <label for="film-name" class="col-md-2">
-                            Tên phim
+            <div class="container add_flim-form" id="post_film" >
+                <div class="row">
+                <div id="edit-film" class="table_box">
+
+                <form method="post" id="form-insert-film" name="form-insert-film" class="form-horizontal" enctype="multipart/form-data" action="" role="form" >
+                    <div >
+                        <label for="film-name" class="container">
+                            movie's name
                         </label>
-                        <div class="col-md-9">
+                        <div class="container">
                             <input type="text" class="form-control" id="film-name" name="film-name">
                         </div>
                     </div>
                    
-                    <div>
-                        <label for="status" class="col-md-2">
-                            Trạng thái
+                    <div >
+                        <label for="status" class="container">
+                            Status
                         </label>
-                        <div class="col-md-9">
+                        <div class="container">
                             <input type="text" class="form-control" id="status" name="status">
                         </div>
                     </div>
-                    <div>
-                        <label for="director" class="col-md-2">
-                            Đạo diễn
+                    <div >
+                        <label for="director" class="container">
+                            directors
                         </label>
-                        <div class="col-md-9">
+                        <div class="container">
                             <input type="text" class="form-control" id="director" name="director">
                         </div>
                     </div>
-                    <div>
-                        <label for="actor" class="col-md-2">
-                            Diễn viên
+                    <div >
+                        <label for="actor" class="container">
+                            Actor
                         </label>
-                        <div class="col-md-9">
+                        <div class="container">
                             <input type="text" class="form-control" id="actor" name="actor">
                         </div>
                     </div>
-                    <div>
-                        <label for="category" class="col-md-2">
-                            Thể loại
+                    <div class="container form_input">
+                        <label for="category" >
+                            Category
                         </label>
-                        <div class="col-md-10">
-                            <select id="category" style="color: black" name="category">
+                        <div >
+                            <select id="category" name="category">
                                 <?php 
                                     $sql = "SELECT * FROM category";
                                     $result = mysqli_query($conn, $sql);
@@ -77,15 +76,15 @@ session_start();
                             </select>
                         </div>
                     </div>
-                    <div>
-                        <label for="type" class="col-md-2">
+                    <div class="container form_input">
+                        <label for="type" >
                             Type-movie 
                         </label>
-                        <div class="col-md-10">
-                            <select id="type" style="color: black" name="type_movie">
-                                <option value="1">Phim lẻ</option>
-                                <option value="2">Phim bộ</option>
-                                <option value="3">Phim rạp</option>
+                        <div >
+                            <select id="type" name="type_movie">
+                                <option value="1">Single-movie</option>
+                                <option value="2">series-movie</option>
+                                <option value="3">theater-movie</option>
                                 
                                 
                                 
@@ -108,12 +107,12 @@ session_start();
                             </select>
                         </div>
                     </div>
-                    <div>
-                        <label for="nation" class="col-md-2">
-                            Quốc gia
+                    <div class="container form_input">
+                        <label for="nation" >
+                            Nation
                         </label>
-                        <div class="col-md-10">
-                            <select id="nation" style="color: black" name="nation">
+                        <div >
+                            <select id="nation" name="nation">
                                 <?php 
                                     $sql = "SELECT * FROM nation";
                                     $result = mysqli_query($conn, $sql);
@@ -133,12 +132,12 @@ session_start();
                             </select>
                         </div>
                     </div>
-                    <div>
-                        <label for="year" class="col-md-2">
-                            Năm phát hành
+                    <div class="container form_input" >
+                        <label for="year" >
+                            Release year
                         </label>
-                        <div class="col-md-9">
-                            <select id="year" name="year" id="year" style="color: black">
+                        <div class="container">
+                            <select id="year" name="year" id="year">
                                 <option value="2015">2015</option>
                                 <option value="2016">2016</option>
                                 <option value="2017">2017</option>
@@ -146,64 +145,49 @@ session_start();
                             </select>
                         </div>
                     </div>
-                    <div>
-                        <label for="image" class="col-md-2">
-                        Link ảnh 
+                    <div >
+                        <label for="image" class="container">
+                            Image's Link
                         </label>
-                        <div class="col-md-9">
-                            <input type="file" name="image_name" id="image_name" onchange="alertName()"/>
-                            <input type="text" class="form-control" id="image_link" name="image" >
-                            <script>
-                                function alertName() {
-                                    var name =  document.getElementById("image_name").value;
-                                    var n = name.lastIndexOf('\\'); 
-                                    var result = name.substring(n + 1);
-                                    document.getElementById("image_link").value = "image/" + result;
-                                }
+                        <div class="container">
+                            <input type="file" name="image" id="image">
                             </script>
                         </div>
                     </div>
-                    <div>
-                        <label for="decription" class="col-md-2">
-                        Mô tả phim 
+                    <div >
+                        <label for="decription" class="container">
+                            Movie Description 
                         </label>
-                        <div class="col-md-9" style="color: black">
-                            <textarea name="decription" id="decription" cols="82" rows="10"></textarea>
+                        <div class="container">
+                            <input type="text" class="form-control" id="description" name="description">
                         </div>
                     
                     </div>
-                    <div>
-                        <label for="duration" class="col-md-2">
-                        Thời lượng (phút)
+                    <div >
+                        <label for="duration" class="container">
+                            Duration (minutes)
                         </label>
-                        <div class="col-md-9">
+                        <div class="container">
                             <input type="number" class="form-control" id="duration" name="duration">
                         </div>
                     </div>
-                    <div>
-                        <label for="author" class="col-md-2">
-                        Tác giả
+                    <div >
+                        <label for="author" class="container">
+                            Author
                         </label>
-                        <div class="col-md-9">
+                        <div class="container">
                             <input type="text" class="form-control" id="author" name="author">
                         </div>
                     </div>
-
-
-                    <div class="row">
-                        <div class="col-md-9"></div>
-                        <div class="col-md-3">
-                            <!-- <input class="btn btn-primary" type="submit" value="Post"> -->
-                            <button type="submit" class="btn btn-primary" id="button_post" name="button_post">Đăng phim </button>
+                        <div class="container">
+                            <button type="submit" class="btn btn-primary btn-md-10" id="button_post" name="button_post">Post movie </button>
                         </div>
-                    </div>
                 </form>
-
+                </div>
             </div>
         </div>
     
     </div>
-
 
     <?php
     if(isset($_POST["button_post"])){
@@ -215,14 +199,21 @@ session_start();
         $type_movie = $_POST["type_movie"];
         $nation = $_POST["nation"];
         $year = $_POST["year"];
-        $conn_image = $_POST["image"];
         $conn_film = '';
-        $description = $_POST["decription"];
+        $description = $_POST["description"];
         $duration = $_POST["duration"];
         $author = $_POST["author"];
+        $image = $_FILES['image']['name'];
+        $target = "image/".basename($image);
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+            echo '<script language="javascript">alert("Đã upload thành công!");</script>';
+            }
+        else{
+            echo '<script language="javascript">alert("Đã upload thất bại!");</script>';
+            }
        
         $sql = "INSERT INTO film(name,status,director,actor,category_id,type_movie,nation_id,year,image,description,duration,author)            
-            VALUES ('$name', '$status','$director','$actor','$category','$type_movie','$nation','$year','$conn_image','$description','$duration','$author')";
+            VALUES ('$name', '$status','$director','$actor','$category','$type_movie','$nation','$year','$image','$description','$duration','$author')";
         $result = mysqli_query($conn,$sql);
         var_dump($result);
         if($result){?>

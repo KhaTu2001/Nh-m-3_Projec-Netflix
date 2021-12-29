@@ -27,7 +27,7 @@ session_start();
       </form>
     </div>
   </nav>
-  <div class="slide-banner bg-img "
+  <div class="slide-banner bg-img"
   style="background-image: url(assets/img/slide-banner.jpg);
     height: 100vh;">
     <div class="layer">

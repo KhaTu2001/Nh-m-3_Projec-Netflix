@@ -1,15 +1,17 @@
 <?php
-    require 'connect.php' ;
-    include 'header.php';
+    require('connect.php');
+    include('header.php');
 ?>
+<body>
 <div class="slide-banner bg-img " style="background-image: url(image/slide-banner.jpg);height:100vh">
+        
        <div class="container">
             <div class="row" id="search-user">
                 <form method="post" class="search_form">
                     <div class="row">
                        <div class="col-md-2"></div>
                         <div class="col-md-7">
-                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search film for name, director, actor,..." name="qry">
+                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search user" name="user">
                         </div>
                         <div class="col-md-3">
                             <button class="btn btn-lg btn-primary" type="submit" name="button_search" style="padding: 8px">Search</button>
@@ -19,50 +21,33 @@
             </div>
             <div class="container" id="list-user">
                 <div class="table_box">
-                <div class="table_manage">
                     <!-- get from database -->
                     <?php
                         if(isset($_POST["button_search"])){
-                            $qry = isset($_POST["qry"]) ? $_POST["qry"] : '';
-                            $sql_name = "SELECT * FROM film WHERE name LIKE '%{$qry}%'";
-                            $sql_director = "SELECT * FROM film WHERE director LIKE '%{$qry}%'";
-                            $sql_actor = "SELECT * FROM film WHERE actor LIKE '%{$qry}%'";
-                            $sql_description = "SELECT * FROM film WHERE description LIKE '%{$qry}%'";
-
-                            $sql = $sql_name ." UNION ".$sql_director . " UNION ".$sql_actor. " UNION ". $sql_description;
+                            $name = isset($_POST["user"]) ? $_POST["user"] : '';
+                            
+                            $sql = "SELECT * FROM user WHERE username LIKE '%{$name}%'";
                             $result = mysqli_query($conn, $sql);
                             if (mysqli_num_rows($result) > 0) { ?>
                                 <!-- output data of each row -->
-                                <table class="table table-bordered " >
+                                <table class="table table-bordered" >
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
-                                            <th scope="col">Image</th>
-                                            <th scope="col">Name</th>                      
-                                            <th scope="col">Director</th>
-                                            <th scope="col">Actor</th>
-                                            <th scope="col">Description</th>
-                                            <th scope="col">Author</th>
+                                            <th scope="col">User name</th>
+                                            <th scope="col">Email</th>
                                             <th scope="col">Action_edit</th>
                                             <th scope="col">Action_delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                <?php while($row = mysqli_fetch_assoc($result)) {  ?>
+                                <?php while($row = mysqli_fetch_assoc($result)) {
+                                    if ($row["Usertype"] == 20){
+                                    ?>
                                     <tr>
                                         <th> <?php echo $row["id"] ?> </th>
-                                        <th>
-                                            <?php
-                                                echo "<div id='img_div'>";
-                                                echo "<img src='image/".$row['image']."' >";
-                                                echo "</div>";
-                                                
-                                                ?></th>
-                                        <th> <?php echo $row["name"] ?> </th>  
-                                        <th> <?php echo $row["director"] ?> </th>
-                                        <th> <?php echo $row["actor"] ?> </th>
-                                        <th> <?php echo $row["description"] ?> </th>
-                                        <th> <?php echo $row["author"] ?> </th>
+                                        <th> <?php echo $row["username"] ?> </th>
+                                        <th> <?php echo $row["email"] ?> </th>
                                         <td class="action_btn">
                                             <button type="button" class="btn btn-info" name="edit" onclick="edit(this)">Edit</button>
                                         </td>
@@ -71,45 +56,37 @@
                                         </td>
                                     </tr>
                                 <?php 
+                                    } 
                                 }
                             } else {
-                                echo "No user like ".$qry;
+                                echo "No user like ".$name;
                             }
                         }
                             mysqli_close($conn);
                     ?>
                         </tbody>
-                        <style>
-                            #img_div img{
-                            width: 300px;
-                            object-fit: cover;
-                                            }
-                        </style>
                     </table>
                 </div>
+            
             </div>
         </div>
     </div>
-    
-
     <script>
         function edit(params) {
                 var tr = params.parentElement.parentElement;
                 var td0= tr.cells.item(0).innerHTML;
                 td0 = td0.replace(' ','' ); //id của user có space ???
-                location.href= "editFilm.php?id=" + td0;
+                location.href= "editUser.php?id=" + td0;
         };
         function del(params) {
-            if(confirm("Are you sure you want to delete this movie?")){
+            if(confirm("Are you sure you want to delete this user?")){
                 var tr = params.parentElement.parentElement;
                 var td0= tr.cells.item(0).innerHTML;
                 td0 = td0.replace(' ','' ); //id của user có space ???
-                location.href= "deleteFilm.php?id=" + td0;
+                location.href= "deleteUser.php?id=" + td0;
             }
         };
+        
     </script>
-    <?php
-        include 'footer.php';
-    ?>
 </body>
 </html>
