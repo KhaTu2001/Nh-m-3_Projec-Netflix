@@ -1,36 +1,40 @@
 <?php
 
-    session_start();
     include('connect.php');
     if (isset($_POST['txtEmail'])) {
         $email = $_POST['txtEmail'];
         $pass = $_POST['txtPass'];
-
-        $sql = "SELECT * FROM user WHERE email = '$email'";
-        $result = mysqli_query($con,$sql);
-        $row = mysqli_fetch_assoc($result);
-        $checkEmail = mysqli_num_rows($result);
-        if($checkEmail == 1){
+        $sql = "SELECT * FROM user WHERE email = '$email' AND pass = '$pass'";
+        echo $sql;
+        $result = mysqli_query($conn,$sql);
+        if(mysqli_num_rows($result) > 0){
             // CẤP THẺ LÀM VIỆC
             
-            $pass_save = $row['pass'];
-            if (password_verify($pass, $pass_save)) {
-                echo $pass_save;
-                $_SESSION['isLoginOK'] = $row;
-    
-    
+            $_SESSION['isLoginOK'] = $email;  
+            $dbarray = mysqli_fetch_array($result);
+            if($dbarray['Usertype'] == 99){
+                $_SESSION['isLoginOK'] = $email;
+                header("location:admin/admin_page.php"); 
                 
-                header("Location:main.php");
-            } else {
-                $error = 'Mật khẩu sai';
-                header("Location:login.php?error=$error");
             }
+            
+            else{
+
+                header("location:main.php"); 
+            }
+            
+        }
+        else{
+            
+            $error = "Bạn đã nhập thông tin Email"."<br/>"."hoặc mật khẩu chưa chính xác";
+            header("location: login.php?error=$error");
+             //Chuyển hướng, hiển thị thông báo lỗi
         }
 
-       
 
 
-         } else {
+         } 
+         else {
             header("Location: login.php");
         }
 
