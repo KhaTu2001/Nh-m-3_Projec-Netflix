@@ -54,14 +54,14 @@
     background-color: #e60b0b;
     transition: all 0.2s ease;
   }
-  .text{
+  .text-way{
     text-align: center;
     font-size: 12px;
     margin-top: 50px;
     margin-bottom: 100px;
   }
-  .ᴠr { 
-    height: 100%; width: 1pх; 
+  .vr { 
+    height: 100%; width: 1px; 
     border-left: 1px solid gray;
    }
    .container .row a{
@@ -105,3 +105,223 @@
   .banquyen img{
     display: flex;
   }
+
+/*main-demo*/
+  * {
+    box-sizing: border-box;
+  }
+  .main-demo {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #141414;
+  }
+  .hero {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 48px;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    width: 92px;
+    padding-bottom: 10px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  .menu-left,
+  .menu-right {
+    display: flex;
+    color: #e5e5e5;
+    font-size: 14px;
+  }
+  .menu-left ul li a{
+    text-decoration: none;
+    color: white;
+  }
+  .menu ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  .menu ul li {
+    padding-right: 15px;
+  }
+  .menu .user img {
+    width: 32px;
+    margin-right: 8px;
+  }
+  .menu .user {
+    display: flex;
+  }
+  .dropdown-menu{
+    background-color: black;
+  }
+  .dropdown-menu a{
+    text-decoration: none;
+    display: flex;
+    color: white;
+    padding: 7px;
+    font-weight: 700;
+  }
+  .dropdown-menu a:hover{
+    text-decoration: underline;
+  }
+  .menu i {
+    font-size: 20px;
+  }
+  .menu-right ul li {
+    padding-right: 24px;
+  }
+  .banner {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+  }
+  .banner .poster {
+    width: 450px;
+  }
+  .banner .subtitle {
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.25;
+    padding-top: 8px;
+  }
+  .buttons {
+    margin-top: 32px;
+  }
+  .buttons .btn {
+    color: #fff;
+    padding: 9px 32px;
+    margin-right: 12px;
+    font-weight: 600;
+    border-radius: 2px;
+    background: rgba(51, 51, 51, 0.4);
+    font-family: inherit;
+    font-size: 100%;
+    border: 0;
+  }
+  .buttons .btn i {
+    margin-right: 8px;
+  }
+  .category {
+    height: 200px;
+  }
+  .category span {
+    color: #e5e5e5;
+    font-size: 18px;
+    line-height: 17px;
+    font-weight: 600;
+  }
+  .slider {
+    margin-top: 13px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    left: 60px;
+    right: 0;
+  }
+  .slider .movie {
+    min-width: 19.3%;
+  }
+  .slider .movie img {
+    max-width: 100%;
+    padding-right: 5px;
+  }
+  .footer {
+    margin: 100px auto 0;
+    width: 80%;
+    color: #808080;
+  }
+  .footer .social i {
+    padding-right: 26px;
+    font-size: 28px;
+  }
+  .flex {
+    display: flex;
+    padding-bottom: 80px;
+  }
+  .footer .info {
+    width: 60%;
+  
+  }
+  .footer .info ul {
+    list-style: none;
+    display: inline;
+    font-size: 13px;
+  }
+  .footer .info ul li a{
+    margin-top: 8px;
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+  }
+  .footer .info ul li a:hover{
+    text-decoration: underline;
+    color: white;
+  }
+  /*search*/
+    #container{
+    margin:auto;
+    float:right;
+    text-align:center;
+    }
+    #searchform{
+    display:inline;
+    font-size:20px;
+    border:2px solid white;
+    
+    padding: 5px;
+    background:black;
+    }
+    #s{
+    transition:all 0.2s ease-out;
+    width:1px;
+    border-radius:0;
+    box-shadow:none;
+    outline: none;
+    padding:0;
+    margin:0;
+    border:0;
+    background-color: transparent;
+    opacity:0;
+    color: white;
+    border-radius: none;
+    }
+    #s:focus{
+    width: 250px;;
+    opacity:1;
+    border: 10px;
+    }
+    label{
+    padding-left: 1px;
+    display:inline-block;
+    margin-top:0.3em;
+    color:white;
+    text-shadow:0 0 2px rgba(60,60,60,0.3);
+    position: relative;
+    left:0.1em;
+    }
+  /*test*/
+  .carousel-test span{
+    color: #e5e5e5;
+    font-size: 18px;
+    line-height: 17px;
+    font-weight: 600;
+  }
+    
+    
+    
+    
+    
+   
