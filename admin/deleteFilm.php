@@ -1,6 +1,5 @@
 <?php
     require('connect.php');
-
     if(isset($_GET["id"])){
         $filmID = $_GET['id'];
     }
@@ -9,7 +8,7 @@
     if (mysqli_query($conn, $sql)) {?>
         <script>
             alert("Xóa phim thành công");
-            location.href = "manageUser.php";
+            location.href = "manageFilm.php";
             // alert("hshshsh");
         </script>
 

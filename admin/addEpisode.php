@@ -1,73 +1,65 @@
-    <?php
-    session_start();
-        include 'header.php';
-        
+<?php
+    require('connect.php');
+        include 'header.php';  
     ?>
 <body>
-    <?php
-        require('connect.php');
-  ?>
-    <div id="wrapper">
-        <?php
-            include("common.php");
-        ?>
-        <div id="edit-film">
-            <div class="row text-center">
-                <h2>Thêm tập phim</h2>
-            </div>
+<div class="slide-banner bg-img " style="background-image: url(image/slide-banner.jpg);height:100vh">
+    <div class="container">
+        <div class="row">
+            <div id="edit-film" class="table_box">
+                <div class="text-center">
+                    <h2>Thêm tập phim</h2>
+                </div>
 
-            <form action="" method="post">
-                <div>
-                    <label for="id_film" class="col-md-2">
-                        Chọn phim 
-                    </label>
-                    <div class="col-md-10">
-                        <select id="id_film" style="color: black; width:90%" name="id_film" class="form-control">
-                            <?php 
-                                $sql1 = "SELECT * FROM film";
-                                $result1 = mysqli_query($conn, $sql1);
-
-                                if (mysqli_num_rows($result1) > 0) { 
-                                    while($row1 = mysqli_fetch_assoc($result1)) { ?>
-                                    <option value="<?php echo $row1["id"];?>">
-                                        <?php echo $row1["name"];?>
-                                    </option>
+                <form action="" method="post">
+                    <div class ="container">
+                        <label for="id_film" class="container">
+                          Chọn phim 
+                        </label>
+                        <div class="container">
+                            <select id="id_film"  name="id_film" class="form-control">
                                 <?php 
-                                    }
-                                }  
-                                else {?>
-                                    <option value="-1">None</option>
-                                <?php }
-                            ?>
-                        </select>
+                                    $sql1 = "SELECT * FROM film";
+                                    $result1 = mysqli_query($conn, $sql1);
+
+                                    if (mysqli_num_rows($result1) > 0) { 
+                                        while($row1 = mysqli_fetch_assoc($result1)) { ?>
+                                        <option value="<?php echo $row1["id"];?>">
+                                            <?php echo $row1["name"];?>
+                                        </option>
+                                    <?php 
+                                        }
+                                    }  
+                                    else {?>
+                                        <option value="-1">None</option>
+                                    <?php }
+                                    ?>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="ID-episode" class="container">
+                                ID tập phim
+                            </label>
+                            <div class="container">
+                                <input type="number" class="form-control" id="ID-episode" value="" name="id_episode">
+                            </div>
+                        </div>
+                    <div>
+                        <label for="name_episode" class="container">
+                            Tên tập phim
+                        </label>
+                        <div class="container">
+                            <input type="text" class="form-control" id="name_episode" value="" name="name_episode">
+                        </div>
                     </div>
-                </div>
                 <div>
-                    <label for="ID-episode" class="col-md-2">
-                        ID tập phim
-                    </label>
-                    <div class="col-md-9">
-                        <input type="number" class="form-control" id="ID-episode" value="" name="id_episode">
-                    </div>
-                </div>
-                <div>
-                    <label for="name_episode" class="col-md-2">
-                        Tên tập phim
-                    </label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" id="name_episode" value="" name="name_episode">
-                    </div>
-                </div>
-                <div>
-                    <label for="link" class="col-md-2">
-                        Link tập phim
-                    </label>
-                    <div class="col-md-9">
+                        <label for="link" class="container">
+                            Link tập phim
+                        </label>
+                        <div class="container">
                             <input type="file" name="video_name" id="video_name" onchange="getlink()"/>
                             <input type="text" class="form-control" id="video_link" name="video" >
-                            <p class="help-block">
-                                Ví dụ: images/video/cuoc-chien-vo-cuc.jpg
-                            </p>
+                            
                             <script>
                                 function getlink() {
                                     var name =  document.getElementById("video_name").value;
@@ -78,13 +70,12 @@
                             </script>
                         </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-9"></div>
-                    <div class="col-md-3">
+                
+                    <div class="container">
                         <!-- <input class="btn btn-primary" type="submit" value="Post"> -->
                         <button type="submit" class="btn btn-primary" id="button_post" name="button_post">Thêm tập phim </button>
                     </div>
-                </div>
+                
             </form>
 
             <?php
@@ -120,6 +111,9 @@
                 }
             }
             ?>
+            </div>
+            </div>
+
         </div>  
     </div>
     <?php

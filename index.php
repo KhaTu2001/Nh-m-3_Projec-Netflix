@@ -27,7 +27,7 @@ session_start();
       </form>
     </div>
   </nav>
-  <div class="slide-banner bg-img "
+  <div class="slide-banner bg-img"
   style="background-image: url(assets/img/slide-banner.jpg);
     height: 100vh;">
     <div class="layer">
@@ -52,6 +52,7 @@ session_start();
               <button type="submit" class="btn btn-danger btn_get_stared" name="btn_submit">Get Started <i class="fas fa-chevron-right"></i></button>
              
             </div>
+           
           </form>
          
         </div>

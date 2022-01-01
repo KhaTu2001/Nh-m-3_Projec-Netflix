@@ -12,9 +12,9 @@
         </div>
         <div class="col-md-4 col-6">
           <ul>
-            <li><a href="#">Help Centre</a></li>
-            <li><a href="#">Legal Notices</a></li>
-            <li><a href="#">Terms of Use</a></li>
+            <li><a href="helpcentre.php">Help Centre</a></li>
+            <li><a href="LegalNotices.php">Legal Notices</a></li>
+            <li><a href="termsofuse.php">Terms of Use</a></li>
           </ul>
         </div>
         <div class="col-md-4 col-6">

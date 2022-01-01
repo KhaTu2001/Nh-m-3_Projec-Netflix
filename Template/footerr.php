@@ -9,6 +9,6 @@
       integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
       crossorigin="anonymous"
     ></script>
-    
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
