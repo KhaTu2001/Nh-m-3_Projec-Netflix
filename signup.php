@@ -1,9 +1,21 @@
-<?php 
-  session_start();
-      //Put session start at the beginning of the file
-?>
+
 <?php
-  require('Template/header_login.php')
+  session_start();
+  require('Template/header_login.php');
+  if(isset($_POST['btn_submit1'])){
+    $user = $_POST['firstName'];
+    $email = $_POST['txtEmail'];
+    $pass1 = $_POST['txtPass1'];
+    $pass2 = $_POST['txtPass2'];
+    require('connect.php');
+    $sql = "select * from user where email ='$email'";
+    $res = mysqli_query($con,$sql);
+    echo $sql;
+    // if(mysqli_num_rows($res) >0){
+    //   echo $value = 'đăng ký thất bại';
+    //   header("Location:login.php?response=$value");
+    // }
+  }
 ?>
 
 
@@ -30,13 +42,13 @@
       </div>
   </nav>
       <div class="signup_form container" >
-        <form class="mx-1 mx-md-4 " method="POST">
+        <form class="mx-1 mx-md-4 " method="POST" onsubmit="return validateSignup()" action="signup.php" name="Signup">
           
           <div class="d-flex flex-row align-items-center mb-4">
            
             <div class="form-outline flex-fill mb-0">
               <label class="form-label" for="firstName">User Name</label>
-              <input type="text" id="firstName" name="firstName" class="form-control" placeholder="User name" />
+              <input type="text" id="firstName" name="firstName" class="form-control" placeholder="User name" required>
               
             </div>
           </div>
@@ -58,19 +70,20 @@
             
             <div class="form-outline flex-fill mb-0">
               <label class="form-label" for="firstName">Password</label>
-              <input type="password" id="inputPassword" name="txtPass" class="form-control" placeholder="Password" required>
+              <input type="password" id="inputPassword" name="txtPass1" class="form-control" placeholder="Password" required>
               
             </div>
+            
           </div>
+          <p id="sr_pass"></p>
           <div class="d-flex flex-row align-items-center mb-4">
             
             <div class="form-outline flex-fill mb-0">
               <label class="form-label" for="firstName">Retry Password</label>
-              <input type="password" id="inputPassword" name="txtPass" class="form-control" placeholder="Retry Password" required>
-              
+              <input type="password" id="inputPassword" name="txtPass2" class="form-control" placeholder="Retry Password" required>
             </div>
           </div>
-                                                  
+          <p id="sr_pass1"></p>                                      
           <div class="mb-3 form_signup">
               <h5>Already have an account?</h5>
               <a class="sign_up_now" href="login.php">Log in</a>
@@ -80,10 +93,11 @@
           </div>
 
         </form>
-
+        
       </div>
       
 <?php
   require('Template/footerr.php')
 ?>
+
 

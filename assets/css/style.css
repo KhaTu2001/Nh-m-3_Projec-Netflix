@@ -641,4 +641,12 @@
 .header_right{
   float: right !important;
 }
-
+.thea{
+   color: #e50914;
+   text-decoration: none;
+   cursor: pointer;
+}
+.thea:hover{
+   color: #e50914;
+   text-decoration: underline;
+}

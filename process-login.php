@@ -1,7 +1,7 @@
 <?php
     session_start();
     include('connect.php');
-    if (isset($_POST['btn_submit'])) {
+    if (isset($_POST['txtEmail'])) {
         $email = $_POST['txtEmail'];
         $pass = $_POST['txtPass'];
         $sql = "SELECT * FROM user WHERE email = '$email' AND pass = '$pass'";
@@ -29,6 +29,5 @@
     else {
         header("Location: login.php");
         }
-
 
     ?>

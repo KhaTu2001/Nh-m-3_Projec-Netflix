@@ -86,7 +86,7 @@
     </div>
   </div>
 </div>
-<div class="text">
+<div class="text-way">
   <p>Netflix streaming membership and internet connection required.
 <br>
 Netflix will be available on select devices from the following brands displayed.</p>

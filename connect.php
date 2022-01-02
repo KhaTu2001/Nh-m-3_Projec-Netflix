@@ -1,7 +1,9 @@
 <?php
- $conn = mysqli_connect('localhost','root','','btl_netflix');
-                        if(!$conn){
-                            die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
-                        }
-         
-        ?>               
+    $con = new mysqli("localhost","root","","btl_netflix");
+
+// Check connection
+    if ($con -> connect_errno) {
+        echo "Failed to connect to MySQL: " . $con -> connect_error;
+        exit();
+}
+?>           

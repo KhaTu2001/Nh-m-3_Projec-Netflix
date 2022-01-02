@@ -52,6 +52,7 @@ session_start();
               <button type="submit" class="btn btn-danger btn_get_stared" name="btn_submit">Get Started <i class="fas fa-chevron-right"></i></button>
              
             </div>
+           
           </form>
          
         </div>
