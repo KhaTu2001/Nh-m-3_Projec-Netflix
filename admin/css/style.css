@@ -5,6 +5,10 @@ body {
     margin: 0;
     font-family: "Roboto",sans-serif;
     overflow-x: hidden;
+    background-image: url(image/slide-banner.jpg);
+    /* background-repeat: no-repeat; */
+    max-height: 100vh;
+    
  }
  #header .head{
      position: absolute;
@@ -44,6 +48,7 @@ body {
   .navbar {
      position: absolute;
      width: 100%;
+     background-image: url(image);
   }
   a.navbar-brand {
      color: #e50914 !important;
@@ -54,13 +59,9 @@ body {
     display: none;
  }
  .layer {
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   height: 100vh;
+    
  }
  .notifyerror{
      color: red;
@@ -113,26 +114,32 @@ body {
  .navbar-nav.side-nav{
     margin-top: 12px;
  }
- .slide-banner{
-    padding-bottom: none;
-    background-repeat:repeat-x;
-    
- }
+
+.btn-primary{
+   background-color: #e50914;
+   border: none;
+}
+.btn-primary:hover{
+   background-color: #e50914;
+
+}
  .collapse.navbar-collapse{
     position: relative;
  }
  .search_form{
     margin-top: 48px;  
+    
  }
  .table_box .table{
     color: #fff;
  }
  .table_manage{
-    max-height: 600px;
+   max-height: 500px;
    overflow-x: auto;
    overflow-y: scroll;
  }
  .table_box{
+    color: #fff;
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     margin-top: 24px;
@@ -173,7 +180,7 @@ body {
 .select_sex{
    display: flex;
    justify-content:space-between ;
-   width: 120px;
+   width: 160px;
 }
 .navbar_select-option{
    display: none;

@@ -2,19 +2,22 @@
     require('connect.php');
         include 'header.php';  
     ?>
-<body>
-<div class="slide-banner bg-img " style="background-image: url(image/slide-banner.jpg);height:100vh">
+<body style="background-image: url(image/slide-banner.jpg)">
+<?php
+        include 'navbar.php';
+?>
+<div class="slide-banner bg-img ">
     <div class="container">
         <div class="row">
             <div id="edit-film" class="table_box">
                 <div class="text-center">
-                    <h2>Thêm tập phim</h2>
+                    <h2>Add More episodes</h2>
                 </div>
 
                 <form action="" method="post">
                     <div class ="container">
                         <label for="id_film" class="container">
-                          Chọn phim 
+                        Choose a movie
                         </label>
                         <div class="container">
                             <select id="id_film"  name="id_film" class="form-control">
@@ -38,7 +41,7 @@
                         </div>
                         <div>
                             <label for="ID-episode" class="container">
-                                ID tập phim
+                                ID Movie
                             </label>
                             <div class="container">
                                 <input type="number" class="form-control" id="ID-episode" value="" name="id_episode">
@@ -46,7 +49,7 @@
                         </div>
                     <div>
                         <label for="name_episode" class="container">
-                            Tên tập phim
+                            Name's Movie
                         </label>
                         <div class="container">
                             <input type="text" class="form-control" id="name_episode" value="" name="name_episode">
@@ -54,7 +57,7 @@
                     </div>
                 <div>
                         <label for="link" class="container">
-                            Link tập phim
+                            Link's Movie
                         </label>
                         <div class="container">
                             <input type="file" name="video_name" id="video_name" onchange="getlink()"/>
@@ -73,7 +76,7 @@
                 
                     <div class="container">
                         <!-- <input class="btn btn-primary" type="submit" value="Post"> -->
-                        <button type="submit" class="btn btn-primary" id="button_post" name="button_post">Thêm tập phim </button>
+                        <button type="submit" class="btn btn-primary" id="button_post" name="button_post">Add More episodes </button>
                     </div>
                 
             </form>

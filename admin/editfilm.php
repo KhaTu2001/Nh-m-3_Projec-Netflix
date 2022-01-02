@@ -1,7 +1,8 @@
 <?php
     include 'header.php';  
 ?>
-<body>
+<body style="background-image: url(image/slide-banner.jpg)">
+
     <?php
     require('connect.php');
     if(isset($_GET["id"])){
@@ -15,9 +16,10 @@
     } 
     else {
         $row = mysqli_fetch_assoc($result);
+        include 'navbar.php';
     ?>
 
-    <div class="slide-banner bg-img " style="background-image: url(image/slide-banner.jpg);background-repeat: repeat-y;">
+    <div class="slide-banner bg-img " >
              
              <div class="container add_flim-form" id="post_film" >
                  <div class="row">
@@ -167,10 +169,6 @@
                     </label>
                     <div class="container">
                         <input type="file" name="image" id="image">
-                       
-                        <script>
-                           
-                        </script>
                     </div>
                 </div>
                 <div>
@@ -215,6 +213,7 @@
    
    
     <?php
+    
         require_once("connect.php");
         if(isset($_POST["button_update"])){
             $name = $_POST["film-name"];
@@ -232,54 +231,54 @@
             $image = $_FILES['image']['name'];
             $target = "image/".basename($image);
             if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-                echo '<script language="javascript">alert("Đã upload thành công!");</script>';
+                $sql = "SELECT * FROM film WHERE ID = '$filmID'";
+                $check = mysqli_query($conn,$sql);
+                if(mysqli_num_rows($check) <= 0){ ?>
+                    <script>
+                        alert('Film and ID <?php echo $filmID;?> does not exist');
+                    </script>";
+                    <?php
+                }
+                else{
+                    $sql = "UPDATE film SET 
+                        name='$name',
+                        status='$status', 
+                        director='$director', 
+                        actor='$actor', 
+                        category_id='$category',
+                        type_movie='$type_movie',
+                        nation_id='$nation',
+                        image='$image',
+                        description='$description',
+                        duration='$duration',
+                        author='$author'
+                        WHERE id = $filmID";
+                        $result = mysqli_query($conn,$sql); 
+
+                        if ($result){?>
+                            <script>
+                                alert("Edit film successfully!");
+                                location.href="manageFilm.php";
+                                // location.href= window.location.href; reload page
+                            </script>
+                        <?php 
+                        } 
+                        else{ 
+                        ?>
+                            <script>
+                                alert("Edit film fail!"); -->
+                            </script>
+                        <?php
+                        }
+                    }
                 }
             else{
                 echo '<script language="javascript">alert("Đã upload thất bại!");</script>';
                 }
             //thực hiện việc lưu trữ dữ liệu vào db 
-            $sql = "SELECT * FROM film WHERE ID = '$filmID'";
-            $check = mysqli_query($conn,$sql);
-            if(mysqli_num_rows($check) <= 0){ ?>
-                <script>
-                    alert('Phim với ID <?php echo $filmID;?> không tồn tại');
-                </script>";
-                <?php
-            }
-            else{
-                $sql = "UPDATE film SET 
-                    name='$name',
-                    status='$status', 
-                    director='$director', 
-                    actor='$actor', 
-                    category_id='$category',
-                    type_movie='$type_movie',
-                    nation_id='$nation',
-                    image='$image',
-                    description='$description',
-                    duration='$duration',
-                    author='$author'
-                WHERE id = $filmID";
-                $result = mysqli_query($conn,$sql); 
-
-                if ($result){?>
-                    <script>
-                        alert("Edit film successfully!");
-                        location.href="manageFilm.php";
-                        // location.href= window.location.href; reload page
-                    </script>
-                <?php 
-                } else{ 
-                ?>
-                    <script>
-                        alert("Edit film fail!"); -->
-                    </script>
-                <?php
-                }
-            }
+           
         }
-    ?>
-    <?php }
+    }
         mysqli_close($conn);
     ?>
 

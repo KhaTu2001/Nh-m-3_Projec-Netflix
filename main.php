@@ -3,9 +3,7 @@
     // Trước khi cho người dùng xâm nhập vào bên trong
     // Phải kiểm tra THẺ LÀM VIỆC
     session_start();
-    if(!isset($_SESSION['isLoginOK'])){
-        header("location:login.php");
-    }   
+     
 ?>
 <?php
   require('Template/header_login.php')
@@ -82,20 +80,7 @@
     <div class="container">
       <div class="row">
         <h2>K-dramas</h2>
-        <div class="img_posters">
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-        </div>
+      
       </div>
       <div class="row">
         <h2>K-dramas</h2>

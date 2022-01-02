@@ -2,21 +2,23 @@
     require 'connect.php' ;
     include 'header.php';
 ?>
-<div class="slide-banner bg-img " style="background-image: url(image/slide-banner.jpg);height:100vh">
-       <div class="container">
-            <div class="row" id="search-user">
-                <form method="post" class="search_form">
-                    <div class="row">
-                       <div class="col-md-2"></div>
-                        <div class="col-md-7">
-                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search film for name, director, actor,..." name="qry">
+<body style="background-image: url(image/slide-banner.jpg)">
+<?php
+    include 'navbar.php';
+?>
+<div class="slide-banner bg-img " >
+                <div class="container" style="max-width:900px;">
+                    <form method="post" class="search_form">
+                        <div class="row" id="search-user" style="flex-wrap: nowrap;">
+                            <div style="width:70%">
+                                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search user" name="user">
+                            </div>
+                            <div style="width:30%">
+                                <button class="btn btn-lg btn-primary" type="submit" name="button_search" style="width:100%">Search</button>
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-lg btn-primary" type="submit" name="button_search" style="padding: 8px">Search</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+                    </form>
+                </div>
             <div class="container" id="list-user">
                 <div class="table_box">
                 <div class="table_manage">
@@ -28,7 +30,6 @@
                             $sql_director = "SELECT * FROM film WHERE director LIKE '%{$qry}%'";
                             $sql_actor = "SELECT * FROM film WHERE actor LIKE '%{$qry}%'";
                             $sql_description = "SELECT * FROM film WHERE description LIKE '%{$qry}%'";
-
                             $sql = $sql_name ." UNION ".$sql_director . " UNION ".$sql_actor. " UNION ". $sql_description;
                             $result = mysqli_query($conn, $sql);
                             if (mysqli_num_rows($result) > 0) { ?>
@@ -49,27 +50,26 @@
                                     </thead>
                                     <tbody>
                                 <?php while($row = mysqli_fetch_assoc($result)) {  ?>
-                                    <tr>
-                                        <th> <?php echo $row["id"] ?> </th>
-                                        <th>
-                                            <?php
-                                                echo "<div id='img_div'>";
-                                                echo "<img src='image/".$row['image']."' >";
-                                                echo "</div>";
-                                                
+                                        <tr>
+                                            <th> <?php echo $row["id"] ?> </th>
+                                            <th>
+                                                <?php
+                                                    echo "<div id='img_div'> ";
+                                                    echo "<img src='image/".$row['image']."' >";
+                                                    echo "</div>";                                    
                                                 ?></th>
-                                        <th> <?php echo $row["name"] ?> </th>  
-                                        <th> <?php echo $row["director"] ?> </th>
-                                        <th> <?php echo $row["actor"] ?> </th>
-                                        <th> <?php echo $row["description"] ?> </th>
-                                        <th> <?php echo $row["author"] ?> </th>
-                                        <td class="action_btn">
-                                            <button type="button" class="btn btn-info" name="edit" onclick="edit(this)">Edit</button>
-                                        </td>
-                                        <td class="action_btn">
-                                            <button type="button" class="btn btn-danger" name="delete" onclick="del(this)">Delete</button>
-                                        </td>
-                                    </tr>
+                                            <th> <?php echo $row["name"] ?> </th>  
+                                            <th> <?php echo $row["director"] ?> </th>
+                                            <th> <?php echo $row["actor"] ?> </th>
+                                            <th> <?php echo $row["description"] ?> </th>
+                                            <th> <?php echo $row["author"] ?> </th>
+                                            <td class="action_btn">
+                                                <button type="button" class="btn btn-info" name="edit" onclick="edit(this)">Edit</button>
+                                            </td>
+                                            <td class="action_btn">
+                                                <button type="button" class="btn btn-danger" name="delete" onclick="del(this)">Delete</button>
+                                            </td>
+                                        </tr>
                                 <?php 
                                 }
                             } else {
@@ -81,8 +81,9 @@
                         </tbody>
                         <style>
                             #img_div img{
-                            width: 300px;
+                            width: 240px;
                             object-fit: cover;
+                            
                                             }
                         </style>
                     </table>

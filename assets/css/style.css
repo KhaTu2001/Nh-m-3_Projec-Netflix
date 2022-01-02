@@ -120,10 +120,6 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    display: visible;
- }
- .layer:hover{
-    display: flex;
  }
  .layer.row{
     z-index: 1;

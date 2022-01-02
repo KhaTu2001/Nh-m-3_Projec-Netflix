@@ -7,7 +7,7 @@ session_start();
 ?>
  <nav id="header" class=" navbar navbar-light p-0">
     <div class="container-fluid px-5 head">
-      <a href="admin_page.php" class="navbar-brand">  <svg
+      <a href="index.php" class="navbar-brand">  <svg
         viewBox="0 0 111 30"
         class="header_navbar--logo"
         focusable="false"
@@ -29,7 +29,7 @@ session_start();
   </nav>
   <div class="slide-banner bg-img"
   style="background-image: url(assets/img/slide-banner.jpg);
-    height: 100vh;">
+    height: 100vh;    background-repeat:no-repeat;">
     <div class="layer">
       <div class="row" style="flex:1;">
         <div class="col-md-12 text-center" style="margin-top:100%" >
