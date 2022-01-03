@@ -2,21 +2,24 @@
     include 'header.php';
 ?>
 
-<body>
-
+<body style="background-image: url(image/slide-banner.jpg)">
+   
 	<?php
         require('connect.php');
         $sql = "SELECT id FROM film ";
         $result = mysqli_query($conn, $sql);
+        include 'navbar.php';
     ?>
 		
             
-             <div class="slide-banner bg-img " style="background-image: url(image/slide-banner.jpg);">
+             <div class="slide-banner bg-img  ">
              
             <div class="container add_flim-form" id="post_film" >
                 <div class="row">
                 <div id="edit-film" class="table_box">
-
+                <div class="text-center">
+                    <h2>Add More Movie</h2>
+                </div>
                 <form method="post" id="form-insert-film" name="form-insert-film" class="form-horizontal" enctype="multipart/form-data" action="" role="form" >
                     <div >
                         <label for="film-name" class="container">
@@ -24,6 +27,22 @@
                         </label>
                         <div class="container">
                             <input type="text" class="form-control" id="film-name" name="film-name">
+                        </div>
+                    </div>
+                    <div >
+                        <label for="film-link" class="container">
+                            movie's link
+                        </label>
+                        <div class="container">
+                            <input type="file" class="form-control" id="film-link" name="film-link">
+                        </div>
+                    </div>
+                    <div >
+                        <label for="image" class="container">
+                            Image's Link
+                        </label>
+                        <div class="container">
+                            <input type="file" class="form-control" name="image" id="image">
                         </div>
                     </div>
                    
@@ -146,15 +165,6 @@
                         </div>
                     </div>
                     <div >
-                        <label for="image" class="container">
-                            Image's Link
-                        </label>
-                        <div class="container">
-                            <input type="file" name="image" id="image">
-                            </script>
-                        </div>
-                    </div>
-                    <div >
                         <label for="decription" class="container">
                             Movie Description 
                         </label>
@@ -192,6 +202,7 @@
     <?php
     if(isset($_POST["button_post"])){
         $name = $_POST["film-name"];
+        
         $status = $_POST["status"];
         $director = $_POST["director"];
         $actor = $_POST["actor"];
@@ -204,31 +215,27 @@
         $duration = $_POST["duration"];
         $author = $_POST["author"];
         $image = $_FILES['image']['name'];
-        $target = "image/".basename($image);
-        if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-            echo '<script language="javascript">alert("Đã upload thành công!");</script>';
-            }
+        $targetimg = "image/".basename($image);   
+        $link = $_FILES["film-link"]['name'];
+        $targetimg = "image/".basename($image);
+        $targetmp4 = "video/".basename($link);
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $targetimg) && move_uploaded_file($_FILES['film-link']['tmp_name'], $targetmp4)) {
+            $sql = "INSERT INTO film(name,status,director,actor,category_id,type_movie,nation_id,year,image,description,duration,link,author)            
+            VALUES ('$name', '$status','$director','$actor','$category','$type_movie','$nation','$year','$image','$description','$duration','$link','$author')";
+            $result = mysqli_query($conn,$sql);
+            var_dump($result);
+            if($result){?>
+                <script>
+                    alert("Insert film sucessfully!");
+                </script>
+            <?php
+            } 
+        }
         else{
             echo '<script language="javascript">alert("Đã upload thất bại!");</script>';
             }
        
-        $sql = "INSERT INTO film(name,status,director,actor,category_id,type_movie,nation_id,year,image,description,duration,author)            
-            VALUES ('$name', '$status','$director','$actor','$category','$type_movie','$nation','$year','$image','$description','$duration','$author')";
-        $result = mysqli_query($conn,$sql);
-        var_dump($result);
-        if($result){?>
-            <script>
-                alert("Insert film sucessfully!");
-            </script>
-        <?php
-        } else { ?>
-            <script>
-                alert("Add film fail!"); -->
-            </script>
-        <?php }
     }
     ?>
-
-    <?php
-        include 'footer.php';
-    ?>
+    </body>
+    </html>

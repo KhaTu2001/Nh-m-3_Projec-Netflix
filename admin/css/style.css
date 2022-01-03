@@ -5,6 +5,8 @@ body {
     margin: 0;
     font-family: "Roboto",sans-serif;
     overflow-x: hidden;
+    height: calc();
+    
  }
  #header .head{
      position: absolute;
@@ -54,13 +56,9 @@ body {
     display: none;
  }
  .layer {
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   height: 100vh;
+    
  }
  .notifyerror{
      color: red;
@@ -69,24 +67,8 @@ body {
      font-weight: normal;
      margin-bottom: 0px;
  }
- img {
-    filter: gray;
-    /* IE6-9 */
-    -webkit-filter: grayscale(1);
-    /* Google Chrome, Safari 6+ & Opera 15+ */
-    -webkit-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
-    margin-bottom: 20px;
- }
- 
- img:hover {
-    filter: none;
-    /* IE6-9 */
-    -webkit-filter: grayscale(0);
-    /* Google Chrome, Safari 6+ & Opera 15+ */
-   }
-   .title{
+
+.title{
        padding: 10px 30px;
        border-radius: 10px;
        width: 500px;
@@ -99,12 +81,6 @@ body {
  .layer .row{
     color: #fff;
  }
- .avata_admin{
-    margin-top: 100px;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
- }
  .navbar-nav{
     display: flex;
     align-items: center;
@@ -113,26 +89,32 @@ body {
  .navbar-nav.side-nav{
     margin-top: 12px;
  }
- .slide-banner{
-    padding-bottom: none;
-    background-repeat:repeat-x;
-    
- }
+
+.btn-primary{
+   background-color: #e50914;
+   border: none;
+}
+.btn-primary:hover{
+   background-color: #e50914;
+
+}
  .collapse.navbar-collapse{
     position: relative;
  }
  .search_form{
     margin-top: 48px;  
+    
  }
  .table_box .table{
     color: #fff;
  }
  .table_manage{
-    max-height: 600px;
+   max-height: 500px;
    overflow-x: auto;
    overflow-y: scroll;
  }
  .table_box{
+    color: #fff;
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     margin-top: 24px;
@@ -173,7 +155,7 @@ body {
 .select_sex{
    display: flex;
    justify-content:space-between ;
-   width: 120px;
+   width: 160px;
 }
 .navbar_select-option{
    display: none;
@@ -205,6 +187,30 @@ body {
    font-size: 1.25rem;
    border-radius: 4px;
 }
+.dropdown > button{
+   background-color: #e50914 !important;
+}
 .dropdown button:hover{
    color: #fff;
+   border: 2px solid #fff;
+}
+.dropdown-item{
+   display: none;
+}
+.dropdown-menu.show .dropdown-item{
+   display: block;
+}
+.dropdown-item:hover{
+   background-color: #e50914;
+}
+.dropdown-item button{
+   border: none;
+}
+.upload_avata-profile{
+   display: block;
+   background-color: #551fac;
+   color: #fff;
+   padding: 6px 10px;
+   border-radius: 4px;
+   align-items: center;
 }

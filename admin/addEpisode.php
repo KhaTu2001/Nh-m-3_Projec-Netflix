@@ -1,20 +1,22 @@
 <?php
-    require('connect.php');
-        include 'header.php';  
-    ?>
-<body>
-<div class="slide-banner bg-img " style="background-image: url(image/slide-banner.jpg);height:100vh">
+    include 'header.php';  
+?>
+<body style="background-image: url(image/slide-banner.jpg)">
+<?php
+        include 'navbar.php';
+?>
+<div class="slide-banner bg-img ">
     <div class="container">
         <div class="row">
             <div id="edit-film" class="table_box">
                 <div class="text-center">
-                    <h2>Thêm tập phim</h2>
+                    <h2>Add More episodes</h2>
                 </div>
 
-                <form action="" method="post">
+                <form method="post" id="form-insert-film" name="form-insert-film" class="form-horizontal" enctype="multipart/form-data" action="" role="form" >
                     <div class ="container">
                         <label for="id_film" class="container">
-                          Chọn phim 
+                        Choose a movie
                         </label>
                         <div class="container">
                             <select id="id_film"  name="id_film" class="form-control">
@@ -38,7 +40,7 @@
                         </div>
                         <div>
                             <label for="ID-episode" class="container">
-                                ID tập phim
+                                ID Movie
                             </label>
                             <div class="container">
                                 <input type="number" class="form-control" id="ID-episode" value="" name="id_episode">
@@ -46,7 +48,7 @@
                         </div>
                     <div>
                         <label for="name_episode" class="container">
-                            Tên tập phim
+                            Name's Movie
                         </label>
                         <div class="container">
                             <input type="text" class="form-control" id="name_episode" value="" name="name_episode">
@@ -54,69 +56,66 @@
                     </div>
                 <div>
                         <label for="link" class="container">
-                            Link tập phim
+                            Link's Movie
                         </label>
                         <div class="container">
-                            <input type="file" name="video_name" id="video_name" onchange="getlink()"/>
-                            <input type="text" class="form-control" id="video_link" name="video" >
-                            
-                            <script>
-                                function getlink() {
-                                    var name =  document.getElementById("video_name").value;
-                                    var n = name.lastIndexOf('\\'); 
-                                    var result = name.substring(n + 1);
-                                    document.getElementById("video_link").value = "images/video/" + result;
-                                }
-                            </script>
+                            <input type="file" class="form-control" id="video_link" name="video" >
                         </div>
                 </div>
                 
                     <div class="container">
                         <!-- <input class="btn btn-primary" type="submit" value="Post"> -->
-                        <button type="submit" class="btn btn-primary" id="button_post" name="button_post">Thêm tập phim </button>
-                    </div>
-                
+                        <button type="submit" class="btn btn-primary" id="button_post" name="button_post">Add More episodes </button>
+                    </div>                
             </form>
-
-            <?php
+            <?php    
+            include('connect.php');
             if(isset($_POST["button_post"])){
                 $id_film = $_POST["id_film"];
                 $id_episode = $_POST["id_episode"];
                 $name_episode = $_POST["name_episode"];
-                $content = $_POST["video"];
-
-                $sql = "SELECT * FROM episode WHERE episode=". $id_episode;
-                $result = mysqli_query($conn,$sql);
-                if (mysqli_num_rows($result)){?>
-                    <script>
-                        alert("Tập phim này đã có");
-                    </script>
-                <?php
-                }else {
-                    $sql = "INSERT INTO episode(film_id,episode,episode_name,content)            
-                        VALUES ('$id_film', '$id_episode','$name_episode','$content')";
+                $content = $_FILES["video"]['name'];
+                $target = "video/".basename($link);
+                if (move_uploaded_file($_FILES['video']['tmp_name'], $target)){
+                    $sql = "SELECT * FROM episode WHERE episode = $id_episode";
                     $result = mysqli_query($conn,$sql);
-                    if($result){?>
+                    if (mysqli_num_rows($result)){?>
                         <script>
-                            alert("Thêm tập phim thành công!");
+                            alert("This episode already has");
                         </script>
                     <?php
-                    } else { ?>
-                        <script>
-                            alert("Lỗi thêm tập phim"); -->
-                        </script>
-                    <?php 
-                
+                    }
+                    else {
+                        $sql1 = "INSERT INTO episode(film_id,episode,episode_name,content)            
+                            VALUES ('$id_film', '$id_episode','$name_episode','$content')";
+                        $result1 = mysqli_query($conn,$sql1);
+                        if($result1){?>
+                            <script>
+                                alert("ADD successful episodes!");
+                            </script>
+                        <?php
+                        } 
+                        else { ?>
+                            <script>
+                                alert("Error adding episode"); 
+                            </script>
+                        <?php 
+                    
+                        }
                     }
                 }
+                else{
+                    echo '<script language="javascript">alert("Đã upload thất bại!");</script>';
+                }
             }
+            
             ?>
             </div>
             </div>
 
         </div>  
     </div>
-    <?php
-        include 'footer.php';
     ?>
+    </body>
+    </html>
 

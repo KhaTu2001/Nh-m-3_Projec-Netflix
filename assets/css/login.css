@@ -42,7 +42,6 @@ a.navbar-brand:hover{
 .form_login{ 
    display: flex;
    margin-bottom: 10rem;
-   opacity: 0.9;
    justify-content: center;
    align-items: center;
   
@@ -54,6 +53,7 @@ a.navbar-brand:hover{
    background-color: #13110E;
    padding: 60px 68px 40px;
    opacity: 1 !important;
+   background-color:  rgba(0,0,0,0.7);
 }
 .form-control{
    width: 314px !important;
@@ -198,9 +198,10 @@ a.navbar-brand:hover{
       margin-top: 70px;
       background-color: #13110E;
       padding: 60px 68px 40px;
-      width: 400px !important;
-      height: 640px !important;
+      max-width: 800px !important;
+      max-height: 700px !important;
       background-color:  rgba(0,0,0,0.7);
       border-radius: 16px;
+      margin-bottom: 100px;
 }
 
