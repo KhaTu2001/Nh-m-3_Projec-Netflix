@@ -31,11 +31,11 @@
 			  <ul id="active">
 				  <li>
 					  <a href="addFilm.php">
-					  <i class="fa fa-plus"></i></i> Add film</a>
+					  <i class="fa fa-plus"></i> Add film</a>
 				  </li>
 				  <li>
 					  <a href="addEpisode.php">
-					  <i class="fa fa-plus"></i></i> Add episode</a>
+					  <i class="fa fa-plus"></i> Add episode</a>
 				  </li>
 				  <li>
 					  <a href="manageFilm.php">
@@ -49,18 +49,24 @@
 		</div>
 		</div>
 		<div class="navbar_header-right">
+			<?php
+				$_SESSION["userid"] = $rowAd['ID'];
+			?>
 		<div class="dropdown">
 			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 				<i class="fa fa-user"></i><?php echo $rowAd['username'] ; ?>
 			</button>
 			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 				<li class="dropdown-item">
-					<a href="<?php echo "editUser.php?id=".$rowAd["id"]?>"> 
-					<i class="fa fa-user"></i> Profile</a>
+				<form method="post" action="">
+					<a href="<?php echo "profile.php"?>">
+					<i class="fa fa-user"></i>Profile</a>
+				</form>
+
 				</li>
 				<li class="dropdown-item">
 					<form method="post" action="">
-						<a> <button id="logout" name="log_out" style=""> 
+						<a> <button sid="logout" name="log_out" style=""> 
 							<i class="fa fa-power-off"></i>Đăng xuất</button> 
 						</a>
 					</form>
@@ -68,6 +74,7 @@
 				
 			</ul>
 		</div>
+
 		<div class="moblie_reponsive">
 			
 			<label for="nav_mobile-input" class="navbar_btn">
@@ -80,17 +87,18 @@
 			</label>
 			
 			<div class="navbar_select-option"style="">
+				
 				<ul id="active">
 					<label for="nav_mobile-input" class="close_navbar">
 						<i class="fas fa-times"></i>	
 					</label>
-					<li>
-						<a href="addFilm.php">
-						<i class="fa fa-plus"></i></i> Add film</a>
-					</li>
+					<li style="padding-top:14px;">
+					  <a href="addFilm.php">
+					  <i class="fa fa-plus"></i> Add film</a>
+				  </li>
 					<li>
 						<a href="addEpisode.php">
-						<i class="fa fa-plus"></i></i> Add episode</a>
+						<i class="fa fa-plus"></i> Add episode</a>
 					</li>
 					<li>
 						<a href="manageFilm.php">
@@ -108,7 +116,7 @@
 			unset($_SESSION['isLoginOK']);
 			session_unset(); 
 			session_destroy();
-			header('Location:../index.php');
+			header('Location:../admin_page.php');
 		}
 	
 	?>

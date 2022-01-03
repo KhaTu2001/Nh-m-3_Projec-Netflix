@@ -39,7 +39,8 @@
                                         <tr>
                                             <th scope="col">ID</th>
                                             <th scope="col">Image</th>
-                                            <th scope="col">Name</th>                      
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Movie's link</th>                                        
                                             <th scope="col">Director</th>
                                             <th scope="col">Actor</th>
                                             <th scope="col">Description</th>
@@ -58,7 +59,8 @@
                                                     echo "<img src='image/".$row['image']."' >";
                                                     echo "</div>";                                    
                                                 ?></th>
-                                            <th> <?php echo $row["name"] ?> </th>  
+                                            <th> <?php echo $row["name"] ?> </th> 
+                                            <th> <?php echo $row["link"] ?> </th>  
                                             <th> <?php echo $row["director"] ?> </th>
                                             <th> <?php echo $row["actor"] ?> </th>
                                             <th> <?php echo $row["description"] ?> </th>
@@ -109,8 +111,6 @@
             }
         };
     </script>
-    <?php
-        include 'footer.php';
-    ?>
+    
 </body>
 </html>

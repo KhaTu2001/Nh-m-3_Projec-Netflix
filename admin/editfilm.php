@@ -45,7 +45,22 @@
                         <input type="text" class="form-control" id="film-name" name="film-name" value="<?php echo $row["name"]; ?>">
                     </div>
                 </div>
-               
+                <div >
+                        <label for="film-link" class="container">
+                            movie's link
+                        </label>
+                        <div class="container">
+                            <input type="text" class="form-control" id="film-link" name="film-link">
+                        </div>
+                    </div>
+                    <div >
+                        <label for="trailer-link" class="container">
+                            Trailer's link
+                        </label>
+                        <div class="container">
+                            <input type="text" class="form-control" id="trailer-link" name="trailer-link">
+                        </div>
+                    </div>
                 <div>
                     <label for="status" class="container">
                         Status
@@ -217,6 +232,8 @@
         require_once("connect.php");
         if(isset($_POST["button_update"])){
             $name = $_POST["film-name"];
+            $link = $_POST["film-link"];
+            $trailer = $_POST["trailer-link"];
             $status = $_POST["status"];
             $director = $_POST["director"];
             $actor = $_POST["actor"];
@@ -251,7 +268,9 @@
                         image='$image',
                         description='$description',
                         duration='$duration',
-                        author='$author'
+                        link='$link',           
+                        author='$author',
+                        trailer_link='$trailer'
                         WHERE id = $filmID";
                         $result = mysqli_query($conn,$sql); 
 

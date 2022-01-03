@@ -39,8 +39,10 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">ID</th>
+                                            <th scope="col">full name</th>
                                             <th scope="col">User name</th>
                                             <th scope="col">Email</th>
+                                            <th scope="col">Number phone</th>
                                             <th scope="col">Gender</th>
                                             <th scope="col">Action_edit</th>
                                             <th scope="col">Action_delete</th>
@@ -48,13 +50,15 @@
                                     </thead>
                                     <tbody>
                                 <?php while($row = mysqli_fetch_assoc($result)) {
-                                    if ($row["Usertype"] == 20){
+                                    if ($row["usertype"] == 20){
                                     ?>
                                     <tr>
-                                        <th> <?php echo $row["id"] ?> </th>
+                                        <th> <?php echo $row["ID"] ?> </th>
+                                        <th> <?php echo $row["fullname"] ?> </th>
                                         <th> <?php echo $row["username"] ?> </th>
                                         <th> <?php echo $row["email"] ?> </th>
-                                        <th> <?php echo $row["gender"] ?> </th>
+                                        <th> <?php echo $row["phone"] ?> </th>
+                                        <th> <?php echo $row["sex"] ?> </th>
                                         <td class="action_btn">
                                             <button type="button" class="btn btn-info" name="edit" onclick="edit(this)">Edit</button>
                                         </td>

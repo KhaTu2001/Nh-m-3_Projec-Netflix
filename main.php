@@ -1,140 +1,240 @@
-<?php
-    
-    // Trước khi cho người dùng xâm nhập vào bên trong
-    // Phải kiểm tra THẺ LÀM VIỆC
-    session_start();
-     
-?>
-<?php
-  require('Template/header_login.php')
-?>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Netflix</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/minh.css?v=<?php echo time(); ?>">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+</head>
+<body class="main-demo" >
+	<div style="height: 600px;
+	  background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.8) 0%,
+			rgba(0, 0, 0, 0.2) 20%,
+			rgba(20, 20, 20, 0.2) 80%,
+			rgba(20, 20, 20, 1) 100%
+		),
+		url(assets/img/poster.jpg);
+	background-size: cover;
+	padding: 4px 12px 12px;" class="container-fluid ">
+		<div class="hero">
+			<div class="header">
+				<div class="logo">
+					<a href="index.html">
+					<img src="assets/img/netflix-logo-2-1.png" alt="" />
+					</a>
+				</div>
+				<div class="menu">
+					<div class="menu-left">
+						<ul>
+							<li><a href="">Home</a></li>
+							<li><a href="">TV Shows</a></li>
+							<li><a href="">Movies</a></li>
+							<li><a href="">New & Popular</a></li>
+							<li><a href="">My list</a></li>
+						</ul>
+					</div>
+					<div class="menu-right">
+						<ul>
+							<li>
+								<div id="container">
+									<form role="search" method="get" id="searchform" action="">
+										<label for="s">
+											<i class="fas fa-search"></i>
+										</label>
+										<input type="text" value="" placeholder="Search..." class="" id="s" />
+									</form>
+								</div>
+							</li>
+							<li>Kids</li>
+							<li>DVD</li>
+							<li><i class="fas fa-bell"></i></li>
+							<li class="user">
+								<img src="assets/img/user.png" alt="" />
+								<div class="dropdown">
+									<a class="btn btn-secondary dropdown-toggle" href="#"  id="dropdownMenuLink" data-bs-toggle="dropdown" ></a>
+									<div class="dropdown-menu">
+										<a href="#">Account</a>
+										<a href="#">Help Center</a>
+										<a  href="#">Sign out of Neflix</a>
+									</div>
+								  </div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="banner">
+			<video width="640" height="480" controls posster="images/poster.png">
 
-  <body style="background-color: #111 !important">
-    <div class="container header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a href="index.php" class="navbar-brand">
-            <svg
-              viewBox="0 0 111 30"
-              class="header_navbar--logo"
-              focusable="false"
-            >
-              <g id="netflix-logo">
-                <path
-                  d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z"
-                  id="Fill-14"
-                  fill="#e50914"
-                ></path>
-              </g></svg></a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">TV Shows</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Movies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">New & Popular</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">My List</a>
-              </li>
-            </ul>
-            <div class="header_right"></div>
-          </div>
-        </div>
-      </nav>
-    </div>
-      <div class="container">
-        <div class="banner" style="background-image: url(assets/img/banner.jpg) ;
-        height: 448px;
-        background-size:cover;
-        width: 100%;object-fit:contain;
-        ">
-        
-      
-        <div class="banner_content">
-          <h1>
-            The legend
-          </h1>
-          <div class="banner_description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-            repellat harum dolorum quaerat sint sed eius voluptas, blanditiis
-            labore recusandae unde deserunt! Dolorem commodi suscipit culpa
-            temporibus animi, molestiae magnam.
-          </div>
-          <div class="banner_button">
-            <button class="button_play">
-              Play
-            </button>
-          </div>
-        </div>
-      </div>
-      </div>
+					<source src="admin/video/dhruv - double take (Official Audio).mp4" type="video/mp4">
 
-    <div class="container">
-      <div class="row">
-        <h2>K-dramas</h2>
-      
-      </div>
-      <div class="row">
-        <h2>K-dramas</h2>
-        <div class="img_posters">
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-        </div>
-      </div>
-      <div class="row">
-        <h2>K-dramas</h2>
-        <div class="img_posters">
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-        </div>
-      </div>
-      <div class="row">
-        <h2>K-dramas</h2>
-        <div class="img_posters">
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-          <img src="assets/img/small-movie1.jpg" class="rounded" alt="" />
-        </div>
-      </div>
-    </div>
+					<source src="freehostpage.ogg" type="video/ogg">
+			</video>
+			<!-- <div>
+<button onclick="playPause();">Play/Pause</button>
+<button onclick="size250();">250</button>
+<button onclick="size400();">400</button>
+<button onclick="size550();">550</button>
+</div>
+<video id="myvideo" width="250">
+      <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"></source>
+      <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm"></source>
+      <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg"></source>
+</video>
+<script type="text/javascript">
+var video = document.getElementById("myvideo");
+function playPause()
+{ 
+if (video.paused) 
+video.play(); 
+else 
+video.pause(); 
+}
 
-    <?php
-  require('Template/footerr.php')
-?>
+function size250()
+{video.width = 250;}
+
+function size400()
+{video.width = 400;}
+
+function size550()
+{video.width = 550;} 
+</script>   -->
+				<span class="subtitle">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum cumque
+					voluptatum ut placeat maiores! Minus quo
+				</span>
+				<div class="buttons">
+					<button class="btn"><i class="fas fa-play"></i>Assistir</button>
+					<button class="btn"><i class="fas fa-plus"></i>Minha lista</button>
+				</div>
+			</div>
+			<div class="category">
+				<span>Recomendados</span>
+				<div id="carouselExampleControls" class="carousel slide" name="carousel-slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+					  <div class="carousel-item active">
+						<div class="row">
+							<div class="col-md-2">
+								<img class="" src="assets/img/video_001.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_002.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_003.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_004.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_005.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_001.jpg" alt="">
+							</div>
+						</div>
+					  </div>
+					  <div class="carousel-item">
+						<div class="row">
+							<div class="col-md-2">
+								<img class="" src="assets/img/video_001.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_002.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_003.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_004.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_005.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_001.jpg" alt="">
+							</div>
+						</div>
+					  </div>
+					  <div class="carousel-item">
+						<div class="row">
+							<div class="col-md-2">
+								<img class="" src="assets/img/video_001.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_002.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_003.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_004.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_005.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_001.jpg" alt="">
+							</div>
+						</div>
+					  </div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+					  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+					  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  <span class="visually-hidden">Next</span>
+					</button>
+				  </div>
+			</div>
+			<div class="footer">
+				<div class="social">
+					<i class="fab fa-facebook-square"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-twitter"></i>
+					<i class="fab fa-youtube"></i>
+				</div>
+				<div class="flex">
+					<div class="info">
+						<ul>
+							<li><a href="">Questions? Contact us.</a></li>
+							<li><a href="">FAQ</a></li>
+							<li><a href="">Privacy</a></li>
+						</ul>
+					</div>
+					<div class="info">
+						<ul>
+							<li><a href="">Help Center</a></li>
+							<li><a href="">Legal Notices</a></li>
+							<li><a href="">Terms of Use</a></li>
+						</ul>
+					</div>
+					<div class="info">
+						<ul>
+							<li><a href="">Account</a></li>
+							<li><a href="">Ways to Match</a></li>
+							<li><a href="">Corporate Information</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

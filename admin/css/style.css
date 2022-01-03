@@ -5,9 +5,7 @@ body {
     margin: 0;
     font-family: "Roboto",sans-serif;
     overflow-x: hidden;
-    background-image: url(image/slide-banner.jpg);
-    /* background-repeat: no-repeat; */
-    max-height: 100vh;
+    height: calc();
     
  }
  #header .head{
@@ -48,7 +46,6 @@ body {
   .navbar {
      position: absolute;
      width: 100%;
-     background-image: url(image);
   }
   a.navbar-brand {
      color: #e50914 !important;
@@ -70,24 +67,8 @@ body {
      font-weight: normal;
      margin-bottom: 0px;
  }
- img {
-    filter: gray;
-    /* IE6-9 */
-    -webkit-filter: grayscale(1);
-    /* Google Chrome, Safari 6+ & Opera 15+ */
-    -webkit-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.75);
-    margin-bottom: 20px;
- }
- 
- img:hover {
-    filter: none;
-    /* IE6-9 */
-    -webkit-filter: grayscale(0);
-    /* Google Chrome, Safari 6+ & Opera 15+ */
-   }
-   .title{
+
+.title{
        padding: 10px 30px;
        border-radius: 10px;
        width: 500px;
@@ -99,12 +80,6 @@ body {
  }
  .layer .row{
     color: #fff;
- }
- .avata_admin{
-    margin-top: 100px;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
  }
  .navbar-nav{
     display: flex;
@@ -212,6 +187,30 @@ body {
    font-size: 1.25rem;
    border-radius: 4px;
 }
+.dropdown > button{
+   background-color: #e50914 !important;
+}
 .dropdown button:hover{
    color: #fff;
+   border: 2px solid #fff;
+}
+.dropdown-item{
+   display: none;
+}
+.dropdown-menu.show .dropdown-item{
+   display: block;
+}
+.dropdown-item:hover{
+   background-color: #e50914;
+}
+.dropdown-item button{
+   border: none;
+}
+.upload_avata-profile{
+   display: block;
+   background-color: #551fac;
+   color: #fff;
+   padding: 6px 10px;
+   border-radius: 4px;
+   align-items: center;
 }

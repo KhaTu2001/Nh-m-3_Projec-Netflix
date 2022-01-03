@@ -3,9 +3,9 @@
     if(isset($_GET["id"])){
         $filmID = $_GET['id'];
     }
-    $sql = "DELETE FROM film  WHERE id = $filmID";
-
-    if (mysqli_query($conn, $sql)) {?>
+    $sql = "DELETE FROM episode  WHERE film_id = $filmID";
+    $sql1 = "DELETE FROM film  WHERE id = $filmID";
+    if (mysqli_query($conn, $sql) && mysqli_query($conn, $sql1)) {?>
         <script>
             alert("Xóa phim thành công");
             location.href = "manageFilm.php";
