@@ -1,7 +1,6 @@
 .navbar .container img{
     width: 145px;
     height: 35px;
-
 }
 .navbar .container form{
     text-align: center;
@@ -64,11 +63,11 @@
     height: 100%; width: 1px; 
     border-left: 1px solid gray;
    }
-   .container .row a{
+   .tienich .container .row a{
      color: gray;
      text-decoration: none;
    }
-   .container .row a:hover{
+   .tienich .container .row a:hover{
      text-decoration: underline;
    }
    .banquyen{
@@ -253,7 +252,6 @@
   }
   .footer .info {
     width: 60%;
-  
   }
   .footer .info ul {
     list-style: none;
@@ -280,7 +278,6 @@
     display:inline;
     font-size:20px;
     border:2px solid white;
-    
     padding: 5px;
     background:black;
     }
