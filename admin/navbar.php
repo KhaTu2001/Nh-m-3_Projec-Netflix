@@ -116,7 +116,7 @@
 			unset($_SESSION['isLoginOK']);
 			session_unset(); 
 			session_destroy();
-			header('Location:../admin_page.php');
+			header('Location:../index.php');
 		}
 	
 	?>

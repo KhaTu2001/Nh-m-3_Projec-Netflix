@@ -35,26 +35,13 @@ session_start();
         <div class="col-md-12 text-center" style="margin-top:100%" >
           <h1>Unlimited movies, TV <br>shows and more.</h1>
           <h3>Watch anywhere. Cancel anytime.</h3>
-          <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
+          <h5>Ready to watch? Enter sign up now to create or restart your membership.</h5>
         </div>
       </div>
       <div class="row w-100">
         <div class="col-md-2 col-1"></div>
         <div class="col-md-8 col-10  main-search">
-        
-        <form action = "signup.php" class="form_layout" method="POST">
-            <div class="input-group">
-              <div class="email-search form-control">
-                <input type="email" id="email_address" class=" email-address " name="txtEmailinput" required = "">
-                <label for="">Email address</label>
-                
-              </div>
-              <button type="submit" class="btn btn-danger btn_get_stared" name="btn_submit">Get Started <i class="fas fa-chevron-right"></i></button>
-             
-            </div>
-           
-          </form>
-         
+          <a href="signup.php" class="input-group-text " id="basic-addon2">Sign up now <i class="fas fa-chevron-right"></i></a>
         </div>
         
       </div>
@@ -169,21 +156,12 @@ You can watch as much as you want, whenever you want, without a single ad – al
   <section class="bottom-email-search">
     <div class="bottom-search">
       <p class="text-center">Ready to watch? Enter your email to create or restart your membership.</p>
-      <div class="row">
+      <div class="row w-100">
         <div class="col-md-2 col-1"></div>
         <div class="col-md-8 col-10  main-search">
-        <form action = "signup.php" class="form_layout" method="POST">
-            <div class="input-group">
-              <div class="email-search form-control">
-                <input type="email" id="email_address" class=" email-address " name="txtEmailinput" required = "">
-                <label for="">Email address</label>
-                
-              </div>
-              <button type="submit" class="btn btn-danger btn_get_stared" name="btn_submit">Get Started <i class="fas fa-chevron-right"></i></button>
-             
-            </div>
-          </form>
+          <a href="signup.php" class="input-group-text " id="basic-addon2">Sign up now <i class="fas fa-chevron-right"></i></a>
         </div>
+        
       </div>
     </div>
   </section>

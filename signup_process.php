@@ -1,33 +1,37 @@
 <?php 
-
   if(isset($_POST['btn_submit1'])){
-    $user = $_POST['firstName'];
-    $email = $_POST['txtEmail'];
-    $pass1 = $_POST['txtPass1'];
-    $pass2 = $_POST['txtPass2'];
-    
-    //b1:mo ket noi database
+    $username=$_POST['userName'];
+    $fullname = $_POST['FullName'];
+    $email=$_POST['txtEmail'];
+    $phone =$_POST['txtphone'];
+    $pass1=$_POST['txtPass1'];
+    $pass2=$_POST['txtPass2'];
+    $gender = $_POST["gender"];
     require('connect.php');
-    //b2:truy van
-    $sql1 = "SELECT * FROM user WHERE email = '$email' or username='$user'";
-    $result = mysqli_query($con,$sql1);
-    if(mysqli_num_rows($result) > 0){
-      $error = 'tài khoản đã tồn tại';
-      header("Location:signup.php?response=$error");
+    $sql = "SELECT * FROM user where email = '$email'";
+    $res = mysqli_query($conn,$sql);
+    if( mysqli_num_rows($res) > 0){
+      $error = "Tai khoan da ton tai";
+      header("Location:signup.php?error=$error");
     }
-    else {
-      $code = md5($pass1);
-      $pass_hash = password_hash($pass1, PASSWORD_DEFAULT);
-      $sql2  = "INSERT INTO user (username, email, pass) 
-          VALUES ('$user',' $email','$pass_hash')";
-      $res2 = mysqli_query($con, $sql2); // voi lenh insert thanh cong tra ve so nguyen
-      if ($res2 == true){
-        header("Location:login.php?");
-      }else{
-          $error = 'khong the insert';
-          header("Location:signup.php?response=$error");
+    else{
+      $pass_hash = password_hash($pass1,PASSWORD_DEFAULT);
+      $sql2 = "INSERT INTO user (username,fullname,email,password,phone,sex,usertype) VALUES ('$username','$fullname', '$email','$pass_hash','$phone','$gender','20')";
+      $res2 = mysqli_query($conn,$sql2);
+      echo $sql2;
+      if($res2 >0){
+        echo "Signup successful";
+        header("Location:login.php");
       }
+      else{
+        $error = "khong the dang ky";
+      header("Location:signup.php?error=$error");
+      }
+    }
   }
-}
-mysqli_close($con);
+
+  // else{
+    
+  // }
+
 ?>

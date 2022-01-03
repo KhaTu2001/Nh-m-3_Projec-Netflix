@@ -2,20 +2,7 @@
 <?php
   session_start();
   require('Template/header_login.php');
-  if(isset($_POST['btn_submit1'])){
-    $user = $_POST['firstName'];
-    $email = $_POST['txtEmail'];
-    $pass1 = $_POST['txtPass1'];
-    $pass2 = $_POST['txtPass2'];
-    require('connect.php');
-    $sql = "select * from user where email ='$email'";
-    $res = mysqli_query($con,$sql);
-    echo $sql;
-    // if(mysqli_num_rows($res) >0){
-    //   echo $value = 'đăng ký thất bại';
-    //   header("Location:login.php?response=$value");
-    // }
-  }
+  
 ?>
 
 
@@ -42,59 +29,140 @@
       </div>
   </nav>
       <div class="signup_form container" >
-        <form class="mx-1 mx-md-4 " method="POST" onsubmit="return validateSignup()" action="signup.php" name="Signup">
-          
-          <div class="d-flex flex-row align-items-center mb-4">
+      <form class="mx-1 mx-md-4 " method="POST" onsubmit="return validateSignup()" action="signup_process.php" name="Signup">
+         <!-- <div class="form_header">
+              <h1 style="color:red; left:50%">Sign up</h1>
+            </div> -->
+            <div class="row">
+              <div class="col-6">
+                <div class="d-flex flex-row align-items-center mb-3">
            
-            <div class="form-outline flex-fill mb-0">
-              <label class="form-label" for="firstName">User Name</label>
-              <input type="text" id="firstName" name="firstName" class="form-control" placeholder="User name" required>
-              
-            </div>
-          </div>
-          <div class="d-flex flex-row align-items-center mb-4">
-            
-            <div class="form-outline flex-fill mb-0">
-              <?php
-                  $email_value = "";
-                  if(isset($_POST['txtEmailinput'])){
-                    $email_value = $_POST['txtEmailinput'];
-                  }
-              ?>
-              <label class="form-label" for="firstName">Email</label>
-              <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" value="<?php echo $email_value;  ?> "  required autofocus>
-              
-            </div>
-          </div>
-          <div class="d-flex flex-row align-items-center mb-4">
-            
-            <div class="form-outline flex-fill mb-0">
-              <label class="form-label" for="firstName">Password</label>
-              <input type="password" id="inputPassword" name="txtPass1" class="form-control" placeholder="Password" required>
-              
-            </div>
-            
-          </div>
-          <p id="sr_pass"></p>
-          <div class="d-flex flex-row align-items-center mb-4">
-            
-            <div class="form-outline flex-fill mb-0">
-              <label class="form-label" for="firstName">Retry Password</label>
-              <input type="password" id="inputPassword" name="txtPass2" class="form-control" placeholder="Retry Password" required>
-            </div>
-          </div>
-          <p id="sr_pass1"></p>                                      
-          <div class="mb-3 form_signup">
-              <h5>Already have an account?</h5>
-              <a class="sign_up_now" href="login.php">Log in</a>
-          </div>
-          <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4" >
-            <button type="submit" class="btn btn-primary mb-3" name="btn_submit1" >Sign in</button>
-          </div>
+                  <div class="form-outline flex-fill mb-0">
+                    <label class="form-label" for="firstName">User Name</label>
+                    <input type="text" id="firstName" name="userName" class="form-control" placeholder="User name" required>
+                    
+                  </div>
+                </div>
 
+                <div class="d-flex flex-row align-items-center mb-3">
+           
+                  <div class="form-outline flex-fill mb-0">
+                    
+                    <label class="form-label" for="firstName">Email</label>
+                    <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address"  required >
+                    <!-- <small id="emailHelp"></small> -->
+                  </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center">
+            
+                  <div class="form-outline flex-fill mb-0">
+                    <label class="form-label" for="firstName">Password</label>
+                    <input type="password" id="inputPassword1" name="txtPass1" class="form-control" placeholder="Password" required>
+                    <p style="color:#fff;font-size:16px;margin-top:10px">(*)Password phải có 8 kí tự trở lên(trong đó có một chữ cái in hoa,một chữ cái thường,một số)</p>
+                    <small id="passlHelp"></small>
+                  </div>
+ 
+                </div>
+
+                <div class="mb-3 form_signup">
+                      <h5>Already have an account?</h5>
+                      <a class="sign_up_now" href="login.php">Log in</a>
+                  </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex flex-row align-items-center mb-3">
+                  <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="firstName">Full Name</label>
+                      <input type="text" id="firstName" name="FullName" class="form-control" placeholder="Full name" required>
+                      
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center mb-3">
+            
+                  <div class="form-outline flex-fill mb-0">
+                  
+                    <label class="form-label" for="firstName">Phone number</label>
+                    <input type="text" id="inputEmail" name="txtphone" class="form-control" placeholder="Phone number"  required >
+                    <!-- <small id="emailHelp"></small> -->
+                  </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center mb-2">
+            
+                  <div class="form-outline flex-fill ">
+                    <label class="form-label" for="firstName">Confirm Password</label>
+                    <input type="password" id="inputPassword2" name="txtPass2" class="form-control" placeholder="Confrim Password" required>
+                  </div>
+                </div>
+                <p id="sr_pass1"></p> 
+
+                <div class=" container form-group " style="font-size: 20px;">
+                        <label class="control-label">Gender</label>
+                        <div class="select_sex">
+                            <label class="checkbox-inline">
+                            <input type="radio" name="gender" id="update-gender-male" value="male" > Male</label>
+                            <label class="checkbox-inline">
+                            <input type="radio" name="gender" id="update-gender-female" value="female" > Female</label>
+
+                        </div>
+                    </div>   
+              </div>
+            </div>
+         
+          
+          
+          
+         
+          
+                                           
+          
+          <?php
+                    if(isset($_GET['error'])){
+                        echo "<h5 style='color:red'> {$_GET['error']} </h5>";
+                    }
+
+                ?>
+          <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4" >
+            <button type="submit" class="btn btn-primary mb-3" name="btn_submit1" style="width:400px">Sign in</button>
+          </div>
+       
         </form>
         
       </div>
+      <div class="login_footer">
+          <div class="container">
+            <a href="#" class="question-contact my-4" style="margin-left: 32px;">Questions? Contact us.</a>
+             <div class="row">
+               <div class="col-md-3 col-6 my-4">
+                 <ul>
+                   <li><a href="#">FAQ</a></li>
+                   <li><a href="#">Cookie Preferences</a></li>
+                   
+                 </ul>
+               </div>
+               <div class="col-md-3 col-6 my-4">
+                 <ul>
+                   
+                   <li><a href="#">Help Centre</a></li>
+                   <li><a href="#">Corporate Information</a></li>
+                   
+                 </ul>
+               </div>
+               <div class="col-md-3 col-6 my-4">
+                 <ul>
+                   <li><a href="#">Terms of Us</a></li>
+                 </ul>
+               </div>
+               <div class="col-md-3 col-6 my-4">
+                 <ul>
+                   <li><a href="privacy.php">Privacy</a></li>
+                   
+                 </ul>
+               </div>
+             </div>
+           </div>
       
 <?php
   require('Template/footerr.php')

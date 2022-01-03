@@ -151,7 +151,12 @@
  .btn:focus {
     box-shadow: none;
  }
- 
+ .main-search {
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
  .main-search input {
     height: 50px;
     
@@ -192,6 +197,17 @@
     background-color: #303030;
     font-size: 26px;
     color: #fff;
+    
+ }
+ .input-group{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+ }
+ .get_started{
+   max-width: 200px;
+    height: 64px;
     
  }
 .card a{
