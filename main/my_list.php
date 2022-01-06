@@ -1,7 +1,7 @@
 <?php
-    include 'Template/header.php';
+    include '../Template/header.php';
 ?>
-    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../assets/css/style.css?v=<?php echo time(); ?>">
     </head>
     <body>  
     <div class="my_list-page ">
@@ -39,7 +39,7 @@
                             echo "</div>";           
                         ?>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body-film">
                       <div class="card-body-item-left">
                         <div class="card-body-item"><a href="remove_list-even.php?id=<?php echo $row['id']; ?>"><i class="fas fa-play"></i></a></div>
                         <div class="card-body-item"><a href="remove_list-even.php?id=<?php echo $row['id']; ?>"><i class="fas fa-check"></i></a></div>
@@ -115,5 +115,5 @@
     
   </footer>
 <?php          
-    include 'Template/footer.php';
+    include '../Template/footer.php';
 ?>

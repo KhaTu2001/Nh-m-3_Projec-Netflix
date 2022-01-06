@@ -174,24 +174,24 @@ You can watch as much as you want, whenever you want, without a single ad – al
       <div class="row">
         <div class="col-md-4 col-6">
           <ul>
-            <li><a href="contactus.php" class="question-contact">Questions? Contact us.</a></li>
-            <li><a href="FAQ.php">FAQ</a></li>
-            <li><a href="privacy.php">Privacy</a></li>
+            <li><a href="footer/contactus.php" class="question-contact">Questions? Contact us.</a></li>
+            <li><a href="footer/FAQ.php">FAQ</a></li>
+            <li><a href="footer/privacy.php">Privacy</a></li>
             
           </ul>
         </div>
         <div class="col-md-4 col-6">
           <ul>
-            <li><a href="helpcenter.php">Help Centre</a></li>
-            <li><a href="LegalNotices.php">Legal Notices</a></li>
-            <li><a href="termsofuse.php">Terms of Use</a></li>
+            <li><a href="footer/helpcenter.php">Help Centre</a></li>
+            <li><a href="footer/LegalNotices.php">Legal Notices</a></li>
+            <li><a href="footer/termsofuse.php">Terms of Use</a></li>
           </ul>
         </div>
         <div class="col-md-4 col-6">
           <ul>
             <li><a href="login.php">Account</a></li>
-            <li><a href="way-match.php">Ways to Match</a></li>
-            <li><a href="corpinfo.php">Corporate Information</a></li>
+            <li><a href="footer/way-match.php">Ways to Match</a></li>
+            <li><a href="footer/corpinfo.php">Corporate Information</a></li>
            
           </ul>
         </div>
