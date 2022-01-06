@@ -13,7 +13,7 @@
                     <form method="post" class="search_form">
                         <div class="row" id="search-user" style="flex-wrap: nowrap;">
                             <div style="width:70%">
-                                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search user" name="user">
+                                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search user by username" name="user">
                             </div>
                             <div style="width:30%">
                                 <button class="btn btn-lg btn-primary" type="submit" name="button_search" style="width:100%">Search</button>
@@ -29,8 +29,7 @@
                     <!-- get from database -->
                     <?php
                         if(isset($_POST["button_search"])){
-                            $name = isset($_POST["user"]) ? $_POST["user"] : '';
-                            
+                            $name = isset($_POST["user"]) ? $_POST["user"] : '';   
                             $sql = "SELECT * FROM user WHERE username LIKE '%{$name}%'";
                             $result = mysqli_query($conn, $sql);
                             if (mysqli_num_rows($result) > 0) { ?>
@@ -70,7 +69,9 @@
                                     } 
                                 }
                             } else {
-                                echo "No user like ".$name;
+                                echo '<style language="css">.table_manage{overflow-y: hidden;} h2{padding: 12px 20px;}</style>';
+                                echo "<h2>No user has the same name as  '  ".$name."  '</h2>";
+                                echo "<h2>Please re-enter something else</h2>";
                             }
                         }
                             mysqli_close($conn);

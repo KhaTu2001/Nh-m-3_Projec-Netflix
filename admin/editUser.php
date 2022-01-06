@@ -73,16 +73,17 @@
                     </div>
                     <div class="form-group">
                         <label class="container control-label">Number phone</label>
-                        <div class="container"><input type="text" class="form-control" name="phonr" id="phone" value="<?php echo $row["phone"];?>"> 
+                        <div class="container"><input type="text" class="form-control" name="phone" id="phone" value="<?php echo $row["phone"];?>"> 
                         </div>
                     </div>    
                     <div class="form-group">
                         <label class="container control-label">Giới tính</label>
                         <div class="container">
                             <label class="checkbox-inline">
-                            <input type="radio" name="gender" id="update-gender-male" value="male" <?php if($row["sex"] == "male") echo "checked";?>> male</label>
+                            <input type="radio" name="gender" id="update-gender-male" value="male" <?php if($row["sex"] == "male") echo "checked";?>> male
+                            </label>
                             <label class="checkbox-inline">
-                                <input type="radio" name="gender" id="update-gender-female" value="female" <?php if($row["sex"] == "female") echo "checked";?>> female
+                            <input type="radio" name="gender" id="update-gender-female" value="female" <?php if($row["sex"] == "female") echo "checked";?>> female
                             </label>
                         </div>
                     </div>
@@ -324,10 +325,11 @@
                 if ($result){?>
                     <script>
                         alert("Edit user successfully!");
-                        location.href= window.location.href; //reload page
                     </script>
                 <?php 
-                } else{ 
+                    header("location:manageUser.php");
+                } 
+                else{ 
                 ?>
                     <script>
                         alert("Edit user fail!"); -->

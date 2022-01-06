@@ -23,7 +23,7 @@
                     
                     else{
                         echo 'hello';
-                        header("location:main.php"); 
+                        header("location:main/main.php"); 
                     }
                 }
                 else{

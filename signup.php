@@ -1,11 +1,13 @@
 
 <?php
   session_start();
-  require('Template/header_login.php');
+  require('Template/header.php');
   
 ?>
 
-
+<link rel="stylesheet" href="assets/css/reponsive.css">
+<link rel="stylesheet" href="assets/css/login.css?v=<?php echo time(); ?>">
+</header>
 
   <body style="background-image: url(assets/img/slide-banner.jpg);height: 100vh;">
   
