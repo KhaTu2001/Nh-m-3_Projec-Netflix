@@ -8,9 +8,8 @@
 
     if (mysqli_query($link, $sql)) {?>
         <script>
-            alert("Xóa User thành công");
-            location.href = "manageUser.php";
-            // alert("hshshsh");
+            alert("Film have been remove from my list");
+            location.href= window.location.href;
         </script>
 
     <?php        

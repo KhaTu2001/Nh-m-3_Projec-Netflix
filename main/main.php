@@ -1,4 +1,17 @@
 <?php
+<<<<<<< HEAD:main.php
+=======
+	session_start();
+	require('connect.php');
+	if(isset( $_SESSION['isLoginOK'])){
+	$link =  $_SESSION['isLoginOK'];
+	$sql = "SELECT * from user WHERE email = '$link'";
+	$result = mysqli_query($conn, $sql);
+	if(mysqli_num_rows($result) > 0){
+		$row = mysqli_fetch_assoc($result);
+		$user_id = $row['id'];
+	}
+>>>>>>> 5049d0f7b183ca6b25fbd3f799e59740524c9814:main/main.php
 
 ?>
 <!DOCTYPE html>
@@ -28,6 +41,8 @@
 	background-size: cover;
 	padding: 4px 12px 12px;" class="container-fluid ">
 		<div class="hero">
+			
+
 			<div class="header">
 				<div class="logo">
 					<a href="index.html">
@@ -41,9 +56,10 @@
 							<li><a href="">TV Shows</a></li>
 							<li><a href="">Movies</a></li>
 							<li><a href="">New & Popular</a></li>
-							<li><a href="">My list</a></li>
+							<li><a href="my_list.php">My list</a></li>
 						</ul>
 					</div>
+					
 					<div class="menu-right">
 						<ul>
 							<li>
@@ -60,11 +76,11 @@
 							<li>DVD</li>
 							<li><i class="fas fa-bell"></i></li>
 							<li class="user">
-								<img src="assets/img/user.png" alt="" />
+								<h4></h4>
 								<div class="dropdown">
 									<a class="btn btn-secondary dropdown-toggle" href="#"  id="dropdownMenuLink" data-bs-toggle="dropdown" ></a>
 									<div class="dropdown-menu">
-										<a href="#">Account</a>
+										<a href="">Account</a>
 										<a href="#">Help Center</a>
 										<a  href="#">Sign out of Neflix</a>
 									</div>
@@ -101,13 +117,10 @@ video.play();
 else 
 video.pause(); 
 }
-
 function size250()
 {video.width = 250;}
-
 function size400()
 {video.width = 400;}
-
 function size550()
 {video.width = 550;} 
 </script>   -->
@@ -238,6 +251,13 @@ function size550()
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
-</body>
+		<?php
+	}
+	else{
+		header("location:login.php");
+	}
+			?>
+
+	</body>
 
 </html>

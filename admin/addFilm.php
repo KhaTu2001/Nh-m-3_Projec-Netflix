@@ -101,13 +101,9 @@
                         </label>
                         <div >
                             <select id="type" name="type_movie">
-                                <option value="1">Single-movie</option>
-                                <option value="2">series-movie</option>
-                                <option value="3">theater-movie</option>
-                                
-                                
-                                
-                                <!-- <?php 
+                                <option value="1">TV Shows</option>
+                                <option value="2">Movies</option>
+                                 <?php 
                                     $sql = "SELECT * FROM type_movie";
                                     $result = mysqli_query($conn, $sql);
 
@@ -122,7 +118,7 @@
                                     else {
                                         echo "No nation";
                                     }
-                                ?> -->
+                                ?> 
                             </select>
                         </div>
                     </div>
@@ -151,18 +147,14 @@
                             </select>
                         </div>
                     </div>
-                    <div class="container form_input" >
-                        <label for="year" >
-                            Release year
+                    <div >
+                        <label for="decription" class="container">
+                            year
                         </label>
                         <div class="container">
-                            <select id="year" name="year" id="year">
-                                <option value="2015">2015</option>
-                                <option value="2016">2016</option>
-                                <option value="2017">2017</option>
-                                <option value="2018">2018</option>
-                            </select>
+                            <input type="text" class="form-control" id="year" name="year">
                         </div>
+                    
                     </div>
                     <div >
                         <label for="decription" class="container">
@@ -202,7 +194,6 @@
     <?php
     if(isset($_POST["button_post"])){
         $name = $_POST["film-name"];
-        
         $status = $_POST["status"];
         $director = $_POST["director"];
         $actor = $_POST["actor"];

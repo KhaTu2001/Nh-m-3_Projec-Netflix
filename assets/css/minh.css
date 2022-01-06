@@ -61,7 +61,7 @@
     margin-bottom: 100px;
   }
   .vr { 
-    height: 100%; width: 1px; 
+    height: 10px; width: 1px; 
     border-left: 1px solid gray;
    }
    .container .row a{
@@ -132,7 +132,6 @@
   }
   .menu {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     width: 100%;
     align-items: center;
@@ -244,7 +243,7 @@
   .footer {
     margin: 100px auto 0;
     width: 80%;
-    color: #808080;
+    color: #fff;
   }
   .footer .social i {
     padding-right: 26px;
@@ -283,7 +282,6 @@
     display:inline;
     font-size:20px;
     border:2px solid white;
-    
     padding: 5px;
     background:black;
     }

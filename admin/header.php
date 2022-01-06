@@ -12,6 +12,6 @@
     <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
 	<link rel="stylesheet" href="css/reponsive.css?v=<?php echo time(); ?>">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="asset/js/jquery-1.10.2.min.js"></script>  
+    <script type="text/javascript" src="asset/js/jquery-3.6.0.min.js"></script>  
 </head>
 

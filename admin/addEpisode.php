@@ -38,14 +38,6 @@
                                     ?>
                             </select>
                         </div>
-                        <div>
-                            <label for="ID-episode" class="container">
-                                ID Movie
-                            </label>
-                            <div class="container">
-                                <input type="number" class="form-control" id="ID-episode" value="" name="id_episode">
-                            </div>
-                        </div>
                     <div>
                         <label for="name_episode" class="container">
                             Name's Movie
@@ -72,7 +64,6 @@
             include('connect.php');
             if(isset($_POST["button_post"])){
                 $id_film = $_POST["id_film"];
-                $id_episode = $_POST["id_episode"];
                 $name_episode = $_POST["name_episode"];
                 $content = $_FILES["video"]['name'];
                 $target = "video/".basename($link);
@@ -86,8 +77,8 @@
                     <?php
                     }
                     else {
-                        $sql1 = "INSERT INTO episode(film_id,episode,episode_name,content)            
-                            VALUES ('$id_film', '$id_episode','$name_episode','$content')";
+                        $sql1 = "INSERT INTO episode(film_id,episode_name,content)            
+                            VALUES ('$id_film','$name_episode','$content')";
                         $result1 = mysqli_query($conn,$sql1);
                         if($result1){?>
                             <script>

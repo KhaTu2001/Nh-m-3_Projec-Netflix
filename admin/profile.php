@@ -14,16 +14,15 @@
           <form action="upload_avata.php" method="post" id="avata-admin" name="avata-admin" class="form-horizontal" enctype="multipart/form-data" action="" role="form" >
                             <input type="file" hidden name="image" id="Upload_avata">
                             <?php
-                            if(empty($rowAd['image'])){?>
+                            if(empty($rowAd['avata_image'])){?>
                                 <div id='img_div'><img  src="image/avata_admin.jfif" alt=""></div>
                             <?php
                             }
                             else{
                           
                                 echo "<div id='img_div'> ";
-                                echo "<img src='image/".$rowAd['image']."' >";
+                                echo "<img src='image/".$rowAd['avata_image']."' >";
                                 echo "</div>"; 
-                  
                             }                                              
                             ?>           
                         <style>
