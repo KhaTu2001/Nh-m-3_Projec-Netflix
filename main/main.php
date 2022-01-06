@@ -1,4 +1,6 @@
 <?php
+<<<<<<< HEAD:main.php
+=======
 	session_start();
 	require('connect.php');
 	if(isset( $_SESSION['isLoginOK'])){
@@ -9,6 +11,7 @@
 		$row = mysqli_fetch_assoc($result);
 		$user_id = $row['id'];
 	}
+>>>>>>> 5049d0f7b183ca6b25fbd3f799e59740524c9814:main/main.php
 
 ?>
 <!DOCTYPE html>

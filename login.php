@@ -27,17 +27,17 @@
 
       <div class="slide-banner bg-img " style=" background-image: url(assets/img/slide-banner.jpg);height: 100%;">
         <div class="form_login">
-        <form action="process-login.php" class="form_layout" method="POST" name="login" onsubmit="return validateLogin()">
+        <form action="./src/process-login.php" class="form_layout" method="POST" name="login" >
             <div class="form_header">
               <h1>Sign in</h1>
             </div>
             <div class="mb-3 mt-3">
 
-            <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" value="" required autofocus>
+            <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" value="" autofocus>
             </div>
             <div class="mb-3">
 
-            <input type="password" id="inputPassword" name="txtPass" class="form-control" placeholder="Password" required>
+            <input type="password" id="inputPassword" name="txtPass" class="form-control" placeholder="Password">
 
             </div>
             <p id="sr_pass"></p>
