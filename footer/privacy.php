@@ -1,6 +1,6 @@
 
     <?php   
-        include 'Template/header_page-footer.php';
+        include '../Template/header_page-footer.php';
     ?>    
 
         <div class="container privacy-text" > 
@@ -138,7 +138,7 @@
            <p> <span>Last Updated</span> : November 2, 2021</p>
         </div>
         <?php
-        include 'Template/footer_page-footer.php';
+        include '../Template/footer_page-footer.php';
         ?>  
 </body>
 </html>

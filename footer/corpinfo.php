@@ -1,7 +1,7 @@
 <?php
-  include 'Template/header_page-footer.php';
+  include '../Template/header_page-footer.php';
 ?>
-    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../assets/css/style.css?v=<?php echo time(); ?>">
 
   </head>
 <body>
@@ -58,5 +58,5 @@
     </div>
   </div>
   <?php
-    include 'Template/footer_page-footer.php'
+    include '../Template/footer_page-footer.php'
   ?>

@@ -1,5 +1,5 @@
 <?php
-      include 'Template/header_page-footer.php';
+      include '../Template/header_page-footer.php';
     ?>
 <section class="content-contact">
   <div class="container">
@@ -42,7 +42,7 @@
       Software, including required acknowledgements, license terms and notices, can be found <a href="https://help.nflxext.com/legal/netflix_open_source_notices_20190711.pdf" class="thea">Here</a> </p>
 </div>
 <?php
-    include 'Template/footer_page-footer.php';
+    include '../Template/footer_page-footer.php';
   ?>
 </body>
 

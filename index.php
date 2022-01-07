@@ -115,6 +115,7 @@ You can watch as much as you want, whenever you want, without a single ad – al
         </div>
       </div>
     </div>
+
     <div class="card">
         <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsefour">
           How do i cancel?
@@ -137,7 +138,7 @@ You can watch as much as you want, whenever you want, without a single ad – al
         </div>
       </div>
     </div>
-    <div class="card">
+    <div class="card-item">
         <a class="collapsed btn" data-bs-toggle="collapse" href="#collapsesix">
           Is verry good for kids?
           
@@ -156,6 +157,7 @@ You can watch as much as you want, whenever you want, without a single ad – al
       
     </div>
   </section>
+
   <section class="bottom-email-search">
     <div class="bottom-search">
       <p class="text-center">Ready to watch? Enter your email to create or restart your membership.</p>

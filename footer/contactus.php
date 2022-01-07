@@ -1,9 +1,9 @@
 <?php
-      include 'Template/header_page-footer.php';
+      include '../Template/header_page-footer.php';
     ?>
   <section class="content-contact">
     <div class="container">
-      <h1>Contact Customer Service</h1>
+      <h3>Contact Customer Service</h3>
     </div>
 
   </section>
@@ -16,8 +16,8 @@
             <p>Contacting Netflix is now easier than ever when you contact us from the Netflix app on your Android or iOS phone or tablet! Calling through the app is free - all you need is an internet or cellular connection.</p>
             <h5>Download the Netflix app:</h5>
             <div class="app-dowload">
-              <a href="https://play.google.com/store/apps/details?id=com.netflix.mediaclient"><img src="assets/img/ch-play.jpg" alt="" class="img-fluid"></a>
-              <a href="https://search.itunes.apple.com/WebObjects/MZContentLink.woa/wa/link?mt=8&path=apps%2fnetflix"><img src="assets/img/appstore.jpg" alt="" class="img-fluid"></a>
+              <a href="https://play.google.com/store/apps/details?id=com.netflix.mediaclient"><img src="../assets/img/ch-play.jpg" alt="" class="img-fluid"></a>
+              <a href="https://search.itunes.apple.com/WebObjects/MZContentLink.woa/wa/link?mt=8&path=apps%2fnetflix"><img src="../assets/img/appstore.jpg" alt="" class="img-fluid"></a>
             </div>
             <div class="contact-question">
               <p>Questions?</p>
@@ -58,7 +58,7 @@
     </div>
   </section>
   <?php
-    include 'Template/footer_page-footer.php';
+    include '../Template/footer_page-footer.php';
   ?>
 </body>
 </html>

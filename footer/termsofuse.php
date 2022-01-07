@@ -1,5 +1,5 @@
 <?php
-      include 'Template/header_page-footer.php';
+      include '../Template/header_page-footer.php';
     ?>
 <section class="content-contact">
   <div class="container">
@@ -232,7 +232,7 @@
 
 
 <?php
-    include 'Template/footer_page-footer.php';
+    include '../Template/footer_page-footer.php';
   ?>
 </body>
 

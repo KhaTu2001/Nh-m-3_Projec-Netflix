@@ -1,7 +1,8 @@
 <?php
+
     include '../Template/header.php';
 ?>
-    <link rel="stylesheet" href="../assets/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
     </head>
     <body>  
     <div class="my_list-page ">
@@ -35,11 +36,11 @@
                     <div class="card-img-top">
                         <?php                    
                             echo "<div > ";
-                            echo "<img id='img_div' src='admin/image/".$rowfilm['image']."' >";
+                            echo "<img id='img_div' src='../admin/image/".$rowfilm['image']."' >";
                             echo "</div>";           
                         ?>
                     </div>
-                    <div class="card-body-film">
+                    <div class="card-body">
                       <div class="card-body-item-left">
                         <div class="card-body-item"><a href="remove_list-even.php?id=<?php echo $row['id']; ?>"><i class="fas fa-play"></i></a></div>
                         <div class="card-body-item"><a href="remove_list-even.php?id=<?php echo $row['id']; ?>"><i class="fas fa-check"></i></a></div>
