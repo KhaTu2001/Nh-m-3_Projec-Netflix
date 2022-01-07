@@ -2,25 +2,51 @@
 
     include '../Template/header.php';
 ?>
+    <link rel="stylesheet" href="../assets/css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
+    
     </head>
-    <body>  
+    <body>
+   
     <div class="my_list-page ">
-    <div class="header_my-list container">
-        <h3>My List</h4>
+    <div class="div" style="height: 48px;"></div>
+    <div class="header_my-list container-fluid">
+      <div class=" container">
+        <h3>My List</h3>
+      </div>
     </div>
+  
+    <script > 
+        var height = $('.div').height();
+        $(window).scroll(function(){
+          if($(this).scrollTop() > height){
+            $('.header_my-list').addClass('sticky');
+          }
+          else{
+            $('.header_my-list').removeClass('sticky');
+            
+          }    
+      });
+
+      
+    </script>
     
-    
-<?php 
-    // include 'navbar.php';
-    include 'connect.php' ;
+<?php    
+  include 'connect.php' ;  
+  if(isset( $_SESSION['isLoginOK'])){
+    $link =  $_SESSION['isLoginOK'];
+    $sqlUser = "SELECT * from user WHERE email = '$link'";
+    $resultUser = mysqli_query($conn, $sqlUser);
+    if(mysqli_num_rows($resultUser) > 0){
+      $rowUser = mysqli_fetch_assoc($resultUser);
+      $user_id = $rowUser['ID'];
+	}  
     $sql = "SELECT * from my_list ";
     $result = mysqli_query($conn, $sql); 
     if(mysqli_num_rows($result) > 0){ 
       $row = mysqli_fetch_assoc($result);
       $filmID = $row['film_id'];
 ?>
-
 <div class="container ">
 
     <div class="row">
@@ -34,18 +60,31 @@
             <form >
                 <div class="card">
                     <div class="card-img-top">
+                    <a href="showfilm.php?id=<?php echo $rowfilm['id']; ?>">
                         <?php                    
                             echo "<div > ";
                             echo "<img id='img_div' src='../admin/image/".$rowfilm['image']."' >";
                             echo "</div>";           
                         ?>
+                        </a>
                     </div>
                     <div class="card-body">
                       <div class="card-body-item-left">
-                        <div class="card-body-item"><a href="remove_list-even.php?id=<?php echo $row['id']; ?>"><i class="fas fa-play"></i></a></div>
+                        <div class="card-body-item first_child"><a href="showfilm.php?id=<?php echo $rowfilm['id']; ?>"><i class="fas fa-play"></i></a></div>
                         <div class="card-body-item"><a href="remove_list-even.php?id=<?php echo $row['id']; ?>"><i class="fas fa-check"></i></a></div>
-                        <div class="card-body-item"><a href="remove_list-even.php?id=<?php echo $row['id']; ?>"><i class="fas fa-thumbs-up"></i></a></div>
-                        <div class="card-body-item"><a href="remove_list-even.php?id=<?php echo $row['id']; ?>"><i class="fas fa-thumbs-down"></i></a></div>               
+                        <?php
+                             $rate = "SELECT * from rate ";
+                             $resultRate = mysqli_query($conn, $rate); 
+                             if(mysqli_num_rows($resultRate) > 0){ 
+                               while($rowRate = mysqli_fetch_assoc($resultRate)){
+                        ?>
+                        <div class="card-body-item" onclick ="setLikeDislike_rate('like',)"><i class="fas fa-thumbs-up"></i></div>
+                        <div class="card-body-item" ><i class="fas fa-thumbs-down"></i></div>               
+                      <?php
+                               }
+                              }
+                      ?>
+                      
                       </div>
                       <div class="card-body-item-right">
 
@@ -82,6 +121,9 @@
     }
 </style>
 </div>
+<?php
+  }
+?>
 <footer>
     <div class="container">
      
@@ -115,6 +157,7 @@
 
     
   </footer>
-<?php          
+<?php         
+  
     include '../Template/footer.php';
 ?>

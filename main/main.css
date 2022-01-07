@@ -1,8 +1,20 @@
 .header_my-list{
-    height: 100px;
     display: flex;
     align-items: center;
+    position: relative;
+    background-color: black;
+ }
+ .header_my-list.sticky{
+   top: 0;
+   left: 0;
     z-index: 1000;
+    position: fixed;
+ }
+ .header_my-list h3{
+
+   line-height: 100%;
+   position: relative;
+    color: #fff;
  }
  .my_list-page{
     min-height:1000px ;
@@ -39,13 +51,17 @@
  }
  .card{
     background-color: #000;
+    
  }
  .card-body-item:hover{
     border: 1px solid #ffffff;
  }
- .card-body-item::first-child{
+ .first_child{
     background-color: #fff;
     color: #000;
+ }
+ .first_child i{
+   color: #000;
  }
  .card-body-item a{
     color: #fff ;
@@ -56,8 +72,56 @@
     color: #fff !important;
  }
  .card:hover  {
+    animation-name: display_block;
+    animation-duration: 2s;
     transform: scale(1.8);
  }
   .card:hover div{
-    display: flex;
+    
+   display: flex;
+  }
+  .full_screen-film{
+   position: relative;
+  }
+  .full_screen-film video{
+     height: 100%;
+     width: 100%;
+      top: 0;
+     bottom: 0;   
+     left: 0;
+     right: 0;
+     background-color: #000;
+  }
+  .prev-page{
+     margin-top: 24px;
+     margin-left: 24px;
+     background: none;
+     border: none;
+     position: absolute;
+     font-size: 3rem;
+     z-index: 1000;
+     animation-name: display_block;
+     animation-duration: 1s;
+      animation-delay: 1s;
+  }
+  .prev-page i{
+     color: #fff;
+  }
+  .name_film{
+   position: absolute;
+   color: #fff;
+   animation-name: remove;
+   animation-duration: 4s;
+  }
+  @keyframes remove {
+   0% {display: block;}
+   50% {background: rgba(0, 0, 0, 0.5); }
+   100% {display: none;}
+  }
+  @keyframes display_block {
+   0% {transform: scale(1);}
+   25% {transform: scale(1);}
+   50% {transform: scale(1);}
+   80% {transform: scale(1);}
+   100% {transform: scale(1.8);}
   }

@@ -21,7 +21,7 @@
                     if(password_verify($pass,$password)){
                         $_SESSION['isLoginOK'] = $email;  
                         
-                        if($usertype == '99'){
+                        if($usertype == '99'){  
                             $_SESSION['isLoginOK'] = $email;
                             header("location:../admin/admin_page.php"); 
                             ?>

@@ -1,4 +1,14 @@
 <?php
+	session_start();
+	require('connect.php');
+	if(isset( $_SESSION['isLoginOK'])){
+	$link =  $_SESSION['isLoginOK'];
+	$sql = "SELECT * from user WHERE email = '$link'";
+	$result = mysqli_query($conn, $sql);
+	if(mysqli_num_rows($result) > 0){
+		$row = mysqli_fetch_assoc($result);
+		$user_id = $row['ID'];
+	}
 
 ?>
 <!DOCTYPE html>
@@ -238,7 +248,12 @@ function size550()
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
-
+		<?php
+	}
+	else{
+		header("location:login.php");
+	}
+			?>
 
 	</body>
 
