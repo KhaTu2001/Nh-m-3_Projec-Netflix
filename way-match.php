@@ -91,53 +91,51 @@
 <br>
 Netflix will be available on select devices from the following brands displayed.</p>
 </div>
-<div class="tienich">
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h5>Get Help</h5>
-      <a href="">FAQ</a>
-      <div class="vr"></div>
-      <a href="">Help Center</a>
-      <div class="vr"></div>
-      <a href="">Account</a>
-    </div>
-    <div class="col">
-      <h5>Our Company</h5>
-      <a href="">Media Center</a>
-      <div class="vr"></div>
-      <a href="">Blog</a>
-      <div class="vr"></div>
-      <br>
-      <a href="">Investor Relations</a>
-      <div class="vr"></div>
-      <a href="">Netflix Originals</a>
-      <br>
-      <div class="vr"></div>
-      <a href="">Jobs</a>
-    </div>
-    <div class="col">
-      <h5>Getting Started</h5>
-      <a href="">Redeem Your Gift</a><div class="vr"></div><br>
-      <a href="">Devices that stream from Netflix</a>
-    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h5>Get Help</h5>
+        <a href="">FAQ</a>
+        <div class="vr"></div>
+        <a href="">Help Center</a>
+        <div class="vr"></div>
+        <a href="">Account</a>
+      </div>
+      <div class="col">
+        <h5>Our Company</h5>
+        <a href="">Media Center</a>
+        <div class="vr"></div>
+        <a href="">Blog</a>
+        <div class="vr"></div>
+        <br>
+        <a href="">Investor Relations</a>
+        <div class="vr"></div>
+        <a href="">Netflix Originals</a>
+        <br>
+        <div class="vr"></div>
+        <a href="">Jobs</a>
+      </div>
+      <div class="col">
+        <h5>Getting Started</h5>
+        <a href="">Redeem Your Gift</a><div class="vr"></div><br>
+        <a href="">Devices that stream from Netflix</a>
+      </div>
+        <div class="bottom">
+          <div class="textany">
+            <a href="">Terms of Use</a>
+            <a href="privacy.php">Privacy</a>
+          </div>
+          <div class="banquyen ">
+            <div class="banquyenleft">
+              <i class="far fa-copyright"></i>
+              <p>2021 Netflix, Inc.</p>
+          </div>
+              <img src="assets/img/quoc-ky-viet-nam.png" alt="">
+          </div>
+        </div>
+      </div>
   </div>
-</div>
-<div class="bottom">
-  <div class="textany">
-  <a href="">Terms of Use</a>
-  <a href="privacy.php">Privacy</a>
-</div>
-  <div class="banquyen ">
-<div class="banquyenleft">
-<i class="far fa-copyright">
-  </i>
-  <p>2021 Netflix, Inc.</p>
-</div>
-  <img src="assets/img/quoc-ky-viet-nam.png" alt="">
-  </div>
-</div>
-</div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
      crossorigin="anonymous"></script>
