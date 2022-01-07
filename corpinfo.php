@@ -1,41 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+  include 'Template/header_page-footer.php';
+?>
+    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <title>Document</title>
-  <link rel="stylesheet" href="assets/css/base.css?v=<?php echo time(); ?>">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
+  </head>
 <body>
-  <div class="header">
-    <div class="container">
-      <div class="left">
-        <a href="#">
-          <img src="assets/img/Netflixblack.png" alt="">
-        </a>
-        <a href="" class="text">Help Center</a>
-      </div>
-      <div class="right">
-        <button class="bt_join">JOIN NETFLIX</button>
-        <button class="bt_signin">SIGN IN</button>
-      </div>
-    </div>
-  </div>
-  <div class="back">
-    <div class="container">
-      <a href="">
-        <-Back To Help Home</a>
-    </div>
-  </div>
   <div class="mid">
     <div class="container">
       <h2 class="title tri">Netflix Corporate Information</h2>
@@ -88,22 +57,6 @@
       </p>
     </div>
   </div>
-  <div class="end">
-    <div class="container">
-      <div class="language">
-        <a href="#" language='english' class="active">EN</a>
-        <a href="#" language='japanese'>JA</a>
-      </div>
-
-      <div class="right">
-        <a class="term" href="">TermsofUse</a>
-        <a href="">Privacy</a>
-        <a class="corpinfo" href="#">CorporateInformation</a></li>
-      </div>
-    </div>
-  </div>
-    
-
-</body>
-
-</html>
+  <?php
+    include 'Template/footer_page-footer.php'
+  ?>

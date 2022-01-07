@@ -11,7 +11,7 @@
                     <form method="post" class="search_form">
                         <div class="row" id="search-user" style="flex-wrap: nowrap;">
                             <div style="width:70%">
-                                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search user" name="user">
+                                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="search movies by name, director, actor, description" name="film">
                             </div>
                             <div style="width:30%">
                                 <button class="btn btn-lg btn-primary" type="submit" name="button_search" style="width:100%">Search</button>
@@ -25,7 +25,7 @@
                     <!-- get from database -->
                     <?php
                         if(isset($_POST["button_search"])){
-                            $qry = isset($_POST["qry"]) ? $_POST["qry"] : '';
+                            $qry = isset($_POST["film"]) ? $_POST["film"] : '';
                             $sql_name = "SELECT * FROM film WHERE name LIKE '%{$qry}%'";
                             $sql_director = "SELECT * FROM film WHERE director LIKE '%{$qry}%'";
                             $sql_actor = "SELECT * FROM film WHERE actor LIKE '%{$qry}%'";
@@ -40,7 +40,6 @@
                                             <th scope="col">ID</th>
                                             <th scope="col">Image</th>
                                             <th scope="col">Name</th>
-                                            <th scope="col">Movie's link</th>                                        
                                             <th scope="col">Director</th>
                                             <th scope="col">Actor</th>
                                             <th scope="col">Description</th>
@@ -60,7 +59,6 @@
                                                     echo "</div>";                                    
                                                 ?></th>
                                             <th> <?php echo $row["name"] ?> </th> 
-                                            <th> <?php echo $row["link"] ?> </th>  
                                             <th> <?php echo $row["director"] ?> </th>
                                             <th> <?php echo $row["actor"] ?> </th>
                                             <th> <?php echo $row["description"] ?> </th>
@@ -75,7 +73,9 @@
                                 <?php 
                                 }
                             } else {
-                                echo "No user like ".$qry;
+                                echo '<style language="css">.table_manage{overflow-y: hidden;} h2{padding: 12px 20px;}</style>';
+                                echo "<h2>No Film like '  ".$qry."  ' </h2>";
+                                echo "<h2>Please re-enter something else</h2>";
                             }
                         }
                             mysqli_close($conn);

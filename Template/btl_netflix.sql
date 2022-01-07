@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 03, 2022 at 05:43 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.3.33
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th1 06, 2022 lúc 07:27 PM
+-- Phiên bản máy phục vụ: 10.4.21-MariaDB
+-- Phiên bản PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,15 +18,33 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `btl_netflix`
+-- Cơ sở dữ liệu: `btl_netflix`
 --
-CREATE DATABASE IF NOT EXISTS `btl_netflix` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `btl_netflix`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `category`
+-- Cấu trúc bảng cho bảng `administrators`
+--
+
+CREATE TABLE `administrators` (
+  `name` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pass` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_Addministrators` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `administrators`
+--
+
+INSERT INTO `administrators` (`name`, `pass`, `id_Addministrators`) VALUES
+('quan', '1', 1),
+('quan', '1', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `category`
 --
 
 CREATE TABLE `category` (
@@ -35,7 +53,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `category`
+-- Đang đổ dữ liệu cho bảng `category`
 --
 
 INSERT INTO `category` (`id`, `name`) VALUES
@@ -61,7 +79,7 @@ INSERT INTO `category` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `episode`
+-- Cấu trúc bảng cho bảng `episode`
 --
 
 CREATE TABLE `episode` (
@@ -75,7 +93,7 @@ CREATE TABLE `episode` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `film`
+-- Cấu trúc bảng cho bảng `film`
 --
 
 CREATE TABLE `film` (
@@ -96,7 +114,7 @@ CREATE TABLE `film` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `film`
+-- Đang đổ dữ liệu cho bảng `film`
 --
 
 INSERT INTO `film` (`id`, `name`, `status`, `director`, `actor`, `category_id`, `type_movie`, `nation_id`, `year`, `image`, `description`, `duration`, `link`, `author`) VALUES
@@ -106,7 +124,7 @@ INSERT INTO `film` (`id`, `name`, `status`, `director`, `actor`, `category_id`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nation`
+-- Cấu trúc bảng cho bảng `nation`
 --
 
 CREATE TABLE `nation` (
@@ -115,7 +133,7 @@ CREATE TABLE `nation` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `nation`
+-- Đang đổ dữ liệu cho bảng `nation`
 --
 
 INSERT INTO `nation` (`id`, `name`) VALUES
@@ -133,7 +151,7 @@ INSERT INTO `nation` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nav-menu`
+-- Cấu trúc bảng cho bảng `nav-menu`
 --
 
 CREATE TABLE `nav-menu` (
@@ -143,7 +161,7 @@ CREATE TABLE `nav-menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `nav-menu`
+-- Đang đổ dữ liệu cho bảng `nav-menu`
 --
 
 INSERT INTO `nav-menu` (`id`, `name`, `handle`) VALUES
@@ -156,7 +174,7 @@ INSERT INTO `nav-menu` (`id`, `name`, `handle`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `series-movie`
+-- Cấu trúc bảng cho bảng `series-movie`
 --
 
 CREATE TABLE `series-movie` (
@@ -166,7 +184,7 @@ CREATE TABLE `series-movie` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `series-movie`
+-- Đang đổ dữ liệu cho bảng `series-movie`
 --
 
 INSERT INTO `series-movie` (`id`, `name`, `year`) VALUES
@@ -178,7 +196,7 @@ INSERT INTO `series-movie` (`id`, `name`, `year`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `single-movie`
+-- Cấu trúc bảng cho bảng `single-movie`
 --
 
 CREATE TABLE `single-movie` (
@@ -188,7 +206,7 @@ CREATE TABLE `single-movie` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `single-movie`
+-- Đang đổ dữ liệu cho bảng `single-movie`
 --
 
 INSERT INTO `single-movie` (`id`, `name`, `year`) VALUES
@@ -200,7 +218,7 @@ INSERT INTO `single-movie` (`id`, `name`, `year`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `theater-movie`
+-- Cấu trúc bảng cho bảng `theater-movie`
 --
 
 CREATE TABLE `theater-movie` (
@@ -210,7 +228,7 @@ CREATE TABLE `theater-movie` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `theater-movie`
+-- Đang đổ dữ liệu cho bảng `theater-movie`
 --
 
 INSERT INTO `theater-movie` (`id`, `name`, `year`) VALUES
@@ -222,7 +240,7 @@ INSERT INTO `theater-movie` (`id`, `name`, `year`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `type-movie`
+-- Cấu trúc bảng cho bảng `type-movie`
 --
 
 CREATE TABLE `type-movie` (
@@ -232,7 +250,7 @@ CREATE TABLE `type-movie` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `type-movie`
+-- Đang đổ dữ liệu cho bảng `type-movie`
 --
 
 INSERT INTO `type-movie` (`id`, `name`, `handle`) VALUES
@@ -243,7 +261,7 @@ INSERT INTO `type-movie` (`id`, `name`, `handle`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Cấu trúc bảng cho bảng `user`
 --
 
 CREATE TABLE `user` (
@@ -255,21 +273,27 @@ CREATE TABLE `user` (
   `phone` varchar(20) NOT NULL,
   `sex` varchar(10) NOT NULL,
   `usertype` int(2) NOT NULL,
-  `image` varchar(150) NOT NULL
+  `image` varchar(150) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `user`
+-- Đang đổ dữ liệu cho bảng `user`
 --
 
-INSERT INTO `user` (`ID`, `username`, `fullname`, `email`, `password`, `phone`, `sex`, `usertype`, `image`) VALUES
-(11, 'khatu17', 'Nguyen kha tu', 'khatu@gmail.com', '', '0965815052', 'male', 99, 'Khatu_avata.jpg'),
-(12, 'khatu', 'nguyen kha tu', 'khatu123@gmail.com', '', '0965815052', 'male', 20, '');
+INSERT INTO `user` (`ID`, `username`, `fullname`, `email`, `password`, `phone`, `sex`, `usertype`, `image`, `status`) VALUES
+(11, 'khatu17', 'Nguyen kha tu', 'khatu@gmail.com', '', '0965815052', 'male', 99, 'Khatu_avata.jpg', 0),
+(12, 'khatu', 'nguyen kha tu', 'khatu123@gmail.com', '', '0965815052', 'male', 20, '', 0),
+(14, 'quan', 'Tran Trung Quan', 'quan@gmail.com', '$2y$10$LnAMil/QxOCDXsTBtZoRWugCEkiOURdcTADXOdf1Gh/BsOyY0ISNe', '0345990207', 'male', 99, '', 0),
+(15, 'admin', 'Tran Trung Quan', 'quan27@gmail.com', '$2y$10$RlNqNEwwENLXIJ/dmzoG2ugHkZ9TXuP2i2WPDsTvGM8zH2DzIeBya', '0944737093', 'male', 20, '', 1),
+(16, 'admin', 'Quan Trung', 'c@gmail.com', '$2y$10$FDdy0d/WWG2kxzN5jAGhKOUEBP1budTYahD9Sbl9gZonUN9hxe3w2', '0944737091', 'male', 99, '', 0),
+(18, 'quanhipp', 'Trung Quan', 'e@gmail.com', '$2y$10$Glw5UrgbRSDREN6AUpLXWu1rngvE/mkxbwHz7wQQnABFjyvujxzrq', '0944732315', 'male', 20, '', 0),
+(30, 'quanhip', 'Quan', 'quantrung.2k1@gmail.com', '$2y$10$sLrHISndotun1kC.PcJdsO4P7YOvbKLZU5q2qUpNXI0P1SidkopBe', '14125413', 'male', 20, '', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usertype`
+-- Cấu trúc bảng cho bảng `usertype`
 --
 
 CREATE TABLE `usertype` (
@@ -278,7 +302,7 @@ CREATE TABLE `usertype` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `usertype`
+-- Đang đổ dữ liệu cho bảng `usertype`
 --
 
 INSERT INTO `usertype` (`type`, `typename`) VALUES
@@ -287,24 +311,30 @@ INSERT INTO `usertype` (`type`, `typename`) VALUES
 (99, 'Admin');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `category`
+-- Chỉ mục cho bảng `administrators`
+--
+ALTER TABLE `administrators`
+  ADD PRIMARY KEY (`id_Addministrators`);
+
+--
+-- Chỉ mục cho bảng `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `episode`
+-- Chỉ mục cho bảng `episode`
 --
 ALTER TABLE `episode`
   ADD PRIMARY KEY (`id`,`film_id`),
   ADD KEY `film_id` (`film_id`);
 
 --
--- Indexes for table `film`
+-- Chỉ mục cho bảng `film`
 --
 ALTER TABLE `film`
   ADD PRIMARY KEY (`id`),
@@ -312,131 +342,137 @@ ALTER TABLE `film`
   ADD KEY `category` (`category_id`);
 
 --
--- Indexes for table `nation`
+-- Chỉ mục cho bảng `nation`
 --
 ALTER TABLE `nation`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `nav-menu`
+-- Chỉ mục cho bảng `nav-menu`
 --
 ALTER TABLE `nav-menu`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `series-movie`
+-- Chỉ mục cho bảng `series-movie`
 --
 ALTER TABLE `series-movie`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `single-movie`
+-- Chỉ mục cho bảng `single-movie`
 --
 ALTER TABLE `single-movie`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `theater-movie`
+-- Chỉ mục cho bảng `theater-movie`
 --
 ALTER TABLE `theater-movie`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `type-movie`
+-- Chỉ mục cho bảng `type-movie`
 --
 ALTER TABLE `type-movie`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Chỉ mục cho bảng `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `user_ibfk_1` (`usertype`);
 
 --
--- Indexes for table `usertype`
+-- Chỉ mục cho bảng `usertype`
 --
 ALTER TABLE `usertype`
   ADD PRIMARY KEY (`type`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `episode`
+-- AUTO_INCREMENT cho bảng `administrators`
+--
+ALTER TABLE `administrators`
+  MODIFY `id_Addministrators` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT cho bảng `episode`
 --
 ALTER TABLE `episode`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `film`
+-- AUTO_INCREMENT cho bảng `film`
 --
 ALTER TABLE `film`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 
 --
--- AUTO_INCREMENT for table `nation`
+-- AUTO_INCREMENT cho bảng `nation`
 --
 ALTER TABLE `nation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `nav-menu`
+-- AUTO_INCREMENT cho bảng `nav-menu`
 --
 ALTER TABLE `nav-menu`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `series-movie`
+-- AUTO_INCREMENT cho bảng `series-movie`
 --
 ALTER TABLE `series-movie`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `single-movie`
+-- AUTO_INCREMENT cho bảng `single-movie`
 --
 ALTER TABLE `single-movie`
   MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `theater-movie`
+-- AUTO_INCREMENT cho bảng `theater-movie`
 --
 ALTER TABLE `theater-movie`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `type-movie`
+-- AUTO_INCREMENT cho bảng `type-movie`
 --
 ALTER TABLE `type-movie`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `episode`
+-- Các ràng buộc cho bảng `episode`
 --
 ALTER TABLE `episode`
   ADD CONSTRAINT `episode_ibfk_1` FOREIGN KEY (`film_id`) REFERENCES `film` (`id`);
 
 --
--- Constraints for table `film`
+-- Các ràng buộc cho bảng `film`
 --
 ALTER TABLE `film`
   ADD CONSTRAINT `film_ibfk_1` FOREIGN KEY (`nation_id`) REFERENCES `nation` (`id`),
   ADD CONSTRAINT `film_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
 
 --
--- Constraints for table `user`
+-- Các ràng buộc cho bảng `user`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`usertype`) REFERENCES `usertype` (`type`);

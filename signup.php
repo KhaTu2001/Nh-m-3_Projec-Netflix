@@ -1,11 +1,13 @@
 
 <?php
   session_start();
-  require('Template/header_login.php');
+  require('Template/header.php');
   
 ?>
 
-
+<link rel="stylesheet" href="assets/css/reponsive.css">
+<link rel="stylesheet" href="assets/css/login.css?v=<?php echo time(); ?>">
+</header>
 
   <body style="background-image: url(assets/img/slide-banner.jpg);height: 100vh;">
   
@@ -29,17 +31,15 @@
       </div>
   </nav>
       <div class="signup_form container" >
-      <form class="mx-1 mx-md-4 " method="POST" onsubmit="return validateSignup()" action="signup_process.php" name="Signup">
-         <!-- <div class="form_header">
-              <h1 style="color:red; left:50%">Sign up</h1>
-            </div> -->
+      <form class="mx-1 mx-md-4 " method="POST" action="./src/signup_process.php" name="Signup">
+         
             <div class="row">
               <div class="col-6">
                 <div class="d-flex flex-row align-items-center mb-3">
            
                   <div class="form-outline flex-fill mb-0">
                     <label class="form-label" for="firstName">User Name</label>
-                    <input type="text" id="firstName" name="userName" class="form-control" placeholder="User name" required>
+                    <input type="text" id="userName" name="userName" class="form-control" placeholder="User name" required>
                     
                   </div>
                 </div>
@@ -50,7 +50,7 @@
                     
                     <label class="form-label" for="firstName">Email</label>
                     <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address"  required >
-                    <!-- <small id="emailHelp"></small> -->
+                    <small id="emailHelp"></small>
                   </div>
                 </div>
 
@@ -84,7 +84,7 @@
                   <div class="form-outline flex-fill mb-0">
                   
                     <label class="form-label" for="firstName">Phone number</label>
-                    <input type="text" id="inputEmail" name="txtphone" class="form-control" placeholder="Phone number"  required >
+                    <input type="text" id="inputPhone" name="txtphone" class="form-control" placeholder="Phone number"  required >
                     <!-- <small id="emailHelp"></small> -->
                   </div>
                 </div>

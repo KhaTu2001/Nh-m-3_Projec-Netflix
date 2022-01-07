@@ -1,3 +1,19 @@
+<?php
+<<<<<<< HEAD:main.php
+=======
+	session_start();
+	require('connect.php');
+	if(isset( $_SESSION['isLoginOK'])){
+	$link =  $_SESSION['isLoginOK'];
+	$sql = "SELECT * from user WHERE email = '$link'";
+	$result = mysqli_query($conn, $sql);
+	if(mysqli_num_rows($result) > 0){
+		$row = mysqli_fetch_assoc($result);
+		$user_id = $row['id'];
+	}
+>>>>>>> 5049d0f7b183ca6b25fbd3f799e59740524c9814:main/main.php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +34,7 @@
     />
 
 </head>
+<<<<<<< HEAD:main.php
 <body class="main" >
 	<nav  class="container-fluid navbar-header">
 	<div class="header">
@@ -47,6 +64,42 @@
 						</div>
 				</div>
 						</li>
+=======
+<body class="main-demo" >
+	<div style="height: 600px;
+	  background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.8) 0%,
+			rgba(0, 0, 0, 0.2) 20%,
+			rgba(20, 20, 20, 0.2) 80%,
+			rgba(20, 20, 20, 1) 100%
+		),
+		url(assets/img/poster.jpg);
+	background-size: cover;
+	padding: 4px 12px 12px;" class="container-fluid ">
+		<div class="hero">
+			
+
+			<div class="header">
+				<div class="logo">
+					<a href="index.html">
+					<img src="assets/img/netflix-logo-2-1.png" alt="" />
+					</a>
+				</div>
+				<div class="menu">
+					<div class="menu-left">
+						<ul>
+							<li><a href="">Home</a></li>
+							<li><a href="">TV Shows</a></li>
+							<li><a href="">Movies</a></li>
+							<li><a href="">New & Popular</a></li>
+							<li><a href="my_list.php">My list</a></li>
+						</ul>
+					</div>
+					
+					<div class="menu-right">
+						<ul>
+>>>>>>> 58a64c0997e0ea7356b95a195e8da2fd9963ae61:main/main.php
 							<li>
 								<div id="container">
 									<form role="search" method="get" id="searchform" action="">
@@ -61,10 +114,14 @@
 							<li id="DVD">DVD</li>
 							<li><i id="bell" class="fas fa-bell"></i></li>
 							<li class="user">
+<<<<<<< HEAD:main.php
+=======
+								<h4></h4>
+>>>>>>> 58a64c0997e0ea7356b95a195e8da2fd9963ae61:main/main.php
 								<div class="dropdown">
 									<a class="btn btn-secondary dropdown-toggle" href="#"  id="dropdownMenuLink" data-bs-toggle="dropdown" ><img id="img-user" src="assets/img/user.png" alt="" /></a>
 									<div class="dropdown-menu">
-										<a href="#">Account</a>
+										<a href="">Account</a>
 										<a href="#">Help Center</a>
 										<a  href="#">Sign out of Neflix</a>
 									</div>
@@ -73,6 +130,7 @@
 						</ul>
 					</div>
 			</div>
+<<<<<<< HEAD:main.php
 	</div>
 	</nav>
 	<div class="slider">
@@ -92,6 +150,121 @@
 						<div class="buttons">
 							<button class="btn"><i class="fas fa-play"></i>Play</button>
 							<button class="btn"><i class="fas fa-info-circle"></i>More Info</button>
+=======
+			<div class="banner">
+			<video width="640" height="480" controls posster="images/poster.png">
+
+					<source src="admin/video/dhruv - double take (Official Audio).mp4" type="video/mp4">
+
+					<source src="freehostpage.ogg" type="video/ogg">
+			</video>
+			<!-- <div>
+<button onclick="playPause();">Play/Pause</button>
+<button onclick="size250();">250</button>
+<button onclick="size400();">400</button>
+<button onclick="size550();">550</button>
+</div>
+<video id="myvideo" width="250">
+      <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"></source>
+      <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm"></source>
+      <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg"></source>
+</video>
+<script type="text/javascript">
+var video = document.getElementById("myvideo");
+function playPause()
+{ 
+if (video.paused) 
+video.play(); 
+else 
+video.pause(); 
+}
+function size250()
+{video.width = 250;}
+function size400()
+{video.width = 400;}
+function size550()
+{video.width = 550;} 
+</script>   -->
+				<span class="subtitle">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum cumque
+					voluptatum ut placeat maiores! Minus quo
+				</span>
+				<div class="buttons">
+					<button class="btn"><i class="fas fa-play"></i>Assistir</button>
+					<button class="btn"><i class="fas fa-plus"></i>Minha lista</button>
+				</div>
+			</div>
+			<div class="category">
+				<span>Recomendados</span>
+				<div id="carouselExampleControls" class="carousel slide" name="carousel-slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+					  <div class="carousel-item active">
+						<div class="row">
+							<div class="col-md-2">
+								<img class="" src="assets/img/video_001.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_002.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_003.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_004.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_005.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_001.jpg" alt="">
+							</div>
+						</div>
+					  </div>
+					  <div class="carousel-item">
+						<div class="row">
+							<div class="col-md-2">
+								<img class="" src="assets/img/video_001.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_002.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_003.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_004.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_005.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_001.jpg" alt="">
+							</div>
+						</div>
+					  </div>
+					  <div class="carousel-item">
+						<div class="row">
+							<div class="col-md-2">
+								<img class="" src="assets/img/video_001.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_002.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_003.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_004.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_005.jpg" alt="">
+							</div>
+							<div class="col-md-2">
+								<img src="assets/img/video_001.jpg" alt="">
+							</div>
+						</div>
+					  </div>
+>>>>>>> 58a64c0997e0ea7356b95a195e8da2fd9963ae61:main/main.php
 					</div>
 					</div>
 					<div class="dropdown">
@@ -372,6 +545,7 @@
 					</div>
 				</div>
 			</div>
+<<<<<<< HEAD:main.php
 			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 			<script>
 				var swiper = new Swiper(".mySwiper", {
@@ -383,6 +557,22 @@
 						prevEl: '.swiper-button-prev',
 					},
 				});
+=======
+		</div>
+	</div>
+	<script src="main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+		<?php
+	}
+	else{
+		header("location:login.php");
+	}
+			?>
+
+	</body>
+>>>>>>> 58a64c0997e0ea7356b95a195e8da2fd9963ae61:main/main.php
 
 				var swiper = new Swiper(".swiper1", {
 					slidesPerView: 2,

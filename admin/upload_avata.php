@@ -8,7 +8,7 @@
         $image = $_FILES['image']['name'];
         $target = "image/".basename($image);
         if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-            $sql="UPDATE user SET  image='$image' where id = $userID";
+            $sql="UPDATE user SET  avata_image = '$image' where id = $userID";
             $check = mysqli_query($conn,$sql);
             if($check){?>
                 <script>

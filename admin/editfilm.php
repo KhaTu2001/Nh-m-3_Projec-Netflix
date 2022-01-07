@@ -50,15 +50,33 @@
                             movie's link
                         </label>
                         <div class="container">
-                            <input type="text" class="form-control" id="film-link" name="film-link">
+                            <input type="file" class="form-control" id="film_name" name="film_name" onchange="alertName1()"/>
+                            <input type="text" class="form-control" id="flim_link" name="link" value="<?php echo $row["link"]; ?>">
+                            <script>
+                            function alertName1() {
+                                var name =  document.getElementById("film_name").value;
+                                var n = name.lastIndexOf('\\'); 
+                                var result = name.substring(n + 1);
+                                document.getElementById("flim_link").value = result;
+                            }
+                        </script>
                         </div>
                     </div>
                     <div >
-                        <label for="trailer-link" class="container">
-                            Trailer's link
+                        <label for="image" class="container">
+                            Image's Link
                         </label>
                         <div class="container">
-                            <input type="text" class="form-control" id="trailer-link" name="trailer-link">
+                        <input type="file" name="image_name" id="image_name" onchange="alertName2()"/>
+                        <input type="text" class="form-control" id="image_link" name="image" value="<?php echo $row["image"]; ?>">
+                        <script>
+                            function alertName2() {
+                                var name =  document.getElementById("image_name").value;
+                                var n = name.lastIndexOf('\\'); 
+                                var result = name.substring(n + 1);
+                                document.getElementById("image_link").value = result;
+                            }
+                        </script>
                         </div>
                     </div>
                 <div>
@@ -112,34 +130,32 @@
                     </div>
                 </div>
                 <div class="container form_input">
-                    <label for="type" >
-                        Type-movie 
-                    </label>
-                    <div >
-                        <select id="type" name="type_movie" >
-                            <option value="1" <?php echo ($row["category_id"] == 1) ?  "selected": "" ?>>Single-movie</option>
-                            <option value="2" <?php echo ($row["category_id"] == 2) ?  "selected": "" ?>>series-movie</option>
-                            <option value="3" <?php echo ($row["category_id"] == 3) ?  "selected": "" ?>>theater-movie</option>
-                            
-                            <!-- <?php 
-                                $sql = "SELECT * FROM type_movie";
-                                $result = mysqli_query($conn, $sql);
+                        <label for="type" >
+                            Type-movie 
+                        </label>
+                        <div >
+                            <select id="type" name="type_movie">
+                                <option value="1">TV Shows</option>
+                                <option value="2">Movies</option>
+                                 <?php 
+                                    $sql = "SELECT * FROM type_movie";
+                                    $result = mysqli_query($conn, $sql);
 
-                                if (mysqli_num_rows($result) > 0) { 
-                                    while($row = mysqli_fetch_assoc($result)) { ?>
-                                    <option value="<?php echo $row["id"];?>">
-                                        <?php echo $row["name"];?>
-                                    </option>
-                            <?php 
+                                    if (mysqli_num_rows($result) > 0) { 
+                                        while($row = mysqli_fetch_assoc($result)) { ?>
+                                        <option value="<?php echo $row["id"];?>">
+                                            <?php echo $row["name"];?>
+                                        </option>
+                                <?php 
+                                        }
+                                    }  
+                                    else {
+                                        echo "No nation";
                                     }
-                                }  
-                                else {
-                                    echo "No nation";
-                                }
-                            ?> -->
-                        </select>
+                                ?> 
+                            </select>
+                        </div>
                     </div>
-                </div>
                 <div class="container form_input">
                     <label for="nation" >
                         Nation
@@ -165,33 +181,24 @@
                         </select>
                     </div>
                 </div>
-                <div class="container form_input">
-                    <label for="year" >
-                        Release year
-                    </label>
-                    <div >
-                        <select id="year" name="year" id="year" >
-                            <option value="2015" <?php echo ($row["year"] == 2015) ?  "selected": "" ?>>2015</option>
-                            <option value="2016" <?php echo ($row["year"] == 2016) ?  "selected": "" ?>>2016</option>
-                            <option value="2017" <?php echo ($row["year"] == 2017) ?  "selected": "" ?>>2017</option>
-                            <option value="2018" <?php echo ($row["year"] == 2018) ?  "selected": "" ?>>2018</option>
-                        </select>
+                <div >
+                        <label for="decription" class="container">
+                            year
+                        </label>
+                        <div class="container">
+                            <input type="text" class="form-control" id="year" name="year" value="<?php echo $row["year"]; ?>" >
+                            </input>
+                        </div>
+                    
                     </div>
-                </div>
-                <div>
-                    <label for="image" class="container">
-                        Image's Link 
-                    </label>
-                    <div class="container">
-                        <input type="file" name="image" id="image">
-                    </div>
-                </div>
+                
                 <div>
                     <label for="decription" class="container">
                         Decription 
                     </label>
                     <div class="container">
-                        <input type="text" class="form-control" name="decription" id="decription"  ><?php echo $row["description"]; ?></input>
+                        <input type="text" class="form-control" name="decription" id="decription"  value="<?php echo $row["description"]; ?>">
+                        </input>
                     </div>
                 
                 </div>
@@ -232,8 +239,6 @@
         require_once("connect.php");
         if(isset($_POST["button_update"])){
             $name = $_POST["film-name"];
-            $link = $_POST["film-link"];
-            $trailer = $_POST["trailer-link"];
             $status = $_POST["status"];
             $director = $_POST["director"];
             $actor = $_POST["actor"];
@@ -245,9 +250,19 @@
             $description = $_POST["decription"];
             $duration = $_POST["duration"];
             $author = $_POST["author"];
-            $image = $_FILES['image']['name'];
-            $target = "image/".basename($image);
-            if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+            $image = $_POST["image"];
+            $link = $_POST["link"];
+            $link_name = $_FILES["film_name"]['name'];
+            $image_name = $_FILES["image_name"]['name'];
+            $targetimg = "image/".basename($image_name);
+            $targetmp4 = "video/".basename($link_name);
+            if(!empty($image_name)){
+                move_uploaded_file($_FILES['image_name']['tmp_name'], $targetimg);
+            }
+            elseif(!empty($link_name) ){
+                move_uploaded_file($_FILES['film_name']['tmp_name'], $targetmp4);
+            }
+            else{}
                 $sql = "SELECT * FROM film WHERE ID = '$filmID'";
                 $check = mysqli_query($conn,$sql);
                 if(mysqli_num_rows($check) <= 0){ ?>
@@ -256,7 +271,7 @@
                     </script>";
                     <?php
                 }
-                else{
+                else{}
                     $sql = "UPDATE film SET 
                         name='$name',
                         status='$status', 
@@ -269,8 +284,7 @@
                         description='$description',
                         duration='$duration',
                         link='$link',           
-                        author='$author',
-                        trailer_link='$trailer'
+                        author='$author'
                         WHERE id = $filmID";
                         $result = mysqli_query($conn,$sql); 
 
@@ -289,15 +303,10 @@
                             </script>
                         <?php
                         }
-                    }
                 }
-            else{
-                echo '<script language="javascript">alert("Đã upload thất bại!");</script>';
-                }
-            //thực hiện việc lưu trữ dữ liệu vào db 
-           
-        }
-    }
+            }
+        
+
         mysqli_close($conn);
     ?>
 

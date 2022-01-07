@@ -5,6 +5,9 @@ session_start();
 <?php
   include 'Template/header.php' 
 ?>
+<link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
+</head>
+<body >
  <nav id="header" class=" navbar navbar-light p-0">
     <div class="container-fluid px-5 head">
       <a href="index.php" class="navbar-brand">  <svg
@@ -165,6 +168,39 @@ You can watch as much as you want, whenever you want, without a single ad – al
       </div>
     </div>
   </section>
+  <footer>
+    <div class="container">
+     
+      <div class="row">
+        <div class="col-md-4 col-6">
+          <ul>
+            <li><a href="contactus.php" class="question-contact">Questions? Contact us.</a></li>
+            <li><a href="FAQ.php">FAQ</a></li>
+            <li><a href="privacy.php">Privacy</a></li>
+            
+          </ul>
+        </div>
+        <div class="col-md-4 col-6">
+          <ul>
+            <li><a href="helpcenter.php">Help Centre</a></li>
+            <li><a href="LegalNotices.php">Legal Notices</a></li>
+            <li><a href="termsofuse.php">Terms of Use</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-6">
+          <ul>
+            <li><a href="login.php">Account</a></li>
+            <li><a href="way-match.php">Ways to Match</a></li>
+            <li><a href="corpinfo.php">Corporate Information</a></li>
+           
+          </ul>
+        </div>
+       
+      </div>
+    </div>
+
+    
+  </footer>
 <?php
     include 'Template/footer.php';
 ?>

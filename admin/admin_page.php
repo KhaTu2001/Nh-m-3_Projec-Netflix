@@ -21,7 +21,7 @@
                     <form  action="upload_avata.php"method="post" id="avata-admin" name="avata-admin" class="form-horizontal" enctype="multipart/form-data" action="" role="form" >
                             <input type="file" hidden name="image" id="Upload_avata">
                             <?php
-                            if(empty($rowAd['image'])){?>
+                            if(empty($rowAd['avata_image'])){?>
                                 <label for="Upload_avata"> 
                                     <div id='img_div'><img  src="image/avata_admin.jfif" alt=""></div>   
                                 </label>
@@ -30,7 +30,7 @@
                             else{
                                 echo "<label for='Upload_avata'>";
                                 echo "<div id='img_div'> ";
-                                echo "<img src='image/".$rowAd['image']."' >";
+                                echo "<img src='image/".$rowAd['avata_image']."' >";
                                 echo "</div>"; 
                                 echo "</label>";    
                             }                                              
