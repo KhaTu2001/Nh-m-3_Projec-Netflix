@@ -21,7 +21,7 @@
     </nav>
 
     <div class="form_login">
-        <form action="./process_login.php" class="form_layout" method="POST" name="login"">
+        <form action="./process_loginqt.php" class="form_layout" method="POST" name="login"">
             <div class="form_header">
               <h1>Login</h1>
             </div>
