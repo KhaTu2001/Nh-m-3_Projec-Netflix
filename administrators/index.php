@@ -1,14 +1,15 @@
 <?php
-    // Trước khi cho người dùng xâm nhập vào bên trong
+// Trước khi cho người dùng xâm nhập vào bên trong
     // Phải kiểm tra THẺ LÀM VIỆC
     session_start();
     if(!isset($_SESSION['isLoginOK'])){
         header("location:login.php");
     }
-    
-    require "../Template/header_login.php";
+  include('../Template/header.php');
+  
 ?>
-
+<link rel="stylesheet" href="../assets/css/login.css">
+</head>
 <body style=" background-image: url(img/slide-banner.jpg);height:100%;">
         <nav id="header" class=" navbar navbar-light p-0">
             <div class="container-fluid px-5 head">
@@ -25,7 +26,7 @@
         <div class="container admin-list" style="margin-top: 120px;background-color:  rgba(0,0,0,0.7);">
         <h5 class="text-center text-primary mt-5">Danh sách Admin</h5>
         <div>
-                <a class="btn btn-primary mb-3" href="addadmin.php">Thêm</a>
+                <a class="btn btn-primary mb-3" href="./addadmin.php">Thêm</a>
             </div>
             <table class="table  table-bordered" style="border: 1px solid #ddd;">
                 <thead>
@@ -36,6 +37,7 @@
                     <th scope="col" style="border: 1px solid #ddd;">Số điện thoại</th> 
                     <th scope="col" style="border: 1px solid #ddd;">Giới tính</th>
                     <th scope="col" style="border: 1px solid #ddd;">Manager</th>
+                    
                     </tr>
                 </thead>
                 <tbody>

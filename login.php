@@ -26,7 +26,7 @@
       </nav>  
 
       <div class="slide-banner bg-img " style=" background-image: url(assets/img/slide-banner.jpg);height: 100%;">
-        <div class="form_login">
+        <div class="form_login container">
         <form action="./src/process-login.php" class="form_layout" method="POST" name="login" >
             <div class="form_header">
               <h1>Sign in</h1>

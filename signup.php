@@ -33,8 +33,8 @@
       <div class="signup_form container" >
       <form class="mx-1 mx-md-4 " method="POST" action="./src/signup_process.php" name="Signup">
          
-            <div class="row">
-              <div class="col-6">
+            <div class="row ">
+              <div class="col-md-6 col-sm-12">
                 <div class="d-flex flex-row align-items-center mb-3">
            
                   <div class="form-outline flex-fill mb-0">
@@ -70,7 +70,7 @@
                       <a class="sign_up_now" href="login.php">Log in</a>
                   </div>
               </div>
-              <div class="col-6">
+              <div class=" col-md-6 col-sm-12">
                 <div class="d-flex flex-row align-items-center mb-3">
                   <div class="form-outline flex-fill mb-0">
                       <label class="form-label" for="firstName">Full Name</label>
@@ -118,12 +118,7 @@
           
                                            
           
-          <?php
-                    if(isset($_GET['error'])){
-                        echo "<h5 style='color:red'> {$_GET['error']} </h5>";
-                    }
-
-                ?>
+         
           <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4" >
             <button type="submit" class="btn btn-primary mb-3" name="btn_submit1" style="width:400px">Sign in</button>
           </div>
@@ -165,7 +160,7 @@
            </div>
       
 <?php
-  require('Template/footerr.php')
+  require('Template/footer.php')
 ?>
 
 

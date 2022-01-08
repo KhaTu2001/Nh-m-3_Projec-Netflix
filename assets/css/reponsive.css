@@ -78,6 +78,9 @@
  }
  
  @media(max-width: 612px) {
+    .bg-img{
+       height: 100%;
+    }
    .sperate{
       display: none;
    }

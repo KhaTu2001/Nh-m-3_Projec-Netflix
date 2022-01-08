@@ -724,9 +724,9 @@
 .card-body-item a:hover{
    color: #fff !important;
 }
-.card:hover  {
+/* .card:hover  {
    transform: scale(1.8);
-}
+} */
  .card:hover div{
    display: flex;
  }

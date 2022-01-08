@@ -28,7 +28,7 @@
       mysqli_query($conn,$sql2);
       //tao link de vao mail kich hoat
       $link = "<a href='localhost/Nhom-3_Project-Netflix/src/verify-email.php?key=".$email."&token=".$token."'>Click and Verify Email</a>";
-      include('process_mailer.php');
+      require('process_mailer.php');
       // echo $sql2;
       if(sendMail($email, $link)){
         ?>
@@ -44,7 +44,7 @@
         ?>
           <script>
            alert("Không thể đăng ký tài khoản.Hãy thử lại!!!");
-           location.href = "../signup.php";
+          //  location.href = "../signup.php";
            </script>
 
           <?php
