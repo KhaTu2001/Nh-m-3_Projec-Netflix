@@ -54,7 +54,7 @@
                         </div>
 
                     </div>
-                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-4">
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-5">
                         <button type="submit" class="btn btn-primary mb-3" name="btn_submit1" style="width:400px">ADD</button>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                     <p id="sr_pass1"></p>
 
                     <div class=" container form-group " style="font-size: 20px;">
-                        <label class="control-label">Gender</label>
+                        <label class="form-label">Gender</label>
                         <div class="select_sex">
                             <label class="checkbox-inline">
                                 <input type="radio" name="gender" id="update-gender-male" value="male"> Male</label>

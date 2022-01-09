@@ -99,7 +99,7 @@
                 <p id="sr_pass1"></p> 
 
                 <div class=" container form-group " style="font-size: 20px;">
-                        <label class="control-label">Gender</label>
+                        <label class="form-label">Gender</label>
                         <div class="select_sex">
                             <label class="checkbox-inline">
                             <input type="radio" name="gender" id="update-gender-male" value="male" > Male</label>

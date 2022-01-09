@@ -24,11 +24,11 @@
             </div>
         </nav>
         <div class="container admin-list" style="margin-top: 120px;background-color:  rgba(0,0,0,0.7);">
-        <h5 class="text-center text-primary mt-5">Danh sách Admin</h5>
+        <h5 class="text-center ">Danh sách Admin</h5>
         <div>
-                <a class="btn btn-primary mb-3" href="./addadmin.php">Thêm</a>
+                <a class="btn btn-primary mb-3" href="./addadmin.php" style="width:70px">Thêm</a>
             </div>
-            <table class="table  table-bordered" style="border: 1px solid #ddd;">
+            <table class="table  table-bordered " style="border: 1px solid #ddd;">
                 <thead>
                     <tr style="color: #fff;">
                     <th scope="col" style="border: 1px solid #ddd;">Mã Admin</th>
@@ -36,7 +36,8 @@
                     <th scope="col" style="border: 1px solid #ddd;">Email</th> 
                     <th scope="col" style="border: 1px solid #ddd;">Số điện thoại</th> 
                     <th scope="col" style="border: 1px solid #ddd;">Giới tính</th>
-                    <th scope="col" style="border: 1px solid #ddd;">Manager</th>
+                    <th scope="col" style="border: 1px solid #ddd;">Sửa</th>
+                    <th scope="col" style="border: 1px solid #ddd;">Xóa</th>
                     
                     </tr>
                 </thead>
@@ -53,14 +54,15 @@
                         while($row = mysqli_fetch_assoc($result)){
                 ?>
                             <tr style="color:#fff;">
-                                <th scope="row"><?php echo $row['username']; ?></th>
+                                <th scope="row"><?php echo $row['ID']; ?></th>
                                 <td><?php echo $row['fullname']; ?></td>
                                 <td><?php echo $row['email']; ?></td>
                                 <td><?php echo $row['phone']; ?></td>
                                 <td><?php echo $row['sex']; ?></td>
                                 <td>
-                                    <a href="editadmin.php"><i class="bi bi-pencil-square" ></i>Sửa</a>
-                                    <a href=""><i class="bi bi-trash"></i>Xóa</a>
+                                    <a href="editadmin.php?id=<?php echo $row['ID']; ?>"><i class="bi bi-pencil-square"></i></a>
+                                </td> <td>
+                                    <a href="deleteadmin.php?id=<?php echo $row['ID']; ?>"><i class="bi bi-trash"></i></a>
                                 </td>
                                 
                             </tr>

@@ -1,20 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix</title>
-    <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/reponsive.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="../assets/css/login.css">
+<?php
+    
+  require('../Template/header.php');
+  //mo connect
+  require('../connect.php');
+  if(isset($_GET['id'])){ // nhan duoc id gui den
+    $userID = $_GET['id'];
+    //thuc hien truy van du lieu
+    $sql = "SELECT * FROM user  WHERE ID = '$userID'";
+    //tra ve tap ket qua
+    $result = mysqli_query($conn, $sql);
+    //
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result); // lay ban ghi can lay
+        $sex = $row['sex'];   
+}                                     
+}
+//dong ket noi
+mysqli_close($conn);
+?>
+<link rel="stylesheet" href="../assets/css/login.css">
 </head>
 
 <body style=" background-image: url(img/slide-banner.jpg);height:100%;">
@@ -31,16 +35,25 @@
         </div>
     </nav>
     <div class="signup_form container">
-        <form class="mx-1 mx-md-4 " method="POST" action="./process_login.php" name="Signup">
+        <form class="mx-1 mx-md-4 " method="POST" action="./processupdateadmin.php" name="Signup">
             <h2 class="text-center" style="color: #fff;">Edit Admin</h2>
             <div class="row">
                 <div class="col-6">
                     <div class="d-flex flex-row align-items-center mb-3">
 
                         <div class="form-outline flex-fill mb-0">
-                            <label class="form-label" for="firstName">User Name</label>
+                            <label class="form-label" for="txtid">ID</label>
+                            <input type="text" id="id" name="txtid" class="form-control"
+                                value="<?php echo $row['ID']; ?>" disabled>
+
+                        </div>
+                        </div>
+                    <div class="d-flex flex-row align-items-center mb-3">
+
+                        <div class="form-outline flex-fill mb-0">
+                            <label class="form-label" for="userName">User Name</label>
                             <input type="text" id="userName" name="userName" class="form-control"
-                                placeholder="User name" required>
+                            value="<?php echo $row['username']; ?>" required>
 
                         </div>
                     </div>
@@ -49,26 +62,17 @@
 
                         <div class="form-outline flex-fill mb-0">
 
-                            <label class="form-label" for="firstName">Email</label>
+                            <label class="form-label" for="txtEmail">Email</label>
                             <input type="email" id="inputEmail" name="txtEmail" class="form-control"
-                                placeholder="Email address" required>
+                            value="<?php echo $row['email']; ?>" required>
                             <small id="emailHelp"></small>
                         </div>
                     </div>
 
-                    <div class="d-flex flex-row align-items-center">
+                    
 
-                        <div class="form-outline flex-fill mb-0">
-                            <label class="form-label" for="firstName">Password</label>
-                            <input type="password" id="inputPassword1" name="txtPass1" class="form-control"
-                                placeholder="Password" required>
-
-                        </div>
-
-                    </div>
-                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-4">
-                        <button type="submit" class="btn btn-primary mb-3" name="btn_submit1" style="width:400px">Save</button>
-                    </div>
+                    
+                    
                 </div>
 
                 <div class="col-6">
@@ -76,7 +80,7 @@
                         <div class="form-outline flex-fill mb-0">
                             <label class="form-label" for="firstName">Full Name</label>
                             <input type="text" id="firstName" name="FullName" class="form-control"
-                                placeholder="Full name" required>
+                            value="<?php echo $row['fullname']; ?>" required>
 
                         </div>
                     </div>
@@ -87,33 +91,17 @@
 
                             <label class="form-label" for="firstName">Phone number</label>
                             <input type="text" id="inputPhone" name="txtphone" class="form-control"
-                                placeholder="Phone number" required>
+                            value="<?php echo $row['phone']; ?>" required>
                             <!-- <small id="emailHelp"></small> -->
                         </div>
                     </div>
 
-                    <div class="d-flex flex-row align-items-center mb-2">
-
-                        <div class="form-outline flex-fill ">
-                            <label class="form-label" for="firstName">Status</label>
-                            <input type="password" id="inputPassword2" name="txtPass2" class="form-control"
-                                placeholder="Confrim Password" required>
-                        </div>
-                    </div>
-                    <p id="sr_pass1"></p>
-
-                    <div class=" container form-group " style="font-size: 20px;">
-                        <label class="control-label">Gender</label>
-                        <div class="select_sex">
-                            <label class="checkbox-inline">
-                                <input type="radio" name="gender" id="update-gender-male" value="male"> Male</label>
-                            <label class="checkbox-inline">
-                                <input type="radio" name="gender" id="update-gender-female" value="female">
-                                Female</label>
-
-                        </div>
-                    </div>
+                    
+                    
                 </div>
+                <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-4">
+                        <button type="submit" class="btn btn-primary mb-3" name="btn_submit1" style="width:400px">Save</button>
+                    </div>
             </div>
 </body>
 

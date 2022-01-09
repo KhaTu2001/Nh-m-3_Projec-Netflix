@@ -46,12 +46,6 @@
                 <input class="form-check-input" type="checkbox" name="remember"> Remember me
               </label>
               <a class="needhelp_form" href="">Needhelp?</a>
-              <?php
-                    if(isset($_GET['error'])){
-                        echo "<h5 style='color:red'> {$_GET['error']} </h5>";
-                    }
-
-                ?>
             </div>
             <div class="mb-3">
               <i class="fab fa-facebook-square"></i>
