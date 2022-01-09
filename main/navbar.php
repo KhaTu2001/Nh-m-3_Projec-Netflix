@@ -19,9 +19,9 @@ if(isset( $_SESSION['isLoginOK'])){
             <div class="menu-left">
                 <ul>
                     <li><a href="main.php">Home</a></li>
-                    <li><a href="">TV Shows</a></li>
-                    <li><a href="">Movies</a></li>
-                    <li><a href="">New & Popular</a></li>
+                    <li><a href="TVShows.php">TV Shows</a></li>
+                    <li><a href="movies.php">Movies</a></li>
+                    <li><a href="popular.php">Popular</a></li>
                     <li><a href="my_list.php">My List</a></li>
                 </ul>
             </div>
@@ -34,9 +34,9 @@ if(isset( $_SESSION['isLoginOK'])){
                                     data-bs-toggle="dropdown">Browser</a>
                                 <div class="dropdown-menu">
                                     <a href="#">Home</a>
-                                    <a href="#">TV Shows</a>
-                                    <a href="#">Movies</a>
-                                    <a href="#">New & Popular</a>
+                                    <a href="TVShows.php">TV Shows</a>
+                                    <a href="movies.php">Movies</a>
+                                    <a href="popular.php">Popular</a>
                                     <a href="my_list.php">My List</a>
                                 </div>
                             </div>

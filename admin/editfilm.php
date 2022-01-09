@@ -67,7 +67,7 @@
                             Image's Link
                         </label>
                         <div class="container">
-                        <input type="file" name="image_name" id="image_name" onchange="alertName2()"/>
+                        <input type="file" class="form-control" name="image_name" id="image_name" onchange="alertName2()"/>
                         <input type="text" class="form-control" id="image_link" name="image" value="<?php echo $row["image"]; ?>">
                         <script>
                             function alertName2() {
@@ -183,10 +183,10 @@
                 </div>
                 <div >
                         <label for="decription" class="container">
-                            year
+                            Release year
                         </label>
                         <div class="container">
-                            <input type="text" class="form-control" id="year" name="year" value="<?php echo $row["year"]; ?>" >
+                            <input type="text" class="form-control" id="year" name="year" value="<?php echo $row["release_year"]; ?>" >
                             </input>
                         </div>
                     
@@ -280,6 +280,7 @@
                         category_id='$category',
                         type_movie='$type_movie',
                         nation_id='$nation',
+                        release_year = '$year',
                         image='$image',
                         description='$description',
                         duration='$duration',
