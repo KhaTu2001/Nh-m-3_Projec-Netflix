@@ -59,7 +59,7 @@
                                         <th> <?php echo $row["phone"] ?> </th>
                                         <th> <?php echo $row["sex"] ?> </th>
                                         <td class="action_btn">
-                                            <button type="button" class="btn btn-info" name="edit" onclick="edit(this)">Edit</button>
+                                            <button type="button" class="btn btn-info" name="edit" onclick="show(this)">Show Profile</button>
                                         </td>
                                         <td class="action_btn">
                                             <button type="button" class="btn btn-danger" name="delete" onclick="del(this)">Delete</button>
@@ -84,11 +84,11 @@
         </div>
     </div>
     <script>
-        function edit(params) {
+        function show(params) {
                 var tr = params.parentElement.parentElement;
                 var td0= tr.cells.item(0).innerHTML;
                 td0 = td0.replace(' ','' ); //id của user có space ???
-                location.href= "editUser.php?id=" + td0;
+                location.href= "Showprofile.php?id=" + td0;
         };
         function del(params) {
             if(confirm("Are you sure you want to delete this user?")){

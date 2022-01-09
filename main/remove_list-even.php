@@ -7,14 +7,13 @@
 
     if (mysqli_query($conn, $sql)) {?>
      <script>
-            alert("Movie");
-            location.href = "My_list.php";
+            window.history.go(-1);
             // alert("hshshsh");
         </script>
 
     <?php        
     } else {
-        echo "Lỗi xóa user " . mysqli_error($conn);
+        echo "Lỗi " . mysqli_error($conn);
     }
     mysqli_close($link);
     

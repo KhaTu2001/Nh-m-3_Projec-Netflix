@@ -1,7 +1,6 @@
 .header_my-list{
     display: flex;
     align-items: center;
-    position: relative;
     background-color: black;
  }
  .header_my-list.sticky{
@@ -31,55 +30,6 @@
  .no_list h4{
     color: #757575;
  }
- .card-body{
-    
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-     background-color: rgb(29, 26, 26);
- }
- .card-body-item{
-    height: 24px;
-    width: 24px;
-    border: 1px solid #757575;
-    border-radius: 50%;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 2px;
- }
- .card{
-    background-color: #000;
-    
- }
- .card-body-item:hover{
-    border: 1px solid #ffffff;
- }
- .first_child{
-    background-color: #fff;
-    color: #000;
- }
- .first_child i{
-   color: #000;
- }
- .card-body-item a{
-    color: #fff ;
-    text-decoration: none;
-    font-size: 0.75rem;
- }
- .card-body-item a:hover{
-    color: #fff !important;
- }
- .card:hover  {
-    animation-name: display_block;
-    animation-duration: 2s;
-    transform: scale(1.8);
- }
-  .card:hover div{
-    
-   display: flex;
-  }
   .full_screen-film{
    position: relative;
   }
@@ -100,9 +50,7 @@
      position: absolute;
      font-size: 3rem;
      z-index: 1000;
-     animation-name: display_block;
-     animation-duration: 1s;
-      animation-delay: 1s;
+
   }
   .prev-page i{
      color: #fff;
@@ -113,15 +61,75 @@
    animation-name: remove;
    animation-duration: 4s;
   }
-  @keyframes remove {
-   0% {display: block;}
-   50% {background: rgba(0, 0, 0, 0.5); }
-   100% {display: none;}
-  }
-  @keyframes display_block {
-   0% {transform: scale(1);}
-   25% {transform: scale(1);}
-   50% {transform: scale(1);}
-   80% {transform: scale(1);}
-   100% {transform: scale(1.8);}
-  }
+
+
+/* The Modal (background) */
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top: 100px; /* Location of the box */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+ 
+ /* Modal Content */
+ .modal-content {
+   position: relative;
+   background-color: #fefefe;
+   margin: auto;
+   padding: 0;
+   border: 1px solid #888;
+   width: 80%;
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+   -webkit-animation-name: animatetop;
+   -webkit-animation-duration: 0.4s;
+   animation-name: animatetop;
+   animation-duration: 0.4s
+ }
+ 
+ /* Add Animation */
+ @-webkit-keyframes animatetop {
+   from {top:-300px; opacity:0} 
+   to {top:0; opacity:1}
+ }
+ 
+ @keyframes animatetop {
+   from {top:-300px; opacity:0}
+   to {top:0; opacity:1}
+ }
+ 
+ /* The Close Button */
+ .close {
+   color: white;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+ 
+ .close:hover,
+ .close:focus {
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+ }
+ 
+ .modal-header {
+   padding: 2px 16px;
+   background-color: #5cb85c;
+   color: white;
+ }
+ 
+ .modal-body {padding: 2px 16px;}
+ 
+ .modal-footer {
+   padding: 2px 16px;
+   background-color: #5cb85c;
+   color: white;
+ }
+ 

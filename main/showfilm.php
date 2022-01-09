@@ -7,16 +7,19 @@
     <body>  
 <?php
     require('connect.php');
-      $filmid = $_GET["id"];
-    $sql = "SELECT * from film where id = $filmid";
-    $result=mysqli_query($conn, $sql);
-    while($row = mysqli_fetch_assoc($result)){?>
+    $filmid = $_GET["id"];
+        $sql = "SELECT * from film where id = $filmid";
+        $result=mysqli_query($conn, $sql);
+    while($row = mysqli_fetch_assoc($result)){
+        $view = $row['num_view'] + 1 ;
+        $sql1 = "UPDATE film Set num_view =  $view where id = $filmid";
+        $result=mysqli_query($conn, $sql1);   
+        ?>
     <div class="full_screen-film container-fluid">
         <h2 class = "name_film container"><?php echo $row['name'] ?></h2>
         <button type="submit" class="prev-page" onclick="prev()"><i class="fas fa-arrow-left"></i></button>
-        <video width="640" height="480" controls posster="images/poster.png">
+        <video  controls>
                 <source src="../admin/video/<?php echo $row['link'] ?>" type="video/mp4">
-                <source src="freehostpage.ogg" type="video/ogg">
         </video>
     </div>
 

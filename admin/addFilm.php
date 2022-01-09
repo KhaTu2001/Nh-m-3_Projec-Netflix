@@ -82,8 +82,8 @@
 
                                     if (mysqli_num_rows($result) > 0) { 
                                         while($row = mysqli_fetch_assoc($result)) { ?>
-                                        <option value="<?php echo $row["id"];?>">
-                                            <?php echo $row["name"];?>
+                                        <option value="<?php echo $row["id_category"];?>">
+                                            <?php echo $row["name_category"];?>
                                         </option>
                                 <?php 
                                         }

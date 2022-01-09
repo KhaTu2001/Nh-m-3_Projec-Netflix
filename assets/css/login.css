@@ -142,9 +142,9 @@ a.navbar-brand:hover{
       background-color: #13110E;
       padding: 60px 68px 40px;
       max-width: 800px !important;
-      max-height: 700px !important;
       background-color:  rgba(0,0,0,0.7);
       border-radius: 16px;
       margin-bottom: 100px;
+      height: max-content;
 }
 

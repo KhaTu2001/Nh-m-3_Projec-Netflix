@@ -18,7 +18,6 @@
             id="Fill-14"  
             fill="#e50914"
             
-            
           ></path>
         </g>
       </svg></a>
