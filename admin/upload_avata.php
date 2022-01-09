@@ -13,7 +13,7 @@
             if($check){?>
                 <script>
                     alert("Insert film sucessfully!");
-                    location.href="admin_page.php";
+                    window.history.go(-1);
                 </script>
                 
             <?php

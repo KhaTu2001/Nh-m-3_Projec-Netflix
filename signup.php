@@ -43,7 +43,7 @@
                     
                   </div>
                 </div>
-
+                <div class="col-md-6 col-sm-12">
                 <div class="d-flex flex-row align-items-center mb-3">
            
                   <div class="form-outline flex-fill mb-0">
@@ -53,6 +53,8 @@
                     <small id="emailHelp"></small>
                   </div>
                 </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
 
                 <div class="d-flex flex-row align-items-center">
             
@@ -61,6 +63,7 @@
                     <input type="password" id="inputPassword1" name="txtPass1" class="form-control" placeholder="Password" required>
                     <p style="color:#fff;font-size:16px;margin-top:10px">(*)Password phải có 8 kí tự trở lên(trong đó có một chữ cái in hoa,một chữ cái thường,một số)</p>
                     <small id="passlHelp"></small>
+                  </div>
                   </div>
  
                 </div>

@@ -115,8 +115,8 @@
 
                                 if (mysqli_num_rows($result1) > 0) { 
                                     while($row1 = mysqli_fetch_assoc($result1)) { ?>
-                                    <option value="<?php echo $row1["id"];?>" <?php echo ($row1["id"] == $row["category_id"]) ?  "selected": "" ?> >
-                                        <?php echo $row1["name"];?>
+                                    <option value="<?php echo $row1["id_category"];?>" <?php echo ($row1["id_category"] == $row["category_id"]) ?  "selected": "" ?> >
+                                        <?php echo $row1["name_category"];?>
                                     </option>
                             <?php 
                                     }

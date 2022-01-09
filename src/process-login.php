@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('../connect.php');
+    include('../main/connect.php');
     if (isset($_POST['btn_submit']) && isset($_POST['txtEmail'])) {
         $email = $_POST['txtEmail'];
         $pass = $_POST['txtPass'];
@@ -21,7 +21,7 @@
                     if(password_verify($pass,$password)){
                         $_SESSION['isLoginOK'] = $email;  
                         
-                        if($usertype == '99'){
+                        if($usertype == '99'){  
                             $_SESSION['isLoginOK'] = $email;
                             header("location:../admin/admin_page.php"); 
                             ?>
