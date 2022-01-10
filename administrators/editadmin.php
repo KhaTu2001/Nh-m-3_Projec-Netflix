@@ -44,7 +44,7 @@ mysqli_close($conn);
                         <div class="form-outline flex-fill mb-0">
                             <label class="form-label" for="txtid">ID</label>
                             <input type="text" id="id" name="txtid" class="form-control"
-                                value="<?php echo $row['ID']; ?>" disabled>
+                                value="<?php echo $row['ID']; ?>"  readonly>
 
                         </div>
                         </div>

@@ -19,14 +19,14 @@
         </div>
     </nav>
     <div class="signup_form container">
-        <form class="mx-1 mx-md-4 " method="POST" action="./process_login.php" name="Signup">
+        <form class="mx-1 mx-md-4 " method="POST" action="./processadd.php" name="addadmin">
             <h2 class="text-center" style="color: #fff;">Add admin</h2>
             <div class="row">
                 <div class="col-6">
                     <div class="d-flex flex-row align-items-center mb-3">
 
                         <div class="form-outline flex-fill mb-0">
-                            <label class="form-label" for="firstName">User Name</label>
+                            <label class="form-label" for="username">User Name</label>
                             <input type="text" id="userName" name="userName" class="form-control"
                                 placeholder="User name" required>
 
@@ -37,7 +37,7 @@
 
                         <div class="form-outline flex-fill mb-0">
 
-                            <label class="form-label" for="firstName">Email</label>
+                            <label class="form-label" for="Email">Email</label>
                             <input type="email" id="inputEmail" name="txtEmail" class="form-control"
                                 placeholder="Email address" required>
                             <small id="emailHelp"></small>
@@ -47,7 +47,7 @@
                     <div class="d-flex flex-row align-items-center">
 
                         <div class="form-outline flex-fill mb-0">
-                            <label class="form-label" for="firstName">Password</label>
+                            <label class="form-label" for="password">Password</label>
                             <input type="password" id="inputPassword1" name="txtPass1" class="form-control"
                                 placeholder="Password" required>
 
@@ -62,8 +62,8 @@
                 <div class="col-6">
                     <div class="d-flex flex-row align-items-center mb-3">
                         <div class="form-outline flex-fill mb-0">
-                            <label class="form-label" for="firstName">Full Name</label>
-                            <input type="text" id="firstName" name="FullName" class="form-control"
+                            <label class="form-label" for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="FullName" class="form-control"
                                 placeholder="Full name" required>
 
                         </div>
@@ -73,22 +73,12 @@
 
                         <div class="form-outline flex-fill mb-0">
 
-                            <label class="form-label" for="firstName">Phone number</label>
+                            <label class="form-label" for="phone">Phone number</label>
                             <input type="text" id="inputPhone" name="txtphone" class="form-control"
                                 placeholder="Phone number" required>
                             <!-- <small id="emailHelp"></small> -->
                         </div>
                     </div>
-
-                    <div class="d-flex flex-row align-items-center mb-2">
-
-                        <div class="form-outline flex-fill ">
-                            <label class="form-label" for="firstName">Status</label>
-                            <input type="password" id="inputPassword2" name="txtPass2" class="form-control"
-                                placeholder="Confrim Password" required>
-                        </div>
-                    </div>
-                    <p id="sr_pass1"></p>
 
                     <div class=" container form-group " style="font-size: 20px;">
                         <label class="form-label">Gender</label>
@@ -101,6 +91,8 @@
 
                         </div>
                     </div>
+                    
+                    
                 </div>
             </div>
 </body>
