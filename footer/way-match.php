@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <title>Document</title>
-  <link rel="stylesheet" href="assets/css/minh.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="../assets/css/minh.css?v=<?php echo time(); ?>">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -16,7 +17,7 @@
   <nav class="navbar navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="index.php">
-        <img src="assets/img/logo1.png" alt="">
+        <img src="../assets/img/logo1.png" alt="">
       </a>
       <form class="d-flex">
         <a href="login.php" class="text-decoration-none link-primary" style="color: red;height: 50px;line-height: 50px;padding: 0 10px;display: block;color: #e50914;
@@ -27,34 +28,34 @@
       </form>
     </div>
   </nav>
-  <div class="top" style="background-image: url(assets/img/backgourp.jpg);">
+  <div class="top" style="background-image: url(../assets/img/backgourp.jpg);">
     <h2>Connect to Netflix using your favorite devices.</h2>
   </div>
   <div class="tabs">
     <div class="tab-item active">
-      <img  class="img-fluid" src="assets/img/iconwaymatch1.png" alt="">
+      <img  class="img-fluid" src="../assets/img/iconwaymatch1.png" alt="">
     </div>
     <div class="tab-item">
-    <img  class="img-fluid"  src="assets/img/iconwaymatch2.png" alt="">
+    <img  class="img-fluid"  src="../assets/img/iconwaymatch2.png" alt="">
     </div>
     <div class="tab-item">
-    <img  class="img-fluid"  src="assets/img/iconwaymatch3.png" alt="">
+    <img  class="img-fluid"  src="../assets/img/iconwaymatch3.png" alt="">
     </div>
     <div class="tab-item">
-    <img  class="img-fluid"  src="assets/img/iconwaymatch4.png" alt="">
+    <img  class="img-fluid"  src="../assets/img/iconwaymatch4.png" alt="">
     </div>
     <div class="tab-item">
-    <img  class="img-fluid"  src="assets/img/iconwaymatch5.png" alt="">
+    <img  class="img-fluid"  src="../assets/img/iconwaymatch5.png" alt="">
     </div>
     <div class="tab-item">
-    <img  class="img-fluid"  src="assets/img/iconwaymatch6.png" alt="">
+    <img  class="img-fluid"  src="../assets/img/iconwaymatch6.png" alt="">
     </div>
     <div class="tab-item">
-    <img  class="img-fluid"  src="assets/img/iconwaymatch7.png" alt="">
+    <img  class="img-fluid"  src="../assets/img/iconwaymatch7.png" alt="">
     </div>
     <div class="line"></div>
   </div>
-  <div class="tab-content" style="background-image: url(assets/img/backgroundwaymatch.png);">
+  <div class="tab-content" style="background-image: url(../assets/img/backgroundwaymatch.png);">
     <div class="tab-pane active ">
       <h2>PLUG AND PLAY</h2>
       <p>The newest generation of media players and streaming sticks offer a fast, easy, and affordable way to watch Netflix on your TV.</p>
@@ -130,7 +131,7 @@ Netflix will be available on select devices from the following brands displayed.
               <i class="far fa-copyright"></i>
               <p>2021 Netflix, Inc.</p>
           </div>
-              <img src="assets/img/quoc-ky-viet-nam.png" alt="">
+              <img src="../assets/img/quoc-ky-viet-nam.png" alt="">
           </div>
         </div>
       </div>
@@ -171,3 +172,5 @@ Netflix will be available on select devices from the following brands displayed.
 
 
 </html>
+message.txt
+7 KB

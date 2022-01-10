@@ -26,7 +26,7 @@
 
       <div class="slide-banner bg-img " style=" background-image: url(assets/img/slide-banner.jpg);height: 100%;">
         <div class="form_login container">
-        <form action="./src/process-login.php" class="form_layout" method="POST" name="login" >
+        <form action="./src/process-login.php" class="form_layout" method="POST" name="login" id="form-login" >
             <div class="form_header">
               <h1>Sign in</h1>
             </div>
@@ -40,7 +40,7 @@
 
             </div>
             <p id="sr_pass"></p>
-            <button type="submit" class="btn btn-primary mb-3" name="btn_submit">Sign in</button>
+            <button type="submit" id="btn_submit" class="btn btn-primary mb-3" name="btn_submit">Sign in</button>
             <div class="form-check mb-3">
               <label class="form-check-label ">
                 <input class="form-check-input" type="checkbox" name="remember"> Remember me

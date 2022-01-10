@@ -667,3 +667,17 @@
    text-decoration: underline;
    
 }
+.helpcenter a{
+   text-decoration: none;
+   color: #000;
+   
+}
+
+.helpcenter a:hover{
+   text-decoration: underline;
+   color: #e50914 !important;
+}
+.helpcenter li{
+   list-style: none;
+   margin-top:20px;
+}

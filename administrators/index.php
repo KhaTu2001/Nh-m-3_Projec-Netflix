@@ -36,7 +36,6 @@
                     <th scope="col" style="border: 1px solid #ddd;">Email</th> 
                     <th scope="col" style="border: 1px solid #ddd;">Số điện thoại</th> 
                     <th scope="col" style="border: 1px solid #ddd;">Giới tính</th>
-                    <th scope="col" style="border: 1px solid #ddd;">Sửa</th>
                     <th scope="col" style="border: 1px solid #ddd;">Xóa</th>
                     
                     </tr>
@@ -60,8 +59,6 @@
                                 <td><?php echo $row['phone']; ?></td>
                                 <td><?php echo $row['sex']; ?></td>
                                 <td>
-                                    <a href="editadmin.php?id=<?php echo $row['ID']; ?>"><i class="bi bi-pencil-square"></i></a>
-                                </td> <td>
                                     <a href="deleteadmin.php?id=<?php echo $row['ID']; ?>"><i class="bi bi-trash"></i></a>
                                 </td>
                                 

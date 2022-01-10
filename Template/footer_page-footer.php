@@ -9,10 +9,9 @@
      <div class="col-md-8 col-sm-12">
        <div class="footer-contact-left">
 
-         <a href="#">Terms of Use</a>
-         <a href="#">Privacy</a>
-         <a href="#">Cookie Preferences</a>
-         <a href="#">Corporate Information</a>
+         <a href="termsofuse.php">Terms of Use</a>
+         <a href="privacy.php">Privacy</a>
+         <a href="corpinfo.php">Corporate Information</a>
        </div>
      </div>
    </div>

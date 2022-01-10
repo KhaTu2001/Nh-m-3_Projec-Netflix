@@ -39,7 +39,7 @@
            
                   <div class="form-outline flex-fill mb-0">
                     <label class="form-label" for="firstName">User Name</label>
-                    <input type="text" id="userName" name="userName" class="form-control" placeholder="User name" required>
+                    <input type="text" id="userName" name="userName" class="form-control" placeholder="User name">
                     
                   </div>
                 </div>
@@ -49,8 +49,10 @@
                   <div class="form-outline flex-fill mb-0">
                     
                     <label class="form-label" for="firstName">Email</label>
-                    <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address"  required >
-                    <small id="emailHelp"></small>
+                    <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" >
+                    <!-- <small id="emailHelp"></small> -->
+                    <!-- <i class="bi bi-check2"></i>
+                    <i class="bi bi-x-lg"></i> -->
                   </div>
                 </div>
                 </div>
@@ -60,7 +62,7 @@
             
                   <div class="form-outline flex-fill mb-0">
                     <label class="form-label" for="firstName">Password</label>
-                    <input type="password" id="inputPassword1" name="txtPass1" class="form-control" placeholder="Password" required>
+                    <input type="password" id="inputPassword1" name="txtPass1" class="form-control" placeholder="Password" >
                     <p style="color:#fff;font-size:16px;margin-top:10px">(*)Password phải có 8 kí tự trở lên(trong đó có một chữ cái in hoa,một chữ cái thường,một số)</p>
                     <small id="passlHelp"></small>
                   </div>
@@ -77,7 +79,7 @@
                 <div class="d-flex flex-row align-items-center mb-3">
                   <div class="form-outline flex-fill mb-0">
                       <label class="form-label" for="firstName">Full Name</label>
-                      <input type="text" id="firstName" name="FullName" class="form-control" placeholder="Full name" required>
+                      <input type="text" id="firstName" name="FullName" class="form-control" placeholder="Full name" >
                       
                     </div>
                 </div>
@@ -87,7 +89,7 @@
                   <div class="form-outline flex-fill mb-0">
                   
                     <label class="form-label" for="firstName">Phone number</label>
-                    <input type="text" id="inputPhone" name="txtphone" class="form-control" placeholder="Phone number"  required >
+                    <input type="text" id="inputPhone" name="txtphone" class="form-control" placeholder="Phone number" >
                     <!-- <small id="emailHelp"></small> -->
                   </div>
                 </div>
@@ -96,7 +98,7 @@
             
                   <div class="form-outline flex-fill ">
                     <label class="form-label" for="firstName">Confirm Password</label>
-                    <input type="password" id="inputPassword2" name="txtPass2" class="form-control" placeholder="Confrim Password" required>
+                    <input type="password" id="inputPassword2" name="txtPass2" class="form-control" placeholder="Confrim Password">
                   </div>
                 </div>
                 <p id="sr_pass1"></p> 
