@@ -20,7 +20,7 @@
 
 <body class="main">
     <?php
-		include 'navbar.php';
+		include 'connect.php';
         $sql = "SELECT * from film ";
             $sqlMostview = "SELECT * from film";
             $result = mysqli_query($conn, $sql); 
@@ -35,12 +35,13 @@
             while($rowMostview = mysqli_fetch_assoc($resultMostview)){    
             if($rowMostview['num_view'] == max($view) && $num2<1){$num2 +=1; ?>
     <div class="slider container-fluid">
-
+        
         <video class="container-fluid" autoplay muted loop id="myVideo">
             <source src="../admin/video/<?php echo $rowMostview['link'];  ?>" type="video/mp4">
         </video>
 
         <div class="content">
+        <?php include 'navbar.php';?>
             <div class="container">
                 <br>
                 <h1><?php echo $rowMostview['name'];  ?> </h1>
@@ -119,6 +120,7 @@
                 
 include 'list_film.php'; 
 ?>
+
     <div class="footer">
         <div class="social">
             <i class="fab fa-facebook-square"></i>

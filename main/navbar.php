@@ -9,8 +9,8 @@ if(isset( $_SESSION['isLoginOK'])){
 	  while($rowUser = mysqli_fetch_assoc($resultUser)){
 	
 	$user_id = $rowUser['ID'];
-	  }
-}
+	  
+
 ?>
 <nav class="container-fluid navbar-header">
     <div class="header">
@@ -52,14 +52,11 @@ if(isset( $_SESSION['isLoginOK'])){
                             </form>
                         </div>
                     </li>
-                    <li id="kids">Kids</li>
-                    <li id="DVD">DVD</li>
-                    <li><i id="bell" class="fas fa-bell"></i></li>
                     <li class="user">
                         <div class="dropdown">
                             <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuLink"
-                                data-bs-toggle="dropdown"><?php echo $rowUser['']; ?></a>
-                            <div class="dropdown-menu">
+                                data-bs-toggle="dropdown"><?php echo $rowUser['username']; ?></a>
+                            <div class="dropdown-menu" style = "z-index:1000;">
                                 <a href="profile.php">Account</a>
                                 <a href="#">Help Center</a>
                                 <a href="#">Sign out of Neflix</a>
@@ -72,5 +69,7 @@ if(isset( $_SESSION['isLoginOK'])){
     </div>
 </nav>
 <?php
+}
+  }
 }
 ?>
