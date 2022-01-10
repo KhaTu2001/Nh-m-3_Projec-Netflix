@@ -20,28 +20,27 @@
 
 <body class="main">
     <?php
-		include 'connect.php';
-        $sql = "SELECT * from film ";
-            $sqlMostview = "SELECT * from film";
+		include 'navbar.php';
+            $sql = "SELECT * from film where type_movie = 1";
             $result = mysqli_query($conn, $sql); 
+            $sqlMostview = "SELECT * from film";
             $resultMostview = mysqli_query($conn, $sqlMostview); 
             if(mysqli_num_rows($result) > 0){
             $num = 0;
             while( $row= mysqli_fetch_assoc($result)){    
                 $view[$num]  = $row['num_view']; 
-                $num+=1;        
+                $num+=1;      
             }
             $num2 = 0;
             while($rowMostview = mysqli_fetch_assoc($resultMostview)){    
             if($rowMostview['num_view'] == max($view) && $num2<1){$num2 +=1; ?>
     <div class="slider container-fluid">
-        
+
         <video class="container-fluid" autoplay muted loop id="myVideo">
             <source src="../admin/video/<?php echo $rowMostview['link'];  ?>" type="video/mp4">
         </video>
 
         <div class="content">
-        <?php include 'navbar.php';?>
             <div class="container">
                 <br>
                 <h1><?php echo $rowMostview['name'];  ?> </h1>
@@ -80,47 +79,45 @@
         </div>
     </div>
     <?php 
-    }
-}
+    }}
             }
-                $sql123 = "SELECT * from film ";
-                $result123 = mysqli_query($conn, $sql123); 
-                $sql1 = "SELECT * from film ";
-                $sql2 = "SELECT * from film ";
-                $sql3 = "SELECT * from film ";
-                $sql4 = "SELECT * from film ";
-                $sql5 = "SELECT * from film ";
-                $sql6 = "SELECT * from film ";
-                $sql7 = "SELECT * from film ";
-                $sql8 = "SELECT * from film ";
-                $sql9 = "SELECT * from film ";
-                $sql10 = "SELECT * from film ";
-                $sql11 = "SELECT * from film ";
-                $sql12 = "SELECT * from film ";
-                $sql13 = "SELECT * from film ";
-                $sql14 = "SELECT * from film ";
-                $sql15 = "SELECT * from film ";
-                $sql16 = "SELECT * from film ";
-                $result1 = mysqli_query($conn, $sql1); 
-                $result2 = mysqli_query($conn, $sql2); 
-                $result3 = mysqli_query($conn, $sql3); 
-                $result4 = mysqli_query($conn, $sql4); 
-                $result5 = mysqli_query($conn, $sql5); 
-                $result6 = mysqli_query($conn, $sql6); 
-                $result7 = mysqli_query($conn, $sql7); 
-                $result8 = mysqli_query($conn, $sql8); 
-                $result9 = mysqli_query($conn, $sql9); 
-                $result10 = mysqli_query($conn, $sql10); 
-                $result11 = mysqli_query($conn, $sql11); 
-                $result12 = mysqli_query($conn, $sql12); 
-                $result13 = mysqli_query($conn, $sql13); 
-                $result14 = mysqli_query($conn, $sql14); 
-                $result15 = mysqli_query($conn, $sql15); 
-                $result16 = mysqli_query($conn, $sql16); 
-                
-include 'list_film.php'; 
+            $sql123 = "SELECT * from film where type_movie = 1";
+            $result123 = mysqli_query($conn, $sql123); 
+            $sql1 = "SELECT * from film where type_movie = 1";
+            $sql2 = "SELECT * from film where type_movie = 1";
+            $sql3 = "SELECT * from film where type_movie = 1";
+            $sql4 = "SELECT * from film where type_movie = 1";
+            $sql5 = "SELECT * from film where type_movie = 1";
+            $sql6 = "SELECT * from film where type_movie = 1";
+            $sql7 = "SELECT * from film where type_movie = 1";
+            $sql8 = "SELECT * from film where type_movie = 1";
+            $sql9 = "SELECT * from film where type_movie = 1";
+            $sql10 = "SELECT * from film where type_movie = 1";
+            $sql11 = "SELECT * from film where type_movie = 1";
+            $sql12 = "SELECT * from film where type_movie = 1";
+            $sql13 = "SELECT * from film where type_movie = 1";
+            $sql14 = "SELECT * from film where type_movie = 1";
+            $sql15 = "SELECT * from film where type_movie = 1";
+            $sql16 = "SELECT * from film where type_movie = 1";
+            $result1 = mysqli_query($conn, $sql1); 
+            $result2 = mysqli_query($conn, $sql2); 
+            $result3 = mysqli_query($conn, $sql3); 
+            $result4 = mysqli_query($conn, $sql4); 
+            $result5 = mysqli_query($conn, $sql5); 
+            $result6 = mysqli_query($conn, $sql6); 
+            $result7 = mysqli_query($conn, $sql7); 
+            $result8 = mysqli_query($conn, $sql8); 
+            $result9 = mysqli_query($conn, $sql9); 
+            $result10 = mysqli_query($conn, $sql10); 
+            $result11 = mysqli_query($conn, $sql11); 
+            $result12 = mysqli_query($conn, $sql12); 
+            $result13 = mysqli_query($conn, $sql13); 
+            $result14 = mysqli_query($conn, $sql14); 
+            $result15 = mysqli_query($conn, $sql15); 
+            $result16 = mysqli_query($conn, $sql16); 
+            
+            include 'list_film.php'; 
 ?>
-
     <div class="footer">
         <div class="social">
             <i class="fab fa-facebook-square"></i>

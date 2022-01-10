@@ -53,6 +53,7 @@ $(document).ready(function(){
         }
     })
 })
+<<<<<<< HEAD
 //check confirm pass word sign up
 
 $(document).ready(function(){
@@ -64,3 +65,5 @@ $(document).ready(function(){
     }
     })
 })
+=======
+>>>>>>> 7f333c2ccaca3caa4bc38ea46740bcf5a5dfe1e5

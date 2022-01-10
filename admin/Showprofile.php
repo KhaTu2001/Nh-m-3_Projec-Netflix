@@ -31,13 +31,19 @@
                                 <div id='img_div'><img src="image/avata_admin.jfif" alt=""></div>
                                 <?php
                             }
-                            else{
-                                   echo "<img src='image/".$row['avata_image']."' >";
+                            else{?>
+                                    <div id="img_div">
+                                        <img src="image/<?php echo $row['avata_image']?>" alt="">
+                                    </div>
+                                <?php
+    
+                                   
                             }                                              
                             ?>
                                 <style>
                                 #img_div img {
-
+                                    width: 200px;
+                                    height: 200px;
                                     object-fit: cover;
                                     border-radius: 50%;
                                 }

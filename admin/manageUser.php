@@ -23,9 +23,7 @@
                 </div>
             <div class="container" id="list-user">
                 <div class="table_box">
-                    <div class="table_manage">
-
-                    
+                    <div class="table_manage">                   
                     <!-- get from database -->
                     <?php
                         if(isset($_POST["button_search"])){
@@ -43,8 +41,8 @@
                                             <th scope="col">Email</th>
                                             <th scope="col">Number phone</th>
                                             <th scope="col">Gender</th>
-                                            <th scope="col">Action_edit</th>
-                                            <th scope="col">Action_delete</th>
+                                            <th scope="col" style="width:160px;" >Show Profile</th>
+                                            <th scope="col" style="width:120px;">Action delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -58,7 +56,7 @@
                                         <th> <?php echo $row["email"] ?> </th>
                                         <th> <?php echo $row["phone"] ?> </th>
                                         <th> <?php echo $row["sex"] ?> </th>
-                                        <td class="action_btn">
+                                        <td class="action_btn" >
                                             <button type="button" class="btn btn-info" name="edit" onclick="show(this)">Show Profile</button>
                                         </td>
                                         <td class="action_btn">

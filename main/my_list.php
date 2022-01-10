@@ -72,7 +72,7 @@
                                             href="showfilm.php?id=<?php echo $rowfilm['id']; ?>"><i
                                                 class="fas fa-play"></i></a></div>
                                     <div class="card-body-item"><a
-                                            href="remove_list-even.php?id=<?php echo $row['id']; ?>"><i
+                                            href="option/remove_list-even.php?id=<?php echo $row['id']; ?>"><i
                                                 class="fas fa-check"></i></a></div>
                                 </div>
                                 <div class="card-body-item-right">
