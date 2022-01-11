@@ -52,3 +52,20 @@ $(document).ready(function(){
         }
     })
 })
+
+
+    $(document).ready(function(){
+        $('.filminfo').click(function(){
+            var filmid = $(this).data('id');
+            $.ajax({
+                url: 'ajaxfile.php',
+                type: 'post',
+                data: {filmid: filmid},            
+                success: function(response) {
+                    $('.modal-body').html(response);
+                    $('#myModal').modal('show');
+             
+                }
+            });
+        });
+    });

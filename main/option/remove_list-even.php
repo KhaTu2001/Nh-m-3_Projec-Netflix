@@ -2,7 +2,7 @@
     require('connect.php');
       $listid = $_GET["id"];
   
-    $sql = "DELETE from my_list where id = $listid";
+    $sql = "DELETE from my_list where list_id = $listid";
 
     if (mysqli_query($conn, $sql)) {?>
      <script>
