@@ -44,7 +44,7 @@
             <div class="form-check mb-3">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Remember me</label>
-              <a class="needhelp_form.php" href="">Needhelp?</a>
+              <a class="needhelp_form" href="./loginHelp.php">Needhelp?</a>
           </div>
             <div class="mb-3">
               <i class="fab fa-facebook-square"></i>

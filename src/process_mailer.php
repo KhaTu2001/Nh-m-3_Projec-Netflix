@@ -16,8 +16,7 @@ require './PHPMailer/Exception.php';
 require './PHPMailer/PHPMailer.php';
 require './PHPMailer/SMTP.php';
     //2.su dung 
- 
-function generatePassword() {
+    function generatePassword() {
 
         $_alphaSmall = 'abcdefghijklmnopqrstuvwxyz';            // small letters
         $_alphaCaps  = strtoupper($_alphaSmall);                // CAPITAL LETTERS
@@ -25,17 +24,18 @@ function generatePassword() {
         $_specialChars = '`~!@#$%^&*()-_=+]}[{;:,<.>/?\'"\|';   // Special Characters
     
         $_container = $_alphaSmall.$_alphaCaps.$_numerics.$_specialChars;   // Contains all characters
-        $passbam = '';         // will contain the desired pass
+        $pass1 = '';         // will contain the desired pass
     
         for($i = 0; $i < 10; $i++) {                                 // Loop till the length mentioned
             $_rand = rand(0, strlen($_container) - 1);                  // Get Randomized Length
-            $passbam .= substr($_container, $_rand, 1);                // returns part of the string [ high tensile strength ;) ] 
+            $pass1 .= substr($_container, $_rand, 1);                // returns part of the string [ high tensile strength ;) ] 
         }
     
-        return $passbam;       // Returns the generated Pass
+        return $pass1;       // Returns the generated Pass
     }
+
 //Create an instance; passing `true` enables exceptions
-function sendMail($email, $link){
+function sendMail($email,$test,$body){
     global $username;
     global $password;
     $mail = new PHPMailer(true);
@@ -66,8 +66,8 @@ function sendMail($email, $link){
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Chào mừng bạn đến với netflix!';
-        $mail->Body    = 'Click de kich hoat'.$link;
+        $mail->Subject = $test;
+        $mail->Body    = $body;
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();

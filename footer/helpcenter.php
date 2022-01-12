@@ -12,7 +12,7 @@
 
         <div class="navbar-right" style="width:auto;">
 
-          <a href="index.php" class="navbar-brand">
+          <a href="../index.php" class="navbar-brand">
             <svg viewBox="0 0 111 30" class="header_navbar--logo-first" focusable="false">
               <g id="netflix-logo">
                 <path
@@ -41,10 +41,10 @@
         </div>
         <div class="navbar-left" style="width:auto;">
           <div class="join-netflix">
-            <a href="../footer/helpcenter.php">JOIN NETFLIX</a>
+            <a href="../login.php">JOIN NETFLIX</a>
           </div>
           <form class="nav-option d-flex">
-            <a href="../login.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign
+            <a href="../signup.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign
                 In</button></a>
           </form>
         </div>

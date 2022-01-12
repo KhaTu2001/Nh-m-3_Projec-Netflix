@@ -29,8 +29,10 @@
       //tao link de vao mail kich hoat
       $link = "<a href='localhost/Nhom-3_Project-Netflix/src/verify-email.php?key=".$email."&token=".$token."'>Click and Verify Email</a>";
       require('process_mailer.php');
+      $test = 'Active account netflix';
+      $body = 'Click link'.$link;
       // echo $sql2;
-      if(sendMail($email, $link)){
+      if(sendMail($email,$test,$body)){
         ?>
           <script>
            alert("Signup successful!Hãy check mail để kích hoạt tài khoản");
