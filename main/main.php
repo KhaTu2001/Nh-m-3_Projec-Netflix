@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/css/minh.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
 
 </head>
 
@@ -35,13 +38,16 @@
             while($rowMostview = mysqli_fetch_assoc($resultMostview)){    
             if($rowMostview['num_view'] == max($view) && $num2<1){$num2 +=1; ?>
     <div class="slider container-fluid">
-        
+
         <video class="container-fluid" autoplay muted loop id="myVideo">
             <source src="../admin/video/<?php echo $rowMostview['link'];  ?>" type="video/mp4">
         </video>
+        <audio autoplay muted loop>
+            <source src="../admin/video/<?php echo $rowMostview['link'];  ?>" type="video/mp4">
+        </audio>
 
         <div class="content">
-        <?php include 'navbar.php';?>
+            <?php include 'navbar.php';?>
             <div class="container">
                 <br>
                 <h1><?php echo $rowMostview['name'];  ?> </h1>
@@ -83,6 +89,11 @@
     }
 }
             }
+
+?>
+
+
+    <?php
                 $sql123 = "SELECT * from film ";
                 $result123 = mysqli_query($conn, $sql123); 
                 $sql1 = "SELECT * from film ";
@@ -120,7 +131,26 @@
                 
 include 'list_film.php'; 
 ?>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-lg  modal-dialog-centered">
+            <div class="modal-content">
 
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                </div>
+
+            </div>
+        </div>
+    </div>
+   
     <div class="footer">
         <div class="social">
             <i class="fab fa-facebook-square"></i>
@@ -131,23 +161,23 @@ include 'list_film.php';
         <div class="flex">
             <div class="info">
                 <ul>
-                    <li><a href="#">Questions? Contact us.</a></li>
-                    <li><a href="FAQ.php">FAQ</a></li>
-                    <li><a href="privacy.php">Privacy</a></li>
+                    <li><a href="../footer/contactus.php">Questions? Contact us.</a></li>
+                    <li><a href="../footer/FAQ.php">FAQ</a></li>
+                    <li><a href="../footer/privacy.php">Privacy</a></li>
                 </ul>
             </div>
             <div class="info">
                 <ul>
                     <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Legal Notices</a></li>
-                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="../footer/LegalNotices.php">Legal Notices</a></li>
+                    <li><a href="../footer/termsofuse.php">Terms of Use</a></li>
                 </ul>
             </div>
             <div class="info">
                 <ul>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="way-match.php">Ways to Match</a></li>
-                    <li><a href="corpinfo.php">Corporate Information</a></li>
+                    <li><a href="profile.php">Account</a></li>
+                    <li><a href="../footer/way-match.php">Ways to Match</a></li>
+                    <li><a href="../footer/corpinfo.php">Corporate Information</a></li>
                 </ul>
             </div>
         </div>

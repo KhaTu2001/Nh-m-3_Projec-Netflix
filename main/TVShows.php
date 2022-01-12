@@ -15,12 +15,14 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/css/minh.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/main.js"></script>
 
 </head>
 
 <body class="main">
     <?php
-		include 'navbar.php';
+		include 'connect.php';
             $sql = "SELECT * from film where type_movie = 1";
             $result = mysqli_query($conn, $sql); 
             $sqlMostview = "SELECT * from film";
@@ -35,12 +37,13 @@
             while($rowMostview = mysqli_fetch_assoc($resultMostview)){    
             if($rowMostview['num_view'] == max($view) && $num2<1){$num2 +=1; ?>
     <div class="slider container-fluid">
-
         <video class="container-fluid" autoplay muted loop id="myVideo">
             <source src="../admin/video/<?php echo $rowMostview['link'];  ?>" type="video/mp4">
         </video>
 
         <div class="content">
+    <?php include 'navbar.php';?>
+
             <div class="container">
                 <br>
                 <h1><?php echo $rowMostview['name'];  ?> </h1>
@@ -118,6 +121,25 @@
             
             include 'list_film.php'; 
 ?>
+<div class="modal" id="myModal">
+        <div class="modal-dialog modal-lg  modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                </div>
+
+            </div>
+        </div>
+    </div>
     <div class="footer">
         <div class="social">
             <i class="fab fa-facebook-square"></i>

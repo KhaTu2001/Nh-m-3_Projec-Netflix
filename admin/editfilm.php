@@ -300,21 +300,19 @@
                         else{ 
                         ?>
                             <script>
-                                alert("Edit film fail!"); -->
+                                alert("Edit film fail!"); 
                             </script>
                         <?php
                         }
                 }
-            }
+            
         
 
-        mysqli_close($conn);
+                mysqli_close($conn);
     ?>
-
 </body>
 </html>
 
         
     
-
 
