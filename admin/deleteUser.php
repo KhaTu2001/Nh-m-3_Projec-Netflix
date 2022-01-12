@@ -4,7 +4,7 @@
     if(isset($_GET["id"])){
         $userID = $_GET['id'];
     }
-    $sql = "DELETE FROM user  WHERE id = $userID";
+    $sql = "DELETE FROM user  WHERE ID = $userID";
 
     if (mysqli_query($link, $sql)) {?>
         <script>

@@ -1,6 +1,6 @@
 <?php
      $username = 'quantrung.2k1@gmail.com';
-     $pass = 'szqirlbqvcblomap';
+     $password = 'szqirlbqvcblomap';
     //khai bao
     
     //Import PHPMailer classes into the global namespace
@@ -73,11 +73,6 @@ try {
     if($mail->send()){
         return true;
     }
-    // $mail->send();
-    // echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-}
     return false;
 }
 ?>

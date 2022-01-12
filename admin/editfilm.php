@@ -67,7 +67,7 @@
                             Image's Link
                         </label>
                         <div class="container">
-                        <input type="file" name="image_name" id="image_name" onchange="alertName2()"/>
+                        <input type="file" class="form-control" name="image_name" id="image_name" onchange="alertName2()"/>
                         <input type="text" class="form-control" id="image_link" name="image" value="<?php echo $row["image"]; ?>">
                         <script>
                             function alertName2() {
@@ -115,8 +115,8 @@
 
                                 if (mysqli_num_rows($result1) > 0) { 
                                     while($row1 = mysqli_fetch_assoc($result1)) { ?>
-                                    <option value="<?php echo $row1["id"];?>" <?php echo ($row1["id"] == $row["category_id"]) ?  "selected": "" ?> >
-                                        <?php echo $row1["name"];?>
+                                    <option value="<?php echo $row1["id_category"];?>" <?php echo ($row1["id_category"] == $row["category_id"]) ?  "selected": "" ?> >
+                                        <?php echo $row1["name_category"];?>
                                     </option>
                             <?php 
                                     }
@@ -183,10 +183,10 @@
                 </div>
                 <div >
                         <label for="decription" class="container">
-                            year
+                            Release year
                         </label>
                         <div class="container">
-                            <input type="text" class="form-control" id="year" name="year" value="<?php echo $row["year"]; ?>" >
+                            <input type="text" class="form-control" id="year" name="year" value="<?php echo $row["release_year"]; ?>" >
                             </input>
                         </div>
                     
@@ -280,6 +280,7 @@
                         category_id='$category',
                         type_movie='$type_movie',
                         nation_id='$nation',
+                        release_year = '$year',
                         image='$image',
                         description='$description',
                         duration='$duration',
@@ -299,21 +300,19 @@
                         else{ 
                         ?>
                             <script>
-                                alert("Edit film fail!"); -->
+                                alert("Edit film fail!"); 
                             </script>
                         <?php
                         }
                 }
-            }
+            
         
 
-        mysqli_close($conn);
+                mysqli_close($conn);
     ?>
-
 </body>
 </html>
 
         
     
-
 

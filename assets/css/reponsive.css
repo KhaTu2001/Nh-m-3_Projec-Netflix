@@ -78,6 +78,9 @@
  }
  
  @media(max-width: 612px) {
+    .bg-img{
+       height: 100%;
+    }
    .sperate{
       display: none;
    }
@@ -111,8 +114,7 @@
      #basic-addon2{
         font-size: 1.25rem;
         justify-content: center;
-        justify-items: center;
-        
+        justify-items: center;      
     }
     .layer h1 {
        font-size: 50px;
@@ -127,8 +129,7 @@
     .input-group-text {
        width: 100% !important;
        border-radius: 0px;
-       border: 0px;
-       
+       border: 0px;      
     }
     .input-group-text {
        margin-top: 5px;
@@ -159,7 +160,6 @@
   
     
  }
- 
  @media(max-width: 515px) {
    .join-netflix {
       margin-top: -0.5px;
@@ -198,10 +198,8 @@
        font-size: 14px;
     }
  }
- 
  @media(max-width:425px) {
     .layer h1 {
        font-size: 34px;
-    }
-    
+    }   
  }

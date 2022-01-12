@@ -25,33 +25,27 @@
       </nav>  
 
       <div class="slide-banner bg-img " style=" background-image: url(assets/img/slide-banner.jpg);height: 100%;">
-        <div class="form_login">
-        <form action="./src/process-login.php" class="form_layout" method="POST" name="login" >
+        <div class="form_login container">
+        <form action="./src/process-login.php" class="form_layout" method="POST" name="login" id="form-login" >
             <div class="form_header">
               <h1>Sign in</h1>
             </div>
             <div class="mb-3 mt-3">
 
-            <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" value="" autofocus>
+            <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" >
             </div>
             <div class="mb-3">
 
-            <input type="password" id="inputPassword" name="txtPass" class="form-control" placeholder="Password">
+            <input type="password" id="inputPassword" name="txtPass" class="form-control" placeholder="Password" >
 
             </div>
             <p id="sr_pass"></p>
-            <button type="submit" class="btn btn-primary mb-3" name="btn_submit">Sign in</button>
+            <button type="submit" id="btn_submit" class="btn btn-primary mb-3" name="btn_submit">Sign in</button>
             <div class="form-check mb-3">
               <label class="form-check-label ">
-                <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                <input class="form-check-input" type="checkbox" name="remember" value="1"> Remember me
               </label>
               <a class="needhelp_form" href="./loginHelp.php">Needhelp?</a>
-              <?php
-                    if(isset($_GET['error'])){
-                        echo "<h5 style='color:red'> {$_GET['error']} </h5>";
-                    }
-
-                ?>
             </div>
             <div class="mb-3">
               <i class="fab fa-facebook-square"></i>

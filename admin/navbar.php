@@ -3,7 +3,7 @@
 		require('connect.php');
         if(isset( $_SESSION['isLoginOK'])){
 		$link =  $_SESSION['isLoginOK'];
-		$sqlAd = "SELECT * from user WHERE email = '$link'";
+		$sqlAd = "SELECT * from user WHERE email = '$link' ";
 		$resultAd = mysqli_query($conn, $sqlAd);
 		if(mysqli_num_rows($resultAd) > 0){
 			$rowAd = mysqli_fetch_assoc($resultAd);
@@ -65,11 +65,7 @@
 
 				</li>
 				<li class="dropdown-item">
-					<form method="post" action="">
-						<a> <button sid="logout" name="log_out" style=""> 
-							<i class="fa fa-power-off"></i>Đăng xuất</button> 
-						</a>
-					</form>
+					<a href="../logout.php">Sign out of Neflix</a>
 				</li>
 				
 			</ul>
@@ -111,15 +107,6 @@
 				</ul>
 			</div>
 		</div> 
-	<?php
-		if(isset($_POST["log_out"])){
-			unset($_SESSION['isLoginOK']);
-			session_unset(); 
-			session_destroy();
-			header('Location:../index.php');
-		}
-	
-	?>
 	</div>
     </nav>
     <?php

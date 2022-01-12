@@ -1,0 +1,119 @@
+.header_my-list{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    justify-content: start;
+ }
+ .header_my-list.sticky{
+   top: 0;
+   left: 0;
+    z-index: 1000;
+    position: fixed;
+ }
+ .header_my-list.sticky h3{
+   margin-top: 20px;
+
+ }
+ .header_my-list h3{
+   position: relative;
+    color: #fff;
+    margin-top: 80px;
+    z-index: 1000;
+    justify-content: start;
+ }
+ .my_list-page{
+    min-height:1000px ;
+    background-color: #000;
+ }
+ .no_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+ }
+ .no_list h4{
+    color: #757575;
+ }
+  .full_screen-film{
+   position: relative;
+   
+  }
+  .full_screen-film video{
+     height: 100%;
+     margin-top: -80px;
+     width: 100%;
+      top: 0;
+     bottom: 0;   
+     left: 0;
+     right: 0;
+     background-color: #000;
+  }
+  .prev-page{
+     margin-top: 24px;
+     margin-left: 24px;
+     background: none;
+     border: none;
+     position: absolute;
+     font-size: 3rem;
+     z-index: 1000;
+  }
+  .prev-page i{
+     color: #fff;
+  }
+  .name_film{
+   position: absolute;
+   color: #fff;
+   animation-name: remove;
+   animation-duration: 4s;
+  }
+.row > *{
+   padding-left:1px;
+   padding-right:1px;
+  }
+.card-body{
+   padding:1rem 2px;
+}
+.modal-body video{
+   width: 100%;
+}
+.modal-content{
+   background-color: #000;
+   width: 100%;
+}
+.modal{
+   color: #fff;
+}
+.modal::-webkit-scrollbar{
+   display: none;
+}
+.modal-body p{
+   color: #fff;
+}
+.modal-body p span{
+
+   color: rgb(115, 116, 115);
+   flex-direction: column;
+}
+
+
+.card-body-item button{
+   background-color: black;
+   border: 1px solid rgb(105, 104, 104);
+   border-radius: 50%;
+   height: 24px;
+   width: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1rem;
+   color: rgb(105, 104, 104);
+}
+
+.card-body-item button:hover{
+   background-color: black;
+   border: 1px solid #fff;
+
+}

@@ -45,7 +45,16 @@
                         <div class="container">
                             <input type="text" class="form-control" id="name_episode" value="" name="name_episode">
                         </div>
+                    </div> 
+                    <div>
+                        <label for="name_episode" class="container">
+                            Episode
+                        </label>
+                        <div class="container">
+                            <input type="text" class="form-control" id="episode" value="" name="episode">
+                        </div>
                     </div>
+                    
                 <div>
                         <label for="link" class="container">
                             Link's Movie
@@ -65,6 +74,7 @@
             if(isset($_POST["button_post"])){
                 $id_film = $_POST["id_film"];
                 $name_episode = $_POST["name_episode"];
+                $episode = $_POST["episode"];
                 $content = $_FILES["video"]['name'];
                 $target = "video/".basename($link);
                 if (move_uploaded_file($_FILES['video']['tmp_name'], $target)){
@@ -77,8 +87,8 @@
                     <?php
                     }
                     else {
-                        $sql1 = "INSERT INTO episode(film_id,episode_name,content)            
-                            VALUES ('$id_film','$name_episode','$content')";
+                        $sql1 = "INSERT INTO episode(film_id,episode_name,content,episode)            
+                            VALUES ('$id_film','$name_episode','$content','$episode')";
                         $result1 = mysqli_query($conn,$sql1);
                         if($result1){?>
                             <script>

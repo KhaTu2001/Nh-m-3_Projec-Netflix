@@ -19,16 +19,13 @@
                 if(mysqli_stmt_fetch($stmt)){
                     // echo $email;
                     if(password_verify($pass,$password)){
-                        $_SESSION['isLoginOK'] = $email;  
-                        
-                        if($usertype == '99'){
+                        if($usertype == '99'){  
                             $_SESSION['isLoginOK'] = $email;
                             header("location:../admin/admin_page.php"); 
-                            ?>
-                                
-
-                            <?php  
                         
+                        }elseif($usertype == '10') {
+                            $_SESSION['isLoginOK'] = $email;
+                            header("location:../administrators/administrator.php"); 
                         }
                         
                         else{
@@ -43,7 +40,7 @@
                                 <script>
                                     alert("Sai mật khẩu rồi!!!quay lại đi");
                                     location.href = "../login.php";
-                                    // alert("hshshsh");
+                                    
                                 </script>
 
                             <?php  
@@ -54,7 +51,7 @@
                     <script>
                         alert("Tài khoản không tồn tại!!!");
                         location.href = "../login.php";
-                        // alert("hshshsh");
+                        
                     </script>
 
                 <?php  
@@ -62,7 +59,7 @@
             }
 
         }
-       
+        
 
 
     
