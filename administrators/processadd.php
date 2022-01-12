@@ -45,7 +45,7 @@
                 ?>
                     <script>
                     alert("Add admin successful!");
-                    location.href = "./index.php";
+                    location.href = "./manageadmin.php.php";
                     </script>
 
                 <?php  
@@ -55,7 +55,7 @@
                 ?>
                     <script>
                     alert("Add admin khong thanh cong!");
-                    location.href = "./addadmin.php";
+                    location.href = "addadmin.php";
                     </script>
 
                 <?php 

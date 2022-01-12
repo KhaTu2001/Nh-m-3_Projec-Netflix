@@ -138,6 +138,13 @@ a.navbar-brand:hover{
       margin-bottom: 100px;
       height: max-content;
 }
+.input-search{
+   width: 630px !important;
+}
+.signout a{
+   text-decoration: none !important;
+}
+
 
 
 /* reponsive login & sign up */

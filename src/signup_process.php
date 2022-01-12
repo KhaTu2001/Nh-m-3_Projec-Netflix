@@ -10,7 +10,7 @@
     require('../connect.php');
     $sql = "SELECT * FROM user where email = '$email'";
     $res = mysqli_query($conn,$sql);
-    echo mysqli_num_rows($res); //in ra du lieu trong bang
+    //echo mysqli_num_rows($res); //in ra du lieu trong bang
     if( mysqli_num_rows($res) > 0){
       ?>
           <script>
