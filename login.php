@@ -42,12 +42,10 @@
             <p id="sr_pass"></p>
             <button type="submit" id="btn_submit" class="btn btn-primary mb-3" name="btn_submit">Sign in</button>
             <div class="form-check mb-3">
-              <label class="form-check-label ">
-                <input class="form-check-input" type="checkbox" name="remember" value="1"> Remember me
-              </label>
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Remember me</label>
               <a class="needhelp_form.php" href="">Needhelp?</a>
-              
-            </div>
+          </div>
             <div class="mb-3">
               <i class="fab fa-facebook-square"></i>
               <a class="Form_loginfb" href="https://www.facebook.com/login">Login with Facebook</a>
@@ -67,8 +65,8 @@
              <div class="row">
                <div class="col-md-3 col-6 my-4">
                  <ul>
-                   <li><a href="#">FAQ</a></li>
-                   <li><a href="#">Cookie Preferences</a></li>
+                   <li><a href="./footer/FAQ.php">FAQ</a></li>
+                   <li><a href="">Cookie Preferences</a></li>
                    
                  </ul>
                </div>
