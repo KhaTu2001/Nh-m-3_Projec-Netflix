@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('../connect.php');
+    include('../main/connect.php');
     if (isset($_POST['btn_submit']) && isset($_POST['txtEmail'])) {
         $email = $_POST['txtEmail'];
         $pass = $_POST['txtPass'];
@@ -32,14 +32,8 @@
                         }
                         
                         else{
-                            ?>
-                                <script>
-                                    alert("Đăng nhập thành công");
-                                    location.href = "../main.php";
-                                    // alert("hshshsh");
-                                </script>
-
-                            <?php        
+                            $_SESSION['isLoginOK'] = $email;
+                            header("location:../main/main.php");
                             // echo 'hello';
                             // header("location: ../main.php"); 
                         }

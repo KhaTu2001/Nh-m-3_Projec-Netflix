@@ -45,7 +45,7 @@
               <label class="form-check-label ">
                 <input class="form-check-input" type="checkbox" name="remember"> Remember me
               </label>
-              <a class="needhelp_form" href="">Needhelp?</a>
+              <a class="needhelp_form" href="./loginHelp.php">Needhelp?</a>
               <?php
                     if(isset($_GET['error'])){
                         echo "<h5 style='color:red'> {$_GET['error']} </h5>";

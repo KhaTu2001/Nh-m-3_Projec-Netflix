@@ -16,10 +16,27 @@ require './PHPMailer/Exception.php';
 require './PHPMailer/PHPMailer.php';
 require './PHPMailer/SMTP.php';
     //2.su dung 
- 
+    function generatePassword() {
 
+        $_alphaSmall = 'abcdefghijklmnopqrstuvwxyz';            // small letters
+        $_alphaCaps  = strtoupper($_alphaSmall);                // CAPITAL LETTERS
+        $_numerics   = '1234567890';                            // numerics
+        $_specialChars = '`~!@#$%^&*()-_=+]}[{;:,<.>/?\'"\|';   // Special Characters
+    
+        $_container = $_alphaSmall.$_alphaCaps.$_numerics.$_specialChars;   // Contains all characters
+        $pass1 = '';         // will contain the desired pass
+    
+        for($i = 0; $i < 10; $i++) {                                 // Loop till the length mentioned
+            $_rand = rand(0, strlen($_container) - 1);                  // Get Randomized Length
+            $pass1 .= substr($_container, $_rand, 1);                // returns part of the string [ high tensile strength ;) ] 
+        }
+    
+        return $pass1;       // Returns the generated Pass
+    }
+    
 //Create an instance; passing `true` enables exceptions
-function sendMail($email,$link){
+function sendMail($email,$link,$test,$body){
+    
     global $username;
     global $pass;
     $mail = new PHPMailer(true);
@@ -49,8 +66,8 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Active account netflix';
-    $mail->Body    = 'Click de kich hoat'.$link;
+    $mail->Subject = $test;
+    $mail->Body    = $body;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     if($mail->send()){
