@@ -57,6 +57,10 @@ $(document).ready(function(){
         }
     })
 })
+<<<<<<< HEAD
+
+
+=======
 //check confirm pass word sign up
 
 $(document).ready(function(){
@@ -75,6 +79,7 @@ $(document).ready(function(){
     }
     })
 })
+>>>>>>> d66be69dafbe27d383e5b1c0ae488f43996ed8cb
 
 //check dinh dang sdt.phai la day co 10,dau thuoc nha mang VT,VN,mobi
 $(document).ready(function(){
@@ -108,3 +113,18 @@ $(document).ready(function(){
             });
         });
     });
+<<<<<<< HEAD
+    
+
+$(document).ready(function(){
+    $("#inputPassword2").change(function(){
+        var password = $("#inputPassword1").val()
+        var password1 = $("#inputPassword2").val() 
+        if(password != password1){
+            $("#sr_pass1").text("Password khong khop").css("color","red");
+    }
+    })
+})
+
+=======
+>>>>>>> d66be69dafbe27d383e5b1c0ae488f43996ed8cb

@@ -51,7 +51,7 @@
            </div>
            <div class="navbar-left" style="width:auto;">
                <div class="join-netflix">
-                   <a href="">JOIN NETFLIX</a>
+                   <a href="../login.php">JOIN NETFLIX</a>
                </div>
                <form class="nav-option d-flex">
                  <a href=""><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign In</button></a>

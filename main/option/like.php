@@ -2,6 +2,7 @@
     session_start();
 include 'connect.php' ; 
 $filmid = $_GET["id"];
+
 if(isset( $_SESSION['isLoginOK'])){
   $link =  $_SESSION['isLoginOK'];
   $sqlUser = "SELECT * from user WHERE email = '$link'";
@@ -12,6 +13,8 @@ if(isset( $_SESSION['isLoginOK'])){
 	$user_id = $rowUser['ID'];
 	  }
 }
+echo $filmid;
+echo $user_id;
 $sql1 = "SELECT * from dislike where user_id = $user_id and film_id=$filmid";
 $result1 = mysqli_query($conn, $sql1);
 if(empty($result1)){

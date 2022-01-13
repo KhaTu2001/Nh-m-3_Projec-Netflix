@@ -42,13 +42,14 @@
                     </div>
                     <?php  } 
     ?>
+                   
                 </div>
-                <div class="descreption container">
-                    <h4>
-                        description
-                    </h4>
-                    <?php echo $row['description'];  ?>
-                </div>
+                <div class="descreption">
+                        <h4>
+                            Description:
+                        </h4>
+                        <?php echo $row1['description'];  ?>
+                    </div>
             </div>
 
     </form>
