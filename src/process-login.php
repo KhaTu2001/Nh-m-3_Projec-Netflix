@@ -19,22 +19,18 @@
                 if(mysqli_stmt_fetch($stmt)){
                     // echo $email;
                     if(password_verify($pass,$password)){
-                        $_SESSION['isLoginOK'] = $email;  
-                        
                         if($usertype == '99'){  
                             $_SESSION['isLoginOK'] = $email;
                             header("location:../admin/admin_page.php"); 
-                            ?>
-                                
-
-                            <?php  
                         
+                        }elseif($usertype == '10') {
+                            $_SESSION['isLoginOK'] = $email;
+                            header("location:../administrators/administrator.php"); 
                         }
                         
                         else{
                             $_SESSION['isLoginOK'] = $email;
-                            header("location:../main/main.php"); 
-                                   
+                            header("location:../main/main.php");
                             // echo 'hello';
                             // header("location: ../main.php"); 
                         }
@@ -63,7 +59,7 @@
             }
 
         }
-       
+        
 
 
     

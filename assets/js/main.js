@@ -32,12 +32,14 @@ $(document).ready(function(){
             $('.bi-x-lg').css("display", "inline-block");
             $('.bi-check2').css("display", "none");
             $('#btn').attr("disabled", true);
+            $("#btnSubmit1").attr("disabled", true);
         }
         else{
             // $("#emailHelp").text("Email hop le").css("color","red");
             $('.bi-x-lg').css("display", "none");
             $('.bi-check2').css("display", "inline-block");
             $('#btn').attr("disabled", true);
+            $('#btnSubmit1').attr("disabled", false);
         }
     })
 })
@@ -47,14 +49,35 @@ $(document).ready(function(){
         let passPattern =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
         if(passPattern.test($(this).val()) == false){
             $("#passlHelp").text("Password khong hop le").css("color","red");
+            $("#btnSubmit1").attr("disabled", true);
         }
         else{
             $("#passlHelp").text("Password hop le").css("color","red");
+            $('#btnSubmit1').attr("disabled", false);
         }
     })
 })
+<<<<<<< HEAD
 
 
+=======
+//check confirm pass word sign up
+
+$(document).ready(function(){
+    $("#inputPassword2").change(function(){
+        var password = $("#inputPassword1").val()
+        var password1 = $("#inputPassword2").val() 
+        if(password != password1){
+            $("#sr_pass1").text("Password khong khop").css("color","red");
+            $('#btnSubmit1').attr("disabled", true);
+    }
+    else{
+        $("#sr_pass1").text("Password khop").css("color","red");
+        $('#btnSubmit1').attr("disabled", false);
+    }
+    })
+})
+>>>>>>> d66be69dafbe27d383e5b1c0ae488f43996ed8cb
 
     $(document).ready(function(){
         $('.filminfo').click(function(){
@@ -71,6 +94,7 @@ $(document).ready(function(){
             });
         });
     });
+<<<<<<< HEAD
     
 
 $(document).ready(function(){
@@ -83,3 +107,5 @@ $(document).ready(function(){
     })
 })
 
+=======
+>>>>>>> d66be69dafbe27d383e5b1c0ae488f43996ed8cb

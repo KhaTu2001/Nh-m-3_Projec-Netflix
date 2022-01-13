@@ -10,8 +10,8 @@
             
             ?>
         <script>
-            alert("Admin have been remove from my list");
-            location.href = "./manageadmin.php.php";
+            alert("User have been remove from my list");
+            location.href = "./manageuser.php";
         </script>
         
 
