@@ -63,7 +63,7 @@
     <div class="row">
         <?php
             while($row = mysqli_fetch_assoc($result4 )){
-                if($row['category_id'] == 4&& $number<1){echo "<h3>Music</h3>" ;$number+=1;}
+                if($row['category_id'] == 4 && $number4<1){echo "<h3>Music</h3>" ;$number4+=1;}
                 if( $row['category_id'] == 4  ){
                     $filmID = $row['id'];
                 include 'card_film.php';

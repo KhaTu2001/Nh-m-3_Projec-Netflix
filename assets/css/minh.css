@@ -187,30 +187,18 @@
   font-family: Arial;
   font-size: 17px;
   color: #FFFFFF;
-<<<<<<< HEAD
-=======
-  overflow: hidden;
-  height: min-content;
- 
->>>>>>> 488960aaffed69feb5eee0667087c9d496ac4a96
+
 }
 
 .slider video{
   object-fit: cover;
   }
-<<<<<<< HEAD
-
-.content .container {
-  position: relative;
-  bottom: 0;
-=======
 .content  {
   display: flex;
   align-items: center;
   z-index: 1000;
   position: absolute;
   top: 0;
->>>>>>> 488960aaffed69feb5eee0667087c9d496ac4a96
   left: 0;
   width: 100%;
   height: 100%;

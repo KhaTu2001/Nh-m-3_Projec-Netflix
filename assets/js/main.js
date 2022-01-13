@@ -29,16 +29,14 @@ $(document).ready(function(){
         let emailPattern = /\S+@\S+\.\S+/;
         if(emailPattern.test($(this).val()) == false){
             // $("#emailHelp").text("Email khong hop le").css("color","red");
-            $('.bi-x-lg').css("display", "inline-block");
-            $('.bi-check2').css("display", "none");
-            $('#btn').attr("disabled", true);
+            $('#false1').css("display", "inline-block");
+            $('#true1').css("display", "none");
             $("#btnSubmit1").attr("disabled", true);
         }
         else{
             // $("#emailHelp").text("Email hop le").css("color","red");
-            $('.bi-x-lg').css("display", "none");
-            $('.bi-check2').css("display", "inline-block");
-            $('#btn').attr("disabled", true);
+            $('#false1').css("display", "none");
+            $('#true1').css("display", "inline-block");
             $('#btnSubmit1').attr("disabled", false);
         }
     })
@@ -48,11 +46,13 @@ $(document).ready(function(){
     $("#inputPassword1").change(function(){
         let passPattern =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
         if(passPattern.test($(this).val()) == false){
-            $("#passlHelp").text("Password khong hop le").css("color","red");
+            $('#false2').css("display", "inline-block");
+            $('#true2').css("display", "none");
             $("#btnSubmit1").attr("disabled", true);
         }
         else{
-            $("#passlHelp").text("Password hop le").css("color","red");
+            $('#false2').css("display", "none");
+            $('#true2').css("display", "inline-block");
             $('#btnSubmit1').attr("disabled", false);
         }
     })
@@ -64,13 +64,32 @@ $(document).ready(function(){
         var password = $("#inputPassword1").val()
         var password1 = $("#inputPassword2").val() 
         if(password != password1){
-            $("#sr_pass1").text("Password khong khop").css("color","red");
+            $('#false4').css("display", "inline-block");
+            $('#true4').css("display", "none");
             $('#btnSubmit1').attr("disabled", true);
     }
     else{
-        $("#sr_pass1").text("Password khop").css("color","red");
+        $('#false4').css("display", "none");
+        $('#true4').css("display", "inline-block");
         $('#btnSubmit1').attr("disabled", false);
     }
+    })
+})
+
+//check dinh dang sdt.phai la day co 10,dau thuoc nha mang VT,VN,mobi
+$(document).ready(function(){
+    $("#inputPhone").change(function(){
+        let phonePattern =/((09|03|07|08|05)+([0-9]{8})\b)/g;
+        if(phonePattern.test($(this).val()) == false){
+            $('#false3').css("display", "inline-block");
+            $('#true3').css("display", "none");
+            $("#btnSubmit1").attr("disabled", true);
+        }
+        else{
+            $('#false3').css("display", "none");
+            $('#true3').css("display", "inline-block");
+            $('#btnSubmit1').attr("disabled", false);
+        }
     })
 })
 
