@@ -1,14 +1,15 @@
 <?php
-    // Trước khi cho người dùng xâm nhập vào bên trong
+// Trước khi cho người dùng xâm nhập vào bên trong
     // Phải kiểm tra THẺ LÀM VIỆC
     session_start();
     if(!isset($_SESSION['isLoginOK'])){
         header("location:login.php");
     }
-    
-    require "../Template/header_login.php";
+  include('../Template/header.php');
+  
 ?>
-
+<link rel="stylesheet" href="../assets/css/login.css">
+</head>
 <body style=" background-image: url(img/slide-banner.jpg);height:100%;">
         <nav id="header" class=" navbar navbar-light p-0">
             <div class="container-fluid px-5 head">
@@ -23,11 +24,11 @@
             </div>
         </nav>
         <div class="container admin-list" style="margin-top: 120px;background-color:  rgba(0,0,0,0.7);">
-        <h5 class="text-center text-primary mt-5">Danh sách Admin</h5>
+        <h5 class="text-center ">Danh sách Admin</h5>
         <div>
-                <a class="btn btn-primary mb-3" href="addadmin.php">Thêm</a>
+                <a class="btn btn-primary mb-3" href="./addadmin.php" style="width:70px">Thêm</a>
             </div>
-            <table class="table  table-bordered" style="border: 1px solid #ddd;">
+            <table class="table  table-bordered " style="border: 1px solid #ddd;">
                 <thead>
                     <tr style="color: #fff;">
                     <th scope="col" style="border: 1px solid #ddd;">Mã Admin</th>
@@ -35,7 +36,8 @@
                     <th scope="col" style="border: 1px solid #ddd;">Email</th> 
                     <th scope="col" style="border: 1px solid #ddd;">Số điện thoại</th> 
                     <th scope="col" style="border: 1px solid #ddd;">Giới tính</th>
-                    <th scope="col" style="border: 1px solid #ddd;">Manager</th>
+                    <th scope="col" style="border: 1px solid #ddd;">Xóa</th>
+                    
                     </tr>
                 </thead>
                 <tbody>
@@ -51,14 +53,13 @@
                         while($row = mysqli_fetch_assoc($result)){
                 ?>
                             <tr style="color:#fff;">
-                                <th scope="row"><?php echo $row['username']; ?></th>
+                                <th scope="row"><?php echo $row['ID']; ?></th>
                                 <td><?php echo $row['fullname']; ?></td>
                                 <td><?php echo $row['email']; ?></td>
                                 <td><?php echo $row['phone']; ?></td>
                                 <td><?php echo $row['sex']; ?></td>
                                 <td>
-                                    <a href="editadmin.php"><i class="bi bi-pencil-square" ></i>Sửa</a>
-                                    <a href=""><i class="bi bi-trash"></i>Xóa</a>
+                                    <a href="deleteadmin.php?id=<?php echo $row['ID']; ?>"><i class="bi bi-trash"></i></a>
                                 </td>
                                 
                             </tr>

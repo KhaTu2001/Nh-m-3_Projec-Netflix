@@ -32,14 +32,9 @@
                         }
                         
                         else{
-                            ?>
-                                <script>
-                                    alert("Đăng nhập thành công");
-                                    location.href = "../main/main.php";
-                                    // alert("hshshsh");
-                                </script>
-
-                            <?php        
+                            $_SESSION['isLoginOK'] = $email;
+                            header("location:../main/main.php"); 
+                                   
                             // echo 'hello';
                             // header("location: ../main.php"); 
                         }
@@ -49,7 +44,7 @@
                                 <script>
                                     alert("Sai mật khẩu rồi!!!quay lại đi");
                                     location.href = "../login.php";
-                                    // alert("hshshsh");
+                                    
                                 </script>
 
                             <?php  
@@ -60,7 +55,7 @@
                     <script>
                         alert("Tài khoản không tồn tại!!!");
                         location.href = "../login.php";
-                        // alert("hshshsh");
+                        
                     </script>
 
                 <?php  

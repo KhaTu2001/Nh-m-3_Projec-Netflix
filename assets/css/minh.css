@@ -212,10 +212,10 @@
   right: 0;
 }
 .content h1{
-  font-size: 5rem;
+  font-size: 2.75rem;
 }
 .content p{
-  font-size: 3rem;
+  font-size: 1.75rem;
 }
 .btn1{
   background-color: #FFFFFF;
@@ -260,10 +260,10 @@
 }
 @media (max-width: 1000px ) {
   .content h1{
-    font-size: 4.5rem;
+    font-size: 2.75rem;
   }
   .content p{
-    font-size: 3.5rem;
+    font-size: 1.5rem;
   }
     .menu-left-mobile{
       display: block;
@@ -309,12 +309,12 @@
       border: 10px;
     }
 }
-@media (max-width: 700px ) {
+@media (max-width: 800px ) {
   .content h1{
-    font-size: 3rem;
+    font-size: 1rem;
   }
   .content p{
-    font-size: 2rem;
+    display: none;
   }
   
 }

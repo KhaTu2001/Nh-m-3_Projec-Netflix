@@ -1,7 +1,6 @@
 <?php
     include '../Template/header.php';
 ?>
-<link rel="stylesheet" href="../assets/css/style.css?v=<?php echo time(); ?>">
 <link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
 <link rel="stylesheet" href="../assets/css/minh.css?v=<?php echo time(); ?>">
 
@@ -56,11 +55,17 @@
                                 <a href="showfilm.php?id=<?php echo $rowfilm['id']; ?>">
                                     <?php                    
                             echo "<div id='img_div'> ";
-                            echo "<img src='../admin/image/".$rowfilm['image']."' >";
+                            echo "<img class = 'img-fluid' src='../admin/image/".$rowfilm['image']."' >";
                             echo "</div>";           
                         ?>
                                 </a>
-
+                                <style>
+                                #img_div img {
+                                    height: 130px;
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                                </style>
                             </div>
                             <div class="card-body">
                                 <div class="card-body-item-left">
@@ -151,19 +156,8 @@
 <div class="modal" id="myModal">
     <div class="modal-dialog modal-lg  modal-dialog-centered">
         <div class="modal-content">
-
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-
             <div class="modal-body">
             </div>
-
-            <!-- Modal footer -->
-            <div class="modal-footer">
-            </div>
-
         </div>
     </div>
 </div>

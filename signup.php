@@ -33,13 +33,13 @@
       <div class="signup_form container" >
       <form class="mx-1 mx-md-4 " method="POST" action="./src/signup_process.php" name="Signup">
          
-            <div class="row">
+            <div class="row ">
               <div class="col-md-6 col-sm-12">
                 <div class="d-flex flex-row align-items-center mb-3">
            
                   <div class="form-outline flex-fill mb-0">
                     <label class="form-label" for="firstName">User Name</label>
-                    <input type="text" id="userName" name="userName" class="form-control" placeholder="User name" required>
+                    <input type="text" id="userName" name="userName" class="form-control" placeholder="User name">
                     
                   </div>
                 </div>
@@ -49,8 +49,10 @@
                   <div class="form-outline flex-fill mb-0">
                     
                     <label class="form-label" for="firstName">Email</label>
-                    <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address"  required >
-                    <small id="emailHelp"></small>
+                    <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" >
+                    <!-- <small id="emailHelp"></small> -->
+                    <!-- <i class="bi bi-check2"></i>
+                    <i class="bi bi-x-lg"></i> -->
                   </div>
                 </div>
                 </div>
@@ -60,7 +62,7 @@
             
                   <div class="form-outline flex-fill mb-0">
                     <label class="form-label" for="firstName">Password</label>
-                    <input type="password" id="inputPassword1" name="txtPass1" class="form-control" placeholder="Password" required>
+                    <input type="password" id="inputPassword1" name="txtPass1" class="form-control" placeholder="Password" >
                     <p style="color:#fff;font-size:16px;margin-top:10px">(*)Password phải có 8 kí tự trở lên(trong đó có một chữ cái in hoa,một chữ cái thường,một số)</p>
                     <small id="passlHelp"></small>
                   </div>
@@ -73,11 +75,11 @@
                       <a class="sign_up_now" href="login.php">Log in</a>
                   </div>
               </div>
-              <div class="col-6">
+              <div class=" col-md-6 col-sm-12">
                 <div class="d-flex flex-row align-items-center mb-3">
                   <div class="form-outline flex-fill mb-0">
                       <label class="form-label" for="firstName">Full Name</label>
-                      <input type="text" id="firstName" name="FullName" class="form-control" placeholder="Full name" required>
+                      <input type="text" id="firstName" name="FullName" class="form-control" placeholder="Full name" >
                       
                     </div>
                 </div>
@@ -87,7 +89,7 @@
                   <div class="form-outline flex-fill mb-0">
                   
                     <label class="form-label" for="firstName">Phone number</label>
-                    <input type="text" id="inputPhone" name="txtphone" class="form-control" placeholder="Phone number"  required >
+                    <input type="text" id="inputPhone" name="txtphone" class="form-control" placeholder="Phone number" >
                     <!-- <small id="emailHelp"></small> -->
                   </div>
                 </div>
@@ -96,13 +98,13 @@
             
                   <div class="form-outline flex-fill ">
                     <label class="form-label" for="firstName">Confirm Password</label>
-                    <input type="password" id="inputPassword2" name="txtPass2" class="form-control" placeholder="Confrim Password" required>
+                    <input type="password" id="inputPassword2" name="txtPass2" class="form-control" placeholder="Confrim Password">
                   </div>
                 </div>
                 <p id="sr_pass1"></p> 
 
                 <div class=" container form-group " style="font-size: 20px;">
-                        <label class="control-label">Gender</label>
+                        <label class="form-label">Gender</label>
                         <div class="select_sex">
                             <label class="checkbox-inline">
                             <input type="radio" name="gender" id="update-gender-male" value="male" > Male</label>
@@ -121,12 +123,7 @@
           
                                            
           
-          <?php
-                    if(isset($_GET['error'])){
-                        echo "<h5 style='color:red'> {$_GET['error']} </h5>";
-                    }
-
-                ?>
+         
           <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4" >
             <button type="submit" class="btn btn-primary mb-3" name="btn_submit1" style="width:400px">Sign in</button>
           </div>
@@ -168,7 +165,7 @@
            </div>
       
 <?php
-  require('Template/footerr.php')
+  require('Template/footer.php')
 ?>
 
 

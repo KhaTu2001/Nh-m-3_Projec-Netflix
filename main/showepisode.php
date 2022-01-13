@@ -2,15 +2,15 @@
     include "../Template/header.php";
     require('connect.php');
     ?>
-    <link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
-    </head>
-    <body style="overflow-y: hidden;">  
-<?php
+<link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
+</head>
+
+<body style="overflow-y: hidden;">
+    <?php
     require('connect.php');
     $filmid = $_GET["id"];
         $sql = "SELECT * from episode where id = $filmid";
-        $result=mysqli_query($conn, $sql);
-        
+        $result=mysqli_query($conn, $sql);      
     while($row = mysqli_fetch_assoc($result)){
         $episode = $row['film_id'];
         $sql1 = "SELECT * from film where id = $episode";
@@ -21,27 +21,41 @@
         $result2=mysqli_query($conn, $sql2);   
         ?>
     <div class="full_screen-film container-fluid">
-    <button type="submit" class="prev-page" onclick="prev()" style="z-index:1000;position: fixed;"><i class="fas fa-arrow-left"></i></button>
-        <video  controls>
-        
-                <source src="../admin/video/<?php echo $row['content'] ?>" type="video/mp4">
+        <button type="submit" class="prev-page" onclick="prev()" style="z-index:1000;position: fixed;"><i
+                class="fas fa-arrow-left"></i></button>
+        <?php
+        $numepisode =3;
+        $sql3 = "SELECT * from episode where id = $filmid and episode =$numepisode" ;
+        $result3 = mysqli_query($conn,$sql3);
+        if($result3){
+        while($row3 = mysqli_fetch_array($result3)){
+            $numepisode +=1;
+        ?>
+        <a style="z-index:1000;position: fixed;" class = "next_episode" href="showepisode.php?id=<?php echo $row3['id'] ; ?>"> <i
+                class="fas fa-forward"></i> </a>
+        <?php } 
+        }
+?>
+        <video controls>
+
+            <source src="../admin/video/<?php echo $row['content'] ?>" type="video/mp4">
         </video>
     </div>
 
     </html>
-    </body>
-    <script>
-        function prev(){
-            window.history.go(-1);
-        }
-    </script>
-    <style>
-        body{
-            background-color:#000;
-            overflow-x:hidden;
-            overflow-y:auto;
-        }
-    </style>
+</body>
+<script>
+function prev() {
+    window.history.go(-1);
+}
+</script>
+<style>
+body {
+    background-color: #000;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+</style>
 <?php
     } 
 ?>

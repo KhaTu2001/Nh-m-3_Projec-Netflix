@@ -45,13 +45,13 @@
                   </a>
                    <div class="sperate"></div>
                    <div class="help-center">
-                       <a href="#">Help Center</a>
+                       <a href="helpcenter.php">Help Center</a>
                     </div>
             
            </div>
            <div class="navbar-left" style="width:auto;">
                <div class="join-netflix">
-                   <a href="">JOIN NETFLIX</a>
+                   <a href="../login.php">JOIN NETFLIX</a>
                </div>
                <form class="nav-option d-flex">
                  <a href=""><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign In</button></a>
@@ -83,7 +83,7 @@
         <section class="content-contact">
             <div class="container">
             <div class="container back-to-help">
-                <a href="#"><i class="fas fa-arrow-left"></i>Back to help home</a>
+                <a href="helpcenter.php"><i class="fas fa-arrow-left"></i>Back to help home</a>
             </div>
     </div>
   </section>

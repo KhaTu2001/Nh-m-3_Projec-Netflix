@@ -1,9 +1,10 @@
 <?php
-  require('../Template/header_login.php');
+  include('../Template/header.php');
   
 ?>
-
-
+<link rel="stylesheet" href="../assets/css/login.css">
+</head>
+    
 <body style=" background-image: url(img/slide-banner.jpg);height:100%;">
   <div class="slide-banner bg-img ">
     <nav id="header" class=" navbar navbar-light p-0">
@@ -20,7 +21,7 @@
     </nav>
 
     <div class="form_login">
-        <form action="process-login.php" class="form_layout" method="POST" name="login"">
+        <form action="./process_loginqt.php" class="form_layout" method="POST" name="login"">
             <div class="form_header">
               <h1>Login</h1>
             </div>

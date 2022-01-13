@@ -41,10 +41,7 @@
 					  <a href="manageFilm.php">
 					  <i class="fa fa-tasks"></i> Manage film</a>
 				  </li>
-				  <li>
-					  <a href="manageUser.php">
-					  <i class="fa fa-tasks"></i> Manage User</a>
-				  </li>	
+				  
 			  </ul>
 		</div>
 		</div>
@@ -104,10 +101,7 @@
 						<a href="manageFilm.php">
 						<i class="fa fa-tasks"></i> Manage film</a>
 					</li>
-					<li>
-						<a href="manageUser.php">
-						<i class="fa fa-tasks"></i> Manage User</a>
-					</li>	
+					
 				</ul>
 			</div>
 		</div> 

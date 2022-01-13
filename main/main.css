@@ -34,16 +34,39 @@
     height: 100%;
     position: relative;
  }
+ footer {
+   background-color: #000000;
+   padding: 40px 0;
+   border-top: 8px solid #222;
+}
+
+footer ul {
+   list-style-type: none;
+}
+
+footer ul li {
+   color: #757575;
+   margin-top: 15px;
+}
+
+footer a {
+   text-decoration: none;
+   color: #757575;
+}
+
+footer a:hover {
+   color: #757575;
+   text-decoration: underline;
+}
  .no_list h4{
     color: #757575;
  }
   .full_screen-film{
    position: relative;
-   
+   height: 100vh;
   }
   .full_screen-film video{
      height: 100%;
-     margin-top: -80px;
      width: 100%;
       top: 0;
      bottom: 0;   
@@ -77,6 +100,7 @@
    padding:1rem 2px;
 }
 .modal-body video{
+   max-height: 80vh;
    width: 100%;
 }
 .modal-content{
@@ -85,6 +109,7 @@
 }
 .modal{
    color: #fff;
+   animation:fade_in linear 0.3s;
 }
 .modal::-webkit-scrollbar{
    display: none;
@@ -97,9 +122,30 @@
    color: rgb(115, 116, 115);
    flex-direction: column;
 }
-
+@keyframes fade_in {
+   from{
+      opacity:0 ;
+   }
+   to{
+      opacity: 1;
+   }
+}
+@keyframes growth {
+   from{
+      transform: scale(var(--growth-from)) ;
+   }
+   to{
+      transform: scale(var(--growth-to)) ;
+   }
+}
+.modal-body{
+   --growth-from:0.7;
+   --growth-to:1;
+   animation: growth linear 0.3s;
+}
 
 .card-body-item button{
+
    background-color: black;
    border: 1px solid rgb(105, 104, 104);
    border-radius: 50%;
@@ -116,4 +162,57 @@
    background-color: black;
    border: 1px solid #fff;
 
+}
+.next_episode{
+   color: #fff;
+   font-size: 3rem;
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin-top: 24px;
+   margin-right: 24px;
+}
+ video{
+   max-height: 100vh;
+   width: 100%;
+   object-fit: cover;
+}
+.modal-function {
+   position: absolute;
+   display: flex;
+   left: 0;
+   z-index: 1000;
+}
+.modal_all-body{
+   display: flex;
+   align-items: center;
+
+}
+.modal-function .card-body-item{
+   display: flex;
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+}
+.modal-function .card-body-item a{
+   font-size: 1.25rem;
+}
+.btn-show{
+   background-color: #fff;
+   height: 40px;
+   width: 100px;
+   border-radius: 8px;
+   color: #000;
+}
+.btn-show:hover{
+background-color: rgb(163, 159, 159);
+}
+.btn-show a{
+   color: #000;
+   display: flex;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.25rem;
+   text-decoration: none;
 }
