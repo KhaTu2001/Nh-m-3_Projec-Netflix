@@ -48,6 +48,9 @@
               <a class="needhelp_form" href="./loginHelp.php">Needhelp?</a>
             </div>
             <div class="mb-3">
+            <a id="change_password" href="./needhelp.php">Change Password</a>
+            </div>
+            <div class="mb-3">
               <i class="fab fa-facebook-square"></i>
               <a class="Form_loginfb" href="https://www.facebook.com/login">Login with Facebook</a>
             </div>

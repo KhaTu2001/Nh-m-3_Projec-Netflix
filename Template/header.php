@@ -15,5 +15,5 @@
     <link rel="stylesheet" href="assets/css/reponsive.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/jquery-3.6.0.min.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/main.js"></script>

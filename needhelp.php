@@ -74,7 +74,7 @@
 <body>
     <div class="header-change">
         <div class="container">
-            <img id="logo-change" src="./assets/img/Netflixblack.png" alt="">
+            <a href="./index.php"><img id="logo-change" src="./assets/img/Netflixblack.png" alt=""></a>
             <div class="dropdown">
 				<a class="btn btn-secondary dropdown-toggle" href="#"  id="dropdownMenuLink" data-bs-toggle="dropdown" ><img style="width: 40px; height: 25px;" id="img-user" src="./assets/img/user.png" alt="" /></a>
 				<div class="dropdown-menu">
@@ -88,28 +88,27 @@
         </div>
     </div>
     <div class="slider">
-            <form action="" class="from-change">
+            <form action="password-change.php" method="post" class="from-change">
                 <div class="container">
                     <h2>Change Password</h2>
                     <div class="email">
                         <h6>Current Email</h6>
-                        <input class="new-email" type="text" name="email" placeholder="name@gmail.com">
+                        <input id="Emailchange" class="new-email" type="text" name="email" placeholder="name@gmail.com"><br>
+                        <small id="emailHelpchange"></small>
                     </div>
                         <div class="col-mb-3">
-                            <input class="new-password" type="password"  placeholder="Old password " >
+                            <input name="oldpassword" class="new-password" type="password"  placeholder="Old password " >
                         </div>
                         <div class="col-mb-3">
-                            <input class="new-password" type="password"  placeholder="New password (6-60 characters)" >
-                        </div>
-                        <div class="col-mb-3">
-                            <input class="new-password" type="password"  placeholder="Confirm new password" >
+                            <input id="inputPassword1" name="newpassword" class="new-password" type="password"  placeholder="New password (6-60 characters)" ><br>
+                            <small id="passlHelp"></small>
                         </div>
                         <div class="col-mb-3">
                             <input type="checkbox" id="vehicle1" name="" value="">
                             <label id="label-checbox" for="vehicle1"> Require all devices to sign in again with new password </label>
                         </div>
                         <div class="col-mb-3">
-                        <button id="btn-save" type="submit">
+                        <button id="btn-save" name="btnSave" type="submit">
                                 Save
                         </button>
                         <button id="btn-cancel" type="submit">
@@ -151,6 +150,33 @@
 
     
   </footer>
+  <script>
+    $(document).ready(function(){
+        $("#Emailchange").change(function(){
+            let emailPattern = /\S+@\S+.\S+/;
+            if(emailPattern.test($(this).val()) == false){
+                $("#emailHelpchange").text("Email của bạn không hợp lệ").css("color","red");
+            }
+            else{
+                $("#emailHelpchange").text("Email hợp lệ").css("color","#008000");
+            }
+        })
+    })
+
+    // password
+    $(document).ready(function(){
+    $("#inputPassword1").change(function(){
+        let passPattern =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+        if(passPattern.test($(this).val()) == false){
+            $("#passlHelp").text("Password khong hop le").css("color","red");
+        }
+        else{
+            $("#passlHelp").text("Password hop le").css("color","#008000");
+        }
+    })
+})
+  </script> 
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -144,7 +144,14 @@ a.navbar-brand:hover{
 .signout a{
    text-decoration: none !important;
 }
-
+#change_password{
+   color: #FFF;
+   text-decoration: none;
+   margin-bottom: 100px;
+}
+#change_password:hover{
+   text-decoration: underline;
+}
 
 
 /* reponsive login & sign up */

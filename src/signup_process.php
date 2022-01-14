@@ -6,7 +6,7 @@
     $phone =$_POST['txtphone'];
     $pass1=$_POST['txtPass1'];
     $pass2=$_POST['txtPass2'];
-    $gender = $_POST["gender"];
+    $gender = $_POST['gender'];
     require('../connect.php');
     $sql = "SELECT * FROM user where email = '$email'";
     $res = mysqli_query($conn,$sql);
@@ -21,7 +21,7 @@
           <?php
 
     }
-    else{
+   else{
       $token = md5($email).rand(10,9999);
       $pass_hash = password_hash($pass1,PASSWORD_DEFAULT);
       $sql2 = "INSERT INTO user (username,fullname,email,password,phone,sex,usertype) VALUES ('$username','$fullname', '$email','$pass_hash','$phone','$gender','20')";
@@ -29,8 +29,10 @@
       //tao link de vao mail kich hoat
       $link = "<a href='localhost/Nhom-3_Project-Netflix/src/verify-email.php?key=".$email."&token=".$token."'>Click and Verify Email</a>";
       require('process_mailer.php');
+      $test = 'Active account netflix';
+      $body = 'Click link'.$link;
       // echo $sql2;
-      if(sendMail($email, $link)){
+      if(sendMail($email,$test,$body)){
         ?>
           <script>
            alert("Signup successful!Hãy check mail để kích hoạt tài khoản");
@@ -44,19 +46,14 @@
         ?>
           <script>
            alert("Không thể đăng ký tài khoản.Hãy thử lại!!!");
-          //  location.href = "../signup.php";
+           location.href = "../signup.php";
            </script>
 
           <?php
-      //   $error = "khong the dang ky";
-      // header("Location:signup.php?error=$error");
+     
       }
       
     }
   }
-
-  // else{
-    
-  // }
 
 ?>

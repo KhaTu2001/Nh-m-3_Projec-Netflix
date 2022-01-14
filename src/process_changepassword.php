@@ -1,5 +1,5 @@
 <?php
-include_once ('../main/connect.php');
+include_once ('../connect.php');
 if(isset($_POST['btnChange']))
 {
     $email = $_POST['email'];
@@ -14,7 +14,7 @@ if(isset($_POST['btnChange']))
                 $link = "Password";
                 $body = "Your password is : $pass1";
                 $headers = "From: password@studentstutorial.com";
-                sendMail($email,$link,$test,$body);
+                sendMail($email,$test,$body);
 
                 $pass_hash = password_hash($pass1,PASSWORD_DEFAULT);
                 $sql02 = "UPDATE user SET password ='$pass_hash' WHERE email='$email'";
