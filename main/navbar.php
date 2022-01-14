@@ -52,6 +52,7 @@ if(isset( $_SESSION['isLoginOK'])){
                             </form>
                             <div style="background-color: #fff; display: flex;" id="searchresult"></div>
                         </div>
+                        
                     </li>
                     <li class="user">
                         <div class="dropdown">
@@ -70,36 +71,10 @@ if(isset( $_SESSION['isLoginOK'])){
     </div>
 </nav>
 
-<script>
-   // search
-        $(document).ready(function(){
-            $("#s").keyup(function(){
-
-                var input = $(this).val();
-                // alert(input);
-
-                if(input != ""){
-                    $.ajax({
-
-                        url:"livesearch.php",
-                        method: "POST",
-                        data:{input:input},
-
-                        success: function(data){
-                            $("#searchresult").html(data);
-                        }
-                            
-                    })
-                }else{
-
-                    $("#searchresult").css("display","none");
-                }
-            });
-        });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 <?php
-}
-  }
 }else{
     header("location:../login.php");
 }

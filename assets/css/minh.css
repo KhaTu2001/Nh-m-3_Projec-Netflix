@@ -421,33 +421,33 @@
 	background:black;
   }
   #s{
-	transition:all 0.2s ease-out;
-	width: 1px;
-	border-radius:0;
-	box-shadow:none;
-	outline: none;
-	padding:0;
-	margin:0;
-	border:0;
-	background-color: transparent;
-	opacity:0;
-	color: white;
-	border-radius: none;
+    transition:all 0.2s ease-out;
+    width: 1px;
+    border-radius:0; 
+    box-shadow:none;
+    outline: none;
+    padding:0;
+    margin:0;
+    border:0;
+    background-color: transparent;
+    opacity:0;
+    color: white;
+    border-radius: none; 
   }
   #s:focus{
-	width: 200px;
-	opacity:1;
-	border: 10px;
-  position: relative;
+    width: 300px;
+    opacity:1;
+    border: 10px;
+    position: relative;
   }
   label{
-	padding-left: 1px;
-	display:inline-block;
-	margin-top:0.3em;
-	color:white;
-	text-shadow:0 0 2px rgba(60,60,60,0.3);
-	position: relative;
-	left:0.1em;
+    padding-left: 1px;
+    display:inline-block;
+    margin-top:0.3em;
+    color:white;
+    text-shadow:0 0 2px rgba(60,60,60,0.3);
+    position: relative;
+    left:0.1em;
   }
   
 .card-body{
@@ -471,8 +471,7 @@
     background-color: #000;
  }
  .card-body-item:hover{
-  color: #fff ;
-
+    color: #fff ;
     border: 1px solid #ffffff;
  }
  .first_child{

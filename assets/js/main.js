@@ -108,10 +108,6 @@ $(document).ready(function(){
             });
         });
     });
-<<<<<<< HEAD
-
- 
-=======
     
 
 $(document).ready(function(){
@@ -124,4 +120,29 @@ $(document).ready(function(){
     })
 })
 
->>>>>>> 84446c05a6201c26ecdb9cd9b5adf9069898dcb5
+   // search
+        $(document).ready(function(){
+            $("#s").keyup(function(){
+
+                var input = $(this).val();
+                // alert(input);
+
+                if(input != ""){
+                    $("#searchresult").css("display","flex");
+                    $.ajax({
+
+                        url:"livesearch.php",
+                        method: "POST",
+                        data:{input:input},
+
+                        success: function(data){
+                            $("#searchresult").html(data);
+                        }
+                            
+                    })
+                }else{
+
+                    $("#searchresult").css("display","none");
+                }
+            });
+        });
