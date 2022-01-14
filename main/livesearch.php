@@ -20,11 +20,10 @@ if(isset($_POST['input'])){
         <a  style="color:while; text-decoration: none;" href="showfilm.php?id=<?php echo $row['id'];?>">
             <div style="display: flex;" class="searchresult_item">
                 <div class="img-fuild">
-                <img style="margin-right: 10px; height: 100px; width:70px" src="<?php echo '../admin/image/'.$row['image']; ?>" alt="">
+                <img style="margin-right: 10px; height: 90px; width:70px" src="<?php echo '../admin/image/'.$row['image']; ?>" alt="">
                 </div>
                 <div class="text-livesearch">
-                    <p  style="color: #000; font-size:20px; "><?php echo $row['name'];?></p>
-                    <p style=" color: #000; font-size:15px; "><?php echo 'Actor:'.$row['actor']; ?></p>
+                    <p  style="color: #000; font-size: 20px; margin-top:20px; "><?php echo $row['name'];?></p>
                 </div>
             </div>       
 
