@@ -52,6 +52,7 @@ if(isset( $_SESSION['isLoginOK'])){
                             </form>
                             <div style="background-color: #fff; display: flex;" id="searchresult"></div>
                         </div>
+                        
                     </li>
                     <li class="user">
                         <div class="dropdown">
@@ -60,7 +61,7 @@ if(isset( $_SESSION['isLoginOK'])){
                             <div class="dropdown-menu" style="z-index:1000;">
                                 <a href="profile.php?id=<?php echo $user_id ?>">Account</a>
                                 <a href="../footer/helpcenter.php">Help Center</a>
-                                <a href="../logout.php">Sign out of Neflix</a>
+                                <a href="../account/logout.php">Sign out of Neflix</a>
                             </div>
                         </div>
                     </li>
@@ -70,37 +71,11 @@ if(isset( $_SESSION['isLoginOK'])){
     </div>
 </nav>
 
-<script>
-   // search
-        $(document).ready(function(){
-            $("#s").keyup(function(){
-
-                var input = $(this).val();
-                // alert(input);
-
-                if(input != ""){
-                    $.ajax({
-
-                        url:"livesearch.php",
-                        method: "POST",
-                        data:{input:input},
-
-                        success: function(data){
-                            $("#searchresult").html(data);
-                        }
-                            
-                    })
-                }else{
-
-                    $("#searchresult").css("display","none");
-                }
-            });
-        });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 <?php
-  
-}
-else{
+}else{
     header("location:../login.php");
 }
         ?>

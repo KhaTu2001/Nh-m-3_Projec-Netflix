@@ -7,19 +7,19 @@
     $pass1=$_POST['txtPass1'];
     $pass2=$_POST['txtPass2'];
     $gender = $_POST['gender'];
-    require('../connect.php');
+    require('../account/connect.php');
     $sql = "SELECT * FROM user where email = '$email'";
     $res = mysqli_query($conn,$sql);
     //echo mysqli_num_rows($res); //in ra du lieu trong bang
     if( mysqli_num_rows($res) > 0){
       ?>
           <script>
-           alert("Tài khoản đã tồn tại rồi.Hãy thử lại");
-           location.href = "../signup.php";
+           alert("Account already exists.Please try again");
+           location.href = "../account/signup.php";
            </script>
 
           <?php
-
+  
     }
    else{
       $token = md5($email).rand(10,9999);
@@ -35,8 +35,8 @@
       if(sendMail($email,$test,$body)){
         ?>
           <script>
-           alert("Signup successful!Hãy check mail để kích hoạt tài khoản");
-           location.href = "../login.php";
+           alert("Signup successful!Please check your email to activate your account");
+           location.href = "../account/login.php";
            </script>
 
           <?php  
@@ -45,8 +45,8 @@
       else{
         ?>
           <script>
-           alert("Không thể đăng ký tài khoản.Hãy thử lại!!!");
-           location.href = "../signup.php";
+           alert("Unable to register an account.Please try again!!!");
+           location.href = "../account/signup.php";
            </script>
 
           <?php
@@ -54,6 +54,7 @@
       }
       
     }
+    
   }
 
 ?>

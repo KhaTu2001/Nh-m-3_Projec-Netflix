@@ -1,7 +1,7 @@
 <?php
   session_start();
   if(!isset($_SESSION['isLoginOK'])){
-      header("location:../login.php");
+      header("location:../account/login.php");
   }
   include('../Template/header.php');
   
@@ -12,7 +12,7 @@
 <body style=" background-image: url(img/slide-banner.jpg);height:100%;">
     <nav id="header" class=" navbar navbar-light p-0">
         <div class="container-fluid px-5 head">
-            <a href="index.php" class="navbar-brand"> <svg viewBox="0 0 111 30" class="header_navbar--logo"
+            <a href="manageadmin.php" class="navbar-brand"> <svg viewBox="0 0 111 30" class="header_navbar--logo"
                     focusable="false">
                     <g id="netflix-logo">
                         <path
@@ -22,7 +22,8 @@
                 </svg></a>
         </div>
     </nav>
-    <div class="signup_form container">
+    
+    <div class="signup_form container ">
         <form class="mx-1 mx-md-4 " method="POST" action="./processadd.php" name="addadmin">
             <h2 class="text-center" style="color: #fff;">Add admin</h2>
             <div class="row">

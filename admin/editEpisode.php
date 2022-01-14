@@ -161,7 +161,6 @@
                         ?>
         <script>
         alert("Edit Episode fail!");
-        -- >
         </script>
         <?php
                         }

@@ -5,6 +5,7 @@ session_start();
 <?php
   include 'Template/header.php' 
 ?>
+<link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg">
 <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
 <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg">
 </head>
@@ -20,7 +21,7 @@ session_start();
                     </g>
                 </svg></a>
             <form class="nav-option d-flex">
-                <a href="login.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign
+                <a href="account/login.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign
                         In</button></a>
             </form>
         </div>
@@ -38,7 +39,7 @@ session_start();
             <div class="row w-100">
                 <div class="col-md-2 col-1"></div>
                 <div class="col-md-8 col-10  main-search">
-                    <a href="signup.php" class="input-group-text " id="basic-addon2">Sign up now <i
+                    <a href="account/signup.php" class="input-group-text " id="basic-addon2">Sign up now <i
                             class="fas fa-chevron-right"></i></a>
                 </div>
 
@@ -178,7 +179,7 @@ session_start();
             <div class="row w-100">
                 <div class="col-md-2 col-1"></div>
                 <div class="col-md-8 col-10  main-search">
-                    <a href="signup.php" class="input-group-text " id="basic-addon2">Sign up now <i
+                    <a href="account/signup.php" class="input-group-text " id="basic-addon2">Sign up now <i
                             class="fas fa-chevron-right"></i></a>
                 </div>
 

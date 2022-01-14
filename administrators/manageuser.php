@@ -3,7 +3,7 @@
     // Phải kiểm tra THẺ LÀM VIỆC
     session_start();
     if(!isset($_SESSION['isLoginOK'])){
-        header("location:../login.php");
+        header("location:../account/login.php");
     }
   include('../Template/header.php');
   
@@ -45,7 +45,7 @@
                             <table class="table  table-bordered " style="border: 1px solid #ddd;">
                             <thead>
                                 <tr style="color: #fff;">
-                                <th scope="col" style="border: 1px solid #ddd;">Mã User</th>
+                                <th scope="col" style="border: 1px solid #ddd;">ID User</th>
                                 <th scope="col" style="border: 1px solid #ddd;">Full Name</th> 
                                 <th scope="col" style="border: 1px solid #ddd;">Email</th> 
                                 <th scope="col" style="border: 1px solid #ddd;">Phone number</th> 
@@ -59,7 +59,7 @@
                             <!-- Vùng này là Dữ liệu cần lặp lại hiển thị từ CSDL -->
                             <?php
                                 // Bước 01: Kết nối Database Server
-                                require('../connect.php');
+                                require('../account/connect.php');
                                 // Bước 02: Thực hiện truy vấn
                                 $sql = "SELECT * FROM user where usertype = '20'";
                                 $result = mysqli_query($conn,$sql);

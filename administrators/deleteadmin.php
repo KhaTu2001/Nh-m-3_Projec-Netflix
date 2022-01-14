@@ -1,5 +1,5 @@
 <?php
-    require('../connect.php');
+    require('../account/connect.php');
 
     if(isset($_GET['id'])){
         $userID = $_GET['id'];
@@ -11,7 +11,7 @@
             ?>
         <script>
             alert("Admin have been remove from my list");
-            location.href = "./manageadmin.php.php";
+            location.href = "./manageadmin.php";
         </script>
         
 
