@@ -20,7 +20,8 @@ session_start();
                     </g>
                 </svg></a>
             <form class="nav-option d-flex">
-                <a href="login.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign In</button></a>
+                <a href="login.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign
+                        In</button></a>
             </form>
         </div>
     </nav>
@@ -173,7 +174,7 @@ session_start();
 
     <section class="bottom-email-search">
         <div class="bottom-search">
-            <p class="text-center">Ready to watch? Enter your email to create or restart your membership.</p>
+            <p class="text-center">Ready to watch? Enter sign up now to create or restart your membership.</p>
             <div class="row w-100">
                 <div class="col-md-2 col-1"></div>
                 <div class="col-md-8 col-10  main-search">

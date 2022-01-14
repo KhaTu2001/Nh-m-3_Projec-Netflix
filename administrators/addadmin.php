@@ -1,4 +1,8 @@
 <?php
+  session_start();
+  if(!isset($_SESSION['isLoginOK'])){
+      header("location:../login.php");
+  }
   include('../Template/header.php');
   
 ?>
@@ -76,7 +80,7 @@
                             <label class="form-label" for="phone">Phone number</label>
                             <input type="text" id="inputPhone" name="txtphone" class="form-control"
                                 placeholder="Phone number" required>
-                            <!-- <small id="emailHelp"></small> -->
+                           
                         </div>
                     </div>
 

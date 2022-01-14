@@ -67,10 +67,13 @@
             </style>
         </div>
     </nav>
+    <div class="container back-to-help">
+        <a href="main.php"><i class="fas fa-arrow-left" style="margin-top: 100px;"></i>Back to home</a>
+    </div>
     <div class="container py-3">
         <div class="row">
             <div class="col-lg-12">
-                <div class="card mb-12" style="margin-top:68px">
+                <div class="card mb-12" style="margin-top:30px">
                     <div class="card-body text-center">
                         <form action="../admin/upload_avata.php" method="post" id="avata-admin" name="avata-admin"
                             class="form-horizontal" enctype="multipart/form-data" action="" role="form">
