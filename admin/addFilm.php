@@ -38,6 +38,14 @@
                             </div>
                         </div>
                         <div>
+                            <label for="trailer-link" class="container">
+                                Trailer link
+                            </label>
+                            <div class="container">
+                                <input type="file" class="form-control" id="trailer-link" name="trailer-link">
+                            </div>
+                        </div>
+                        <div>
                             <label for="image" class="container">
                                 Image's Link
                             </label>
@@ -209,11 +217,13 @@
         $image = $_FILES['image']['name'];
         $targetimg = "image/".basename($image);   
         $link = $_FILES["film-link"]['name'];
+        $trailer = $_FILES["trailer-link"]['name'];
         $targetimg = "image/".basename($image);
-        $targetmp4 = "video/".basename($link);
-        if (move_uploaded_file($_FILES['image']['tmp_name'], $targetimg) && move_uploaded_file($_FILES['film-link']['tmp_name'], $targetmp4)) {
-            $sql = "INSERT INTO film(name,status,director,actor,category_id,type_movie,nation_id,release_year ,image,description,duration,link,author)            
-            VALUES ('$name', '$status','$director','$actor','$category','$type_movie','$nation','$year','$image','$description','$duration','$link','$author')";
+        $targetlink = "video/".basename($link);
+        $targettrailer= "video/".basename($trailer);
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $targetimg) && move_uploaded_file($_FILES['film-link']['tmp_name'], $targetlink)&& move_uploaded_file($_FILES['trailer-link']['tmp_name'], $targettrailer)) {
+            $sql = "INSERT INTO film(name,status,director,actor,category_id,type_movie,nation_id,release_year ,image,description,duration,link,author,trailer)            
+            VALUES ('$name', '$status','$director','$actor','$category','$type_movie','$nation','$year','$image','$description','$duration','$link','$author','$trailer')";
             $result = mysqli_query($conn,$sql);
             var_dump($result);
             if($result){?>
@@ -226,13 +236,9 @@
             }
         }
         else{
-            echo '<script language="javascript">alert("Đã upload thất bại!");</script>';
-
+            echo '<script language="javascript">alert("Upload failed!");</script>';
             }
-       
     }
-    
     ?>
 </body>
-
 </html>

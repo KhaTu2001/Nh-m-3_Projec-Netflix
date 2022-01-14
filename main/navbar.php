@@ -6,11 +6,11 @@ if(isset( $_SESSION['isLoginOK'])){
   $sqlUser = "SELECT * from user WHERE email = '$link'";
   $resultUser = mysqli_query($conn, $sqlUser);
   if(mysqli_num_rows($resultUser) > 0){
-	  while($rowUser = mysqli_fetch_assoc($resultUser)){
+	$rowUser = mysqli_fetch_assoc($resultUser);
 	
 	$user_id = $rowUser['ID'];
 	  
-
+  }
 ?>
 <nav class="container-fluid navbar-header">
     <div class="header">
@@ -58,8 +58,8 @@ if(isset( $_SESSION['isLoginOK'])){
                             <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuLink"
                                 data-bs-toggle="dropdown"><?php echo $rowUser['username']; ?></a>
                             <div class="dropdown-menu" style = "z-index:1000;">
-                                <a href="profile.php">Account</a>
-                                <a href="#">Help Center</a>
+                                <a href="profile.php?id=<?php echo $user_id ?>">Account</a>
+                                <a href="../footer/helpcenter.php">Help Center</a>
                                 <a href="../logout.php">Sign out of Neflix</a>
                             </div>
                         </div>
@@ -100,5 +100,7 @@ if(isset( $_SESSION['isLoginOK'])){
 <?php
 }
   }
+}else{
+    header("location:../login.php");
 }
-?>
+        ?>

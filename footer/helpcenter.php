@@ -12,7 +12,7 @@
 
         <div class="navbar-right" style="width:auto;">
 
-          <a href="index.php" class="navbar-brand">
+          <a href="../index.php" class="navbar-brand">
             <svg viewBox="0 0 111 30" class="header_navbar--logo-first" focusable="false">
               <g id="netflix-logo">
                 <path
@@ -41,10 +41,10 @@
         </div>
         <div class="navbar-left" style="width:auto;">
           <div class="join-netflix">
-            <a href="">JOIN NETFLIX</a>
+            <a href="../login.php">JOIN NETFLIX</a>
           </div>
           <form class="nav-option d-flex">
-            <a href=""><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign
+            <a href="../signup.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign
                 In</button></a>
           </form>
         </div>
@@ -57,32 +57,32 @@
   </nav>
   <div class="container">
       <div class="row  mt-5 " style="margin-bottom: 100px;">
-        <div class="col-3 helpcenter">
-        <h3 style="color:black;margin-left:30px">Getting Started</h3>
+        <div class="col-md-3 helpcenter">
+        <h3 class="ms-3" style="color:black;">Getting Started</h3>
           <ul>
             <li><a href="">How to sign up for Netflix</a></li>
             <li><a href="">What is Netflix?</a></li>
             <li><a href="">Plans and Pricing</a></li>
           </ul>
         </div>
-        <div class="col-3 helpcenter" >
-          <h3 class="text-center" style="color:black">Can't Watch</h3>
+        <div class="col-md-3 helpcenter" >
+          <h3 class="ms-3"  style="color:black">Can't Watch</h3>
           <ul>
               <li><a href="">How to change your Netflix password</a></li>
               <li><a href="">Netflix asks you to sign up when trying to sign in</a></li>
               <li><a href="">Netflix says 'This app is not compatible with your device.'</a></li>
             </ul>
         </div>
-        <div class="col-3 helpcenter">
-          <h3 class="text-center" style="color:black">Manage My Account</h3>
+        <div class="col-md-3 helpcenter">
+          <h3 class="ms-3"  style="color:black">Manage My Account</h3>
           <ul>
               <li><a href="">Can't sign in to Netflix</a></li>
               <li><a href="">How to restart your Netflix account</a></li>
               <li><a href="">My email was changed without my permission</a></li>
             </ul>
         </div>
-        <div class="col-3 helpcenter">
-          <h3 class="text-center" style="color:black">Watching Netflix</h3>
+        <div class="col-md -3 helpcenter">
+          <h3 class="ms-3" style="color:black">Watching Netflix</h3>
           <ul>
               <li><a href="">What devices can I use to stream Netflix?</a></li>
               <li><a href="">How to watch Netflix on your TV</a></li>

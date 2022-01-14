@@ -56,7 +56,7 @@ a.navbar-brand:hover{
    background-color:  rgba(0,0,0,0.7);
 }
 .form-control{
-   width: 300px !important;
+   width: 260px;
 }
 .form-check-label,.needhelp_form{
    color: #fff !important;
@@ -203,4 +203,26 @@ a.navbar-brand:hover{
    }
   
 }
+.email_check{
+   display: flex;
+   background-color: #fff;
+   width: 280px;
 
+}
+
+.email_check input{
+   border: none;
+}
+.formuser{
+   width: 280px !important;
+}
+.bi-check2{
+   color:aqua;
+   display:none;
+   font-size: 25px;
+}
+.bi-x-lg{
+   color:red;
+   display:none;
+   font-size: 20px;
+}

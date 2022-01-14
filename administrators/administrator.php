@@ -3,7 +3,7 @@
     // Phải kiểm tra THẺ LÀM VIỆC
     session_start();
     if(!isset($_SESSION['isLoginOK'])){
-        header("location:login.php");
+        header("location:../login.php");
     }
   include('../Template/header.php');
   

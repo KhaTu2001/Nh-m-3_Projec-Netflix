@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <title>Netflix</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../assets/css/minh.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
-    <script src="../assets/js/jquery-3.6.0.min.js"></script>
-    <script src="../assets/js/main.js"></script>
-
+<?php
+    include '../Template/header.php';
+?>
+<link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="../assets/css/minh.css?v=<?php echo time(); ?>">
 </head>
 
 <body class="main">
@@ -38,11 +23,11 @@
             if($rowMostview['num_view'] == max($view) && $num2<1){$num2 +=1; ?>
     <div class="slider container-fluid">
         <video class="container-fluid" autoplay muted loop id="myVideo">
-            <source src="../admin/video/<?php echo $rowMostview['link'];  ?>" type="video/mp4">
+            <source src="../admin/video/<?php echo $rowMostview['trailer'];  ?>" type="video/mp4">
         </video>
 
         <div class="content">
-    <?php include 'navbar.php';?>
+            <?php include 'navbar.php';?>
 
             <div class="container">
                 <br>
@@ -51,7 +36,9 @@
                 <div class="buttons">
                     <button class="btn"><a href="showfilm.php?id=<?php echo $rowMostview['id']; ?>"><i
                                 class="fas fa-play"></i>Play</a></button>
-                    <button class="btn"><i class="fas fa-info-circle"></i>More Info</button>
+                    <button data-id="<?php echo $rowMostview['id'];?>" class="btn filminfo">
+                        <i class="fas fa-info-circle "></i>More Info
+                    </button>
                 </div>
 
                 <!-- <div class="dropdown">
@@ -82,8 +69,9 @@
         </div>
     </div>
     <?php 
-    }}
-            }
+    }
+}
+            
             $sql123 = "SELECT * from film where type_movie = 1";
             $result123 = mysqli_query($conn, $sql123); 
             $sql1 = "SELECT * from film where type_movie = 1";
@@ -121,25 +109,25 @@
             
             include 'list_film.php'; 
 ?>
-<div class="modal" id="myModal">
+    <div class="modal" id="myModal">
         <div class="modal-dialog modal-lg  modal-dialog-centered">
             <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-
                 <div class="modal-body">
                 </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                </div>
-
             </div>
         </div>
     </div>
+    <?php
+            }
+    else {
+include 'navbar.php'; 
+?>
+    <div class="container-fluid no_film">
+        <h2> MOVIES NOT AVAILABLE </h2>
+    </div>
+    <?php
+    }
+    ?>
     <div class="footer">
         <div class="social">
             <i class="fab fa-facebook-square"></i>
@@ -150,23 +138,23 @@
         <div class="flex">
             <div class="info">
                 <ul>
-                    <li><a href="#">Questions? Contact us.</a></li>
-                    <li><a href="FAQ.php">FAQ</a></li>
-                    <li><a href="privacy.php">Privacy</a></li>
+                    <li><a href="../footer/contactus.php">Questions? Contact us.</a></li>
+                    <li><a href="../footer/FAQ.php">FAQ</a></li>
+                    <li><a href="../footer/privacy.php">Privacy</a></li>
                 </ul>
             </div>
             <div class="info">
                 <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Legal Notices</a></li>
-                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="../footer/helpcenter.php">Help Center</a></li>
+                    <li><a href="../footer/LegalNotices.php">Legal Notices</a></li>
+                    <li><a href="../footer/termsofuse.php">Terms of Use</a></li>
                 </ul>
             </div>
             <div class="info">
                 <ul>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="way-match.php">Ways to Match</a></li>
-                    <li><a href="corpinfo.php">Corporate Information</a></li>
+                    <li><a href="profile.php">Account</a></li>
+                    <li><a href="../footer/way-match.php">Ways to Match</a></li>
+                    <li><a href="../footer/corpinfo.php">Corporate Information</a></li>
                 </ul>
             </div>
         </div>
