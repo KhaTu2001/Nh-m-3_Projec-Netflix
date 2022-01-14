@@ -56,7 +56,7 @@ if(isset( $_SESSION['isLoginOK'])){
                         <div class="dropdown">
                             <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuLink"
                                 data-bs-toggle="dropdown"><?php echo $rowUser['username']; ?></a>
-                            <div class="dropdown-menu" style = "z-index:1000;">
+                            <div class="dropdown-menu" style="z-index:1000;">
                                 <a href="profile.php?id=<?php echo $user_id ?>">Account</a>
                                 <a href="../footer/helpcenter.php">Help Center</a>
                                 <a href="../logout.php">Sign out of Neflix</a>
@@ -69,9 +69,9 @@ if(isset( $_SESSION['isLoginOK'])){
     </div>
 </nav>
 <?php
+  
 }
-  }
-}else{
+else{
     header("location:../login.php");
 }
         ?>

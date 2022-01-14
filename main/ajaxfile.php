@@ -247,7 +247,8 @@ while($row1 = mysqli_fetch_array($result1)){
             <span>
                 View:
             </span>
-            <?php echo $row['num_view'];  ?> <i class="far fa-eye"></i>
+            <?php echo $row['num_view'];?> 
+            <i class="fas fa-eye"></i>
         </p>
     </div>
 </div>

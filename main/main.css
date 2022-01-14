@@ -99,6 +99,8 @@ footer a:hover {
   }
 .card-body{
    padding:1rem 2px;
+   display: flex;
+   justify-content: space-between;
 }
 .modal-body video{
    max-height: 80vh;

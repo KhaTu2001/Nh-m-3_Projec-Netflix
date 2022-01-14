@@ -1,6 +1,9 @@
 <?php
-include 'header.php';
+    include '../Template/header.php';
 ?>
+<link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="../assets/css/minh.css?v=<?php echo time(); ?>">
+</head>
 
 <body class="main">
     <?php
@@ -132,29 +135,27 @@ include 'navbar.php';
     <?php
     }
     ?>
-   <div class="footer">
-        <div class="social">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-        </div>
-        <div class="flex">
-            <div class="info">
+</body>
+<div class="space" style="height:300px"></div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-6">
                 <ul>
                     <li><a href="../footer/contactus.php">Questions? Contact us.</a></li>
                     <li><a href="../footer/FAQ.php">FAQ</a></li>
                     <li><a href="../footer/privacy.php">Privacy</a></li>
                 </ul>
             </div>
-            <div class="info">
+            <div class="col-md-4 col-6">
                 <ul>
-                <li><a href="../footer/helpcenter.php">Help Center</a></li>
+                    <li><a href="../footer/helpcenter.php">Help Center</a></li>
                     <li><a href="../footer/LegalNotices.php">Legal Notices</a></li>
                     <li><a href="../footer/termsofuse.php">Terms of Use</a></li>
                 </ul>
             </div>
-            <div class="info">
+            <div class="col-md-4 col-6">
                 <ul>
                     <li><a href="profile.php">Account</a></li>
                     <li><a href="../footer/way-match.php">Ways to Match</a></li>
@@ -163,31 +164,32 @@ include 'navbar.php';
             </div>
         </div>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript">
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 5,
-        spaceBetween: 10,
-        slidesPerGroup: 2,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
+</footer>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    slidesPerGroup: 2,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
-    var swiper = new Swiper(".swiper1", {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        slidesPerGroup: 2,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
-</body>
+var swiper = new Swiper(".swiper1", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    slidesPerGroup: 2,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
+
 
 </html>

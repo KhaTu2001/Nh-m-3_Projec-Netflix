@@ -373,38 +373,12 @@
 .swiper1{
   
 }
-.footer {
-	margin: 100px auto 0;
-	width: 80%;
-	color: #808080;
-}
-.footer .social i {
-	padding-right: 26px;
-	font-size: 28px;
-}
+
 .flex {
 	display: flex;
 	padding-bottom: 80px;
 }
-.footer .info {
-	width: 60%;
 
-}
-.footer .info ul {
-	list-style: none;
-	display: inline;
-	font-size: 13px;
-}
-.footer .info ul li a{
-	margin-top: 8px;
-	text-decoration: none;
-	color: gray;
-	font-size: 15px;
-}
-.footer .info ul li a:hover{
-	text-decoration: underline;
-	color: white;
-}
 /* search */
   #container{
 	margin:auto;
@@ -539,5 +513,8 @@ h3 {
  .card-model:hover .add_list a{
   display: flex;
   justify-content:center ;
+
+ }
+ .row >*{
 
  }
