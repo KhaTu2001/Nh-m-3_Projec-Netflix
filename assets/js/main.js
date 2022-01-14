@@ -108,6 +108,10 @@ $(document).ready(function(){
             });
         });
     });
+<<<<<<< HEAD
+
+ 
+=======
     
 
 $(document).ready(function(){
@@ -120,3 +124,4 @@ $(document).ready(function(){
     })
 })
 
+>>>>>>> 84446c05a6201c26ecdb9cd9b5adf9069898dcb5

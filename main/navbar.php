@@ -50,6 +50,7 @@ if(isset( $_SESSION['isLoginOK'])){
                                 </label>
                                 <input type="text" value="" placeholder="Search..." class="" id="s" />
                             </form>
+                            <div style="background-color: #fff; display: flex;" id="searchresult"></div>
                         </div>
                     </li>
                     <li class="user">
@@ -68,6 +69,34 @@ if(isset( $_SESSION['isLoginOK'])){
         </div>
     </div>
 </nav>
+
+<script>
+   // search
+        $(document).ready(function(){
+            $("#s").keyup(function(){
+
+                var input = $(this).val();
+                // alert(input);
+
+                if(input != ""){
+                    $.ajax({
+
+                        url:"livesearch.php",
+                        method: "POST",
+                        data:{input:input},
+
+                        success: function(data){
+                            $("#searchresult").html(data);
+                        }
+                            
+                    })
+                }else{
+
+                    $("#searchresult").css("display","none");
+                }
+            });
+        });
+</script>
 <?php
   
 }

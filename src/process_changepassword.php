@@ -1,5 +1,5 @@
 <?php
-include_once ('../main/connect.php');
+include_once ('../connect.php');
 if(isset($_POST['btnChange']))
 {
     $email = $_POST['email'];

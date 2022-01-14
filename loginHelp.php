@@ -1,6 +1,7 @@
 <?php
   include 'Template/header.php'
 ?>
+
 <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
 </head>
 <style>
@@ -101,7 +102,7 @@ body, html {
 <div class="bg-img">
     
         <span id="logo-change"  class="iconify" data-icon="logos:netflix"></span>
-        <a id="signin-change" href="">Sign In</a>
+        <a id="signin-change" href="login.php">Sign In</a>
         <div class="container">
             <form action="./src/process_changepassword.php" method="post" class="form-loginHelp">
                 
@@ -166,17 +167,17 @@ body, html {
     
   </footer>
   <script>
-    $(document).ready(function(){
-    $("#Emailchange").change(function(){
-        let emailPattern = /\S+@\S+.\S+/;
-        if(emailPattern.test($(this).val()) == false){
-            $("#emailHelpchange").text("Email của bạn không hợp lệ").css("color","red");
-        }
-        else{
-            $("#emailHelpchange").text("Email hợp lệ").css("color","#008000");
-        }
+        $(document).ready(function(){
+        $("#Emailchange").change(function(){
+            let emailPattern = /\S+@\S+.\S+/;
+            if(emailPattern.test($(this).val()) == false){
+                $("#emailHelpchange").text("Email của bạn không hợp lệ").css("color","red");
+            }
+            else{
+                $("#emailHelpchange").text("Email hợp lệ").css("color","#008000");
+            }
+        })
     })
-})
 
   </script>
 
