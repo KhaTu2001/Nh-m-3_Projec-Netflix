@@ -1,14 +1,14 @@
 <?php
-  include 'Template/header.php'
+  include '../Template/header.php'
 ?>
-<link rel="stylesheet" href="assets/css/reponsive.css">
-<link rel="stylesheet" href="assets/css/login.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="../assets/css/reponsive.css">
+<link rel="stylesheet" href="../assets/css/login.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
     <nav id="header" class=" navbar navbar-light p-0">
         <div class="container-fluid px-5 head">
-            <a href="index.php" class="navbar-brand"> <svg viewBox="0 0 111 30" class="header_navbar--logo"
+            <a href="../index.php" class="navbar-brand"> <svg viewBox="0 0 111 30" class="header_navbar--logo"
                     focusable="false">
                     <g id="netflix-logo">
                         <path
@@ -19,9 +19,9 @@
         </div>
     </nav>
 
-    <div class="slide-banner bg-img " style=" background-image: url(assets/img/slide-banner.jpg);height: 100%;">
+    <div class="slide-banner bg-img " style=" background-image: url(../assets/img/slide-banner.jpg);height: 100%;">
         <div class="form_login container">
-            <form action="./src/process-login.php" class="form_layout" method="POST" name="login" id="form-login">
+            <form action="../src/process-login.php" class="form_layout" method="POST" name="login" id="form-login">
                 <div class="form_header">
                     <h1>Sign in</h1>
                 </div>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="mb-3 form_signup">
                     <h5>New to Netflix?</h5>
-                    <a class="sign_up_now" href="index.php">Sign up now.</a>
+                    <a class="sign_up_now" href="signup.php">Sign up now.</a>
                 </div>
         </div>
         <div class="login_footer">

@@ -3,7 +3,7 @@
     // Phải kiểm tra THẺ LÀM VIỆC
     session_start();
     if(!isset($_SESSION['isLoginOK'])){
-        header("location:../login.php");
+        header("location:../account/login.php");
     }
   include('../Template/header.php');
   
@@ -45,7 +45,7 @@
 
             <div class="dropdown">
                 <form class="nav-option d-flex">
-                    <a href="../logout.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign Out</button></a>
+                    <a href="../account/logout.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign Out</button></a>
                 </form>
                 
             </div>

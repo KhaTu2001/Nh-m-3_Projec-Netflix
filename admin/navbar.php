@@ -62,7 +62,7 @@
 
                 </li>
                 <li class="dropdown-item">
-                    <a href="../logout.php">Sign out of Neflix</a>
+                    <a href="../account/logout.php">Sign out of Neflix</a>
                 </li>
 
             </ul>

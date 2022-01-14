@@ -1,10 +1,14 @@
 <?php
 
-include 'Template/header.php';
+include '../Template/header.php';
 
 ?>
+<<<<<<< HEAD:loginHelp.php
 <script src="./assets/js/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
+=======
+<link rel="stylesheet" href="../assets/css/style.css?v=<?php echo time(); ?>">
+>>>>>>> fc073066158aa366d83ab7a5c5b9703ef2b02ce3:account/loginHelp.php
 </head>
 <style>
 body, html {
@@ -18,7 +22,7 @@ body, html {
 }
 
 .bg-img {
-  background-image: url("./assets/img/backgourp-loginHelp.jpg");
+  background-image: url("../assets/img/backgourp-loginHelp.jpg");
   min-height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -102,12 +106,12 @@ body, html {
 <body>
 
 <div class="bg-img">
-        <a href="index.php">
+        <a href="../index.php">
         <span id="logo-change"  class="iconify" data-icon="logos:netflix"></span>
         </a>
         <a id="signin-change" href="login.php">Sign In</a>
         <div class="container">
-            <form action="./src/process_changepassword.php" method="post" class="form-loginHelp">
+            <form action="../src/process_changepassword.php" method="post" class="form-loginHelp">
                 
                     <h1 style="color: #000;" id="forgot">Forgot Email/Password</h1>
                     <p>How would you like to reset your password?</p>

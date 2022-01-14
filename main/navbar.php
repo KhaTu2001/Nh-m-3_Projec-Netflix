@@ -61,7 +61,7 @@ if(isset( $_SESSION['isLoginOK'])){
                             <div class="dropdown-menu" style="z-index:1000;">
                                 <a href="profile.php?id=<?php echo $user_id ?>">Account</a>
                                 <a href="../footer/helpcenter.php">Help Center</a>
-                                <a href="../logout.php">Sign out of Neflix</a>
+                                <a href="../account/logout.php">Sign out of Neflix</a>
                             </div>
                         </div>
                     </li>

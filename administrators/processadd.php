@@ -15,7 +15,7 @@
         $gender = $_POST["gender"];
 
             // Bước 01: Kết nối Database Server
-            require('../connect.php');
+            require('../account/connect.php');
             // Bước 02: Thực hiện truy vấn
             $sql = "SELECT * FROM user where email = '$email'";
             $res = mysqli_query($conn,$sql);

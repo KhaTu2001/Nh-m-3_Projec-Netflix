@@ -1,5 +1,5 @@
 <?php
-    include_once ('./connect.php');
+    include_once ('../account/connect.php');
 
     $email = $_POST["email"];
     $oldpass = $_POST["oldpassword"];
@@ -17,14 +17,14 @@
                 ?>
                 <script>
                     alert("Đổi mật khẩu thành công");
-                    location.href = "./login.php";      
+                    location.href = "../account/login.php";      
                 </script>
                 <?php 
             } else{
                 ?>
                 <script>
                     alert("Tài khoản hoặc mặt khẩu sai");
-                    location.href = "./needhelp.php";          
+                    location.href = "../account/needhelp.php";          
                 </script>
                 <?php 
             }

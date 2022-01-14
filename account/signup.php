@@ -1,14 +1,14 @@
 <?php
   session_start();
-  require('Template/header.php');
+  require('../Template/header.php');
   
 ?>
 
-<link rel="stylesheet" href="assets/css/reponsive.css">
-<link rel="stylesheet" href="assets/css/login.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="../assets/css/reponsive.css">
+<link rel="stylesheet" href="../assets/css/login.css?v=<?php echo time(); ?>">
 </header>
 
-<body style="background-image: url(assets/img/slide-banner.jpg);height: 100vh;">
+<body style="background-image: url(../assets/img/slide-banner.jpg);height: 100vh;">
 
   <nav id="header" class=" navbar navbar-light p-0">
     <div class="container-fluid px-5 head">
@@ -22,7 +22,7 @@
     </div>
   </nav>
   <div class="signup_form container">
-    <form class="mx-1 mx-md-4 " method="POST" action="./src/signup_process.php" name="Signup">
+    <form class="mx-1 mx-md-4 " method="POST" action="../src/signup_process.php" name="Signup">
 
       <div class="row ">
         <div class="col-md-6 col-sm-12">
@@ -184,5 +184,5 @@
     </div>
 
     <?php
-  require('Template/footer.php')
+  require('../Template/footer.php')
 ?>
