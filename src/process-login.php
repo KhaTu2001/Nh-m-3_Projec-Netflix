@@ -31,8 +31,6 @@
                         else{
                             $_SESSION['isLoginOK'] = $email;
                             header("location:../main/main.php");
-                            // echo 'hello';
-                            // header("location: ../main.php"); 
                         }
                     }
                     else{

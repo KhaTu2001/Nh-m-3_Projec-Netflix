@@ -100,6 +100,7 @@
                                 </label>
                                 <button type="submit" class="btn btn-primary btn-md-10" id="button_post"
                                     name="button_post">Post your avata </button>
+                                <a href="updateuser.php?id=<?php echo $user_id ?>" class="editicon">Edit profile</a>
                             </div>
 
                             <style>
@@ -118,6 +119,15 @@
                                 border-radius: 12px;
                                 padding:8px 12px;
                                 margin-right:12px;
+                            }
+                            .editicon {
+                                text-decoration: none;
+                                background-color: aqua;
+                                margin-left: 10px;
+                                width: 111px;
+                                height: 38px;
+                                border-radius: 5px;
+                                padding: 8px 12px;
                             }
                             </style>
                             <h5 class="my-3"><?php echo $row['fullname']?></h5>

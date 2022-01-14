@@ -49,12 +49,12 @@
                             <table class="table  table-bordered " style="border: 1px solid #ddd;">
                             <thead>
                                 <tr style="color: #fff;">
-                                <th scope="col" style="border: 1px solid #ddd;">Mã Admin</th>
-                                <th scope="col" style="border: 1px solid #ddd;">Họ và tên</th> 
+                                <th scope="col" style="border: 1px solid #ddd;">ID Admin</th>
+                                <th scope="col" style="border: 1px solid #ddd;">Full Name</th> 
                                 <th scope="col" style="border: 1px solid #ddd;">Email</th> 
-                                <th scope="col" style="border: 1px solid #ddd;">Số điện thoại</th> 
-                                <th scope="col" style="border: 1px solid #ddd;">Giới tính</th>
-                                <th scope="col" style="border: 1px solid #ddd;">Xóa</th>
+                                <th scope="col" style="border: 1px solid #ddd;">Phone</th> 
+                                <th scope="col" style="border: 1px solid #ddd;">Male</th>
+                                <th scope="col" style="border: 1px solid #ddd;">Delete</th>
                                 
                                 </tr>
                             </thead>

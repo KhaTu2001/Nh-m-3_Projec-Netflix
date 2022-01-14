@@ -45,7 +45,7 @@
                             <table class="table  table-bordered " style="border: 1px solid #ddd;">
                             <thead>
                                 <tr style="color: #fff;">
-                                <th scope="col" style="border: 1px solid #ddd;">Mã User</th>
+                                <th scope="col" style="border: 1px solid #ddd;">ID User</th>
                                 <th scope="col" style="border: 1px solid #ddd;">Full Name</th> 
                                 <th scope="col" style="border: 1px solid #ddd;">Email</th> 
                                 <th scope="col" style="border: 1px solid #ddd;">Phone number</th> 

@@ -50,10 +50,6 @@
           <h5>New to Netflix?</h5>
           <a class="sign_up_now" href="index.php">Sign up now.</a>
         </div>
-        <!-- <div class="mb-3 form_capcha">
-              <span>This page is protected by Google reCAPTCHA to ensure you're not a bot.</span>
-              <a class="Form_loginfb" href="https://www.facebook.com/login">Login with Facebook</a>
-            </div> -->
     </div>
     <div class="login_footer">
       <div class="container">
