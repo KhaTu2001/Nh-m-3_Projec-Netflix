@@ -236,13 +236,9 @@
             }
         }
         else{
-            echo '<script language="javascript">alert("Đã upload thất bại!");</script>';
-
+            echo '<script language="javascript">alert("Upload failed!");</script>';
             }
-       
     }
-    
     ?>
 </body>
-
 </html>

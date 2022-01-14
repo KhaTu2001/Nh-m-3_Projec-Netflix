@@ -13,7 +13,7 @@
     $result = mysqli_query($conn, $sql);
     
     if (mysqli_num_rows($result) == 0) { 
-        echo "No required user";
+        echo "No required Film";
     } 
     else {
         $row = mysqli_fetch_assoc($result);
@@ -26,7 +26,7 @@
             <div class="row">
                 <div id="edit-film" class="table_box">
                     <div class="tiltle_edit">
-                        <h2>Chỉnh sửa film</h2>
+                        <h2>Edit Film</h2>
                     </div>
                     <form method="post" id="form-insert-film" name="form-insert-film" class="form-horizontal" action=""
                         role="form" enctype="multipart/form-data">
@@ -74,11 +74,11 @@
                             </label>
                             <div class="container">
                                 <input type="file" class="form-control" id="trailer_name" name="trailer_name"
-                                    onchange="alertName1()" />
+                                    onchange="alertName2()" />
                                 <input type="text" class="form-control" id="trailer_link" name="trailer"
                                     value="<?php echo $row["link"]; ?>">
                                 <script>
-                                function alertName1() {
+                                function alertName2() {
                                     var name = document.getElementById("trailer_name").value;
                                     var n = name.lastIndexOf('\\');
                                     var result = name.substring(n + 1);
@@ -93,11 +93,11 @@
                             </label>
                             <div class="container">
                                 <input type="file" class="form-control" name="image_name" id="image_name"
-                                    onchange="alertName2()" />
+                                    onchange="alertName3()" />
                                 <input type="text" class="form-control" id="image_link" name="image"
                                     value="<?php echo $row["image"]; ?>">
                                 <script>
-                                function alertName2() {
+                                function alertName3() {
                                     var name = document.getElementById("image_name").value;
                                     var n = name.lastIndexOf('\\');
                                     var result = name.substring(n + 1);
@@ -288,7 +288,7 @@
             $duration = $_POST["duration"];
             $author = $_POST["author"];
             $image = $_POST["image"];
-            $link = $_POST["link"];
+            $link_film = $_POST["link"];
             $trailer = $_POST["trailer"];
             $link_name = $_FILES["film_name"]['name'];
             $trailer_name = $_FILES["trailer_name"]['name'];
@@ -307,7 +307,7 @@
                 move_uploaded_file($_FILES['trailer_name']['tmp_name'], $targettrailer);
             }
             else{}
-                $sql = "SELECT * FROM film WHERE ID = '$filmID'";
+                $sql = "SELECT * FROM film WHERE id = '$filmID'";
                 $check = mysqli_query($conn,$sql);
                 if(mysqli_num_rows($check) <= 0){ ?>
         <script>
@@ -328,7 +328,7 @@
                         image='$image',
                         description='$description',
                         duration='$duration',
-                        link='$link',           
+                        link='$link_film',           
                         author='$author',
                         trailer='$trailer'
                         WHERE id = $filmID";
@@ -355,6 +355,7 @@
         
 
                 mysqli_close($conn);
+            }
     ?>
 </body>
 </html>

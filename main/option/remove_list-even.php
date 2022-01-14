@@ -7,13 +7,12 @@
     if (mysqli_query($conn, $sql)) {?>
      <script>
             window.history.go(-1);
-            // alert("hshshsh");
         </script>
 
     <?php        
     } else {
         echo "Lỗi " . mysqli_error($conn);
     }
-    mysqli_close($link);
+    mysqli_close($conn);
     
 ?>

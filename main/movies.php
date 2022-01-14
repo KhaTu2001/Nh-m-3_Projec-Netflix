@@ -71,7 +71,7 @@ include 'header.php';
         </div>
     </div>
     <?php 
-    }
+    
 }
 }
                 $sql123 = "SELECT * from film where type_movie = 2";
@@ -111,6 +111,7 @@ include 'header.php';
         
 include 'list_film.php'; 
 ?>
+
     <div class="modal" id="myModal">
         <div class="modal-dialog modal-lg  modal-dialog-centered">
             <div class="modal-content">
@@ -119,7 +120,19 @@ include 'list_film.php';
             </div>
         </div>
     </div>
-    <div class="footer">
+
+    <?php
+            }
+    else {
+include 'navbar.php'; 
+?>
+    <div class="container-fluid no_film">
+        <h2> MOVIES NOT AVAILABLE </h2>
+    </div>
+    <?php
+    }
+    ?>
+   <div class="footer">
         <div class="social">
             <i class="fab fa-facebook-square"></i>
             <i class="fab fa-instagram"></i>
@@ -129,23 +142,23 @@ include 'list_film.php';
         <div class="flex">
             <div class="info">
                 <ul>
-                    <li><a href="#">Questions? Contact us.</a></li>
-                    <li><a href="FAQ.php">FAQ</a></li>
-                    <li><a href="privacy.php">Privacy</a></li>
+                    <li><a href="../footer/contactus.php">Questions? Contact us.</a></li>
+                    <li><a href="../footer/FAQ.php">FAQ</a></li>
+                    <li><a href="../footer/privacy.php">Privacy</a></li>
                 </ul>
             </div>
             <div class="info">
                 <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Legal Notices</a></li>
-                    <li><a href="#">Terms of Use</a></li>
+                <li><a href="../footer/helpcenter.php">Help Center</a></li>
+                    <li><a href="../footer/LegalNotices.php">Legal Notices</a></li>
+                    <li><a href="../footer/termsofuse.php">Terms of Use</a></li>
                 </ul>
             </div>
             <div class="info">
                 <ul>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="way-match.php">Ways to Match</a></li>
-                    <li><a href="corpinfo.php">Corporate Information</a></li>
+                    <li><a href="profile.php">Account</a></li>
+                    <li><a href="../footer/way-match.php">Ways to Match</a></li>
+                    <li><a href="../footer/corpinfo.php">Corporate Information</a></li>
                 </ul>
             </div>
         </div>

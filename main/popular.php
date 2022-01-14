@@ -22,7 +22,10 @@
 
 <body class="main">
     <?php
-		include 'navbar.php';
+		include 'navbar.php';?>
+    <div class="sparate" style="height:100px"></div>
+
+    <?php
         $sql123 = "SELECT * from film ";
         $result123 = mysqli_query($conn, $sql123); 
 $sql1 = "SELECT * from film order by num_view DESC";

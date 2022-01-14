@@ -1,6 +1,11 @@
 <?php
-include 'header.php';
+    include '../Template/header.php';
 ?>
+<link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="../assets/css/minh.css?v=<?php echo time(); ?>">
+
+
+</head>
 
 <body class="main">
     <?php
@@ -25,7 +30,7 @@ include 'header.php';
         </video>
         
 
-        <div class="content">
+        <div class="content" >
             <?php include 'navbar.php';?>
             <div class="container">
                 <br>
@@ -69,7 +74,7 @@ include 'header.php';
     <?php 
     }
 }
-            }
+            
 
 ?>
 
@@ -120,6 +125,17 @@ include 'list_film.php';
             </div>
         </div>
     </div>
+    <?php
+            }
+    else {
+include 'navbar.php'; 
+?>
+    <div class="container-fluid no_film">
+        <h2> MOVIES NOT AVAILABLE </h2>
+    </div>
+    <?php
+    }
+    ?>
 
     <div class="footer">
         <div class="social">
@@ -138,7 +154,7 @@ include 'list_film.php';
             </div>
             <div class="info">
                 <ul>
-                    <li><a href="#">Help Center</a></li>
+                    <li><a href="../footer/helpcenter.php">Help Center</a></li>
                     <li><a href="../footer/LegalNotices.php">Legal Notices</a></li>
                     <li><a href="../footer/termsofuse.php">Terms of Use</a></li>
                 </ul>

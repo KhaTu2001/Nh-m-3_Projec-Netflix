@@ -5,7 +5,8 @@
                 <?php                    
                             echo "<div id='img_div'> ";
                             echo "<img class = 'img-fluid' src='../admin/image/".$row['image']."' >";
-                            echo "</div>";           
+                            echo "</div>";          
+                             
                         ?>
             </a>
             <style>
@@ -18,7 +19,8 @@
             </a>
             <div class="card-body ">
                 <div class="card-body-item-left">
-                    <div class="card-body-item first_child"><a href="showfilm.php?id=<?php echo $row['id']; ?>"><i
+                    <div class="card-body-item first_child">
+                        <a href="showfilm.php?id=<?php echo $row['id']; ?>"><i
                                 class="fas fa-play"></i></a>
                     </div>
                     <?php
@@ -44,7 +46,7 @@
                         </a>
                     </div>
                     <?php  }     
-                    $sqlrate1 = "SELECT * from like_action where film_id =  $filmID ";
+                    $sqlrate1 = "SELECT * from like_action where film_id =  $filmID and user_id = $user_id";
                     $resultrate1 = mysqli_query($conn, $sqlrate1); 
                     if(mysqli_num_rows($resultrate1) > 0){ 
                     while($rowrate = mysqli_fetch_assoc($resultrate1)){?>
@@ -61,9 +63,8 @@
                             <i class="far fa-thumbs-up"></i>
                         </a>
                     </div>
-
                     <?php   }
-                    $sqlrate2 = "SELECT * from dislike where film_id =  $filmID ";
+                    $sqlrate2 = "SELECT * from dislike where film_id =  $filmID and user_id = $user_id";
                     $resultrate2 = mysqli_query($conn, $sqlrate2); 
                     if(mysqli_num_rows($resultrate2) > 0){ 
                     while($rowrate = mysqli_fetch_assoc($resultrate2)){?>
@@ -79,19 +80,18 @@
                             <i class="far fa-thumbs-down"></i>
                         </a>
                     </div>
-
                     <?php  }
                     ?>
                 </div>
                 <div class="card-body-item-right">
                     <div class="card-body-item">
-                        <button type="button" class="btn btn-primary filminfo" data-id="<?php echo $filmID; ?>" data-bs-toggle="modal" data-bs-target="#myModal">
+                        <button type="button" class="btn btn-primary filminfo" data-id="<?php echo $filmID; ?>"
+                            data-bs-toggle="modal" data-bs-target="#myModal">
                             <i class="fas fa-chevron-down"></i>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-
     </form>
 </div>

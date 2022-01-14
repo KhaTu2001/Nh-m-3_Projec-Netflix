@@ -57,10 +57,6 @@ $(document).ready(function(){
         }
     })
 })
-<<<<<<< HEAD
-
-
-=======
 //check confirm pass word sign up
 
 $(document).ready(function(){
@@ -77,7 +73,6 @@ $(document).ready(function(){
     }
     })
 })
->>>>>>> d66be69dafbe27d383e5b1c0ae488f43996ed8cb
 
     $(document).ready(function(){
         $('.filminfo').click(function(){
@@ -94,7 +89,6 @@ $(document).ready(function(){
             });
         });
     });
-<<<<<<< HEAD
     
 
 $(document).ready(function(){
@@ -107,5 +101,3 @@ $(document).ready(function(){
     })
 })
 
-=======
->>>>>>> d66be69dafbe27d383e5b1c0ae488f43996ed8cb
