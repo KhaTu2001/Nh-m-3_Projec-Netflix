@@ -68,14 +68,13 @@
         </div>
     </nav>
     <div class="container back-to-help">
-        <a href="main.php"><i class="fas fa-arrow-left" style="margin-top: 100px;"></i>Back to home</a>
     </div>
     <div class="container py-3">
         <div class="row">
             <div class="col-lg-12">
                 <div class="card mb-12" style="margin-top:30px">
                     <div class="card-body text-center">
-                        <form action="../admin/upload_avata.php" method="post" id="avata-admin" name="avata-admin"
+                        <form action="upload_avata.php" method="post" id="avata-admin" name="avata-admin"
                             class="form-horizontal" enctype="multipart/form-data" action="" role="form">
                             <input type="file" hidden name="image" id="Upload_avata">
                             <?php
@@ -104,20 +103,22 @@
 
                             <style>
                             #img_div img {
-                                width:200px;
-                                height:200px;
+                                width: 200px;
+                                height: 200px;
                                 object-fit: cover;
                                 border-radius: 50%;
                             }
-                            .d-flex.justify-content-center{
-                                margin-top:48px;
+
+                            .d-flex.justify-content-center {
+                                margin-top: 48px;
                             }
-                            .upload_avata-profile{
-                                background-color:red;
-                                color:#fff;
+
+                            .upload_avata-profile {
+                                background-color: red;
+                                color: #fff;
                                 border-radius: 12px;
-                                padding:8px 12px;
-                                margin-right:12px;
+                                padding: 8px 12px;
+                                margin-right: 12px;
                             }
                             </style>
                             <h5 class="my-3"><?php echo $row['fullname']?></h5>

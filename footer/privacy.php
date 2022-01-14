@@ -1,5 +1,4 @@
-
-    <?php   
+   <?php   
         include '../Template/header_page-footer.php';
     ?>    
 

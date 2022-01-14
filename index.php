@@ -6,8 +6,8 @@ session_start();
   include 'Template/header.php' 
 ?>
 <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
+<link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg">
 </head>
-
 <body>
     <nav id="header" class=" navbar navbar-light p-0">
         <div class="container-fluid px-5 head">
@@ -215,9 +215,6 @@ session_start();
 
             </div>
         </div>
-
-
     </footer>
-    <?php
-    include 'Template/footer.php';
-?>
+    </body>
+</html>
