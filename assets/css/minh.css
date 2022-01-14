@@ -370,9 +370,7 @@
   transform: scale(1.2);
   z-index: 1;
 }
-.swiper1{
-  
-}
+
 
 .flex {
 	display: flex;
@@ -515,6 +513,4 @@ h3 {
   justify-content:center ;
 
  }
- .row >*{
-
- }
+ 
