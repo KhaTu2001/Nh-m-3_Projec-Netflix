@@ -21,7 +21,7 @@
                         <div class="container">
                             <select id="id_film"  name="id_film" class="form-control">
                                 <?php 
-                                    $sql1 = "SELECT * FROM film";
+                                    $sql1 = "SELECT * FROM film where type_movie = 1";
                                     $result1 = mysqli_query($conn, $sql1);
 
                                     if (mysqli_num_rows($result1) > 0) { 
@@ -78,7 +78,7 @@
                 $content = $_FILES["video"]['name'];
                 $target = "video/".basename($content);
                 if (move_uploaded_file($_FILES['video']['tmp_name'], $target)){
-                    $sql = "SELECT * FROM episode WHERE film_id = $id_film";
+                    $sql = "SELECT * FROM episode WHERE film_id = $id_film and episode = $episode";
                     $result = mysqli_query($conn,$sql);
                     if (mysqli_num_rows($result)){?>
                         <script>

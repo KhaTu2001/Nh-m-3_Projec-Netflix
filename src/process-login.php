@@ -37,7 +37,7 @@
                         ?>
                                 <script>
                                     alert("Sai mật khẩu rồi!!!quay lại đi");
-                                    location.href = "../login.php";
+                                    location.href = "../account/login.php";
                                     
                                 </script>
 

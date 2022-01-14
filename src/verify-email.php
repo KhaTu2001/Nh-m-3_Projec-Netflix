@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>User Account Activation by Email Verification using PHP</title>
+<title>User Account Activation Netflix</title>
 <!-- CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -11,7 +11,7 @@
 <?php
         if($_GET['key'] && $_GET['token'])//bat gia tri tren url
         {
-                require('../connect.php');
+                require('../account/connect.php');
             $email = $_GET['key'];
             $token = $_GET['token'];
             
@@ -25,6 +25,7 @@
                     mysqli_query($conn,$sql2);
         
                     $msg = "Congratulations! Your email has been verified.";
+                    
                 }else{
                     $msg = "You have already verified your account with us";
                 }
@@ -40,10 +41,11 @@
         <div class="container mt-3">
         <div class="card">
         <div class="card-header text-center">
-            User Account Activation by Email Verification using PHP
+            User Account Netflix
         </div>
         <div class="card-body">
         <p><?php echo $msg; ?></p>
+        <a href="../account/login.php">Comback Login Now</a>
         </div>
         </div>
         </div>

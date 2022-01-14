@@ -1,7 +1,9 @@
 <?php
-  include 'Template/header.php'
+
+include '../Template/header.php';
+
 ?>
-<link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="../assets/css/style.css?v=<?php echo time(); ?>">
 </head>
 <style>
 body, html {
@@ -15,7 +17,7 @@ body, html {
 }
 
 .bg-img {
-  background-image: url("./assets/img/backgourp-loginHelp.jpg");
+  background-image: url("../assets/img/backgourp-loginHelp.jpg");
   min-height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -92,18 +94,19 @@ body, html {
         width: 100%;
         padding: 20px 20px;
     }
-    
+
 }
 </style>
 </head>
 <body>
 
 <div class="bg-img">
-    
+        <a href="../index.php">
         <span id="logo-change"  class="iconify" data-icon="logos:netflix"></span>
-        <a id="signin-change" href="">Sign In</a>
+        </a>
+        <a id="signin-change" href="login.php">Sign In</a>
         <div class="container">
-            <form action="./src/process_changepassword.php" method="post" class="form-loginHelp">
+            <form action="../src/process_changepassword.php" method="post" class="form-loginHelp">
                 
                     <h1 style="color: #000;" id="forgot">Forgot Email/Password</h1>
                     <p>How would you like to reset your password?</p>
@@ -166,23 +169,20 @@ body, html {
     
   </footer>
   <script>
-    $(document).ready(function(){
-    $("#Emailchange").change(function(){
-        let emailPattern = /\S+@\S+.\S+/;
-        if(emailPattern.test($(this).val()) == false){
-            $("#emailHelpchange").text("Email của bạn không hợp lệ").css("color","red");
-        }
-        else{
-            $("#emailHelpchange").text("Email hợp lệ").css("color","#008000");
-        }
-    })
-})
-
+        $(document).ready(function(){
+        $("#Emailchange").change(function(){
+            let emailPattern = /\S+@\S+.\S+/;
+            if(emailPattern.test($(this).val()) == false){
+                $("#emailHelpchange").text("Email của bạn không hợp lệ").css("color","red");
+            }
+            else{
+                $("#emailHelpchange").text("Email hợp lệ").css("color","#008000");
+            }
+        });
+    });
   </script>
 
-
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
 </body>
 </html>

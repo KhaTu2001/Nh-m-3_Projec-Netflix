@@ -1,7 +1,7 @@
 <?php
   session_start();
   if(!isset($_SESSION['isLoginOK'])){
-      header("location:../login.php");
+      header("location:../account/login.php");
   }
   include('../Template/header.php');
   

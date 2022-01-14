@@ -6,11 +6,11 @@ if(isset( $_SESSION['isLoginOK'])){
   $sqlUser = "SELECT * from user WHERE email = '$link'";
   $resultUser = mysqli_query($conn, $sqlUser);
   if(mysqli_num_rows($resultUser) > 0){
-	  while($rowUser = mysqli_fetch_assoc($resultUser)){
+	$rowUser = mysqli_fetch_assoc($resultUser);
 	
 	$user_id = $rowUser['ID'];
 	  
-
+  }
 ?>
 <nav class="container-fluid navbar-header">
     <div class="header">
@@ -50,16 +50,18 @@ if(isset( $_SESSION['isLoginOK'])){
                                 </label>
                                 <input type="text" value="" placeholder="Search..." class="" id="s" />
                             </form>
+                            <div style="background-color: #fff; display: flex;" id="searchresult"></div>
                         </div>
+                        
                     </li>
                     <li class="user">
                         <div class="dropdown">
                             <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuLink"
                                 data-bs-toggle="dropdown"><?php echo $rowUser['username']; ?></a>
-                            <div class="dropdown-menu" style = "z-index:1000;">
+                            <div class="dropdown-menu" style="z-index:1000;">
                                 <a href="profile.php?id=<?php echo $user_id ?>">Account</a>
                                 <a href="../footer/helpcenter.php">Help Center</a>
-                                <a href="../logout.php">Sign out of Neflix</a>
+                                <a href="../account/logout.php">Sign out of Neflix</a>
                             </div>
                         </div>
                     </li>
@@ -68,10 +70,12 @@ if(isset( $_SESSION['isLoginOK'])){
         </div>
     </div>
 </nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 <?php
-}
-  }
 }else{
-    header("location:login.php");
+    header("location:../login.php");
 }
         ?>

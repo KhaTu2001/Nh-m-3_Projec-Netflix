@@ -1,6 +1,9 @@
 <?php
-include 'header.php';
+    include '../Template/header.php';
 ?>
+<link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="../assets/css/minh.css?v=<?php echo time(); ?>">
+</head>
 
 <body class="main">
     <?php
@@ -66,8 +69,9 @@ include 'header.php';
         </div>
     </div>
     <?php 
-    }}
-            }
+    }
+}
+            
             $sql123 = "SELECT * from film where type_movie = 1";
             $result123 = mysqli_query($conn, $sql123); 
             $sql1 = "SELECT * from film where type_movie = 1";
@@ -113,37 +117,45 @@ include 'header.php';
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="social">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-        </div>
-        <div class="flex">
-            <div class="info">
+    <?php
+            }
+    else {
+include 'navbar.php'; 
+?>
+    <div class="container-fluid no_film">
+        <h2> MOVIES NOT AVAILABLE </h2>
+    </div>
+    <?php
+    }
+    ?>
+    <div class="space" style="height:300px"></div>
+   <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-6">
                 <ul>
-                    <li><a href="#">Questions? Contact us.</a></li>
-                    <li><a href="FAQ.php">FAQ</a></li>
-                    <li><a href="privacy.php">Privacy</a></li>
+                    <li><a href="../footer/contactus.php">Questions? Contact us.</a></li>
+                    <li><a href="../footer/FAQ.php">FAQ</a></li>
+                    <li><a href="../footer/privacy.php">Privacy</a></li>
                 </ul>
             </div>
-            <div class="info">
+            <div class="col-md-4 col-6">
                 <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Legal Notices</a></li>
-                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="../footer/helpcenter.php">Help Center</a></li>
+                    <li><a href="../footer/LegalNotices.php">Legal Notices</a></li>
+                    <li><a href="../footer/termsofuse.php">Terms of Use</a></li>
                 </ul>
             </div>
-            <div class="info">
+            <div class="col-md-4 col-6">
                 <ul>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="way-match.php">Ways to Match</a></li>
-                    <li><a href="corpinfo.php">Corporate Information</a></li>
+                    <li><a href="profile.php">Account</a></li>
+                    <li><a href="../footer/way-match.php">Ways to Match</a></li>
+                    <li><a href="../footer/corpinfo.php">Corporate Information</a></li>
                 </ul>
             </div>
         </div>
     </div>
+</footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript">
     var swiper = new Swiper(".mySwiper", {

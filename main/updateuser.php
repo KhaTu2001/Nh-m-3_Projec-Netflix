@@ -5,7 +5,7 @@
 </head>
 <?php
          // Bước 01: Kết nối Database Server
-         require('../connect.php');
+         require('../account/connect.php');
 
          if(isset($_GET["id"])){
              $userID = $_GET['id'];

@@ -1,5 +1,5 @@
 <?php
-include_once ('../main/connect.php');
+include_once ('../account/connect.php');
 if(isset($_POST['btnChange']))
 {
     $email = $_POST['email'];
@@ -22,7 +22,7 @@ if(isset($_POST['btnChange']))
                 ?>
                     <script>
                         alert("Check mail để lấy lại mật khẩu từ hệ thống");
-                        location.href = "../login.php";      
+                        location.href = "../account/login.php";      
                     </script>
                 <?php 
                 // $reply="Check mail để lấy lại mật khẩu từ hệ thống";

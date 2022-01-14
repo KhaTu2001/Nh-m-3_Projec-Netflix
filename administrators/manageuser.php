@@ -3,7 +3,7 @@
     // Phải kiểm tra THẺ LÀM VIỆC
     session_start();
     if(!isset($_SESSION['isLoginOK'])){
-        header("location:../login.php");
+        header("location:../account/login.php");
     }
   include('../Template/header.php');
   
@@ -59,7 +59,7 @@
                             <!-- Vùng này là Dữ liệu cần lặp lại hiển thị từ CSDL -->
                             <?php
                                 // Bước 01: Kết nối Database Server
-                                require('../connect.php');
+                                require('../account/connect.php');
                                 // Bước 02: Thực hiện truy vấn
                                 $sql = "SELECT * FROM user where usertype = '20'";
                                 $result = mysqli_query($conn,$sql);

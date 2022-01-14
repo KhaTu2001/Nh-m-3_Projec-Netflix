@@ -3,8 +3,6 @@
 ?>
 <link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
 <link rel="stylesheet" href="../assets/css/minh.css?v=<?php echo time(); ?>">
-
-
 </head>
 
 <body>
@@ -28,46 +26,40 @@
             }
         });
         </script>
-
-        <?php     
-    $sql = "SELECT * from my_list ";
-    $result = mysqli_query($conn, $sql); 
-    if(mysqli_num_rows($result) > 0){ 
-      $row = mysqli_fetch_assoc($result);
-      $UserID = $user_id;
-?>
         <div class="container ">
-
             <div class="row">
                 <?php
-            $sql1=" SELECT * 
-                    from (film inner join my_list on film.id = my_list.film_id)  inner join user on user.ID = my_list.user_id 
-                    where user.ID =  $UserID ";
-            $result1 = mysqli_query($conn, $sql1); 
-            if(mysqli_num_rows($result1) > 0){ 
-            while($rowfilm = mysqli_fetch_assoc($result1)){
-                $filmID = $rowfilm['id'];
-        ?>
+                    $sql = "SELECT * from my_list ";
+                    $result = mysqli_query($conn, $sql); 
+                    if(mysqli_num_rows($result) > 0){ 
+                      $row = mysqli_fetch_assoc($result); 
+                    $sql1=" SELECT * 
+                            from (film inner join my_list on film.id = my_list.film_id)  inner join user on user.ID = my_list.user_id 
+                            where user.ID =  $user_id ";
+                $result1 = mysqli_query($conn, $sql1); 
+                if(mysqli_num_rows($result1) > 0){ 
+                while($rowfilm = mysqli_fetch_assoc($result1)){
+                    $filmID = $rowfilm['id'];
+            ?>
                 <div class="col-md-2 col-sm-4 col-4">
                     <form>
                         <div class="card">
-                            <div class="card-img-top">
-                                <a href="showfilm.php?id=<?php echo $rowfilm['id']; ?>">
-                                    <?php                    
+                            <a href="showfilm.php?id=<?php echo $rowfilm['id']; ?>">
+                                <?php                    
                             echo "<div id='img_div'> ";
                             echo "<img class = 'img-fluid' src='../admin/image/".$rowfilm['image']."' >";
                             echo "</div>";           
                         ?>
-                                </a>
-                                <style>
-                                #img_div img {
-                                    height: 130px;
-                                    width: 100%;
-                                    object-fit: cover;
-                                }
-                                </style>
-                            </div>
-                            <div class="card-body">
+                            </a>
+                            <style>
+                            #img_div img {
+                                height: 130px;
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                            </style>
+
+                            <div class="card-body" style="justify-content: space-between;">
                                 <div class="card-body-item-left">
                                     <div class="card-body-item first_child"><a
                                             href="showfilm.php?id=<?php echo $rowfilm['id']; ?>"><i
@@ -114,9 +106,11 @@
                                             <i class="far fa-thumbs-down"></i>
                                         </a>
                                     </div>
+                                    <?php  }
+                                
+                                    ?>
                                 </div>
-                                <?php  }
-                    ?>
+
                                 <div class="card-body-item-right">
                                     <div class="card-body-item">
                                         <button type="button" class="btn btn-primary filminfo"
@@ -125,11 +119,11 @@
                                             <i class="fas fa-chevron-down"></i>
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </form>
-
                 </div>
                 <?php
                         }
@@ -146,53 +140,49 @@
                     </div>
                 </div>
                 <?php
-          }
-       ?>
+                    }
+                ?>
+            </div>
+        </div>
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-lg  modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+
 
 </body>
-<div class="modal" id="myModal">
-    <div class="modal-dialog modal-lg  modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body">
-            </div>
-        </div>
-    </div>
-</div>
 <footer>
     <div class="container">
-
         <div class="row">
             <div class="col-md-4 col-6">
                 <ul>
-                    <li><a href="contactus.php" class="question-contact">Questions? Contact us.</a></li>
-                    <li><a href="FAQ.php">FAQ</a></li>
-                    <li><a href="privacy.php">Privacy</a></li>
-
+                    <li><a href="../footer/contactus.php">Questions? Contact us.</a></li>
+                    <li><a href="../footer/FAQ.php">FAQ</a></li>
+                    <li><a href="../footer/privacy.php">Privacy</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-6">
                 <ul>
-                    <li><a href="helpcentre.php">Help Centre</a></li>
-                    <li><a href="LegalNotices.php">Legal Notices</a></li>
-                    <li><a href="termsofuse.php">Terms of Use</a></li>
+                    <li><a href="../footer/helpcenter.php">Help Center</a></li>
+                    <li><a href="../footer/LegalNotices.php">Legal Notices</a></li>
+                    <li><a href="../footer/termsofuse.php">Terms of Use</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-6">
                 <ul>
-                    <li><a href="login.php">Account</a></li>
-                    <li><a href="way-match.php">Ways to Match</a></li>
-                    <li><a href="corpinfo.php">Corporate Information</a></li>
-
+                    <li><a href="profile.php">Account</a></li>
+                    <li><a href="../footer/way-match.php">Ways to Match</a></li>
+                    <li><a href="../footer/corpinfo.php">Corporate Information</a></li>
                 </ul>
             </div>
-
         </div>
     </div>
-
-
 </footer>
 
 
