@@ -20,8 +20,7 @@
             <div class="card-body ">
                 <div class="card-body-item-left">
                     <div class="card-body-item first_child">
-                        <a href="showfilm.php?id=<?php echo $row['id']; ?>"><i
-                                class="fas fa-play"></i></a>
+                        <a href="showfilm.php?id=<?php echo $row['id']; ?>"><i class="fas fa-play"></i></a>
                     </div>
                     <?php
                     $sqlList = "SELECT * from my_list where film_id =  $filmID ";

@@ -3,10 +3,7 @@
 ?>
 <link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
 <link rel="stylesheet" href="../assets/css/minh.css?v=<?php echo time(); ?>">
-
-
 </head>
-
 <body class="main">
     <?php
 		include 'connect.php';
@@ -136,30 +133,26 @@ include 'navbar.php';
     <?php
     }
     ?>
+    <div class="space" style="height:300px"></div>
 
-    <div class="footer">
-        <div class="social">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-        </div>
-        <div class="flex">
-            <div class="info">
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-6">
                 <ul>
                     <li><a href="../footer/contactus.php">Questions? Contact us.</a></li>
                     <li><a href="../footer/FAQ.php">FAQ</a></li>
                     <li><a href="../footer/privacy.php">Privacy</a></li>
                 </ul>
             </div>
-            <div class="info">
+            <div class="col-md-4 col-6">
                 <ul>
                     <li><a href="../footer/helpcenter.php">Help Center</a></li>
                     <li><a href="../footer/LegalNotices.php">Legal Notices</a></li>
                     <li><a href="../footer/termsofuse.php">Terms of Use</a></li>
                 </ul>
             </div>
-            <div class="info">
+            <div class="col-md-4 col-6">
                 <ul>
                     <li><a href="profile.php">Account</a></li>
                     <li><a href="../footer/way-match.php">Ways to Match</a></li>
@@ -168,6 +161,7 @@ include 'navbar.php';
             </div>
         </div>
     </div>
+</footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript">
           
