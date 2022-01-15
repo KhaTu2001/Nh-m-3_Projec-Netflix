@@ -3,7 +3,12 @@
 include '../Template/header.php';
 
 ?>
+<<<<<<< HEAD:loginHelp.php
+<script src="./assets/js/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
+=======
 <link rel="stylesheet" href="../assets/css/style.css?v=<?php echo time(); ?>">
+>>>>>>> fc073066158aa366d83ab7a5c5b9703ef2b02ce3:account/loginHelp.php
 </head>
 <style>
 body, html {
@@ -182,7 +187,6 @@ body, html {
     });
   </script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
 </body>
 </html>

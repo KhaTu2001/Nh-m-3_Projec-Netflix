@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="main.css?v=<?php echo time(); ?>">
 <link rel="stylesheet" href="../assets/css/minh.css?v=<?php echo time(); ?>">
 </head>
+
 <body class="main">
     <?php
 		include 'connect.php';
@@ -22,12 +23,12 @@
             if($rowMostview['num_view'] == max($view) && $num2<1){$num2 +=1; ?>
     <div class="slider container-fluid">
 
-        <video class="container-fluid"  autoplay muted loop id="myVideo">
+        <video class="container-fluid" autoplay muted loop id="myVideo">
             <source src="../admin/video/<?php echo $rowMostview['trailer'];  ?>" type="video/mp4">
         </video>
-        
 
-        <div class="content" >
+
+        <div class="content">
             <?php include 'navbar.php';?>
             <div class="container">
                 <br>
@@ -37,7 +38,7 @@
                     <button class="btn"><a href="showfilm.php?id=<?php echo $rowMostview['id']; ?>"><i
                                 class="fas fa-play"></i>Play</a></button>
                     <button data-id="<?php echo $rowMostview['id'];?>" class="btn filminfo">
-                    <i class="fas fa-info-circle "></i>More Info
+                        <i class="fas fa-info-circle "></i>More Info
                     </button>
                 </div>
 
@@ -134,6 +135,7 @@ include 'navbar.php';
     }
     ?>
     <div class="space" style="height:300px"></div>
+</body>
 
 <footer>
     <div class="container">
@@ -162,17 +164,5 @@ include 'navbar.php';
         </div>
     </div>
 </footer>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript">
-          
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
-    
-	
-	
-</body>
-
 
 </html>
