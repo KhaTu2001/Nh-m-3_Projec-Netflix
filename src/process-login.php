@@ -36,7 +36,7 @@
                     else{
                         ?>
                                 <script>
-                                    alert("Sai mật khẩu rồi!!!quay lại đi");
+                                    alert("Wrong password!!!Please try again");
                                     location.href = "../account/login.php";
                                     
                                 </script>
@@ -47,7 +47,7 @@
                 else{
                     ?>
                     <script>
-                        alert("Tài khoản không tồn tại!!!");
+                        alert("Account does not exist!!!");
                         location.href = "../login.php";
                         
                     </script>

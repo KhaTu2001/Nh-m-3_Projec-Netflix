@@ -8,13 +8,13 @@
     $pass2=$_POST['txtPass2'];
     $gender = $_POST['gender'];
     require('../account/connect.php');
-    $sql = "SELECT * FROM user where email = '$email'";
+    $sql = "SELECT * FROM user where email = '$email' or phone = '$phone'";
     $res = mysqli_query($conn,$sql);
     //echo mysqli_num_rows($res); //in ra du lieu trong bang
     if( mysqli_num_rows($res) > 0){
       ?>
           <script>
-           alert("Account already exists.Please try again");
+           alert("Account or Phone already exists.Please try again!!!");
            location.href = "../account/signup.php";
            </script>
 
