@@ -12,7 +12,7 @@
             $check = mysqli_query($conn,$sql);
             if($check){?>
                 <script>
-                    alert("Insert film sucessfully!");
+                    alert("Insert avata sucessfully!");
                     window.history.go(-1);
                 </script>
                 

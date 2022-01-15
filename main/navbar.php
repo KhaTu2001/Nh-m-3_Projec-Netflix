@@ -59,7 +59,7 @@ if(isset( $_SESSION['isLoginOK'])){
                             <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuLink"
                                 data-bs-toggle="dropdown"><?php echo $rowUser['username']; ?></a>
                             <div class="dropdown-menu" style="z-index:1000;">
-                                <a href="profile.php?id=<?php echo $user_id ?>">Account</a>
+                                <a href="profile.php?id=<?php echo $rowUser['ID'];?>">Account</a>
                                 <a href="../footer/helpcenter.php">Help Center</a>
                                 <a href="../account/logout.php">Sign out of Neflix</a>
                             </div>
@@ -71,11 +71,8 @@ if(isset( $_SESSION['isLoginOK'])){
     </div>
 </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
 <?php
 }else{
-    header("location:../login.php");
+    header("location:../account/login.php");
 }
         ?>

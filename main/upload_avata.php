@@ -3,7 +3,7 @@
     include 'connect.php';
     if(isset($_SESSION['userid'])){
     $userID = $_SESSION['userid'];
-}
+
     if(isset($_POST['button_post'])){
         $image = $_FILES['image']['name'];
         $target = "../admin/image/".basename($image);
@@ -12,7 +12,7 @@
             $check = mysqli_query($conn,$sql);
             if($check){?>
                 <script>
-                    alert("Insert film sucessfully!");
+                    alert("Insert avata sucessfully!");
                     window.history.go(-1);
                 </script>
                 
@@ -26,5 +26,5 @@
         
     }
 }
-
+    }
 ?>

@@ -346,7 +346,6 @@
                         ?>
         <script>
         alert("Edit film fail!");
-        -- >
         </script>
         <?php
                         }

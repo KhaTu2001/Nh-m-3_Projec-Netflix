@@ -40,7 +40,10 @@
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    <?php echo $row['username'];  ?>
+                    
+                    <?php
+                    
+                    echo $row['username'];  ?>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="profile.php">Account</a></li>

@@ -79,7 +79,7 @@
 
             </label>
 
-            <div class="navbar_select-option" style="">
+            <div class="navbar_select-option" >
 
                 <ul id="active">
                     <label for="nav_mobile-input" class="close_navbar">
