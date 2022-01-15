@@ -37,7 +37,7 @@
             <div class="row text-center">
                 <h2>Edit User</h2>
             </div>
-            <form method="post" action="processedituser.php" id="form-update" name="form-update" class="form-horizontal" action="" role="form" style="padding: 20px;">
+            <form method="post" action="processeditadmin.php" id="form-update" name="form-update" class="form-horizontal" action="" role="form" style="padding: 20px;">
                     <div class="form-group mt-3">
                         <label class="container control-label">ID</label>
                         <div class="container">

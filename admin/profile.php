@@ -46,8 +46,7 @@
                                 </div>
                                 <div class="row pt-1">
                                     <div class="col-6 mb-3">
-                                        <h6>Recent</h6>
-                                        <p class="text-muted">Netflix</p>
+                                        <a href="editadmin.php?id=<?php echo $user_id ?>" style="color:#000;">Edit profile</a>
                                     </div>
                                     <div class="col-6 mb-3">
                                         <h6>Most Viewed</h6>

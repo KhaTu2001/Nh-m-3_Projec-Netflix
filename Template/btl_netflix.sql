@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 13, 2022 lúc 03:56 PM
+-- Thời gian đã tạo: Th1 15, 2022 lúc 08:49 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.12
 
@@ -66,13 +66,6 @@ CREATE TABLE `dislike` (
   `film_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Đang đổ dữ liệu cho bảng `dislike`
---
-
-INSERT INTO `dislike` (`dislike_id`, `user_id`, `film_id`) VALUES
-(4, 14, 132);
-
 -- --------------------------------------------------------
 
 --
@@ -124,8 +117,8 @@ CREATE TABLE `film` (
 --
 
 INSERT INTO `film` (`id`, `name`, `status`, `director`, `actor`, `category_id`, `type_movie`, `nation_id`, `release_year`, `image`, `description`, `duration`, `link`, `author`, `num_view`, `trailer`) VALUES
-(132, 'Spider-Man: No Way Home', 'Complete', ' Jon Watts', 'Tom Holland,Zendaya,Benedict Cumberbatch,Jacob Batalon,Andrew Garfield,Tobey Maguire,...', 11, 2, 1, 2001, 'no way home.jfif', 'With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.', 123, 'SPIDER-MAN_ NO WAY HOME - Official Trailer (HD).mp4', 'Marvel studio', 46, 'SPIDER-MAN_ NO WAY HOME - Official Trailer (HD).mp4'),
-(133, '3107', 'Complete', 'W/n ( Official Video ) ', 'Nâu, Duongg', 4, 1, 2, 2001, '3107_1.png', 'music', 123, 'yt1s.com - 3107  Wn  Official Video  ft Nâu Duongg.mp4', 'W/n', 11, 'yt1s.com - 3107  Wn  Official Video  ft Nâu Duongg.mp4');
+(132, 'Spider-Man: No Way Home', 'Complete', ' Jon Watts', 'Tom Holland,Zendaya,Benedict Cumberbatch,Jacob Batalon,Andrew Garfield,Tobey Maguire,...', 11, 2, 1, 2001, 'no way home.jfif', 'With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.', 123, 'SPIDER-MAN_ NO WAY HOME - Official Trailer (HD).mp4', 'Marvel studio', 49, 'SPIDER-MAN_ NO WAY HOME - Official Trailer (HD).mp4'),
+(133, '3107', 'Complete', 'W/n ( Official Video ) ', 'Nâu, Duongg', 4, 1, 2, 2001, '3107_1.png', 'music', 123, 'yt1s.com - 3107  Wn  Official Video  ft Nâu Duongg.mp4', 'W/n', 14, 'yt1s.com - 3107  Wn  Official Video  ft Nâu Duongg.mp4');
 
 -- --------------------------------------------------------
 
@@ -139,13 +132,6 @@ CREATE TABLE `like_action` (
   `film_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Đang đổ dữ liệu cho bảng `like_action`
---
-
-INSERT INTO `like_action` (`like_id`, `user_id`, `film_id`) VALUES
-(4, 14, 133);
-
 -- --------------------------------------------------------
 
 --
@@ -157,14 +143,6 @@ CREATE TABLE `my_list` (
   `user_id` int(11) NOT NULL,
   `film_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Đang đổ dữ liệu cho bảng `my_list`
---
-
-INSERT INTO `my_list` (`list_id`, `user_id`, `film_id`) VALUES
-(4, 14, 132),
-(5, 14, 133);
 
 -- --------------------------------------------------------
 
@@ -237,12 +215,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID`, `username`, `fullname`, `email`, `password`, `phone`, `sex`, `usertype`, `avata_image`, `status`) VALUES
-(14, 'user1709', 'Nguyen kha tu', 'khatu123@gmail.com', '$2y$10$jukyIbQYmW40DcQDUyDgwepObA.TtRJSSUE6AitT40AgsF/cF3kvK', '0965815052', 'male', 20, 'Khatu_avata.jpg', 1),
-(16, 'khatu', 'Nguyen kha tu', 'khatu@gmail.com', '$2y$10$jukyIbQYmW40DcQDUyDgwepObA.TtRJSSUE6AitT40AgsF/cF3kvK', '0965815052', 'male', 99, 'Khatu_avata.jpg', 1),
 (17, 'admin', 'Trung Quan', 'quan@gmail.com', '$2y$10$uC7.ozCFD3JZfNmI8tX4WechZwg3gfG5G34QB1Am0P0rEaKERxEb2', '0944737093', 'Male', 10, '', 1),
-(18, 'admin', 'Quang Minh', 'dqminh@gmail.com', '$2y$10$NGlQE6Zxhv.Bx3DgC115jervNMvaDQyCqT7uDvnNMuDCXVEqIGTsq', '0944732315', 'male', 99, '', 1),
-(19, 'admin', 'quann hip', 'quan27@gmail.com', '$2y$10$s1D8xA3Yp4FRpADeJeSXFOAliOr28hiuDWoDhyca2TaUVXrIkE2Jm', '0944737093', 'male', 99, '', 1),
-(20, 'quanhip', 'Tran Trung Quan', 'quantrung.2k1@gmail.com', '$2y$10$qvY0IROdU.jxiN3i4oywuumtVJMSEu0FNfbeqhbM6hlCB1uz.z2le', '0944737093', 'male', 20, '', 1);
+(24, 'admin', 'quannhippp', 'quan27@gmail.com', '$2y$10$rKWr7mA6rJBhh9FbPdq/WegBvtyFI9/.Xt55ZjzCNlq3pDzZs38hu', '0345990207', 'male', 99, '3ca973a4680ea350fa1f1.jpg', 1),
+(25, 'quanhip', 'Tran Trung Quan', 'quantrung.2k1@gmail.com', '$2y$10$ziaxD0aPpSqKiVTho1MnAuzoZGDiNUCakGJgkz74n2h1yY.5D2.OG', '0944737093', 'male', 20, '', 1),
+(27, 'quanhip', 'Trung Quan', 'cun272001@gmail.com', '$2y$10$pxWTvtkg/jerMqpdF.EdSeAvOTOdMJhIL2PO95cF1e7ujlCwf994e', '0944737093', 'male', 20, '', 0),
+(28, 'admin', 'Quang Minh', 'dqminh@gmail.com', '$2y$10$WEZEOzmD.av.64ODp84g6eAq0GSIT/tCqwSl7.dsd0zTEGpjP46H2', '0124721895', 'male', 99, '', 1),
+(29, 'admin', 'Kha Tu', 'khatu1@gmail.com', '$2y$10$jK0sh9F.FhYDbZUTjCuzJ.ngVrKUydEF/iKVxZDIOkDuugpIbA.jK', '0944737091', 'male', 99, '', 1);
 
 -- --------------------------------------------------------
 
@@ -391,7 +369,7 @@ ALTER TABLE `type-movie`
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

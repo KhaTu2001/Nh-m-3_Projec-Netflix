@@ -56,7 +56,7 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li class="dropdown-item">
                     <form method="post" action="">
-                        <a href="<?php echo "profile.php"?>">
+                        <a href="profile.php?id=<?php echo $rowAd["ID"];?>">
                             <i class="fa fa-user"></i>Profile</a>
                     </form>
 
