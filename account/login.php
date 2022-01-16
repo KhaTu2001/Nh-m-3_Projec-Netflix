@@ -43,7 +43,7 @@
                     <label class="form-check-label" for="exampleCheck1">Remember me</label>
                     <a class="needhelp_form" href="./loginHelp.php">Needhelp?</a>
                 </div>
-                
+
                 <div class="mb-3">
                     <i class="fab fa-facebook-square"></i>
                     <a class="Form_loginfb" href="https://www.facebook.com/login">Login with Facebook</a>
@@ -58,31 +58,28 @@
         </div>
         <div class="login_footer">
             <div class="container">
-                <a href="#" class="question-contact my-4" style="margin-left: 32px;">Questions? Contact us.</a>
                 <div class="row">
-                    <div class="col-md-3 col-6 my-4">
+                    <div class="col-md-4 col-6">
                         <ul>
-                            <li><a href="./footer/FAQ.php">FAQ</a></li>
-                            <li><a href="">Cookie Preferences</a></li>
+                            <li><a href="../footer/contactus.php" class="question-contact">Questions? Contact us.</a>
+                            </li>
+                            <li><a href="../footer/FAQ.php">FAQ</a></li>
+                            <li><a href="../footer/privacy.php">Privacy</a></li>
 
                         </ul>
                     </div>
-                    <div class="col-md-3 col-6 my-4">
+                    <div class="col-md-4 col-6">
                         <ul>
-
-                            <li><a href="#">Help Centre</a></li>
-                            <li><a href="#">Corporate Information</a></li>
-
+                            <li><a href="../footer/helpcenter.php">Help Centre</a></li>
+                            <li><a href="../footer/LegalNotices.php">Legal Notices</a></li>
+                            <li><a href="../footer/termsofuse.php">Terms of Use</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-3 col-6 my-4">
+                    <div class="col-md-4 col-6">
                         <ul>
-                            <li><a href="#">Terms of Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-6 my-4">
-                        <ul>
-                            <li><a href="privacy.php">Privacy</a></li>
+                            <li><a href="../footer/login.php">Account</a></li>
+                            <li><a href="../footer/way-match.php">Ways to Match</a></li>
+                            <li><a href="../footer/corpinfo.php">Corporate Information</a></li>
 
                         </ul>
                     </div>

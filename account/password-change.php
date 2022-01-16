@@ -1,6 +1,5 @@
 <?php
-    include_once ('../account/connect.php');
-
+    include_once ('connect.php');
     $email = $_POST["email"];
     $oldpass = $_POST["oldpassword"];
     $newpass = $_POST["newpassword"];
@@ -15,18 +14,18 @@
                 $sql02 = "UPDATE user SET password ='$pass_hash' WHERE email='$email'";
                 $result02 = mysqli_query($conn,$sql02);
                 ?>
-                <script>
-                    alert("Đổi mật khẩu thành công");
-                    location.href = "../account/login.php";      
-                </script>
-                <?php 
+<script>
+alert("Đổi mật khẩu thành công");
+location.href = "../account/login.php";
+</script>
+<?php 
             } else{
                 ?>
-                <script>
-                    alert("Tài khoản hoặc mặt khẩu sai");
-                    location.href = "../account/needhelp.php";          
-                </script>
-                <?php 
+<script>
+alert("Tài khoản hoặc mặt khẩu sai");
+location.href = "../account/needhelp.php";
+</script>
+<?php 
             }
     }
     

@@ -1,8 +1,8 @@
 <?php
   include '../Template/header.php'
 ?>
-<script src="./assets/js/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css?v=<?php echo time(); ?>">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
@@ -92,19 +92,7 @@
 <body>
     <div class="header-change">
         <div class="container">
-            <a href="./../index.php"><img id="logo-change" src="./assets/img/Netflixblack.png" alt=""></a>
-            <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuLink"
-                    data-bs-toggle="dropdown"><img style="width: 40px; height: 25px;" id="img-user"
-                        src="./assets/img/user.png" alt="" /></a>
-                <div class="dropdown-menu">
-                    <a href="#">Account</a>
-                    <br>
-                    <a href="#">Help Center</a>
-                    <br>
-                    <a href="#">Sign out of Neflix</a>
-                </div>
-            </div>
+            <a href="../index.php"><img id="logo-change" src="../assets/img/Netflixblack.png" alt=""></a>
         </div>
     </div>
     <div class="slider">
@@ -145,24 +133,24 @@
             <div class="row">
                 <div class="col-md-4 col-6">
                     <ul>
-                        <li><a href="contactus.php" class="question-contact">Questions? Contact us.</a></li>
-                        <li><a href="FAQ.php">FAQ</a></li>
-                        <li><a href="privacy.php">Privacy</a></li>
+                        <li><a href="../footer/contactus.php" class="question-contact">Questions? Contact us.</a></li>
+                        <li><a href="../footer/FAQ.php">FAQ</a></li>
+                        <li><a href="../footer/privacy.php">Privacy</a></li>
 
                     </ul>
                 </div>
                 <div class="col-md-4 col-6">
                     <ul>
-                        <li><a href="helpcenter.php">Help Centre</a></li>
-                        <li><a href="LegalNotices.php">Legal Notices</a></li>
-                        <li><a href="termsofuse.php">Terms of Use</a></li>
+                        <li><a href="../footer/helpcenter.php">Help Centre</a></li>
+                        <li><a href="../footer/LegalNotices.php">Legal Notices</a></li>
+                        <li><a href="../footer/termsofuse.php">Terms of Use</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 col-6">
                     <ul>
-                        <li><a href="login.php">Account</a></li>
-                        <li><a href="way-match.php">Ways to Match</a></li>
-                        <li><a href="corpinfo.php">Corporate Information</a></li>
+                        <li><a href="../footer/login.php">Account</a></li>
+                        <li><a href="../footer/way-match.php">Ways to Match</a></li>
+                        <li><a href="../footer/corpinfo.php">Corporate Information</a></li>
 
                     </ul>
                 </div>
