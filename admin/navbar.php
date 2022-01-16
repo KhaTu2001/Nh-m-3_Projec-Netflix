@@ -6,9 +6,15 @@
 		$sqlAd = "SELECT * from user WHERE email = '$link' ";
 		$resultAd = mysqli_query($conn, $sqlAd);
 		if(mysqli_num_rows($resultAd) > 0){
-			
+
             $rowAd = mysqli_fetch_assoc($resultAd);
-            $user_id = $rowAd["ID"];
+            if($rowAd['usertype']==99){
+
+                $user_id = $rowAd["ID"];
+            }
+            else{
+                header("location:../account/login.php");
+            }
 		}
 ?>
 <nav class="container-fluid navbar_header" role="navigation">

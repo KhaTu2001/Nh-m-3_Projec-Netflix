@@ -9,6 +9,7 @@ session_start();
 <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
 <link rel="shotcut icon" type="img" href="assets/img/logo-icon.jpg">
 </head>
+
 <body>
     <nav id="header" class=" navbar navbar-light p-0">
         <div class="container-fluid px-5 head">
@@ -20,10 +21,22 @@ session_start();
                             id="Fill-14" fill="#e50914"></path>
                     </g>
                 </svg></a>
+            <?php if(isset( $_SESSION['isLoginOK'])){
+                
+                          ?> <a href="account/logout.php"><button type="button"
+                    class="btn btn-danger btn-sign-in top-sign-in container">Sign out
+                </button></a> <?php
+                }
+                else{
+                ?>
             <form class="nav-option d-flex">
-                <a href="account/login.php"><button type="button" class="btn btn-danger btn-sign-in top-sign-in container"> Sign
+                <a href="account/login.php"><button type="button"
+                        class="btn btn-danger btn-sign-in top-sign-in container"> Sign
                         In</button></a>
             </form>
+            <?php
+                }
+            ?>
         </div>
     </nav>
     <div class="slide-banner bg-img" style="background-image: url(assets/img/slide-banner.jpg);
@@ -217,5 +230,6 @@ session_start();
             </div>
         </div>
     </footer>
-    </body>
+</body>
+
 </html>

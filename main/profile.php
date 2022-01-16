@@ -17,7 +17,7 @@
               }
         }
     }
-    $sql = "SELECT * FROM user WHERE id = $user_id";
+    $sql = "SELECT * FROM user WHERE ID = $user_id";
     $result = mysqli_query($conn, $sql);   
     if (mysqli_num_rows($result) == 0) { 
         echo "No required user";
@@ -48,7 +48,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" href="profile.php">Account</a></li>
                     <li><a class="dropdown-item" href="#">Help Center</a></li>
-                    <li><a class="dropdown-item" href="#">Sign out of Neflix</a></li>
+                    <li><a class="dropdown-item" href="../account/logout.php">Sign out of Neflix</a></li>
                 </ul>
             </div>
             <style>

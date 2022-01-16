@@ -313,3 +313,6 @@ background-color: rgb(163, 159, 159);
    width: 90%;
    flex-wrap: wrap;
 }
+.slider video{
+   margin-top: 80px;
+}

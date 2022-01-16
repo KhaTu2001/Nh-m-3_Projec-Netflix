@@ -30,7 +30,6 @@
                     </div>
                     <form method="post" id="form-insert-film" name="form-insert-film" class="form-horizontal" action=""
                         role="form" enctype="multipart/form-data">
-
                         <div>
                             <label for="ID-film" class="container">
                                 movie's ID
@@ -356,8 +355,5 @@
                 mysqli_close($conn);
             }?>
 </body>
+
 </html>
-
-        
-    
-
