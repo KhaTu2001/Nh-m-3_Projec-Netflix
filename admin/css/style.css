@@ -214,3 +214,9 @@ body {
    border-radius: 4px;
    align-items: center;
 }
+.edit_user a{
+   text-decoration: none;
+}
+.edit_user a:hover{
+   color: #e50914 !important;
+}

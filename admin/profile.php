@@ -45,7 +45,7 @@
                                         name="button_post">Post your avata </button>
                                 </div>
                                 <div class="row pt-1">
-                                    <div class="col-6 mb-3">
+                                    <div class="col-6 mb-3 edit_user">
                                         <a href="editadmin.php?id=<?php echo $user_id ?>" style="color:#000;">Edit profile</a>
                                     </div>
                                     <div class="col-6 mb-3">
